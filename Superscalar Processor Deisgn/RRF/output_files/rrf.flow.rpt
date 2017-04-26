@@ -1,5 +1,5 @@
 Flow report for rrf
-Tue Apr 25 00:37:08 2017
+Wed Apr 26 15:19:53 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 25 00:37:03 2017       ;
+; Flow Status                        ; Successful - Wed Apr 26 15:19:48 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; rrf                                         ;
 ; Top-level Entity Name              ; RRF                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 64 / 15,408 ( < 1 % )                       ;
-;     Total combinational functions  ; 32 / 15,408 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 64 / 15,408 ( < 1 % )                       ;
+; Total logic elements               ; 64 / 6,272 ( 1 % )                          ;
+;     Total combinational functions  ; 32 / 6,272 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 64 / 6,272 ( 1 % )                          ;
 ; Total registers                    ; 64                                          ;
-; Total pins                         ; 184 / 344 ( 53 % )                          ;
+; Total pins                         ; 98 / 180 ( 54 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-; Device                             ; EP4CE15F23C6                                ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
+; Device                             ; EP4CE6F17C6                                 ;
 ; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/25/2017 00:36:28 ;
+; Start date & time ; 04/26/2017 15:19:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; rrf                 ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149306078802092        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149320016213472        ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -91,11 +91,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 677 MB              ; 00:00:34                           ;
-; Fitter                    ; 00:00:13     ; 1.0                     ; 1135 MB             ; 00:00:14                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 563 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 640 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:37     ; --                      ; --                  ; 00:00:52                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 675 MB              ; 00:00:34                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 1119 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 559 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 631 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:44                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

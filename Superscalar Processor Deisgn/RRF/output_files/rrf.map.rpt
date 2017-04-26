@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rrf
-Tue Apr 25 00:36:45 2017
+Wed Apr 26 15:19:38 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,110 +13,43 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |rrf
- 11. Parameter Settings for User Entity Instance: registers:\GEN_REG:0:REGX
- 12. Parameter Settings for User Entity Instance: registers:\GEN_REG:0:VALD
- 13. Parameter Settings for User Entity Instance: registers:\GEN_REG:1:REGX
- 14. Parameter Settings for User Entity Instance: registers:\GEN_REG:1:VALD
- 15. Parameter Settings for User Entity Instance: registers:\GEN_REG:2:REGX
- 16. Parameter Settings for User Entity Instance: registers:\GEN_REG:2:VALD
- 17. Parameter Settings for User Entity Instance: registers:\GEN_REG:3:REGX
- 18. Parameter Settings for User Entity Instance: registers:\GEN_REG:3:VALD
- 19. Parameter Settings for User Entity Instance: registers:\GEN_REG:4:REGX
- 20. Parameter Settings for User Entity Instance: registers:\GEN_REG:4:VALD
- 21. Parameter Settings for User Entity Instance: registers:\GEN_REG:5:REGX
- 22. Parameter Settings for User Entity Instance: registers:\GEN_REG:5:VALD
- 23. Parameter Settings for User Entity Instance: registers:\GEN_REG:6:REGX
- 24. Parameter Settings for User Entity Instance: registers:\GEN_REG:6:VALD
- 25. Parameter Settings for User Entity Instance: registers:\GEN_REG:7:REGX
- 26. Parameter Settings for User Entity Instance: registers:\GEN_REG:7:VALD
- 27. Parameter Settings for User Entity Instance: registers:\GEN_REG:8:REGX
- 28. Parameter Settings for User Entity Instance: registers:\GEN_REG:8:VALD
- 29. Parameter Settings for User Entity Instance: registers:\GEN_REG:9:REGX
- 30. Parameter Settings for User Entity Instance: registers:\GEN_REG:9:VALD
- 31. Parameter Settings for User Entity Instance: registers:\GEN_REG:10:REGX
- 32. Parameter Settings for User Entity Instance: registers:\GEN_REG:10:VALD
- 33. Parameter Settings for User Entity Instance: registers:\GEN_REG:11:REGX
- 34. Parameter Settings for User Entity Instance: registers:\GEN_REG:11:VALD
- 35. Parameter Settings for User Entity Instance: registers:\GEN_REG:12:REGX
- 36. Parameter Settings for User Entity Instance: registers:\GEN_REG:12:VALD
- 37. Parameter Settings for User Entity Instance: registers:\GEN_REG:13:REGX
- 38. Parameter Settings for User Entity Instance: registers:\GEN_REG:13:VALD
- 39. Parameter Settings for User Entity Instance: registers:\GEN_REG:14:REGX
- 40. Parameter Settings for User Entity Instance: registers:\GEN_REG:14:VALD
- 41. Parameter Settings for User Entity Instance: registers:\GEN_REG:15:REGX
- 42. Parameter Settings for User Entity Instance: registers:\GEN_REG:15:VALD
- 43. Parameter Settings for User Entity Instance: registers:\GEN_REG:16:REGX
- 44. Parameter Settings for User Entity Instance: registers:\GEN_REG:16:VALD
- 45. Parameter Settings for User Entity Instance: registers:\GEN_REG:17:REGX
- 46. Parameter Settings for User Entity Instance: registers:\GEN_REG:17:VALD
- 47. Parameter Settings for User Entity Instance: registers:\GEN_REG:18:REGX
- 48. Parameter Settings for User Entity Instance: registers:\GEN_REG:18:VALD
- 49. Parameter Settings for User Entity Instance: registers:\GEN_REG:19:REGX
- 50. Parameter Settings for User Entity Instance: registers:\GEN_REG:19:VALD
- 51. Parameter Settings for User Entity Instance: registers:\GEN_REG:20:REGX
- 52. Parameter Settings for User Entity Instance: registers:\GEN_REG:20:VALD
- 53. Parameter Settings for User Entity Instance: registers:\GEN_REG:21:REGX
- 54. Parameter Settings for User Entity Instance: registers:\GEN_REG:21:VALD
- 55. Parameter Settings for User Entity Instance: registers:\GEN_REG:22:REGX
- 56. Parameter Settings for User Entity Instance: registers:\GEN_REG:22:VALD
- 57. Parameter Settings for User Entity Instance: registers:\GEN_REG:23:REGX
- 58. Parameter Settings for User Entity Instance: registers:\GEN_REG:23:VALD
- 59. Parameter Settings for User Entity Instance: registers:\GEN_REG:24:REGX
- 60. Parameter Settings for User Entity Instance: registers:\GEN_REG:24:VALD
- 61. Parameter Settings for User Entity Instance: registers:\GEN_REG:25:REGX
- 62. Parameter Settings for User Entity Instance: registers:\GEN_REG:25:VALD
- 63. Parameter Settings for User Entity Instance: registers:\GEN_REG:26:REGX
- 64. Parameter Settings for User Entity Instance: registers:\GEN_REG:26:VALD
- 65. Parameter Settings for User Entity Instance: registers:\GEN_REG:27:REGX
- 66. Parameter Settings for User Entity Instance: registers:\GEN_REG:27:VALD
- 67. Parameter Settings for User Entity Instance: registers:\GEN_REG:28:REGX
- 68. Parameter Settings for User Entity Instance: registers:\GEN_REG:28:VALD
- 69. Parameter Settings for User Entity Instance: registers:\GEN_REG:29:REGX
- 70. Parameter Settings for User Entity Instance: registers:\GEN_REG:29:VALD
- 71. Parameter Settings for User Entity Instance: registers:\GEN_REG:30:REGX
- 72. Parameter Settings for User Entity Instance: registers:\GEN_REG:30:VALD
- 73. Parameter Settings for User Entity Instance: registers:\GEN_REG:31:REGX
- 74. Parameter Settings for User Entity Instance: registers:\GEN_REG:31:VALD
- 75. Parameter Settings for User Entity Instance: multiplexer:mux1
- 76. Parameter Settings for User Entity Instance: multiplexer:mux2
- 77. Port Connectivity Checks: "registers:\GEN_REG:31:REGX"
- 78. Port Connectivity Checks: "registers:\GEN_REG:30:REGX"
- 79. Port Connectivity Checks: "registers:\GEN_REG:29:REGX"
- 80. Port Connectivity Checks: "registers:\GEN_REG:28:REGX"
- 81. Port Connectivity Checks: "registers:\GEN_REG:27:REGX"
- 82. Port Connectivity Checks: "registers:\GEN_REG:26:REGX"
- 83. Port Connectivity Checks: "registers:\GEN_REG:25:REGX"
- 84. Port Connectivity Checks: "registers:\GEN_REG:24:REGX"
- 85. Port Connectivity Checks: "registers:\GEN_REG:23:REGX"
- 86. Port Connectivity Checks: "registers:\GEN_REG:22:REGX"
- 87. Port Connectivity Checks: "registers:\GEN_REG:21:REGX"
- 88. Port Connectivity Checks: "registers:\GEN_REG:20:REGX"
- 89. Port Connectivity Checks: "registers:\GEN_REG:19:REGX"
- 90. Port Connectivity Checks: "registers:\GEN_REG:18:REGX"
- 91. Port Connectivity Checks: "registers:\GEN_REG:17:REGX"
- 92. Port Connectivity Checks: "registers:\GEN_REG:16:REGX"
- 93. Port Connectivity Checks: "registers:\GEN_REG:15:REGX"
- 94. Port Connectivity Checks: "registers:\GEN_REG:14:REGX"
- 95. Port Connectivity Checks: "registers:\GEN_REG:13:REGX"
- 96. Port Connectivity Checks: "registers:\GEN_REG:12:REGX"
- 97. Port Connectivity Checks: "registers:\GEN_REG:11:REGX"
- 98. Port Connectivity Checks: "registers:\GEN_REG:10:REGX"
- 99. Port Connectivity Checks: "registers:\GEN_REG:9:REGX"
-100. Port Connectivity Checks: "registers:\GEN_REG:8:REGX"
-101. Port Connectivity Checks: "registers:\GEN_REG:7:REGX"
-102. Port Connectivity Checks: "registers:\GEN_REG:6:REGX"
-103. Port Connectivity Checks: "registers:\GEN_REG:5:REGX"
-104. Port Connectivity Checks: "registers:\GEN_REG:4:REGX"
-105. Port Connectivity Checks: "registers:\GEN_REG:3:REGX"
-106. Port Connectivity Checks: "registers:\GEN_REG:2:REGX"
-107. Port Connectivity Checks: "registers:\GEN_REG:1:REGX"
-108. Port Connectivity Checks: "registers:\GEN_REG:0:REGX"
-109. Post-Synthesis Netlist Statistics for Top Partition
-110. Elapsed Time Per Partition
-111. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |rrf
+ 10. Parameter Settings for User Entity Instance: registers:\GEN_REG:0:VALD
+ 11. Parameter Settings for User Entity Instance: registers:\GEN_REG:1:VALD
+ 12. Parameter Settings for User Entity Instance: registers:\GEN_REG:2:VALD
+ 13. Parameter Settings for User Entity Instance: registers:\GEN_REG:3:VALD
+ 14. Parameter Settings for User Entity Instance: registers:\GEN_REG:4:VALD
+ 15. Parameter Settings for User Entity Instance: registers:\GEN_REG:5:VALD
+ 16. Parameter Settings for User Entity Instance: registers:\GEN_REG:6:VALD
+ 17. Parameter Settings for User Entity Instance: registers:\GEN_REG:7:VALD
+ 18. Parameter Settings for User Entity Instance: registers:\GEN_REG:8:VALD
+ 19. Parameter Settings for User Entity Instance: registers:\GEN_REG:9:VALD
+ 20. Parameter Settings for User Entity Instance: registers:\GEN_REG:10:VALD
+ 21. Parameter Settings for User Entity Instance: registers:\GEN_REG:11:VALD
+ 22. Parameter Settings for User Entity Instance: registers:\GEN_REG:12:VALD
+ 23. Parameter Settings for User Entity Instance: registers:\GEN_REG:13:VALD
+ 24. Parameter Settings for User Entity Instance: registers:\GEN_REG:14:VALD
+ 25. Parameter Settings for User Entity Instance: registers:\GEN_REG:15:VALD
+ 26. Parameter Settings for User Entity Instance: registers:\GEN_REG:16:VALD
+ 27. Parameter Settings for User Entity Instance: registers:\GEN_REG:17:VALD
+ 28. Parameter Settings for User Entity Instance: registers:\GEN_REG:18:VALD
+ 29. Parameter Settings for User Entity Instance: registers:\GEN_REG:19:VALD
+ 30. Parameter Settings for User Entity Instance: registers:\GEN_REG:20:VALD
+ 31. Parameter Settings for User Entity Instance: registers:\GEN_REG:21:VALD
+ 32. Parameter Settings for User Entity Instance: registers:\GEN_REG:22:VALD
+ 33. Parameter Settings for User Entity Instance: registers:\GEN_REG:23:VALD
+ 34. Parameter Settings for User Entity Instance: registers:\GEN_REG:24:VALD
+ 35. Parameter Settings for User Entity Instance: registers:\GEN_REG:25:VALD
+ 36. Parameter Settings for User Entity Instance: registers:\GEN_REG:26:VALD
+ 37. Parameter Settings for User Entity Instance: registers:\GEN_REG:27:VALD
+ 38. Parameter Settings for User Entity Instance: registers:\GEN_REG:28:VALD
+ 39. Parameter Settings for User Entity Instance: registers:\GEN_REG:29:VALD
+ 40. Parameter Settings for User Entity Instance: registers:\GEN_REG:30:VALD
+ 41. Parameter Settings for User Entity Instance: registers:\GEN_REG:31:VALD
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
 
 
 
@@ -143,7 +76,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 25 00:36:45 2017       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 26 15:19:38 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; rrf                                         ;
 ; Top-level Entity Name              ; RRF                                         ;
@@ -152,7 +85,7 @@ agreement for further details.
 ;     Total combinational functions  ; 32                                          ;
 ;     Dedicated logic registers      ; 64                                          ;
 ; Total registers                    ; 64                                          ;
-; Total pins                         ; 184                                         ;
+; Total pins                         ; 98                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -263,16 +196,15 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path              ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
-; registers.vhd                    ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RRF/registers.vhd   ;         ;
-; multiplexer.vhd                  ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RRF/multiplexer.vhd ;         ;
-; components.vhd                   ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RRF/components.vhd  ;         ;
-; rrf.vhd                          ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RRF/rrf.vhd         ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; ../ALL Code Files/rrf.vhd        ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rrf.vhd        ;         ;
+; ../ALL Code Files/registers.vhd  ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd  ;         ;
+; ../ALL Code Files/components.vhd ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -296,14 +228,14 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 64        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 184       ;
+; I/O pins                                    ; 98        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 64        ;
-; Total fan-out                               ; 472       ;
-; Average fan-out                             ; 1.02      ;
+; Total fan-out                               ; 386       ;
+; Average fan-out                             ; 1.32      ;
 +---------------------------------------------+-----------+
 
 
@@ -312,7 +244,7 @@ agreement for further details.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-------------+--------------+
-; |RRF                            ; 32 (0)              ; 64 (0)                    ; 0           ; 0            ; 0       ; 0         ; 184  ; 0            ; |RRF                            ; RRF         ; work         ;
+; |RRF                            ; 32 (0)              ; 64 (0)                    ; 0           ; 0            ; 0       ; 0         ; 98   ; 0            ; |RRF                            ; RRF         ; work         ;
 ;    |registers:\GEN_REG:0:VALD|  ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RRF|registers:\GEN_REG:0:VALD  ; registers   ; work         ;
 ;    |registers:\GEN_REG:10:VALD| ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RRF|registers:\GEN_REG:10:VALD ; registers   ; work         ;
 ;    |registers:\GEN_REG:11:VALD| ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RRF|registers:\GEN_REG:11:VALD ; registers   ; work         ;
@@ -349,80 +281,6 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                       ;
-+------------------------------------------+-----------------------------------------------+
-; Register name                            ; Reason for Removal                            ;
-+------------------------------------------+-----------------------------------------------+
-; registers:\GEN_REG:0:REGX|data[1..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:0:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:10:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:10:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:11:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:11:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:12:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:12:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:13:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:13:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:14:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:14:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:15:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:15:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:16:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:16:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:17:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:17:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:18:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:18:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:19:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:19:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:1:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:1:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:20:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:20:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:21:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:21:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:22:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:22:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:23:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:23:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:24:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:24:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:25:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:25:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:26:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:26:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:27:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:27:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:28:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:28:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:29:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:29:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:2:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:2:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:30:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:30:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:31:REGX|data[0..15]   ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:31:REGX|output[0..15] ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:3:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:3:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:4:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:4:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:5:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:5:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:6:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:6:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:7:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:7:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:8:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:8:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:9:REGX|data[0..15]    ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:9:REGX|output[0..15]  ; Merged with registers:\GEN_REG:0:REGX|data[0] ;
-; registers:\GEN_REG:0:REGX|data[0]        ; Stuck at GND due to stuck port data_in        ;
-; Total Number of Removed Registers = 1024 ;                                               ;
-+------------------------------------------+-----------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -449,31 +307,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:0:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:0:VALD ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
 ; n              ; 1     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:1:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -489,31 +327,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:2:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:2:VALD ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
 ; n              ; 1     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:3:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -529,31 +347,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:4:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:4:VALD ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
 ; n              ; 1     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:5:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -569,31 +367,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:6:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:6:VALD ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
 ; n              ; 1     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:7:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -609,31 +387,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:8:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:8:VALD ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
 ; n              ; 1     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:9:REGX ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 16    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -649,31 +407,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:10:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:10:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:11:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -689,31 +427,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:12:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:12:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:13:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -729,31 +447,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:14:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:14:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:15:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -769,31 +467,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:16:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:16:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:17:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -809,31 +487,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:18:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:18:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:19:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -849,31 +507,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:20:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:20:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:21:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -889,31 +527,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:22:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:22:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:23:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -929,31 +547,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:24:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:24:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:25:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -969,31 +567,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:26:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:26:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:27:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1009,31 +587,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:28:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:28:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:29:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1049,31 +607,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:30:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: registers:\GEN_REG:30:VALD ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
 ; n              ; 1     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: registers:\GEN_REG:31:REGX ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; n              ; 16    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1088,363 +626,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: multiplexer:mux1 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; x              ; 32    ; Signed Integer                       ;
-; y              ; 16    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: multiplexer:mux2 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; x              ; 32    ; Signed Integer                       ;
-; y              ; 16    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:31:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:30:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:29:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:28:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:27:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:26:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:25:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:24:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:23:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:22:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:21:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:20:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:19:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:18:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:17:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:16:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:15:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:14:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:13:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:12:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:11:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+--------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:10:REGX" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; input  ; Input ; Info     ; Stuck at GND               ;
-; enable ; Input ; Info     ; Stuck at GND               ;
-+--------+-------+----------+----------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:9:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:8:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:7:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:6:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:5:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:4:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:3:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:2:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:1:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:0:REGX" ;
-+--------+-------+----------+---------------------------+
-; Port   ; Type  ; Severity ; Details                   ;
-+--------+-------+----------+---------------------------+
-; input  ; Input ; Info     ; Stuck at GND              ;
-; enable ; Input ; Info     ; Stuck at GND              ;
-+--------+-------+----------+---------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 184                         ;
+; boundary_port         ; 98                          ;
 ; cycloneiii_ff         ; 64                          ;
 ;     plain             ; 64                          ;
-; cycloneiii_lcell_comb ; 33                          ;
-;     normal            ; 33                          ;
-;         0 data inputs ; 1                           ;
+; cycloneiii_lcell_comb ; 32                          ;
+;     normal            ; 32                          ;
 ;         4 data inputs ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.79                        ;
+; Average LUT depth     ; 0.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1453,7 +648,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1463,130 +658,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Tue Apr 25 00:36:27 2017
+    Info: Processing started: Wed Apr 26 15:19:22 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rrf -c rrf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file registers.vhd
-    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/RRF/registers.vhd Line: 13
-    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/RRF/registers.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file multiplexer.vhd
-    Info (12022): Found design unit 1: multiplexer-m File: C:/Users/dell/Desktop/RRF/multiplexer.vhd Line: 17
-    Info (12023): Found entity 1: multiplexer File: C:/Users/dell/Desktop/RRF/multiplexer.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file mux8.vhd
-    Info (12022): Found design unit 1: mux8-Behave File: C:/Users/dell/Desktop/RRF/mux8.vhd Line: 14
-    Info (12023): Found entity 1: mux8 File: C:/Users/dell/Desktop/RRF/mux8.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file demux.vhd
-    Info (12022): Found design unit 1: demux-dm File: C:/Users/dell/Desktop/RRF/demux.vhd Line: 17
-    Info (12023): Found entity 1: demux File: C:/Users/dell/Desktop/RRF/demux.vhd Line: 9
-Info (12021): Found 1 design units, including 0 entities, in source file components.vhd
-    Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/RRF/components.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file rrf.vhd
-    Info (12022): Found design unit 1: RRF-files File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 33
-    Info (12023): Found entity 1: RRF File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/rrf.vhd
+    Info (12022): Found design unit 1: RRF-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rrf.vhd Line: 22
+    Info (12023): Found entity 1: RRF File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rrf.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
+    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 13
+    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/components.vhd
+    Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd Line: 5
 Info (12127): Elaborating entity "rrf" for the top level hierarchy
-Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:REGX" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 48
-Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:VALD" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 54
-Info (12128): Elaborating entity "multiplexer" for hierarchy "multiplexer:mux1" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 65
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output1[0]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[1]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[2]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[3]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[4]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[5]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[6]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[7]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[8]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[9]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[10]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[11]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[12]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[13]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[14]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output1[15]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 26
-    Warning (13410): Pin "output2[0]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[1]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[2]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[3]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[4]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[5]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[6]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[7]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[8]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[9]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[10]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[11]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[12]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[13]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[14]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
-    Warning (13410): Pin "output2[15]" is stuck at GND File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 27
+Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:VALD" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rrf.vhd Line: 37
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 54 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "in_sel1[0]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 14
-    Warning (15610): No output dependent on input pin "in_sel1[1]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 14
-    Warning (15610): No output dependent on input pin "in_sel1[2]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 14
-    Warning (15610): No output dependent on input pin "in_sel1[3]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 14
-    Warning (15610): No output dependent on input pin "in_sel1[4]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 14
-    Warning (15610): No output dependent on input pin "in_sel2[0]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 15
-    Warning (15610): No output dependent on input pin "in_sel2[1]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 15
-    Warning (15610): No output dependent on input pin "in_sel2[2]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 15
-    Warning (15610): No output dependent on input pin "in_sel2[3]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 15
-    Warning (15610): No output dependent on input pin "in_sel2[4]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 15
-    Warning (15610): No output dependent on input pin "input1[0]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[1]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[2]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[3]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[4]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[5]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[6]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[7]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[8]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[9]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[10]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[11]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[12]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[13]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[14]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input1[15]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input2[0]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[1]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[2]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[3]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[4]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[5]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[6]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[7]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[8]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[9]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[10]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[11]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[12]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[13]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[14]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input2[15]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 17
-    Warning (15610): No output dependent on input pin "wren1" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 18
-    Warning (15610): No output dependent on input pin "wren2" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 19
-    Warning (15610): No output dependent on input pin "osel1[4]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 28
-    Warning (15610): No output dependent on input pin "osel1[3]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 28
-    Warning (15610): No output dependent on input pin "osel1[2]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 28
-    Warning (15610): No output dependent on input pin "osel1[1]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 28
-    Warning (15610): No output dependent on input pin "osel1[0]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 28
-    Warning (15610): No output dependent on input pin "osel2[4]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 29
-    Warning (15610): No output dependent on input pin "osel2[3]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 29
-    Warning (15610): No output dependent on input pin "osel2[2]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 29
-    Warning (15610): No output dependent on input pin "osel2[1]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 29
-    Warning (15610): No output dependent on input pin "osel2[0]" File: C:/Users/dell/Desktop/RRF/rrf.vhd Line: 29
-Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 120 input pins
-    Info (21059): Implemented 64 output pins
+Info (21057): Implemented 194 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 66 input pins
+    Info (21059): Implemented 32 output pins
     Info (21061): Implemented 96 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 89 warnings
-    Info: Peak virtual memory: 677 megabytes
-    Info: Processing ended: Tue Apr 25 00:36:45 2017
-    Info: Elapsed time: 00:00:18
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 675 megabytes
+    Info: Processing ended: Wed Apr 26 15:19:38 2017
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:34
 
 

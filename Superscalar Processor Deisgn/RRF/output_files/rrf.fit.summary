@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Apr 25 00:36:59 2017
+Fitter Status : Successful - Wed Apr 26 15:19:46 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : rrf
 Top-level Entity Name : RRF
 Family : Cyclone IV E
-Device : EP4CE15F23C6
+Device : EP4CE6F17C6
 Timing Models : Final
-Total logic elements : 64 / 15,408 ( < 1 % )
-    Total combinational functions : 32 / 15,408 ( < 1 % )
-    Dedicated logic registers : 64 / 15,408 ( < 1 % )
+Total logic elements : 64 / 6,272 ( 1 % )
+    Total combinational functions : 32 / 6,272 ( < 1 % )
+    Dedicated logic registers : 64 / 6,272 ( 1 % )
 Total registers : 64
-Total pins : 184 / 344 ( 53 % )
+Total pins : 98 / 180 ( 54 % )
 Total virtual pins : 0
-Total memory bits : 0 / 516,096 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
