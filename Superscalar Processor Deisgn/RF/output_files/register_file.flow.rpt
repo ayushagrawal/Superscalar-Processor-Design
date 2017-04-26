@@ -1,5 +1,5 @@
 Flow report for register_file
-Wed Apr 26 15:31:47 2017
+Wed Apr 26 16:00:57 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 26 15:31:43 2017       ;
+; Flow Status                        ; Successful - Wed Apr 26 16:00:54 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/26/2017 15:31:18 ;
+; Start date & time ; 04/26/2017 16:00:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; register_file       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149320087814256        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149320262808144        ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -91,11 +91,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 674 MB              ; 00:00:29                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 1116 MB             ; 00:00:08                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 678 MB              ; 00:00:32                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 1119 MB             ; 00:00:08                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 564 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 640 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:40                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 637 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:43                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

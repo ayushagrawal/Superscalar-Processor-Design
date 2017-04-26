@@ -53,7 +53,12 @@ architecture rFile of register_file is
 	signal validity_in,validity_out,val_en_ch : main_array(0 to 7)(0 downto 0);
 	signal rrf_valid_in,rrf_valid_out,rrf_valid_en  : main_array(0 to 31)(0 downto 0);
 	signal temp : std_logic_vector(31 downto 0);
+	signal tag1,tag2 : std_logic_vector(15 downto 0);		-- Because tag size has to be equal to data size
+	signal only_one : std_logic := '0';		-- Indicates that only one renamed register is available
 begin
+	
+	tag1(15 downto 3) <= (others => '0');
+	tag2(15 downto 3) <= (others => '0');
 	
 	ar_file : ARF port map(reset => reset,
 								  clk => clk,
@@ -111,9 +116,11 @@ begin
 	end process;
 	
 	-------------------------------- RENAMED REGISTER FILE -----------------------------------
-	-- 1. Validity bit of a register is not chnaged to '0' until we receive a corresponding broadcast
+	-- 1. Validity bit of a register is not changed to '0' until we receive a corresponding broadcast
 	-- 2. If all the valid bits are '1' then we need to stall FETCH and DECODE
 	
+	
+	--------------------- INTERFACING -------------------------
 	rr_file : RRF  generic map(N => 32) 
 						port map(reset 	 		=> reset,
 									clk   	 		=> clk,										  
@@ -121,13 +128,40 @@ begin
 									validity_out 	=> rrf_valid_out,
 														  
 									val_en_ch 		=> rrf_valid_en);
+	--_________________ END INTERFACING _____________________--
 	
-	----------- STALL LOGIC -----------
-	temp(0) <= rrf_valid_out(0)(0);
-   gen: for i in 1 to 31 generate
-       temp(i) <= temp(i-1) and rrf_valid_out(i)(0);
-   end generate;
-	stall_out <= temp(31);
-	-----------------------------------
-
+	process(rrf_valid_out)
+		variable count : integer := 0;
+		variable stall,one : std_logic := '0';
+	begin
+		for i in 0 to 31 loop
+			if(rrf_valid_out(i)(0) = '0') then		-- Implying that the entry is free
+				if(count = 0) then
+					count := 1;
+					tag1(2 downto 0) <= std_logic_vector(to_unsigned(i,3));
+				elsif(count = 1) then
+					count := 2;
+					tag2(2 downto 0) <= std_logic_vector(to_unsigned(i,3));
+				end if;
+			end if;
+		end loop;
+		----------- STALL LOGIC -----------
+		
+		if(count = 0) then
+			stall := '1';
+		elsif(count = 1) then
+			one := '1';
+		else
+			one := '0';
+			stall := '0';
+		end if;
+		stall_out <= stall;
+		only_one <= one;
+		
+		--_______ END STALL LOGIC _______--
+		
+	end process;
+	
+	--____________________________ END RENAMED REGISTER FILE _______________________________--
+	
 end architecture;

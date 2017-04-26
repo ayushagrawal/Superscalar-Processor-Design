@@ -1,5 +1,5 @@
 Fitter report for register_file
-Wed Apr 26 15:31:40 2017
+Wed Apr 26 16:00:51 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 26 15:31:40 2017       ;
+; Fitter Status                      ; Successful - Wed Apr 26 16:00:51 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
@@ -2098,9 +2098,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/RF/output_files/register_file.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1116 megabytes
-    Info: Processing ended: Wed Apr 26 15:31:40 2017
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 1119 megabytes
+    Info: Processing ended: Wed Apr 26 16:00:52 2017
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 
 

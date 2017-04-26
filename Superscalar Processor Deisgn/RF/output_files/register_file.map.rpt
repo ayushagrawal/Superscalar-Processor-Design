@@ -1,5 +1,5 @@
 Analysis & Synthesis report for register_file
-Wed Apr 26 15:31:31 2017
+Wed Apr 26 16:00:43 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -15,70 +15,71 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX
- 11. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD
- 12. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX
- 13. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD
- 14. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX
- 15. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD
- 16. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX
- 17. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD
- 18. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX
- 19. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD
- 20. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX
- 21. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD
- 22. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX
- 23. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD
- 24. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX
- 25. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD
- 26. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1
- 27. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2
- 28. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3
- 29. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4
- 30. Parameter Settings for User Entity Instance: RRF:rr_file
- 31. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD
- 32. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD
- 33. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD
- 34. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD
- 35. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD
- 36. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD
- 37. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD
- 38. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD
- 39. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD
- 40. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD
- 41. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD
- 42. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD
- 43. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD
- 44. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD
- 45. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD
- 46. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD
- 47. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD
- 48. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD
- 49. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD
- 50. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD
- 51. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD
- 52. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD
- 53. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD
- 54. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD
- 55. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD
- 56. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD
- 57. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD
- 58. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD
- 59. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD
- 60. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD
- 61. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD
- 62. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD
- 63. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX"
- 64. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX"
- 65. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX"
- 66. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX"
- 67. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX"
- 68. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX"
- 69. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX"
- 70. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX"
- 71. Post-Synthesis Netlist Statistics for Top Partition
- 72. Elapsed Time Per Partition
- 73. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX
+ 12. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD
+ 13. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX
+ 14. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD
+ 15. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX
+ 16. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD
+ 17. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX
+ 18. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD
+ 19. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX
+ 20. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD
+ 21. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX
+ 22. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD
+ 23. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX
+ 24. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD
+ 25. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX
+ 26. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD
+ 27. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1
+ 28. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2
+ 29. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3
+ 30. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4
+ 31. Parameter Settings for User Entity Instance: RRF:rr_file
+ 32. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD
+ 33. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD
+ 34. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD
+ 35. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD
+ 36. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD
+ 37. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD
+ 38. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD
+ 39. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD
+ 40. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD
+ 41. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD
+ 42. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD
+ 43. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD
+ 44. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD
+ 45. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD
+ 46. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD
+ 47. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD
+ 48. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD
+ 49. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD
+ 50. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD
+ 51. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD
+ 52. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD
+ 53. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD
+ 54. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD
+ 55. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD
+ 56. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD
+ 57. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD
+ 58. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD
+ 59. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD
+ 60. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD
+ 61. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD
+ 62. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD
+ 63. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD
+ 64. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX"
+ 65. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX"
+ 66. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX"
+ 67. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX"
+ 68. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX"
+ 69. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX"
+ 70. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX"
+ 71. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX"
+ 72. Post-Synthesis Netlist Statistics for Top Partition
+ 73. Elapsed Time Per Partition
+ 74. Analysis & Synthesis Messages
 
 
 
@@ -105,7 +106,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 26 15:31:31 2017       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 26 16:00:43 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
@@ -284,7 +285,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+------------------------------------------------------------+
 ; Register name                                       ; Reason for Removal                                         ;
 +-----------------------------------------------------+------------------------------------------------------------+
-; RRF:rr_file|registers:\GEN_REG:0:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:0:REGX|data[1..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:0:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:1:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
@@ -301,6 +301,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ARF:ar_file|registers:\GEN_REG:6:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:7:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:7:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:0:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:0:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:1:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:1:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:2:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:2:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:3:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:3:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:4:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:4:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:5:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:5:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:6:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:6:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:7:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:7:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:0:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]  ;
 ; RRF:rr_file|registers:\GEN_REG:1:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:1:VALD|data[0]  ;
 ; RRF:rr_file|registers:\GEN_REG:2:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:2:VALD|data[0]  ;
 ; RRF:rr_file|registers:\GEN_REG:3:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:3:VALD|data[0]  ;
@@ -332,14 +341,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RRF:rr_file|registers:\GEN_REG:29:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:29:VALD|data[0] ;
 ; RRF:rr_file|registers:\GEN_REG:30:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] ;
 ; RRF:rr_file|registers:\GEN_REG:31:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:31:VALD|data[0] ;
-; ARF:ar_file|registers:\GEN_REG:0:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:0:VALD|data[0]  ;
-; ARF:ar_file|registers:\GEN_REG:1:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:1:VALD|data[0]  ;
-; ARF:ar_file|registers:\GEN_REG:2:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:2:VALD|data[0]  ;
-; ARF:ar_file|registers:\GEN_REG:3:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:3:VALD|data[0]  ;
-; ARF:ar_file|registers:\GEN_REG:4:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:4:VALD|data[0]  ;
-; ARF:ar_file|registers:\GEN_REG:5:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:5:VALD|data[0]  ;
-; ARF:ar_file|registers:\GEN_REG:6:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:6:VALD|data[0]  ;
-; ARF:ar_file|registers:\GEN_REG:7:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:7:VALD|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]       ; Stuck at GND due to stuck port data_in                     ;
 ; RRF:rr_file|registers:\GEN_REG:31:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
 ; RRF:rr_file|registers:\GEN_REG:30:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
@@ -398,6 +399,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -1044,7 +1084,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Apr 26 15:31:18 2017
+    Info: Processing started: Wed Apr 26 16:00:28 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register_file -c register_file
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1075,11 +1115,50 @@ Warning (10541): VHDL Signal Declaration warning at register_file.vhd(53): used 
 Warning (10541): VHDL Signal Declaration warning at register_file.vhd(53): used implicit default value for signal "val_en_ch" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 53
 Warning (10541): VHDL Signal Declaration warning at register_file.vhd(54): used implicit default value for signal "rrf_valid_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 54
 Warning (10541): VHDL Signal Declaration warning at register_file.vhd(54): used implicit default value for signal "rrf_valid_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 54
-Warning (10492): VHDL Process Statement warning at register_file.vhd(94): signal "validity_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at register_file.vhd(94): signal "r1_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at register_file.vhd(106): signal "validity_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at register_file.vhd(106): signal "r2_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 106
-Info (12128): Elaborating entity "ARF" for hierarchy "ARF:ar_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 58
+Warning (10036): Verilog HDL or VHDL warning at register_file.vhd(56): object "tag1" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at register_file.vhd(56): object "tag2" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at register_file.vhd(57): object "only_one" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at register_file.vhd(99): signal "validity_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at register_file.vhd(99): signal "r1_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at register_file.vhd(111): signal "validity_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 111
+Warning (10492): VHDL Process Statement warning at register_file.vhd(111): signal "r2_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 111
+Warning (10631): VHDL Process Statement warning at register_file.vhd(133): inferring latch(es) for signal or variable "count", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 133
+Warning (10631): VHDL Process Statement warning at register_file.vhd(133): inferring latch(es) for signal or variable "stall", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 133
+Warning (10631): VHDL Process Statement warning at register_file.vhd(133): inferring latch(es) for signal or variable "one", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 133
+Info (10041): Inferred latch for "stall" at register_file.vhd(150) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 150
+Info (10041): Inferred latch for "count[0]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[1]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[2]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[3]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[4]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[5]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[6]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[7]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[8]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[9]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[10]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[11]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[12]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[13]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[14]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[15]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[16]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[17]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[18]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[19]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[20]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[21]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[22]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[23]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[24]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[25]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[26]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[27]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[28]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[29]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[30]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (10041): Inferred latch for "count[31]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
+Info (12128): Elaborating entity "ARF" for hierarchy "ARF:ar_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 63
 Warning (10492): VHDL Process Statement warning at ARF.vhd(103): signal "input3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 103
 Warning (10492): VHDL Process Statement warning at ARF.vhd(103): signal "in_sel3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 103
 Warning (10492): VHDL Process Statement warning at ARF.vhd(104): signal "input4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 104
@@ -1091,7 +1170,7 @@ Warning (10492): VHDL Process Statement warning at ARF.vhd(113): signal "in_sel4
 Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:REGX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 55
 Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:VALD" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 61
 Info (12128): Elaborating entity "multiplexer" for hierarchy "ARF:ar_file|multiplexer:mux1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 72
-Info (12128): Elaborating entity "RRF" for hierarchy "RRF:rr_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 117
+Info (12128): Elaborating entity "RRF" for hierarchy "RRF:rr_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 124
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "stall_out" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 12
     Warning (13410): Pin "out_data1[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 29
@@ -1276,10 +1355,10 @@ Warning (21074): Design contains 108 input pin(s) that do not drive logic
 Info (21057): Implemented 177 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 108 input pins
     Info (21059): Implemented 69 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 198 warnings
-    Info: Peak virtual memory: 674 megabytes
-    Info: Processing ended: Wed Apr 26 15:31:31 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 204 warnings
+    Info: Peak virtual memory: 678 megabytes
+    Info: Processing ended: Wed Apr 26 16:00:43 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
 
 
