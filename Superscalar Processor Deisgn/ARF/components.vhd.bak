@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.math_real.all;
+
+package components is
+	
+	type main_array is array(natural range <>) of std_logic_vector;
+	
+	component registers is
+		generic(N  : integer);
+		port(input : in std_logic_vector(N-1 downto 0);
+			  enable: in std_logic;
+			  output: out std_logic_vector(N-1 downto 0);
+			  clk   : in std_logic;
+			  reset : in std_logic);
+	end component;
+	
+	component multiplexer is
+		generic(X : integer;
+				  Y : integer);
+		port(output : out std_logic_vector(Y-1 downto 0);
+			  input  : in main_array(0 to X-1)(Y-1 downto 0);
+			  sel		: in std_logic_vector(natural(log2(real(X)))-1 downto 0));
+
+	end component;
+	
+	component reorder_buffer is
+	
+		generic(N : integer);		-- Represets total number of entries
+		port(input			: in std_logic_vector(21 downto 0);
+			  wr_en			: in std_logic;								-- When writing to ROB
+			  
+			  clk				: in std_logic;
+			  reset			: in std_logic;
+			  stall			: out std_logic;
+			  output			: out std_logic_vector(21 downto 0));
+
+	end component;
+	
+end package;

@@ -1,0 +1,9 @@
+set_global_assignment -name IP_TOOL_NAME "PARALLEL_ADD"
+set_global_assignment -name IP_TOOL_VERSION "16.1"
+set_global_assignment -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV E}"
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "inc.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "inc.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "inc_inst.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "inc.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "inc.cmp"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "inc_syn.v"]

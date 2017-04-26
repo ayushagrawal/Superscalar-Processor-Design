@@ -1,0 +1,1243 @@
+Analysis & Synthesis report for register_file
+Tue Apr 25 02:38:27 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX
+ 11. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD
+ 12. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX
+ 13. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD
+ 14. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX
+ 15. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD
+ 16. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX
+ 17. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD
+ 18. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX
+ 19. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD
+ 20. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX
+ 21. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD
+ 22. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX
+ 23. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD
+ 24. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX
+ 25. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD
+ 26. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1
+ 27. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2
+ 28. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3
+ 29. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4
+ 30. Parameter Settings for User Entity Instance: RRF:rr_file
+ 31. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD
+ 32. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD
+ 33. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD
+ 34. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD
+ 35. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD
+ 36. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD
+ 37. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD
+ 38. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD
+ 39. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD
+ 40. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD
+ 41. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD
+ 42. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD
+ 43. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD
+ 44. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD
+ 45. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD
+ 46. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD
+ 47. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD
+ 48. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD
+ 49. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD
+ 50. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD
+ 51. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD
+ 52. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD
+ 53. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD
+ 54. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD
+ 55. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD
+ 56. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD
+ 57. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD
+ 58. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD
+ 59. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD
+ 60. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD
+ 61. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD
+ 62. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD
+ 63. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX"
+ 64. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX"
+ 65. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX"
+ 66. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX"
+ 67. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX"
+ 68. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX"
+ 69. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX"
+ 70. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX"
+ 71. Post-Synthesis Netlist Statistics for Top Partition
+ 72. Elapsed Time Per Partition
+ 73. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Apr 25 02:38:27 2017       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; register_file                               ;
+; Top-level Entity Name              ; register_file                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 137                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; register_file      ; register_file      ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                        ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                 ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; rrf.vhd                          ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RF/rrf.vhd             ;         ;
+; components.vhd                   ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RF/components.vhd      ;         ;
+; ARF.vhd                          ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RF/ARF.vhd             ;         ;
+; ../DECODE/multiplexer.vhd        ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/DECODE/multiplexer.vhd ;         ;
+; ../FETCH/registers.vhd           ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/FETCH/registers.vhd    ;         ;
+; register_file.vhd                ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/RF/register_file.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 137   ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 137   ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; |register_file             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 137  ; 0            ; |register_file      ; register_file ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                               ;
++-----------------------------------------------------+------------------------------------------------------------+
+; Register name                                       ; Reason for Removal                                         ;
++-----------------------------------------------------+------------------------------------------------------------+
+; RRF:rr_file|registers:\GEN_REG:0:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:0:REGX|data[1..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:0:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:1:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:1:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:2:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:2:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:3:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:3:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:4:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:4:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:5:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:5:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:6:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:6:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:7:REGX|data[0..15]   ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:7:REGX|output[0..15] ; Merged with ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:1:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:1:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:2:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:2:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:3:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:3:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:4:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:4:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:5:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:5:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:6:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:6:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:7:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:7:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:8:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:8:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:9:VALD|output[0]     ; Merged with RRF:rr_file|registers:\GEN_REG:9:VALD|data[0]  ;
+; RRF:rr_file|registers:\GEN_REG:10:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:10:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:11:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:11:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:12:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:12:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:13:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:13:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:14:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:14:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:15:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:15:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:16:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:16:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:17:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:17:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:18:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:18:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:19:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:19:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:20:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:20:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:21:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:21:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:22:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:22:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:23:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:23:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:24:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:24:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:25:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:25:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:26:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:26:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:27:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:27:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:28:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:28:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:29:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:29:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:30:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] ;
+; RRF:rr_file|registers:\GEN_REG:31:VALD|output[0]    ; Merged with RRF:rr_file|registers:\GEN_REG:31:VALD|data[0] ;
+; ARF:ar_file|registers:\GEN_REG:0:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:0:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:1:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:1:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:2:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:2:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:3:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:3:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:4:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:4:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:5:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:5:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:6:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:6:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:7:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:7:VALD|data[0]  ;
+; ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:31:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:30:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:29:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:28:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:27:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:26:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:25:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:24:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:23:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:22:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:21:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:20:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:19:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:18:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:17:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:16:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:15:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:14:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:13:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:12:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:11:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:10:VALD|data[0]      ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:9:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:8:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:7:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:6:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:5:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:4:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:3:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:2:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:1:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:7:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:6:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:5:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:4:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:3:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:2:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:1:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; ARF:ar_file|registers:\GEN_REG:0:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; Total Number of Removed Registers = 336             ;                                                            ;
++-----------------------------------------------------+------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; x              ; 8     ; Signed Integer                                   ;
+; y              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; x              ; 8     ; Signed Integer                                   ;
+; y              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; x              ; 8     ; Signed Integer                                   ;
+; y              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; x              ; 8     ; Signed Integer                                   ;
+; y              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; input  ; Input ; Info     ; Stuck at GND                          ;
+; enable ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 137                         ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Tue Apr 25 02:38:12 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register_file -c register_file
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file rrf.vhd
+    Info (12022): Found design unit 1: RRF-files File: C:/Users/dell/Desktop/RF/rrf.vhd Line: 23
+    Info (12023): Found entity 1: RRF File: C:/Users/dell/Desktop/RF/rrf.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file mux8.vhd
+    Info (12022): Found design unit 1: mux8-Behave File: C:/Users/dell/Desktop/RF/mux8.vhd Line: 14
+    Info (12023): Found entity 1: mux8 File: C:/Users/dell/Desktop/RF/mux8.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file mux2.vhd
+    Info (12022): Found design unit 1: mux2-Behave File: C:/Users/dell/Desktop/RF/mux2.vhd Line: 11
+    Info (12023): Found entity 1: mux2 File: C:/Users/dell/Desktop/RF/mux2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file demux.vhd
+    Info (12022): Found design unit 1: demux-dm File: C:/Users/dell/Desktop/RF/demux.vhd Line: 17
+    Info (12023): Found entity 1: demux File: C:/Users/dell/Desktop/RF/demux.vhd Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file components.vhd
+    Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/RF/components.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file arf.vhd
+    Info (12022): Found design unit 1: ARF-files File: C:/Users/dell/Desktop/RF/ARF.vhd Line: 34
+    Info (12023): Found entity 1: ARF File: C:/Users/dell/Desktop/RF/ARF.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/decode/multiplexer.vhd
+    Info (12022): Found design unit 1: multiplexer-m File: C:/Users/dell/Desktop/DECODE/multiplexer.vhd Line: 17
+    Info (12023): Found entity 1: multiplexer File: C:/Users/dell/Desktop/DECODE/multiplexer.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/fetch/registers.vhd
+    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/FETCH/registers.vhd Line: 13
+    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/FETCH/registers.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
+    Info (12022): Found design unit 1: register_file-rFile File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 45
+    Info (12023): Found entity 1: register_file File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 8
+Info (12127): Elaborating entity "register_file" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at register_file.vhd(46): used implicit default value for signal "rrf_tag1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 46
+Warning (10541): VHDL Signal Declaration warning at register_file.vhd(46): used implicit default value for signal "rrf_tag2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 46
+Warning (10541): VHDL Signal Declaration warning at register_file.vhd(47): used implicit default value for signal "validity_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 47
+Warning (10541): VHDL Signal Declaration warning at register_file.vhd(47): used implicit default value for signal "val_en_ch" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 47
+Warning (10541): VHDL Signal Declaration warning at register_file.vhd(48): used implicit default value for signal "rrf_valid_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 48
+Warning (10541): VHDL Signal Declaration warning at register_file.vhd(48): used implicit default value for signal "rrf_valid_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at register_file.vhd(82): signal "validity_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at register_file.vhd(82): signal "r1_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at register_file.vhd(94): signal "validity_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at register_file.vhd(94): signal "r2_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 94
+Info (12128): Elaborating entity "ARF" for hierarchy "ARF:ar_file" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 52
+Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:REGX" File: C:/Users/dell/Desktop/RF/ARF.vhd Line: 49
+Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:VALD" File: C:/Users/dell/Desktop/RF/ARF.vhd Line: 55
+Info (12128): Elaborating entity "multiplexer" for hierarchy "ARF:ar_file|multiplexer:mux1" File: C:/Users/dell/Desktop/RF/ARF.vhd Line: 66
+Info (12128): Elaborating entity "RRF" for hierarchy "RRF:rr_file" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 104
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "stall_out" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 12
+    Warning (13410): Pin "out_data1[0]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[1]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[2]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[3]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[4]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[5]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[6]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[7]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[8]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[9]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[10]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[11]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[12]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[13]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[14]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[15]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data1[16]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 29
+    Warning (13410): Pin "out_data2[0]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[1]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[2]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[3]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[4]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[5]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[6]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[7]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[8]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[9]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[10]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[11]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[12]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[13]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[14]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[15]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data2[16]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 30
+    Warning (13410): Pin "out_data3[0]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[1]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[2]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[3]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[4]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[5]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[6]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[7]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[8]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[9]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[10]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[11]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[12]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[13]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[14]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[15]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data3[16]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 31
+    Warning (13410): Pin "out_data4[0]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[1]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[2]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[3]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[4]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[5]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[6]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[7]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[8]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[9]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[10]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[11]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[12]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[13]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[14]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[15]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+    Warning (13410): Pin "out_data4[16]" is stuck at GND File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 32
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 68 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 10
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 11
+    Warning (15610): No output dependent on input pin "write_back_check1" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 14
+    Warning (15610): No output dependent on input pin "write_back_check2" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "r1_validity_1" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 16
+    Warning (15610): No output dependent on input pin "r2_validity_1" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 17
+    Warning (15610): No output dependent on input pin "r1_validity_2" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 18
+    Warning (15610): No output dependent on input pin "r2_validity_2" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 19
+    Warning (15610): No output dependent on input pin "r3_1[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 22
+    Warning (15610): No output dependent on input pin "r3_1[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 22
+    Warning (15610): No output dependent on input pin "r3_1[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 22
+    Warning (15610): No output dependent on input pin "r3_2[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 25
+    Warning (15610): No output dependent on input pin "r3_2[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 25
+    Warning (15610): No output dependent on input pin "r3_2[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 25
+    Warning (15610): No output dependent on input pin "in_sel1[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 35
+    Warning (15610): No output dependent on input pin "in_sel1[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 35
+    Warning (15610): No output dependent on input pin "in_sel1[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 35
+    Warning (15610): No output dependent on input pin "in_sel2[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 36
+    Warning (15610): No output dependent on input pin "in_sel2[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 36
+    Warning (15610): No output dependent on input pin "in_sel2[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 36
+    Warning (15610): No output dependent on input pin "input1[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[3]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[4]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[5]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[6]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[7]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[8]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[9]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[10]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[11]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[12]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[13]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[14]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input1[15]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 37
+    Warning (15610): No output dependent on input pin "input2[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[3]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[4]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[5]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[6]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[7]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[8]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[9]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[10]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[11]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[12]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[13]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[14]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "input2[15]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 38
+    Warning (15610): No output dependent on input pin "wren1" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 39
+    Warning (15610): No output dependent on input pin "wren2" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 40
+    Warning (15610): No output dependent on input pin "r1_1[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 20
+    Warning (15610): No output dependent on input pin "r1_1[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 20
+    Warning (15610): No output dependent on input pin "r1_1[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 20
+    Warning (15610): No output dependent on input pin "r2_1[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 21
+    Warning (15610): No output dependent on input pin "r2_1[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 21
+    Warning (15610): No output dependent on input pin "r2_1[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 21
+    Warning (15610): No output dependent on input pin "r1_2[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 23
+    Warning (15610): No output dependent on input pin "r1_2[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 23
+    Warning (15610): No output dependent on input pin "r1_2[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 23
+    Warning (15610): No output dependent on input pin "data_dep_1" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 26
+    Warning (15610): No output dependent on input pin "r2_2[2]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 24
+    Warning (15610): No output dependent on input pin "r2_2[1]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 24
+    Warning (15610): No output dependent on input pin "r2_2[0]" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 24
+    Warning (15610): No output dependent on input pin "data_dep_2" File: C:/Users/dell/Desktop/RF/register_file.vhd Line: 27
+Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
+    Info (21059): Implemented 69 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 150 warnings
+    Info: Peak virtual memory: 677 megabytes
+    Info: Processing ended: Tue Apr 25 02:38:27 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
+
+

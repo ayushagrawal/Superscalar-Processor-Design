@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Apr 26 14:31:45 2017
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : ARF
+Top-level Entity Name : ARF
+Family : Cyclone IV E
+Device : EP4CE15F23C6
+Timing Models : Final
+Total logic elements : 16 / 15,408 ( < 1 % )
+    Total combinational functions : 8 / 15,408 ( < 1 % )
+    Dedicated logic registers : 16 / 15,408 ( < 1 % )
+Total registers : 16
+Total pins : 182 / 344 ( 53 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
