@@ -34,10 +34,16 @@ entity register_file is
 		  -- From Write Back
 		  in_sel1				: in std_logic_vector(2 downto 0);
 		  in_sel2				: in std_logic_vector(2 downto 0);
+		  in_sel3				: in std_logic_vector(2 downto 0);
+		  in_sel4				: in std_logic_vector(2 downto 0);
 		  input1					: in std_logic_vector(15 downto 0);
 		  input2					: in std_logic_vector(15 downto 0);
+		  input3					: in std_logic_vector(15 downto 0);
+		  input4					: in std_logic_vector(15 downto 0);
 		  wren1					: in std_logic;
-		  wren2					: in std_logic
+		  wren2					: in std_logic;
+		  wren3					: in std_logic;
+		  wren4					: in std_logic
 		  );
 	
 end entity;
@@ -53,10 +59,16 @@ begin
 								  clk => clk,
 								  in_sel1 => in_sel1,
 								  in_sel2 => in_sel2,
+								  in_sel3 => in_sel3,
+								  in_sel4 => in_sel4,
 								  input1 => input1,
 								  input2 => input2,
+								  input3 => input3,
+								  input4 => input4,
 								  wren1 => wren1,
 								  wren2 => wren2,
+								  wren3 => wren3,
+								  wren4 => wren4,
 								  
 								  validity_in => validity_in,
 								  validity_out => validity_out,

@@ -91,10 +91,16 @@ package components is
 			  clk   : in std_logic;
 			  in_sel1: in std_logic_vector(2 downto 0);
 			  in_sel2 : in std_logic_vector(2 downto 0);
+			  in_sel3: in std_logic_vector(2 downto 0);
+			  in_sel4 : in std_logic_vector(2 downto 0);
 			  input1 : in std_logic_vector(15 downto 0);
 			  input2 : in std_logic_vector(15 downto 0);
+			  input3 : in std_logic_vector(15 downto 0);
+			  input4 : in std_logic_vector(15 downto 0);
 			  wren1 : in std_logic;
 			  wren2 : in std_logic;
+			  wren3 : in std_logic;
+			  wren4 : in std_logic;
 			  
 			  validity_in : in main_array(0 to 7)(0 downto 0);
 			  validity_out : out main_array(0 to 7)(0 downto 0);
@@ -109,6 +115,19 @@ package components is
 			  osel2	 : in std_logic_vector(2 downto 0);
 			  osel3	 : in std_logic_vector(2 downto 0);
 			  osel4	 : in std_logic_vector(2 downto 0));
+		
+	end component;
+	
+	component RRF is
+		generic(N : integer := 32);				-- Represents total number of registers
+		port(reset 	 		: in std_logic;
+			  clk   	 		: in std_logic;
+			  
+			  validity_in  : in  main_array(0 to N-1)(0 downto 0);
+			  validity_out : out main_array(0 to N-1)(0 downto 0);
+			  
+			  val_en_ch 	: in main_array(0 to N-1)(0 downto 0)	-- DEFAULT is '1' ;change to 0 indicate action to be performed
+			  );
 		
 	end component;
 
