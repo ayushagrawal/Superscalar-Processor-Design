@@ -31,7 +31,7 @@ entity register_file is
 		  out_data3				: out std_logic_vector(16 downto 0);
 		  out_data4				: out std_logic_vector(16 downto 0);
 		  
-		  -- From Write Back
+		  -- From Write Back for ARF
 		  in_sel1				: in std_logic_vector(2 downto 0);
 		  in_sel2				: in std_logic_vector(2 downto 0);
 		  
@@ -39,7 +39,15 @@ entity register_file is
 		  input2					: in std_logic_vector(15 downto 0);
 		  
 		  wren1					: in std_logic;
-		  wren2					: in std_logic);
+		  wren2					: in std_logic;
+		  
+		  -- From Execute Complete for RRF
+		  broadcast				: in main_array(0 to 4)(21 downto 0)	-- Max of 5 units can return
+																						-- Data 		= 16 bits
+																						-- Tag  		= 5  bits (RRF size)
+																						-- Validity = 1 bit
+																						-- (In the above order) --
+		  );
 	
 end entity;
 
@@ -88,7 +96,7 @@ begin
 	out_data1(16) <= validity_out(to_integer(unsigned(r1_1)))(0);
 	out_data2(16) <= validity_out(to_integer(unsigned(r2_1)))(0);
 	
-	process(out3_arf,rrf_tag1,data_dep_1)
+	process(out3_arf,rrf_tag1,data_dep_1,validity_out,r1_2,r2_2,broadcast,write_back_check1,write_back_check2)
 	
 	begin
 	if(data_dep_1 = '0') then
@@ -163,6 +171,21 @@ begin
 		
 		-------- VALIDITY 0 -> 1 LOGIC --------
 		
+		for i in 0 to 4 loop
+			if(broadcast(i)(0) = '1') then 			-- Implying Valid Broadcast
+				N_rrf_valid_in(to_integer(unsigned(broadcast(i)(5 downto 1))))(0) := '0';
+				N_rrf_valid_en(to_integer(unsigned(broadcast(i)(5 downto 1))))(0) := '1';
+			else
+				N_rrf_valid_in(to_integer(unsigned(broadcast(i)(5 downto 1))))(0) := '0';
+				N_rrf_valid_en(to_integer(unsigned(broadcast(i)(5 downto 1))))(0) := '0';
+			end if;
+		end loop;
+		
+		--____ VALIDITY 1 -> 0 LOGIC END ____--
+		
+		
+		-------- VALIDITY 0 -> 1 LOGIC --------
+		
 		if(count = 2) then
 			if(write_back_check1 = '1') then
 				N_rrf_valid_in(a)(0) := '1';
@@ -208,10 +231,11 @@ begin
 			end if;
 		end if;
 		
+		--____ VALIDITY 0 -> 1 LOGIC END ____--
+		
 		rrf_valid_in <= N_rrf_valid_in;
 		rrf_valid_en <= N_rrf_valid_en;
 		
-		--____ VALIDITY 0 -> 1 LOGIC END ____--
 		
 	end process;
 	

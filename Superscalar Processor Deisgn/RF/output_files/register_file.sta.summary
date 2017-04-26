@@ -3,111 +3,147 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -22.898
-TNS   : -251.021
+Slack : -22.764
+TNS   : -248.084
 
 Type  : Slow 1200mV 85C Model Setup 'write_back_check1'
-Slack : -12.595
-TNS   : -398.127
+Slack : -13.754
+TNS   : -768.688
+
+Type  : Slow 1200mV 85C Model Setup 'broadcast[0][1]'
+Slack : -12.765
+TNS   : -729.878
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.640
-TNS   : -64.181
+Slack : -6.244
+TNS   : -129.610
 
 Type  : Slow 1200mV 85C Model Hold 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -7.239
-TNS   : -71.699
+Slack : -7.436
+TNS   : -56.785
 
 Type  : Slow 1200mV 85C Model Hold 'write_back_check1'
-Slack : -0.607
-TNS   : -2.097
+Slack : -3.855
+TNS   : -44.537
+
+Type  : Slow 1200mV 85C Model Hold 'broadcast[0][1]'
+Slack : -2.648
+TNS   : -19.938
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.530
-TNS   : -0.530
+Slack : -0.886
+TNS   : -0.886
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -6.507
-TNS   : -2002.016
+Slack : -6.506
+TNS   : -2016.296
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'write_back_check1'
+Slack : -3.000
+TNS   : -285.913
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -35.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'write_back_check1'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'broadcast[0][1]'
 Slack : -3.000
 TNS   : -3.000
 
 Type  : Slow 1200mV 0C Model Setup 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -20.488
-TNS   : -225.412
+Slack : -20.377
+TNS   : -222.225
 
 Type  : Slow 1200mV 0C Model Setup 'write_back_check1'
-Slack : -11.206
-TNS   : -354.102
+Slack : -12.202
+TNS   : -682.721
+
+Type  : Slow 1200mV 0C Model Setup 'broadcast[0][1]'
+Slack : -11.396
+TNS   : -650.054
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.174
-TNS   : -53.431
+Slack : -5.447
+TNS   : -111.669
 
 Type  : Slow 1200mV 0C Model Hold 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -6.444
-TNS   : -63.217
+Slack : -6.628
+TNS   : -49.576
 
 Type  : Slow 1200mV 0C Model Hold 'write_back_check1'
-Slack : -0.544
-TNS   : -1.570
+Slack : -3.441
+TNS   : -36.840
+
+Type  : Slow 1200mV 0C Model Hold 'broadcast[0][1]'
+Slack : -2.305
+TNS   : -17.080
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.520
-TNS   : -0.520
+Slack : -0.855
+TNS   : -0.855
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -5.777
-TNS   : -1730.433
+Slack : -5.762
+TNS   : -1735.979
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'write_back_check1'
+Slack : -3.000
+TNS   : -238.040
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -35.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'write_back_check1'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'broadcast[0][1]'
 Slack : -3.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Setup 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -12.475
-TNS   : -138.765
+Slack : -12.862
+TNS   : -137.781
 
 Type  : Fast 1200mV 0C Model Setup 'write_back_check1'
-Slack : -6.978
-TNS   : -218.262
+Slack : -7.704
+TNS   : -425.866
+
+Type  : Fast 1200mV 0C Model Setup 'broadcast[0][1]'
+Slack : -7.197
+TNS   : -394.722
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.714
-TNS   : -25.186
+Slack : -3.407
+TNS   : -72.163
 
 Type  : Fast 1200mV 0C Model Hold 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -4.103
-TNS   : -40.966
+Slack : -4.227
+TNS   : -32.436
 
 Type  : Fast 1200mV 0C Model Hold 'write_back_check1'
-Slack : -0.455
-TNS   : -1.868
+Slack : -2.454
+TNS   : -33.541
+
+Type  : Fast 1200mV 0C Model Hold 'broadcast[0][1]'
+Slack : -1.711
+TNS   : -15.732
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.350
-TNS   : -0.350
+Slack : -0.526
+TNS   : -0.526
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RRF:rr_file|registers:\GEN_REG:0:VALD|data[0]'
-Slack : -3.523
-TNS   : -914.971
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : -3.000
-TNS   : -39.605
+Slack : -3.478
+TNS   : -925.718
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'write_back_check1'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -115.763
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -40.685
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'broadcast[0][1]'
+Slack : -3.000
+TNS   : -14.209
 
 ------------------------------------------------------------
