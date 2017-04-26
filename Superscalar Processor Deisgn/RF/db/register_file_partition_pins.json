@@ -2,7 +2,28 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "stall_out",
+					"strict" : false
+				},
+				{
+					"name" : "write_back_check1",
+					"strict" : false
+				},
+				{
+					"name" : "write_back_check2",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

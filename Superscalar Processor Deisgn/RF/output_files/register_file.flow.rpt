@@ -1,5 +1,5 @@
 Flow report for register_file
-Wed Apr 26 16:00:57 2017
+Wed Apr 26 16:36:10 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 26 16:00:54 2017       ;
+; Flow Status                        ; Successful - Wed Apr 26 16:36:05 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0 / 15,408 ( 0 % )                          ;
-;     Total combinational functions  ; 0 / 15,408 ( 0 % )                          ;
-;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                          ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 177 / 344 ( 51 % )                          ;
+; Total logic elements               ; 671 / 6,272 ( 11 % )                        ;
+;     Total combinational functions  ; 671 / 6,272 ( 11 % )                        ;
+;     Dedicated logic registers      ; 32 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 32                                          ;
+; Total pins                         ; 137 / 180 ( 76 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-; Device                             ; EP4CE15F23C6                                ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
+; Device                             ; EP4CE6F17C6                                 ;
 ; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/26/2017 16:00:28 ;
+; Start date & time ; 04/26/2017 16:35:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; register_file       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149320262808144        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149320470101292        ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -91,11 +91,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 678 MB              ; 00:00:32                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 1119 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 564 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 637 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:43                           ;
+; Analysis & Synthesis      ; 00:00:27     ; 1.0                     ; 682 MB              ; 00:00:45                           ;
+; Fitter                    ; 00:00:33     ; 1.0                     ; 1188 MB             ; 00:00:35                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 559 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.2                     ; 642 MB              ; 00:00:04                           ;
+; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:25                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

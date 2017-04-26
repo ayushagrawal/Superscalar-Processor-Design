@@ -34,17 +34,12 @@ entity register_file is
 		  -- From Write Back
 		  in_sel1				: in std_logic_vector(2 downto 0);
 		  in_sel2				: in std_logic_vector(2 downto 0);
-		  in_sel3				: in std_logic_vector(2 downto 0);
-		  in_sel4				: in std_logic_vector(2 downto 0);
+		  
 		  input1					: in std_logic_vector(15 downto 0);
 		  input2					: in std_logic_vector(15 downto 0);
-		  input3					: in std_logic_vector(15 downto 0);
-		  input4					: in std_logic_vector(15 downto 0);
+		  
 		  wren1					: in std_logic;
-		  wren2					: in std_logic;
-		  wren3					: in std_logic;
-		  wren4					: in std_logic
-		  );
+		  wren2					: in std_logic);
 	
 end entity;
 
@@ -62,18 +57,20 @@ begin
 	
 	ar_file : ARF port map(reset => reset,
 								  clk => clk,
-								  in_sel1 => in_sel1,
-								  in_sel2 => in_sel2,
-								  in_sel3 => in_sel3,
-								  in_sel4 => in_sel4,
-								  input1 => input1,
-								  input2 => input2,
-								  input3 => input3,
-								  input4 => input4,
-								  wren1 => wren1,
-								  wren2 => wren2,
-								  wren3 => wren3,
-								  wren4 => wren4,
+								  in_sel1 => in_sel1,	-- From write back
+								  in_sel2 => in_sel2,	-- From write back
+								  in_sel3 => r3_1,		-- From decode
+								  in_sel4 => r3_2,		-- From deocde
+								  
+								  input1 => input1,					-- From write back
+								  input2 => input2,					-- From write back
+								  input3 => tag1,						-- From RRF
+								  input4 => tag2,						-- From RRF
+								  
+								  wren1 => wren1,						-- From write back
+								  wren2 => wren2,						-- From write back
+								  wren3 => write_back_check1,		-- From decode (Indicates whether there is a need for renaming)
+								  wren4 => write_back_check2,		-- From decode (Indicates whether there is a need for renaming)
 								  
 								  validity_in => validity_in,
 								  validity_out => validity_out,
@@ -133,14 +130,18 @@ begin
 	process(rrf_valid_out)
 		variable count : integer := 0;
 		variable stall,one : std_logic := '0';
+		variable a,b : integer := 0;
+		variable N_rrf_valid_in,N_rrf_valid_en: main_array(0 to 31)(0 downto 0) := (others => (others => '0'));
 	begin
 		for i in 0 to 31 loop
 			if(rrf_valid_out(i)(0) = '0') then		-- Implying that the entry is free
 				if(count = 0) then
 					count := 1;
+					a := i;
 					tag1(2 downto 0) <= std_logic_vector(to_unsigned(i,3));
 				elsif(count = 1) then
 					count := 2;
+					b := i;
 					tag2(2 downto 0) <= std_logic_vector(to_unsigned(i,3));
 				end if;
 			end if;
@@ -159,6 +160,58 @@ begin
 		only_one <= one;
 		
 		--_______ END STALL LOGIC _______--
+		
+		-------- VALIDITY 0 -> 1 LOGIC --------
+		
+		if(count = 2) then
+			if(write_back_check1 = '1') then
+				N_rrf_valid_in(a)(0) := '1';
+				N_rrf_valid_en(a)(0) := '1';
+				if(write_back_check2 = '1') then
+					N_rrf_valid_in(b)(0) := '1';
+					N_rrf_valid_en(b)(0) := '1';
+				else
+					N_rrf_valid_in(b)(0) := '0';
+					N_rrf_valid_en(b)(0) := '0';
+				end if;
+			elsif(write_back_check1 = '0') then
+				N_rrf_valid_in(b)(0) := '0';
+				N_rrf_valid_en(b)(0) := '0';
+				if(write_back_check2 = '1') then
+					N_rrf_valid_in(a)(0) := '1';
+					N_rrf_valid_en(a)(0) := '1';
+				else
+					N_rrf_valid_in(a)(0) := '0';
+					N_rrf_valid_en(a)(0) := '0';
+				end if;
+			end if;
+		elsif(count = 1) then
+			if(write_back_check1 = '1') then
+				N_rrf_valid_in(a)(0) := '1';
+				N_rrf_valid_en(a)(0) := '1';
+				if(write_back_check2 = '1') then
+					stall := '1';
+				else
+					N_rrf_valid_in(b)(0) := '0';
+					N_rrf_valid_en(b)(0) := '0';
+				end if;
+			elsif(write_back_check1 = '0') then
+				N_rrf_valid_in(b)(0) := '0';
+				N_rrf_valid_en(b)(0) := '0';
+				if(write_back_check2 = '1') then
+					N_rrf_valid_in(a)(0) := '1';
+					N_rrf_valid_en(a)(0) := '1';
+				else
+					N_rrf_valid_in(a)(0) := '0';
+					N_rrf_valid_en(a)(0) := '0';
+				end if;
+			end if;
+		end if;
+		
+		rrf_valid_in <= N_rrf_valid_in;
+		rrf_valid_en <= N_rrf_valid_en;
+		
+		--____ VALIDITY 0 -> 1 LOGIC END ____--
 		
 	end process;
 	
