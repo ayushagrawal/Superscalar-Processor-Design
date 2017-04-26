@@ -1,5 +1,5 @@
 Analysis & Synthesis report for register_file
-Wed Apr 26 21:52:24 2017
+Thu Apr 27 00:54:49 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,75 +13,74 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX
- 13. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD
- 14. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX
- 15. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD
- 16. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX
- 17. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD
- 18. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX
- 19. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD
- 20. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX
- 21. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD
- 22. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX
- 23. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD
- 24. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX
- 25. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD
- 26. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX
- 27. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD
- 28. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1
- 29. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2
- 30. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3
- 31. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4
- 32. Parameter Settings for User Entity Instance: RRF:rr_file
- 33. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD
- 34. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD
- 35. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD
- 36. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD
- 37. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD
- 38. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD
- 39. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD
- 40. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD
- 41. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD
- 42. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD
- 43. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD
- 44. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD
- 45. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD
- 46. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD
- 47. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD
- 48. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD
- 49. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD
- 50. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD
- 51. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD
- 52. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD
- 53. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD
- 54. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD
- 55. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD
- 56. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD
- 57. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD
- 58. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD
- 59. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD
- 60. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD
- 61. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD
- 62. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD
- 63. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD
- 64. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD
- 65. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX"
- 66. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX"
- 67. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX"
- 68. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX"
- 69. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX"
- 70. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX"
- 71. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX"
- 72. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX"
- 73. Port Connectivity Checks: "ARF:ar_file"
- 74. Post-Synthesis Netlist Statistics for Top Partition
- 75. Elapsed Time Per Partition
- 76. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX
+ 12. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD
+ 13. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX
+ 14. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD
+ 15. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX
+ 16. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD
+ 17. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX
+ 18. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD
+ 19. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX
+ 20. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD
+ 21. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX
+ 22. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD
+ 23. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX
+ 24. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD
+ 25. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX
+ 26. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD
+ 27. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1
+ 28. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2
+ 29. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3
+ 30. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4
+ 31. Parameter Settings for User Entity Instance: RRF:rr_file
+ 32. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD
+ 33. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD
+ 34. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD
+ 35. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD
+ 36. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD
+ 37. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD
+ 38. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD
+ 39. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD
+ 40. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD
+ 41. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD
+ 42. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD
+ 43. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD
+ 44. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD
+ 45. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD
+ 46. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD
+ 47. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD
+ 48. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD
+ 49. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD
+ 50. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD
+ 51. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD
+ 52. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD
+ 53. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD
+ 54. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD
+ 55. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD
+ 56. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD
+ 57. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD
+ 58. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD
+ 59. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD
+ 60. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD
+ 61. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD
+ 62. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD
+ 63. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD
+ 64. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX"
+ 65. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX"
+ 66. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX"
+ 67. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX"
+ 68. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX"
+ 69. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX"
+ 70. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX"
+ 71. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX"
+ 72. Port Connectivity Checks: "ARF:ar_file"
+ 73. Post-Synthesis Netlist Statistics for Top Partition
+ 74. Elapsed Time Per Partition
+ 75. Analysis & Synthesis Messages
 
 
 
@@ -108,15 +107,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 26 21:52:24 2017       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 00:54:49 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,356                                       ;
-;     Total combinational functions  ; 1,356                                       ;
-;     Dedicated logic registers      ; 32                                          ;
-; Total registers                    ; 32                                          ;
+; Total logic elements               ; 1,242                                       ;
+;     Total combinational functions  ; 1,242                                       ;
+;     Dedicated logic registers      ; 113                                         ;
+; Total registers                    ; 113                                         ;
 ; Total pins                         ; 247                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -243,36 +242,36 @@ agreement for further details.
 +-------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 1,356                   ;
-;                                             ;                         ;
-; Total combinational functions               ; 1356                    ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 1059                    ;
-;     -- 3 input functions                    ; 187                     ;
-;     -- <=2 input functions                  ; 110                     ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 1356                    ;
-;     -- arithmetic mode                      ; 0                       ;
-;                                             ;                         ;
-; Total registers                             ; 32                      ;
-;     -- Dedicated logic registers            ; 32                      ;
-;     -- I/O registers                        ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 247                     ;
-;                                             ;                         ;
-; Embedded Multiplier 9-bit elements          ; 0                       ;
-;                                             ;                         ;
-; Maximum fan-out node                        ; write_back_check2~input ;
-; Maximum fan-out                             ; 103                     ;
-; Total fan-out                               ; 5361                    ;
-; Average fan-out                             ; 2.85                    ;
-+---------------------------------------------+-------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 1,242 ;
+;                                             ;       ;
+; Total combinational functions               ; 1242  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 1040  ;
+;     -- 3 input functions                    ; 162   ;
+;     -- <=2 input functions                  ; 40    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1242  ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 113   ;
+;     -- Dedicated logic registers            ; 113   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 247   ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; b~25  ;
+; Maximum fan-out                             ; 161   ;
+; Total fan-out                               ; 5309  ;
+; Average fan-out                             ; 2.87  ;
++---------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -280,7 +279,7 @@ agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name   ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
-; |register_file                     ; 1356 (1324)         ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 247  ; 0            ; |register_file                                        ; register_file ; work         ;
+; |register_file                     ; 1242 (1210)         ; 113 (81)                  ; 0           ; 0            ; 0       ; 0         ; 247  ; 0            ; |register_file                                        ; register_file ; work         ;
 ;    |RRF:rr_file|                   ; 32 (0)              ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register_file|RRF:rr_file                            ; RRF           ; work         ;
 ;       |registers:\GEN_REG:0:VALD|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register_file|RRF:rr_file|registers:\GEN_REG:0:VALD  ; registers     ; work         ;
 ;       |registers:\GEN_REG:10:VALD| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register_file|RRF:rr_file|registers:\GEN_REG:10:VALD ; registers     ; work         ;
@@ -316,93 +315,6 @@ agreement for further details.
 ;       |registers:\GEN_REG:9:VALD|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register_file|RRF:rr_file|registers:\GEN_REG:9:VALD  ; registers     ; work         ;
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                  ;
-+-----------------------------------------------------+-----------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
-+-----------------------------------------------------+-----------------------+------------------------+
-; stall                                               ; stall                 ; yes                    ;
-; count[1]                                            ; count[17]             ; yes                    ;
-; count[0]                                            ; count[17]             ; yes                    ;
-; N_rrf_valid_in[0][0]                                ; N_rrf_valid_in[0][0]  ; yes                    ;
-; N_rrf_valid_en[0][0]                                ; N_rrf_valid_in[0][0]  ; yes                    ;
-; N_rrf_valid_in[1][0]                                ; N_rrf_valid_in[1][0]  ; yes                    ;
-; N_rrf_valid_en[1][0]                                ; N_rrf_valid_in[1][0]  ; yes                    ;
-; N_rrf_valid_in[2][0]                                ; N_rrf_valid_in[2][0]  ; yes                    ;
-; N_rrf_valid_en[2][0]                                ; N_rrf_valid_in[2][0]  ; yes                    ;
-; N_rrf_valid_in[3][0]                                ; N_rrf_valid_in[3][0]  ; yes                    ;
-; N_rrf_valid_en[3][0]                                ; N_rrf_valid_in[3][0]  ; yes                    ;
-; N_rrf_valid_in[4][0]                                ; N_rrf_valid_in[4][0]  ; yes                    ;
-; N_rrf_valid_en[4][0]                                ; N_rrf_valid_in[4][0]  ; yes                    ;
-; N_rrf_valid_in[5][0]                                ; N_rrf_valid_in[5][0]  ; yes                    ;
-; N_rrf_valid_en[5][0]                                ; N_rrf_valid_in[5][0]  ; yes                    ;
-; N_rrf_valid_in[6][0]                                ; N_rrf_valid_in[6][0]  ; yes                    ;
-; N_rrf_valid_en[6][0]                                ; N_rrf_valid_in[6][0]  ; yes                    ;
-; N_rrf_valid_in[7][0]                                ; N_rrf_valid_in[7][0]  ; yes                    ;
-; N_rrf_valid_en[7][0]                                ; N_rrf_valid_in[7][0]  ; yes                    ;
-; N_rrf_valid_in[8][0]                                ; N_rrf_valid_in[8][0]  ; yes                    ;
-; N_rrf_valid_en[8][0]                                ; N_rrf_valid_in[8][0]  ; yes                    ;
-; N_rrf_valid_in[9][0]                                ; N_rrf_valid_in[9][0]  ; yes                    ;
-; N_rrf_valid_en[9][0]                                ; N_rrf_valid_in[9][0]  ; yes                    ;
-; N_rrf_valid_in[10][0]                               ; N_rrf_valid_in[10][0] ; yes                    ;
-; N_rrf_valid_en[10][0]                               ; N_rrf_valid_in[10][0] ; yes                    ;
-; N_rrf_valid_in[11][0]                               ; N_rrf_valid_in[11][0] ; yes                    ;
-; N_rrf_valid_en[11][0]                               ; N_rrf_valid_in[11][0] ; yes                    ;
-; N_rrf_valid_in[12][0]                               ; N_rrf_valid_in[12][0] ; yes                    ;
-; N_rrf_valid_en[12][0]                               ; N_rrf_valid_in[12][0] ; yes                    ;
-; N_rrf_valid_in[13][0]                               ; N_rrf_valid_in[13][0] ; yes                    ;
-; N_rrf_valid_en[13][0]                               ; N_rrf_valid_in[13][0] ; yes                    ;
-; N_rrf_valid_in[14][0]                               ; N_rrf_valid_in[14][0] ; yes                    ;
-; N_rrf_valid_en[14][0]                               ; N_rrf_valid_in[14][0] ; yes                    ;
-; N_rrf_valid_in[15][0]                               ; N_rrf_valid_in[15][0] ; yes                    ;
-; N_rrf_valid_en[15][0]                               ; N_rrf_valid_in[15][0] ; yes                    ;
-; N_rrf_valid_in[16][0]                               ; N_rrf_valid_in[16][0] ; yes                    ;
-; N_rrf_valid_en[16][0]                               ; N_rrf_valid_in[16][0] ; yes                    ;
-; N_rrf_valid_in[17][0]                               ; N_rrf_valid_in[17][0] ; yes                    ;
-; N_rrf_valid_en[17][0]                               ; N_rrf_valid_in[17][0] ; yes                    ;
-; N_rrf_valid_in[18][0]                               ; N_rrf_valid_in[18][0] ; yes                    ;
-; N_rrf_valid_en[18][0]                               ; N_rrf_valid_in[18][0] ; yes                    ;
-; N_rrf_valid_in[19][0]                               ; N_rrf_valid_in[19][0] ; yes                    ;
-; N_rrf_valid_en[19][0]                               ; N_rrf_valid_in[19][0] ; yes                    ;
-; N_rrf_valid_in[20][0]                               ; N_rrf_valid_in[20][0] ; yes                    ;
-; N_rrf_valid_en[20][0]                               ; N_rrf_valid_in[20][0] ; yes                    ;
-; N_rrf_valid_in[21][0]                               ; N_rrf_valid_in[21][0] ; yes                    ;
-; N_rrf_valid_en[21][0]                               ; N_rrf_valid_in[21][0] ; yes                    ;
-; N_rrf_valid_in[22][0]                               ; N_rrf_valid_in[22][0] ; yes                    ;
-; N_rrf_valid_en[22][0]                               ; N_rrf_valid_in[22][0] ; yes                    ;
-; N_rrf_valid_in[23][0]                               ; N_rrf_valid_in[23][0] ; yes                    ;
-; N_rrf_valid_en[23][0]                               ; N_rrf_valid_in[23][0] ; yes                    ;
-; N_rrf_valid_in[24][0]                               ; N_rrf_valid_in[24][0] ; yes                    ;
-; N_rrf_valid_en[24][0]                               ; N_rrf_valid_in[24][0] ; yes                    ;
-; N_rrf_valid_in[25][0]                               ; N_rrf_valid_in[25][0] ; yes                    ;
-; N_rrf_valid_en[25][0]                               ; N_rrf_valid_in[25][0] ; yes                    ;
-; N_rrf_valid_in[26][0]                               ; N_rrf_valid_in[26][0] ; yes                    ;
-; N_rrf_valid_en[26][0]                               ; N_rrf_valid_in[26][0] ; yes                    ;
-; N_rrf_valid_in[27][0]                               ; N_rrf_valid_in[27][0] ; yes                    ;
-; N_rrf_valid_en[27][0]                               ; N_rrf_valid_in[27][0] ; yes                    ;
-; N_rrf_valid_in[28][0]                               ; N_rrf_valid_in[28][0] ; yes                    ;
-; N_rrf_valid_en[28][0]                               ; N_rrf_valid_in[28][0] ; yes                    ;
-; N_rrf_valid_in[29][0]                               ; N_rrf_valid_in[29][0] ; yes                    ;
-; N_rrf_valid_en[29][0]                               ; N_rrf_valid_in[29][0] ; yes                    ;
-; N_rrf_valid_in[30][0]                               ; N_rrf_valid_in[30][0] ; yes                    ;
-; N_rrf_valid_en[30][0]                               ; N_rrf_valid_in[30][0] ; yes                    ;
-; N_rrf_valid_in[31][0]                               ; N_rrf_valid_in[31][0] ; yes                    ;
-; N_rrf_valid_en[31][0]                               ; N_rrf_valid_in[31][0] ; yes                    ;
-; b[4]                                                ; b[4]                  ; yes                    ;
-; b[0]                                                ; b[4]                  ; yes                    ;
-; b[1]                                                ; b[4]                  ; yes                    ;
-; b[2]                                                ; b[4]                  ; yes                    ;
-; b[3]                                                ; b[4]                  ; yes                    ;
-; a[4]                                                ; a[0]                  ; yes                    ;
-; a[0]                                                ; a[0]                  ; yes                    ;
-; a[1]                                                ; a[0]                  ; yes                    ;
-; a[2]                                                ; a[0]                  ; yes                    ;
-; a[3]                                                ; a[0]                  ; yes                    ;
-; Number of user-specified and inferred latches = 77  ;                       ;                        ;
-+-----------------------------------------------------+-----------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -484,55 +396,56 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 32    ;
-; Number of registers using Synchronous Clear  ; 32    ;
+; Total registers                              ; 113   ;
+; Number of registers using Synchronous Clear  ; 97    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |register_file|N_rrf_valid_in[2][0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count                ;
-; 64:1               ; 2 bits    ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; No         ; |register_file|count[0]             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 32:1               ; 3 bits    ; 63 LEs        ; 60 LEs               ; 3 LEs                  ; Yes        ; |register_file|tag2[1]     ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |register_file|tag1[2]     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; No         ; |register_file|b           ;
+; 33:1               ; 4 bits    ; 88 LEs        ; 84 LEs               ; 4 LEs                  ; No         ; |register_file|a           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -1165,17 +1078,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 247                         ;
-; cycloneiii_ff         ; 32                          ;
-;     SCLR              ; 32                          ;
-; cycloneiii_lcell_comb ; 1357                        ;
-;     normal            ; 1357                        ;
+; cycloneiii_ff         ; 113                         ;
+;     ENA               ; 6                           ;
+;     SCLR              ; 97                          ;
+;     plain             ; 10                          ;
+; cycloneiii_lcell_comb ; 1243                        ;
+;     normal            ; 1243                        ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 110                         ;
-;         3 data inputs ; 187                         ;
-;         4 data inputs ; 1059                        ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 162                         ;
+;         4 data inputs ; 1040                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 26.00                       ;
-; Average LUT depth     ; 9.51                        ;
+; Max LUT depth         ; 22.00                       ;
+; Average LUT depth     ; 14.78                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1184,7 +1099,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1194,7 +1109,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Apr 26 21:51:56 2017
+    Info: Processing started: Thu Apr 27 00:54:28 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register_file -c register_file
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
@@ -1218,307 +1133,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: ARF-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 40
     Info (12023): Found entity 1: ARF File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 8
 Info (12127): Elaborating entity "register_file" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at register_file.vhd(55): used implicit default value for signal "rrf_tag1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 55
-Warning (10541): VHDL Signal Declaration warning at register_file.vhd(55): used implicit default value for signal "rrf_tag2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 55
 Warning (10541): VHDL Signal Declaration warning at register_file.vhd(56): used implicit default value for signal "validity_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 56
 Warning (10541): VHDL Signal Declaration warning at register_file.vhd(56): used implicit default value for signal "val_en_ch" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 56
 Warning (10036): Verilog HDL or VHDL warning at register_file.vhd(60): object "only_one" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 60
-Warning (10492): VHDL Process Statement warning at register_file.vhd(116): signal "validity_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 116
-Warning (10492): VHDL Process Statement warning at register_file.vhd(116): signal "r2_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 116
-Warning (10492): VHDL Process Statement warning at register_file.vhd(175): signal "broadcast" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 175
-Warning (10492): VHDL Process Statement warning at register_file.vhd(176): signal "broadcast" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 176
-Warning (10492): VHDL Process Statement warning at register_file.vhd(177): signal "broadcast" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 177
-Warning (10492): VHDL Process Statement warning at register_file.vhd(179): signal "broadcast" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 179
-Warning (10492): VHDL Process Statement warning at register_file.vhd(180): signal "broadcast" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 180
-Warning (10492): VHDL Process Statement warning at register_file.vhd(190): signal "write_back_check1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 190
-Warning (10492): VHDL Process Statement warning at register_file.vhd(193): signal "write_back_check2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 193
-Warning (10492): VHDL Process Statement warning at register_file.vhd(200): signal "write_back_check1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 200
-Warning (10492): VHDL Process Statement warning at register_file.vhd(203): signal "write_back_check2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 203
-Warning (10492): VHDL Process Statement warning at register_file.vhd(212): signal "write_back_check1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 212
-Warning (10492): VHDL Process Statement warning at register_file.vhd(215): signal "write_back_check2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 215
-Warning (10492): VHDL Process Statement warning at register_file.vhd(221): signal "write_back_check1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 221
-Warning (10492): VHDL Process Statement warning at register_file.vhd(224): signal "write_back_check2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 224
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "count", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "a", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "tag1", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "b", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "tag2", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "stall", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "one", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "N_rrf_valid_in", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Warning (10631): VHDL Process Statement warning at register_file.vhd(138): inferring latch(es) for signal or variable "N_rrf_valid_en", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Info (10041): Inferred latch for "tag2[0]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Info (10041): Inferred latch for "tag2[1]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Info (10041): Inferred latch for "tag2[2]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Info (10041): Inferred latch for "tag1[0]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Info (10041): Inferred latch for "tag1[1]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Info (10041): Inferred latch for "tag1[2]" at register_file.vhd(138) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 138
-Info (10041): Inferred latch for "stall" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[31][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[30][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[29][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[28][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[27][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[26][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[25][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[24][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[23][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[22][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[21][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[20][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[19][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[18][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[17][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[16][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[15][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[14][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[13][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[12][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[11][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[10][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[9][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[8][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[7][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[6][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[5][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[4][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[3][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[2][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[1][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_en[0][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[31][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[30][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[29][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[28][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[27][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[26][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[25][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[24][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[23][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[22][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[21][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[20][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[19][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[18][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[17][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[16][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[15][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[14][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[13][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[12][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[11][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[10][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[9][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[8][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[7][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[6][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[5][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[4][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[3][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[2][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[1][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "N_rrf_valid_in[0][0]" at register_file.vhd(189) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-Info (10041): Inferred latch for "b[0]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "b[1]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "b[2]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "b[3]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "b[4]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "a[0]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "a[1]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "a[2]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "a[3]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "a[4]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[0]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[1]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[2]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[3]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[4]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[5]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[6]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[7]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[8]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[9]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[10]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[11]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[12]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[13]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[14]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[15]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[16]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[17]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[18]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[19]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[20]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[21]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[22]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[23]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[24]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[25]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[26]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[27]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[28]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[29]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[30]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Info (10041): Inferred latch for "count[31]" at register_file.vhd(145) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at register_file.vhd(145): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
 Info (12128): Elaborating entity "ARF" for hierarchy "ARF:ar_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 66
 Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:REGX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 55
 Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:VALD" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 61
 Info (12128): Elaborating entity "multiplexer" for hierarchy "ARF:ar_file|multiplexer:mux1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 72
 Info (12128): Elaborating entity "RRF" for hierarchy "RRF:rr_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 129
-Warning (13012): Latch stall has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 140
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check2 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 15
-Warning (13012): Latch count[1] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[1] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Warning (13012): Latch count[0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal count[1] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-Warning (13012): Latch N_rrf_valid_in[0][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[0][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[1][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[1][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[2][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[2][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[3][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[3][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[4][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[4][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[5][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[5][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[6][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[6][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[7][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[7][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[8][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[8][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[9][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[9][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[10][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[10][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[11][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[11][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[12][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[12][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[13][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[13][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[14][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[14][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[15][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[15][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[16][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[16][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[17][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[17][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[18][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[18][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[19][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[19][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[20][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[20][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[21][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[21][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[22][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[22][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[23][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[23][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[24][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[24][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[25][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[25][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[26][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[26][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[27][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[27][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[28][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[28][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[29][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[29][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[30][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[30][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_in[31][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch N_rrf_valid_en[31][0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 189
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal write_back_check1 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 14
-Warning (13012): Latch b[4] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:31:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch b[0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch b[1] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:31:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch b[2] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:31:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch b[3] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:31:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch a[4] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch a[0] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch a[1] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch a[2] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
-Warning (13012): Latch a[3] has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RRF:rr_file|registers:\GEN_REG:30:VALD|data[0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 18
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_data1[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 29
     Warning (13410): Pin "out_data1[1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 29
@@ -1554,9 +1177,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_data2[14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 30
     Warning (13410): Pin "out_data2[15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 30
     Warning (13410): Pin "out_data2[16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 30
-    Warning (13410): Pin "out_data3[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
-    Warning (13410): Pin "out_data3[1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
-    Warning (13410): Pin "out_data3[2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
     Warning (13410): Pin "out_data3[3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
     Warning (13410): Pin "out_data3[4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
     Warning (13410): Pin "out_data3[5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
@@ -1571,9 +1191,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_data3[14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
     Warning (13410): Pin "out_data3[15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
     Warning (13410): Pin "out_data3[16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 31
-    Warning (13410): Pin "out_data4[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 32
-    Warning (13410): Pin "out_data4[1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 32
-    Warning (13410): Pin "out_data4[2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 32
     Warning (13410): Pin "out_data4[3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 32
     Warning (13410): Pin "out_data4[4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 32
     Warning (13410): Pin "out_data4[5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 32
@@ -1591,7 +1208,7 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 144 input pin(s) that do not drive logic
+Warning (21074): Design contains 142 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "r1_validity_1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 16
     Warning (15610): No output dependent on input pin "r2_validity_1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 17
     Warning (15610): No output dependent on input pin "r1_validity_2" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 18
@@ -1731,19 +1348,17 @@ Warning (21074): Design contains 144 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "r1_2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
     Warning (15610): No output dependent on input pin "r1_2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
     Warning (15610): No output dependent on input pin "r1_2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
-    Warning (15610): No output dependent on input pin "data_dep_1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 26
     Warning (15610): No output dependent on input pin "r2_2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 24
     Warning (15610): No output dependent on input pin "r2_2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 24
     Warning (15610): No output dependent on input pin "r2_2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 24
-    Warning (15610): No output dependent on input pin "data_dep_2" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 27
-Info (21057): Implemented 1603 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1489 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 178 input pins
     Info (21059): Implemented 69 output pins
-    Info (21061): Implemented 1356 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 397 warnings
-    Info: Peak virtual memory: 683 megabytes
-    Info: Processing ended: Wed Apr 26 21:52:24 2017
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:49
+    Info (21061): Implemented 1242 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 210 warnings
+    Info: Peak virtual memory: 679 megabytes
+    Info: Processing ended: Thu Apr 27 00:54:49 2017
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:38
 
 

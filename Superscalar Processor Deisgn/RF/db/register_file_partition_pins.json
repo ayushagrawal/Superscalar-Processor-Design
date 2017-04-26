@@ -8,6 +8,42 @@
 					"strict" : false
 				},
 				{
+					"name" : "out_data3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_data3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_data3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_data4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_data4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_data4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dep_1",
+					"strict" : false
+				},
+				{
+					"name" : "data_dep_2",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
 					"name" : "write_back_check1",
 					"strict" : false
 				},
@@ -16,55 +52,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
 					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[0][5]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[2][5]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[2][1]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[2][2]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[2][3]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[2][4]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[0][1]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[0][2]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[0][3]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[0][4]",
-					"strict" : false
-				},
-				{
-					"name" : "broadcast[3][5]",
 					"strict" : false
 				},
 				{
@@ -88,6 +76,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "broadcast[3][5]",
+					"strict" : false
+				},
+				{
 					"name" : "broadcast[3][1]",
 					"strict" : false
 				},
@@ -101,6 +93,46 @@
 				},
 				{
 					"name" : "broadcast[3][4]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[2][5]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[2][1]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[2][2]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[2][3]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[2][4]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[0][5]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[0][1]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[0][2]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[0][3]",
+					"strict" : false
+				},
+				{
+					"name" : "broadcast[0][4]",
 					"strict" : false
 				},
 				{
