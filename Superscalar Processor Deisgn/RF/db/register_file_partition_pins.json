@@ -32,10 +32,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_dep_1",
-					"strict" : false
-				},
-				{
 					"name" : "data_dep_2",
 					"strict" : false
 				},
@@ -53,6 +49,10 @@
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "data_dep_1",
 					"strict" : false
 				},
 				{

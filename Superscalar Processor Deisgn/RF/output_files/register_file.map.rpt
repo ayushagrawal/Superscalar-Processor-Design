@@ -1,5 +1,5 @@
 Analysis & Synthesis report for register_file
-Thu Apr 27 00:54:49 2017
+Thu Apr 27 01:06:14 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -14,73 +14,74 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX
- 12. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD
- 13. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX
- 14. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD
- 15. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX
- 16. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD
- 17. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX
- 18. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD
- 19. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX
- 20. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD
- 21. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX
- 22. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD
- 23. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX
- 24. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD
- 25. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX
- 26. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD
- 27. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1
- 28. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2
- 29. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3
- 30. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4
- 31. Parameter Settings for User Entity Instance: RRF:rr_file
- 32. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD
- 33. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD
- 34. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD
- 35. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD
- 36. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD
- 37. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD
- 38. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD
- 39. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD
- 40. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD
- 41. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD
- 42. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD
- 43. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD
- 44. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD
- 45. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD
- 46. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD
- 47. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD
- 48. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD
- 49. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD
- 50. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD
- 51. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD
- 52. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD
- 53. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD
- 54. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD
- 55. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD
- 56. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD
- 57. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD
- 58. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD
- 59. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD
- 60. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD
- 61. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD
- 62. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD
- 63. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD
- 64. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX"
- 65. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX"
- 66. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX"
- 67. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX"
- 68. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX"
- 69. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX"
- 70. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX"
- 71. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX"
- 72. Port Connectivity Checks: "ARF:ar_file"
- 73. Post-Synthesis Netlist Statistics for Top Partition
- 74. Elapsed Time Per Partition
- 75. Analysis & Synthesis Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:REGX
+ 13. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:0:VALD
+ 14. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:REGX
+ 15. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:1:VALD
+ 16. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:REGX
+ 17. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:2:VALD
+ 18. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:REGX
+ 19. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:3:VALD
+ 20. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:REGX
+ 21. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:4:VALD
+ 22. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:REGX
+ 23. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:5:VALD
+ 24. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:REGX
+ 25. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:6:VALD
+ 26. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:REGX
+ 27. Parameter Settings for User Entity Instance: ARF:ar_file|registers:\GEN_REG:7:VALD
+ 28. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux1
+ 29. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux2
+ 30. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux3
+ 31. Parameter Settings for User Entity Instance: ARF:ar_file|multiplexer:mux4
+ 32. Parameter Settings for User Entity Instance: RRF:rr_file
+ 33. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:0:VALD
+ 34. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:1:VALD
+ 35. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:2:VALD
+ 36. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:3:VALD
+ 37. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:4:VALD
+ 38. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:5:VALD
+ 39. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:6:VALD
+ 40. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:7:VALD
+ 41. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:8:VALD
+ 42. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:9:VALD
+ 43. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:10:VALD
+ 44. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:11:VALD
+ 45. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:12:VALD
+ 46. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:13:VALD
+ 47. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:14:VALD
+ 48. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:15:VALD
+ 49. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:16:VALD
+ 50. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:17:VALD
+ 51. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:18:VALD
+ 52. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:19:VALD
+ 53. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:20:VALD
+ 54. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:21:VALD
+ 55. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:22:VALD
+ 56. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:23:VALD
+ 57. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:24:VALD
+ 58. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:25:VALD
+ 59. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:26:VALD
+ 60. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:27:VALD
+ 61. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:28:VALD
+ 62. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:29:VALD
+ 63. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:30:VALD
+ 64. Parameter Settings for User Entity Instance: RRF:rr_file|registers:\GEN_REG:31:VALD
+ 65. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:7:REGX"
+ 66. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:6:REGX"
+ 67. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:5:REGX"
+ 68. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:4:REGX"
+ 69. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:3:REGX"
+ 70. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:2:REGX"
+ 71. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:1:REGX"
+ 72. Port Connectivity Checks: "ARF:ar_file|registers:\GEN_REG:0:REGX"
+ 73. Port Connectivity Checks: "ARF:ar_file"
+ 74. Post-Synthesis Netlist Statistics for Top Partition
+ 75. Elapsed Time Per Partition
+ 76. Analysis & Synthesis Messages
 
 
 
@@ -107,15 +108,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 27 00:54:49 2017       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 01:06:14 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,242                                       ;
-;     Total combinational functions  ; 1,242                                       ;
-;     Dedicated logic registers      ; 113                                         ;
-; Total registers                    ; 113                                         ;
+; Total logic elements               ; 1,250                                       ;
+;     Total combinational functions  ; 1,250                                       ;
+;     Dedicated logic registers      ; 116                                         ;
+; Total registers                    ; 116                                         ;
 ; Total pins                         ; 247                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -247,29 +248,29 @@ agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,242 ;
+; Estimated Total logic elements              ; 1,250 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1242  ;
+; Total combinational functions               ; 1250  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1040  ;
-;     -- 3 input functions                    ; 162   ;
-;     -- <=2 input functions                  ; 40    ;
+;     -- 4 input functions                    ; 1039  ;
+;     -- 3 input functions                    ; 165   ;
+;     -- <=2 input functions                  ; 46    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1242  ;
+;     -- normal mode                          ; 1250  ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 113   ;
-;     -- Dedicated logic registers            ; 113   ;
+; Total registers                             ; 116   ;
+;     -- Dedicated logic registers            ; 116   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 247   ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
-; Maximum fan-out node                        ; b~25  ;
+; Maximum fan-out node                        ; a~58  ;
 ; Maximum fan-out                             ; 161   ;
-; Total fan-out                               ; 5309  ;
+; Total fan-out                               ; 5332  ;
 ; Average fan-out                             ; 2.87  ;
 +---------------------------------------------+-------+
 
@@ -279,7 +280,7 @@ agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name   ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
-; |register_file                     ; 1242 (1210)         ; 113 (81)                  ; 0           ; 0            ; 0       ; 0         ; 247  ; 0            ; |register_file                                        ; register_file ; work         ;
+; |register_file                     ; 1250 (1218)         ; 116 (84)                  ; 0           ; 0            ; 0       ; 0         ; 247  ; 0            ; |register_file                                        ; register_file ; work         ;
 ;    |RRF:rr_file|                   ; 32 (0)              ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register_file|RRF:rr_file                            ; RRF           ; work         ;
 ;       |registers:\GEN_REG:0:VALD|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register_file|RRF:rr_file|registers:\GEN_REG:0:VALD  ; registers     ; work         ;
 ;       |registers:\GEN_REG:10:VALD| ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register_file|RRF:rr_file|registers:\GEN_REG:10:VALD ; registers     ; work         ;
@@ -379,6 +380,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ARF:ar_file|registers:\GEN_REG:6:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:6:VALD|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:7:VALD|output[0]     ; Merged with ARF:ar_file|registers:\GEN_REG:7:VALD|data[0]  ;
 ; ARF:ar_file|registers:\GEN_REG:0:REGX|data[0]       ; Stuck at GND due to stuck port data_in                     ;
+; Nout_data3[3..15]                                   ; Stuck at GND due to stuck port data_in                     ;
 ; ARF:ar_file|registers:\GEN_REG:7:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
 ; ARF:ar_file|registers:\GEN_REG:6:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
 ; ARF:ar_file|registers:\GEN_REG:5:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
@@ -387,8 +389,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ARF:ar_file|registers:\GEN_REG:2:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
 ; ARF:ar_file|registers:\GEN_REG:1:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
 ; ARF:ar_file|registers:\GEN_REG:0:VALD|data[0]       ; Stuck at GND due to stuck port data_in                     ;
-; Total Number of Removed Registers = 304             ;                                                            ;
+; Nout_data3[16]                                      ; Stuck at GND due to stuck port data_in                     ;
+; Total Number of Removed Registers = 318             ;                                                            ;
 +-----------------------------------------------------+------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                           ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------+
+; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register                                                    ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------+
+; ARF:ar_file|registers:\GEN_REG:0:REGX|data[0] ; Stuck at GND              ; Nout_data3[3], Nout_data3[4], Nout_data3[5], Nout_data3[6], Nout_data3[7], Nout_data3[8], ;
+;                                               ; due to stuck port data_in ; Nout_data3[9], Nout_data3[10], Nout_data3[11], Nout_data3[12], Nout_data3[13],            ;
+;                                               ;                           ; Nout_data3[14], Nout_data3[15]                                                            ;
+; ARF:ar_file|registers:\GEN_REG:7:VALD|data[0] ; Stuck at GND              ; Nout_data3[16]                                                                            ;
+;                                               ; due to stuck port data_in ;                                                                                           ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -396,7 +412,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 113   ;
+; Total registers                              ; 116   ;
 ; Number of registers using Synchronous Clear  ; 97    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -406,46 +422,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 32:1               ; 3 bits    ; 63 LEs        ; 60 LEs               ; 3 LEs                  ; Yes        ; |register_file|tag2[1]     ;
-; 33:1               ; 2 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |register_file|tag1[2]     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count       ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; No         ; |register_file|b           ;
-; 33:1               ; 4 bits    ; 88 LEs        ; 84 LEs               ; 4 LEs                  ; No         ; |register_file|a           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |register_file|Nout_data3[2] ;
+; 32:1               ; 3 bits    ; 63 LEs        ; 60 LEs               ; 3 LEs                  ; Yes        ; |register_file|tag2[2]       ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 40 LEs               ; 4 LEs                  ; Yes        ; |register_file|tag1[2]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |register_file|count         ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; No         ; |register_file|b             ;
+; 33:1               ; 4 bits    ; 88 LEs        ; 84 LEs               ; 4 LEs                  ; No         ; |register_file|a             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -1078,19 +1095,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 247                         ;
-; cycloneiii_ff         ; 113                         ;
+; cycloneiii_ff         ; 116                         ;
 ;     ENA               ; 6                           ;
 ;     SCLR              ; 97                          ;
-;     plain             ; 10                          ;
-; cycloneiii_lcell_comb ; 1243                        ;
-;     normal            ; 1243                        ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 1251                        ;
+;     normal            ; 1251                        ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 162                         ;
-;         4 data inputs ; 1040                        ;
+;         2 data inputs ; 46                          ;
+;         3 data inputs ; 165                         ;
+;         4 data inputs ; 1039                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 22.00                       ;
-; Average LUT depth     ; 14.78                       ;
+; Average LUT depth     ; 14.72                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1109,7 +1126,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Apr 27 00:54:28 2017
+    Info: Processing started: Thu Apr 27 01:05:53 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register_file -c register_file
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
@@ -1136,12 +1153,12 @@ Info (12127): Elaborating entity "register_file" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at register_file.vhd(56): used implicit default value for signal "validity_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 56
 Warning (10541): VHDL Signal Declaration warning at register_file.vhd(56): used implicit default value for signal "val_en_ch" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 56
 Warning (10036): Verilog HDL or VHDL warning at register_file.vhd(60): object "only_one" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 60
-Warning (10492): VHDL Process Statement warning at register_file.vhd(145): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at register_file.vhd(102): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 102
 Info (12128): Elaborating entity "ARF" for hierarchy "ARF:ar_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 66
 Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:REGX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 55
 Info (12128): Elaborating entity "registers" for hierarchy "ARF:ar_file|registers:\GEN_REG:0:VALD" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 61
 Info (12128): Elaborating entity "multiplexer" for hierarchy "ARF:ar_file|multiplexer:mux1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 72
-Info (12128): Elaborating entity "RRF" for hierarchy "RRF:rr_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 129
+Info (12128): Elaborating entity "RRF" for hierarchy "RRF:rr_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 137
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_data1[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 29
     Warning (13410): Pin "out_data1[1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 29
@@ -1345,20 +1362,20 @@ Warning (21074): Design contains 142 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "r2_1[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 21
     Warning (15610): No output dependent on input pin "r2_1[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 21
     Warning (15610): No output dependent on input pin "r2_1[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 21
-    Warning (15610): No output dependent on input pin "r1_2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
-    Warning (15610): No output dependent on input pin "r1_2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
-    Warning (15610): No output dependent on input pin "r1_2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
     Warning (15610): No output dependent on input pin "r2_2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 24
     Warning (15610): No output dependent on input pin "r2_2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 24
     Warning (15610): No output dependent on input pin "r2_2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 24
-Info (21057): Implemented 1489 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "r1_2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
+    Warning (15610): No output dependent on input pin "r1_2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
+    Warning (15610): No output dependent on input pin "r1_2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 23
+Info (21057): Implemented 1497 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 178 input pins
     Info (21059): Implemented 69 output pins
-    Info (21061): Implemented 1242 logic cells
+    Info (21061): Implemented 1250 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 210 warnings
     Info: Peak virtual memory: 679 megabytes
-    Info: Processing ended: Thu Apr 27 00:54:49 2017
+    Info: Processing ended: Thu Apr 27 01:06:14 2017
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Total CPU time (on all processors): 00:00:37
 
 

@@ -117,18 +117,5 @@ package components is
 			  osel4	 : in std_logic_vector(2 downto 0));
 		
 	end component;
-	
-	component RRF is
-		generic(N : integer := 32);				-- Represents total number of registers
-		port(reset 	 		: in std_logic;
-			  clk   	 		: in std_logic;
-			  
-			  validity_in  : in  main_array(0 to N-1)(0 downto 0);
-			  validity_out : out main_array(0 to N-1)(0 downto 0);
-			  
-			  val_en_ch 	: in main_array(0 to N-1)(0 downto 0)	-- DEFAULT is '1' ;change to 0 indicate action to be performed
-			  );
-		
-	end component;
 
 end package;

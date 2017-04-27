@@ -53,7 +53,6 @@ set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name VHDL_FILE "../ALL Code Files/registers.vhd"
 set_global_assignment -name VHDL_FILE "../ALL Code Files/multiplexer.vhd"
 set_global_assignment -name VHDL_FILE "../ALL Code Files/demux.vhd"
-set_global_assignment -name VHDL_FILE "../ALL Code Files/rrf.vhd"
 set_global_assignment -name VHDL_FILE "../ALL Code Files/register_file.vhd"
 set_global_assignment -name VHDL_FILE "../ALL Code Files/components.vhd"
 set_global_assignment -name VHDL_FILE "../ALL Code Files/ARF.vhd"
