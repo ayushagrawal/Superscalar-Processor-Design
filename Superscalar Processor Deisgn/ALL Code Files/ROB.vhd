@@ -8,26 +8,27 @@ use work.components.all;
 
 entity ROB is
 	generic(N : integer := 32);			-- Represents total number of entries
-	port(reset 	: in std_logic;
-		 clk	: in std_logic;
-		 stall_out : out std_logic;
-		 broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
-																						-- Data 		= 16 bits
-																						-- Tag  		= 5  bits (RRF size)
-																						-- Validity = 1 bit
-																						-- (In the above order) --
-		 valid_in : in main_array(0 to N-1)(0 downto 0);
-		 valid_out : out main_array(0 to N-1)(0 downto 0);
-		 valid_en : in main_array(0 to N-1)(0 downto 0);
+	port(	reset 	: in std_logic;
+			clk	: in std_logic;
+			stall_out : out std_logic;
+			broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
+			-- Data 		= 16 bits
+			-- Tag  		= 5  bits (RRF size)
+			-- Validity = 1 bit
+			-- (In the above order) --
+			
+			valid_in : in main_array(0 to N-1)(0 downto 0);
+			valid_out : out main_array(0 to N-1)(0 downto 0);
+			valid_en : in main_array(0 to N-1)(0 downto 0);
 		 
-		 -- FROM DECODE
-		 instruction1 : in std_logic_vector(21 downto 0);
-		 instruction2 : in std_logic_vector(21 downto 0)
-		 -- Instruction type 			: 2 bits
-		 -- Register affected 			: 3 bits
-		 -- Data 							: 16 bits
-		 -- Validity of information 	: 1 bit
-		 -- Total							: 22 bits
+			-- FROM DECODE
+			 instruction1 : in std_logic_vector(21 downto 0);
+			 instruction2 : in std_logic_vector(21 downto 0)
+			 -- Instruction type 			: 2 bits
+			 -- Register affected 			: 3 bits
+			 -- Data 							: 16 bits
+			 -- Validity of information 	: 1 bit
+			 -- Total							: 22 bits
 		 );
 		 
 end entity;
@@ -38,7 +39,7 @@ architecture files of ROB is
 	signal rob_valid_in,rob_valid_en,rob_valid_out,inst_type_en,rob_data_en,rob_r_en : main_array(0 to N-1)(0 downto 0);
 	signal rob_data_in,rob_data_out : main_array(0 to N-1)(15 downto 0);
 	signal rob_r_in, rob_r_out : main_array(0 to N-1)(2 downto 0);
-	signal top_in,top_out,bottom_in,bottom_out,top_add : std_logic_vector(natural(log2(real(N)))-1 downto 0);
+	signal top_in,top_out,bottom_in,bottom_out,top_add,bottom_add : std_logic_vector(natural(log2(real(N)))-1 downto 0);
 	signal manage_bit_in,manage_bit_out : std_logic_vector(0 downto 0);
 	signal top_en,bottom_en,manage_bit_en : std_logic;
 	
@@ -109,12 +110,52 @@ begin
 		top_add <= (others => '0');
 	end process;
 	
-	adder : adds generic map(N => natural(log2(real(N))))
+	adder0 : adds generic map(N => natural(log2(real(N))))
 					 port map(data1 => top_out,
 								 data2 => top_add,
 								 output => top_in);
 	
 	--________ TOP POINTER LOGIC ENDS ______--
+	
+	
+	----------- BOTTOM POINTER AND VALIDITY REGISTER LOGIC ------------
+	-- 1. This will control the bottom_pointer register enable bit.
+	-- 2. This will make decisions based on broadcast
+	process(broadcast)
+		variable count : integer := 0;
+	begin
+		count := 0;
+		if(broadcast(0)(0) = '1') then
+			count := count + 1;
+			rob_valid_in(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
+			rob_valid_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		elsif(broadcast(1)(0) = '1') then
+			count := count + 1;
+			rob_valid_in(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
+			rob_valid_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		elsif(broadcast(2)(0) = '1') then
+			count := count + 1;
+			rob_valid_in(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
+			rob_valid_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		elsif(broadcast(3)(0) = '1') then
+			count := count + 1;
+			rob_valid_in(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
+			rob_valid_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		elsif(broadcast(4)(0) = '1') then
+			count := count + 1;
+			rob_valid_in(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
+			rob_valid_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		end if;
+		bottom_add <= std_logic_vector(to_unsigned(count,natural(log2(real(N)))));
+	end process;
+	
+	adder1 : adds generic map(N => natural(log2(real(N))))
+					 port map(data1 => bottom_out,
+								 data2 => bottom_add,
+								 output => bottom_in);
+	
+	--________ BOTTOM POINTER AND VALIDITY REGISTER LOGIC ENDS ______--
+	
 	
 	--------- POINTER REGISTERS END ----------
 	
