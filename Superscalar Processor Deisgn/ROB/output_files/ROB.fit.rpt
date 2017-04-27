@@ -1,5 +1,5 @@
 Fitter report for ROB
-Thu Apr 27 12:11:19 2017
+Thu Apr 27 12:44:35 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 27 12:11:19 2017       ;
+; Fitter Status                      ; Successful - Thu Apr 27 12:44:35 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; ROB                                         ;
 ; Top-level Entity Name              ; ROB                                         ;
@@ -84,6 +84,7 @@ agreement for further details.
 ; Option                                                                     ; Setting                               ; Default Value                         ;
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Device                                                                     ; auto                                  ;                                       ;
+; Maximum processors allowed for parallel compilation                        ; 2                                     ;                                       ;
 ; Fit Attempts to Skip                                                       ; 0                                     ; 0.0                                   ;
 ; Use smart compilation                                                      ; Off                                   ; Off                                   ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
@@ -148,7 +149,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -2533,8 +2534,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (119004): Automatically selected device EP4CE15F23C6 for design ROB
 Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
@@ -2591,18 +2591,18 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.01 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ROB/output_files/ROB.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1119 megabytes
-    Info: Processing ended: Thu Apr 27 12:11:19 2017
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 1117 megabytes
+    Info: Processing ended: Thu Apr 27 12:44:35 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+

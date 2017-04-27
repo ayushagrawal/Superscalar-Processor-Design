@@ -38,7 +38,7 @@ architecture files of ROB is
 	signal rob_valid_in,rob_valid_en,rob_valid_out,inst_type_en,rob_data_en,rob_r_en : main_array(0 to N-1)(0 downto 0);
 	signal rob_data_in,rob_data_out : main_array(0 to N-1)(15 downto 0);
 	signal rob_r_in, rob_r_out : main_array(0 to N-1)(2 downto 0);
-	signal top_in,top_out,bottom_in,bottom_out,top_add : std_logic_vector(natural(log2(real(N)))-1 downto 0);
+	signal top_in,top_out,bottom_in,bottom_out : std_logic_vector(natural(log2(real(N)))-1 downto 0);
 	signal manage_bit_in,manage_bit_out : std_logic_vector(0 downto 0);
 	signal top_en,bottom_en,manage_bit_en : std_logic;
 	
@@ -95,21 +95,23 @@ begin
 	-- 1. This will control the top_pointer register enable bit.
 	-- 2. This will make decisions based on 'instruction1' and 'instruction2'
 	process(instruction1,instruction2)
+		variable count : integer := 0;
 	begin
-		if(instruction1(0) = '1' and instruction2(0) = '1') then
-			top_add(1 downto 0) <= "10";
-			top_en <= '1';
-		elsif(instruction1(0) = '1' or instruction2(0) = '1') then
-			top_add(1 downto 0) <= "01";
-			top_en <= '1';
-		else											-- If no new valid instruction is entered, top is not updated
-			top_add(1 downto 0) <= "00";
-			top_en <= '0';
+		count := 0;
+		if(instruction1(0) = '1') then
+			count := 1;
 		end if;
-		top_add <= (others => '0');
+		if(instruction2(0) = '1') then
+			if(count = '1') then
+				couunt := 2;
+			else 
+				count := 1;
+			end if;
+		end if;
+		
 	end process;
 	
-	adder : adds generic map(N => natural(log2(real(N))))
+	adder : adds generic map(N => N)
 					 port map(data1 => top_out,
 								 data2 => top_add,
 								 output => top_in);

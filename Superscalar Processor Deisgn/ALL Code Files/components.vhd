@@ -6,6 +6,14 @@ package components is
 	
 	type main_array is array(natural range <>) of std_logic_vector;
 	
+	component adds is
+		generic(N : integer := 32);			-- Arbit number
+		port(data1 : in std_logic_vector(N-1 downto 0);
+			  data2 : in std_logic_vector(N-1 downto 0);
+			  output : out std_logic_vector(N-1 downto 0));
+			 
+	end component;
+	
 	component instruction_memory IS
 		PORT
 		(
