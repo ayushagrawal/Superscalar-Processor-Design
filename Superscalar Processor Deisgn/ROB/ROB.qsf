@@ -36,7 +36,7 @@
 #
 # -------------------------------------------------------------------------- #
 
-
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE auto
 set_global_assignment -name TOP_LEVEL_ENTITY ROB

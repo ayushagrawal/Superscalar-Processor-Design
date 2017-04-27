@@ -127,6 +127,9 @@ reset => registers:GEN_REG:31:INSTRUCTION_TYPE.reset
 reset => registers:GEN_REG:31:VALIDITY.reset
 reset => registers:GEN_REG:31:DATA.reset
 reset => registers:GEN_REG:31:R_AFFECTED.reset
+reset => registers:top_pointer.reset
+reset => registers:bottom_pointer.reset
+reset => registers:stall_manage.reset
 clk => registers:GEN_REG:0:INSTRUCTION_TYPE.clk
 clk => registers:GEN_REG:0:VALIDITY.clk
 clk => registers:GEN_REG:0:DATA.clk
@@ -255,6 +258,10 @@ clk => registers:GEN_REG:31:INSTRUCTION_TYPE.clk
 clk => registers:GEN_REG:31:VALIDITY.clk
 clk => registers:GEN_REG:31:DATA.clk
 clk => registers:GEN_REG:31:R_AFFECTED.clk
+clk => registers:top_pointer.clk
+clk => registers:bottom_pointer.clk
+clk => registers:stall_manage.clk
+stall_out <= registers:stall_manage.output[0]
 broadcast[4][0] => ~NO_FANOUT~
 broadcast[4][1] => ~NO_FANOUT~
 broadcast[4][2] => ~NO_FANOUT~
@@ -5112,6 +5119,81 @@ clk => data[1].CLK
 clk => data[2].CLK
 reset => data.OUTPUTSELECT
 reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+
+
+|ROB|registers:top_pointer
+input[0] => data.DATAB
+input[1] => data.DATAB
+input[2] => data.DATAB
+input[3] => data.DATAB
+input[4] => data.DATAB
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => output[0]~reg0.CLK
+clk => output[1]~reg0.CLK
+clk => output[2]~reg0.CLK
+clk => output[3]~reg0.CLK
+clk => output[4]~reg0.CLK
+clk => data[0].CLK
+clk => data[1].CLK
+clk => data[2].CLK
+clk => data[3].CLK
+clk => data[4].CLK
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+
+
+|ROB|registers:bottom_pointer
+input[0] => data.DATAB
+input[1] => data.DATAB
+input[2] => data.DATAB
+input[3] => data.DATAB
+input[4] => data.DATAB
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+enable => data.OUTPUTSELECT
+output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => output[0]~reg0.CLK
+clk => output[1]~reg0.CLK
+clk => output[2]~reg0.CLK
+clk => output[3]~reg0.CLK
+clk => output[4]~reg0.CLK
+clk => data[0].CLK
+clk => data[1].CLK
+clk => data[2].CLK
+clk => data[3].CLK
+clk => data[4].CLK
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+reset => data.OUTPUTSELECT
+
+
+|ROB|registers:stall_manage
+input[0] => data.DATAB
+enable => data.OUTPUTSELECT
+output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => output[0]~reg0.CLK
+clk => data[0].CLK
 reset => data.OUTPUTSELECT
 
 
