@@ -1,5 +1,5 @@
 Fitter report for ROB
-Thu Apr 27 14:13:23 2017
+Fri Apr 28 07:09:03 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 27 14:13:23 2017       ;
+; Fitter Status                      ; Successful - Fri Apr 28 07:09:03 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; ROB                                         ;
 ; Top-level Entity Name              ; ROB                                         ;
@@ -2599,9 +2599,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ROB/output_files/ROB.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1118 megabytes
-    Info: Processing ended: Thu Apr 27 14:13:25 2017
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 1124 megabytes
+    Info: Processing ended: Fri Apr 28 07:09:04 2017
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
 

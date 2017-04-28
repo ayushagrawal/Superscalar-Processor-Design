@@ -129,22 +129,51 @@ begin
 			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
-		elsif(broadcast(1)(0) = '1') then
+			rob_data_in(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1)))) <= broadcast(0)(21 downto 6);
+			rob_data_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		else
+			rob_valid_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		end if;
+		if(broadcast(1)(0) = '1') then
 			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
-		elsif(broadcast(2)(0) = '1') then
+			rob_data_in(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1)))) <= broadcast(1)(21 downto 6);
+			rob_data_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		else
+			rob_valid_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		end if;
+		if(broadcast(2)(0) = '1') then
 			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
-		elsif(broadcast(3)(0) = '1') then
+			rob_data_in(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1)))) <= broadcast(2)(21 downto 6);
+			rob_data_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		else
+			rob_valid_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		end if;
+		if(broadcast(3)(0) = '1') then
 			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
-		elsif(broadcast(4)(0) = '1') then
+			rob_data_in(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1)))) <= broadcast(3)(21 downto 6);
+			rob_data_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		else
+			rob_valid_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		end if;
+		if(broadcast(4)(0) = '1') then
 			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
+			rob_data_in(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1)))) <= broadcast(4)(21 downto 6);
+			rob_data_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
+		else
+			rob_valid_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		end if;
 		bottom_add <= std_logic_vector(to_unsigned(count,natural(log2(real(N)))));
 	end process;

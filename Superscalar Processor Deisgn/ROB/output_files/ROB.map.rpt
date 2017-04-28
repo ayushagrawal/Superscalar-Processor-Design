@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ROB
-Thu Apr 27 14:13:16 2017
+Fri Apr 28 07:08:56 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -150,139 +150,138 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 142. Parameter Settings for User Entity Instance: adds:adder0
 143. Parameter Settings for User Entity Instance: adds:adder1
 144. Parameter Settings for User Entity Instance: registers:stall_manage
-145. Port Connectivity Checks: "adds:adder1"
-146. Port Connectivity Checks: "adds:adder0"
-147. Port Connectivity Checks: "registers:\GEN_REG:31:R_AFFECTED"
-148. Port Connectivity Checks: "registers:\GEN_REG:31:DATA"
-149. Port Connectivity Checks: "registers:\GEN_REG:31:VALIDITY"
-150. Port Connectivity Checks: "registers:\GEN_REG:31:INSTRUCTION_TYPE"
-151. Port Connectivity Checks: "registers:\GEN_REG:30:R_AFFECTED"
-152. Port Connectivity Checks: "registers:\GEN_REG:30:DATA"
-153. Port Connectivity Checks: "registers:\GEN_REG:30:VALIDITY"
-154. Port Connectivity Checks: "registers:\GEN_REG:30:INSTRUCTION_TYPE"
-155. Port Connectivity Checks: "registers:\GEN_REG:29:R_AFFECTED"
-156. Port Connectivity Checks: "registers:\GEN_REG:29:DATA"
-157. Port Connectivity Checks: "registers:\GEN_REG:29:VALIDITY"
-158. Port Connectivity Checks: "registers:\GEN_REG:29:INSTRUCTION_TYPE"
-159. Port Connectivity Checks: "registers:\GEN_REG:28:R_AFFECTED"
-160. Port Connectivity Checks: "registers:\GEN_REG:28:DATA"
-161. Port Connectivity Checks: "registers:\GEN_REG:28:VALIDITY"
-162. Port Connectivity Checks: "registers:\GEN_REG:28:INSTRUCTION_TYPE"
-163. Port Connectivity Checks: "registers:\GEN_REG:27:R_AFFECTED"
-164. Port Connectivity Checks: "registers:\GEN_REG:27:DATA"
-165. Port Connectivity Checks: "registers:\GEN_REG:27:VALIDITY"
-166. Port Connectivity Checks: "registers:\GEN_REG:27:INSTRUCTION_TYPE"
-167. Port Connectivity Checks: "registers:\GEN_REG:26:R_AFFECTED"
-168. Port Connectivity Checks: "registers:\GEN_REG:26:DATA"
-169. Port Connectivity Checks: "registers:\GEN_REG:26:VALIDITY"
-170. Port Connectivity Checks: "registers:\GEN_REG:26:INSTRUCTION_TYPE"
-171. Port Connectivity Checks: "registers:\GEN_REG:25:R_AFFECTED"
-172. Port Connectivity Checks: "registers:\GEN_REG:25:DATA"
-173. Port Connectivity Checks: "registers:\GEN_REG:25:VALIDITY"
-174. Port Connectivity Checks: "registers:\GEN_REG:25:INSTRUCTION_TYPE"
-175. Port Connectivity Checks: "registers:\GEN_REG:24:R_AFFECTED"
-176. Port Connectivity Checks: "registers:\GEN_REG:24:DATA"
-177. Port Connectivity Checks: "registers:\GEN_REG:24:VALIDITY"
-178. Port Connectivity Checks: "registers:\GEN_REG:24:INSTRUCTION_TYPE"
-179. Port Connectivity Checks: "registers:\GEN_REG:23:R_AFFECTED"
-180. Port Connectivity Checks: "registers:\GEN_REG:23:DATA"
-181. Port Connectivity Checks: "registers:\GEN_REG:23:VALIDITY"
-182. Port Connectivity Checks: "registers:\GEN_REG:23:INSTRUCTION_TYPE"
-183. Port Connectivity Checks: "registers:\GEN_REG:22:R_AFFECTED"
-184. Port Connectivity Checks: "registers:\GEN_REG:22:DATA"
-185. Port Connectivity Checks: "registers:\GEN_REG:22:VALIDITY"
-186. Port Connectivity Checks: "registers:\GEN_REG:22:INSTRUCTION_TYPE"
-187. Port Connectivity Checks: "registers:\GEN_REG:21:R_AFFECTED"
-188. Port Connectivity Checks: "registers:\GEN_REG:21:DATA"
-189. Port Connectivity Checks: "registers:\GEN_REG:21:VALIDITY"
-190. Port Connectivity Checks: "registers:\GEN_REG:21:INSTRUCTION_TYPE"
-191. Port Connectivity Checks: "registers:\GEN_REG:20:R_AFFECTED"
-192. Port Connectivity Checks: "registers:\GEN_REG:20:DATA"
-193. Port Connectivity Checks: "registers:\GEN_REG:20:VALIDITY"
-194. Port Connectivity Checks: "registers:\GEN_REG:20:INSTRUCTION_TYPE"
-195. Port Connectivity Checks: "registers:\GEN_REG:19:R_AFFECTED"
-196. Port Connectivity Checks: "registers:\GEN_REG:19:DATA"
-197. Port Connectivity Checks: "registers:\GEN_REG:19:VALIDITY"
-198. Port Connectivity Checks: "registers:\GEN_REG:19:INSTRUCTION_TYPE"
-199. Port Connectivity Checks: "registers:\GEN_REG:18:R_AFFECTED"
-200. Port Connectivity Checks: "registers:\GEN_REG:18:DATA"
-201. Port Connectivity Checks: "registers:\GEN_REG:18:VALIDITY"
-202. Port Connectivity Checks: "registers:\GEN_REG:18:INSTRUCTION_TYPE"
-203. Port Connectivity Checks: "registers:\GEN_REG:17:R_AFFECTED"
-204. Port Connectivity Checks: "registers:\GEN_REG:17:DATA"
-205. Port Connectivity Checks: "registers:\GEN_REG:17:VALIDITY"
-206. Port Connectivity Checks: "registers:\GEN_REG:17:INSTRUCTION_TYPE"
-207. Port Connectivity Checks: "registers:\GEN_REG:16:R_AFFECTED"
-208. Port Connectivity Checks: "registers:\GEN_REG:16:DATA"
-209. Port Connectivity Checks: "registers:\GEN_REG:16:VALIDITY"
-210. Port Connectivity Checks: "registers:\GEN_REG:16:INSTRUCTION_TYPE"
-211. Port Connectivity Checks: "registers:\GEN_REG:15:R_AFFECTED"
-212. Port Connectivity Checks: "registers:\GEN_REG:15:DATA"
-213. Port Connectivity Checks: "registers:\GEN_REG:15:VALIDITY"
-214. Port Connectivity Checks: "registers:\GEN_REG:15:INSTRUCTION_TYPE"
-215. Port Connectivity Checks: "registers:\GEN_REG:14:R_AFFECTED"
-216. Port Connectivity Checks: "registers:\GEN_REG:14:DATA"
-217. Port Connectivity Checks: "registers:\GEN_REG:14:VALIDITY"
-218. Port Connectivity Checks: "registers:\GEN_REG:14:INSTRUCTION_TYPE"
-219. Port Connectivity Checks: "registers:\GEN_REG:13:R_AFFECTED"
-220. Port Connectivity Checks: "registers:\GEN_REG:13:DATA"
-221. Port Connectivity Checks: "registers:\GEN_REG:13:VALIDITY"
-222. Port Connectivity Checks: "registers:\GEN_REG:13:INSTRUCTION_TYPE"
-223. Port Connectivity Checks: "registers:\GEN_REG:12:R_AFFECTED"
-224. Port Connectivity Checks: "registers:\GEN_REG:12:DATA"
-225. Port Connectivity Checks: "registers:\GEN_REG:12:VALIDITY"
-226. Port Connectivity Checks: "registers:\GEN_REG:12:INSTRUCTION_TYPE"
-227. Port Connectivity Checks: "registers:\GEN_REG:11:R_AFFECTED"
-228. Port Connectivity Checks: "registers:\GEN_REG:11:DATA"
-229. Port Connectivity Checks: "registers:\GEN_REG:11:VALIDITY"
-230. Port Connectivity Checks: "registers:\GEN_REG:11:INSTRUCTION_TYPE"
-231. Port Connectivity Checks: "registers:\GEN_REG:10:R_AFFECTED"
-232. Port Connectivity Checks: "registers:\GEN_REG:10:DATA"
-233. Port Connectivity Checks: "registers:\GEN_REG:10:VALIDITY"
-234. Port Connectivity Checks: "registers:\GEN_REG:10:INSTRUCTION_TYPE"
-235. Port Connectivity Checks: "registers:\GEN_REG:9:R_AFFECTED"
-236. Port Connectivity Checks: "registers:\GEN_REG:9:DATA"
-237. Port Connectivity Checks: "registers:\GEN_REG:9:VALIDITY"
-238. Port Connectivity Checks: "registers:\GEN_REG:9:INSTRUCTION_TYPE"
-239. Port Connectivity Checks: "registers:\GEN_REG:8:R_AFFECTED"
-240. Port Connectivity Checks: "registers:\GEN_REG:8:DATA"
-241. Port Connectivity Checks: "registers:\GEN_REG:8:VALIDITY"
-242. Port Connectivity Checks: "registers:\GEN_REG:8:INSTRUCTION_TYPE"
-243. Port Connectivity Checks: "registers:\GEN_REG:7:R_AFFECTED"
-244. Port Connectivity Checks: "registers:\GEN_REG:7:DATA"
-245. Port Connectivity Checks: "registers:\GEN_REG:7:VALIDITY"
-246. Port Connectivity Checks: "registers:\GEN_REG:7:INSTRUCTION_TYPE"
-247. Port Connectivity Checks: "registers:\GEN_REG:6:R_AFFECTED"
-248. Port Connectivity Checks: "registers:\GEN_REG:6:DATA"
-249. Port Connectivity Checks: "registers:\GEN_REG:6:VALIDITY"
-250. Port Connectivity Checks: "registers:\GEN_REG:6:INSTRUCTION_TYPE"
-251. Port Connectivity Checks: "registers:\GEN_REG:5:R_AFFECTED"
-252. Port Connectivity Checks: "registers:\GEN_REG:5:DATA"
-253. Port Connectivity Checks: "registers:\GEN_REG:5:VALIDITY"
-254. Port Connectivity Checks: "registers:\GEN_REG:5:INSTRUCTION_TYPE"
-255. Port Connectivity Checks: "registers:\GEN_REG:4:R_AFFECTED"
-256. Port Connectivity Checks: "registers:\GEN_REG:4:DATA"
-257. Port Connectivity Checks: "registers:\GEN_REG:4:VALIDITY"
-258. Port Connectivity Checks: "registers:\GEN_REG:4:INSTRUCTION_TYPE"
-259. Port Connectivity Checks: "registers:\GEN_REG:3:R_AFFECTED"
-260. Port Connectivity Checks: "registers:\GEN_REG:3:DATA"
-261. Port Connectivity Checks: "registers:\GEN_REG:3:VALIDITY"
-262. Port Connectivity Checks: "registers:\GEN_REG:3:INSTRUCTION_TYPE"
-263. Port Connectivity Checks: "registers:\GEN_REG:2:R_AFFECTED"
-264. Port Connectivity Checks: "registers:\GEN_REG:2:DATA"
-265. Port Connectivity Checks: "registers:\GEN_REG:2:VALIDITY"
-266. Port Connectivity Checks: "registers:\GEN_REG:2:INSTRUCTION_TYPE"
-267. Port Connectivity Checks: "registers:\GEN_REG:1:R_AFFECTED"
-268. Port Connectivity Checks: "registers:\GEN_REG:1:DATA"
-269. Port Connectivity Checks: "registers:\GEN_REG:1:VALIDITY"
-270. Port Connectivity Checks: "registers:\GEN_REG:1:INSTRUCTION_TYPE"
-271. Port Connectivity Checks: "registers:\GEN_REG:0:R_AFFECTED"
-272. Port Connectivity Checks: "registers:\GEN_REG:0:DATA"
-273. Port Connectivity Checks: "registers:\GEN_REG:0:VALIDITY"
-274. Port Connectivity Checks: "registers:\GEN_REG:0:INSTRUCTION_TYPE"
-275. Post-Synthesis Netlist Statistics for Top Partition
-276. Elapsed Time Per Partition
-277. Analysis & Synthesis Messages
+145. Port Connectivity Checks: "adds:adder0"
+146. Port Connectivity Checks: "registers:\GEN_REG:31:R_AFFECTED"
+147. Port Connectivity Checks: "registers:\GEN_REG:31:DATA"
+148. Port Connectivity Checks: "registers:\GEN_REG:31:VALIDITY"
+149. Port Connectivity Checks: "registers:\GEN_REG:31:INSTRUCTION_TYPE"
+150. Port Connectivity Checks: "registers:\GEN_REG:30:R_AFFECTED"
+151. Port Connectivity Checks: "registers:\GEN_REG:30:DATA"
+152. Port Connectivity Checks: "registers:\GEN_REG:30:VALIDITY"
+153. Port Connectivity Checks: "registers:\GEN_REG:30:INSTRUCTION_TYPE"
+154. Port Connectivity Checks: "registers:\GEN_REG:29:R_AFFECTED"
+155. Port Connectivity Checks: "registers:\GEN_REG:29:DATA"
+156. Port Connectivity Checks: "registers:\GEN_REG:29:VALIDITY"
+157. Port Connectivity Checks: "registers:\GEN_REG:29:INSTRUCTION_TYPE"
+158. Port Connectivity Checks: "registers:\GEN_REG:28:R_AFFECTED"
+159. Port Connectivity Checks: "registers:\GEN_REG:28:DATA"
+160. Port Connectivity Checks: "registers:\GEN_REG:28:VALIDITY"
+161. Port Connectivity Checks: "registers:\GEN_REG:28:INSTRUCTION_TYPE"
+162. Port Connectivity Checks: "registers:\GEN_REG:27:R_AFFECTED"
+163. Port Connectivity Checks: "registers:\GEN_REG:27:DATA"
+164. Port Connectivity Checks: "registers:\GEN_REG:27:VALIDITY"
+165. Port Connectivity Checks: "registers:\GEN_REG:27:INSTRUCTION_TYPE"
+166. Port Connectivity Checks: "registers:\GEN_REG:26:R_AFFECTED"
+167. Port Connectivity Checks: "registers:\GEN_REG:26:DATA"
+168. Port Connectivity Checks: "registers:\GEN_REG:26:VALIDITY"
+169. Port Connectivity Checks: "registers:\GEN_REG:26:INSTRUCTION_TYPE"
+170. Port Connectivity Checks: "registers:\GEN_REG:25:R_AFFECTED"
+171. Port Connectivity Checks: "registers:\GEN_REG:25:DATA"
+172. Port Connectivity Checks: "registers:\GEN_REG:25:VALIDITY"
+173. Port Connectivity Checks: "registers:\GEN_REG:25:INSTRUCTION_TYPE"
+174. Port Connectivity Checks: "registers:\GEN_REG:24:R_AFFECTED"
+175. Port Connectivity Checks: "registers:\GEN_REG:24:DATA"
+176. Port Connectivity Checks: "registers:\GEN_REG:24:VALIDITY"
+177. Port Connectivity Checks: "registers:\GEN_REG:24:INSTRUCTION_TYPE"
+178. Port Connectivity Checks: "registers:\GEN_REG:23:R_AFFECTED"
+179. Port Connectivity Checks: "registers:\GEN_REG:23:DATA"
+180. Port Connectivity Checks: "registers:\GEN_REG:23:VALIDITY"
+181. Port Connectivity Checks: "registers:\GEN_REG:23:INSTRUCTION_TYPE"
+182. Port Connectivity Checks: "registers:\GEN_REG:22:R_AFFECTED"
+183. Port Connectivity Checks: "registers:\GEN_REG:22:DATA"
+184. Port Connectivity Checks: "registers:\GEN_REG:22:VALIDITY"
+185. Port Connectivity Checks: "registers:\GEN_REG:22:INSTRUCTION_TYPE"
+186. Port Connectivity Checks: "registers:\GEN_REG:21:R_AFFECTED"
+187. Port Connectivity Checks: "registers:\GEN_REG:21:DATA"
+188. Port Connectivity Checks: "registers:\GEN_REG:21:VALIDITY"
+189. Port Connectivity Checks: "registers:\GEN_REG:21:INSTRUCTION_TYPE"
+190. Port Connectivity Checks: "registers:\GEN_REG:20:R_AFFECTED"
+191. Port Connectivity Checks: "registers:\GEN_REG:20:DATA"
+192. Port Connectivity Checks: "registers:\GEN_REG:20:VALIDITY"
+193. Port Connectivity Checks: "registers:\GEN_REG:20:INSTRUCTION_TYPE"
+194. Port Connectivity Checks: "registers:\GEN_REG:19:R_AFFECTED"
+195. Port Connectivity Checks: "registers:\GEN_REG:19:DATA"
+196. Port Connectivity Checks: "registers:\GEN_REG:19:VALIDITY"
+197. Port Connectivity Checks: "registers:\GEN_REG:19:INSTRUCTION_TYPE"
+198. Port Connectivity Checks: "registers:\GEN_REG:18:R_AFFECTED"
+199. Port Connectivity Checks: "registers:\GEN_REG:18:DATA"
+200. Port Connectivity Checks: "registers:\GEN_REG:18:VALIDITY"
+201. Port Connectivity Checks: "registers:\GEN_REG:18:INSTRUCTION_TYPE"
+202. Port Connectivity Checks: "registers:\GEN_REG:17:R_AFFECTED"
+203. Port Connectivity Checks: "registers:\GEN_REG:17:DATA"
+204. Port Connectivity Checks: "registers:\GEN_REG:17:VALIDITY"
+205. Port Connectivity Checks: "registers:\GEN_REG:17:INSTRUCTION_TYPE"
+206. Port Connectivity Checks: "registers:\GEN_REG:16:R_AFFECTED"
+207. Port Connectivity Checks: "registers:\GEN_REG:16:DATA"
+208. Port Connectivity Checks: "registers:\GEN_REG:16:VALIDITY"
+209. Port Connectivity Checks: "registers:\GEN_REG:16:INSTRUCTION_TYPE"
+210. Port Connectivity Checks: "registers:\GEN_REG:15:R_AFFECTED"
+211. Port Connectivity Checks: "registers:\GEN_REG:15:DATA"
+212. Port Connectivity Checks: "registers:\GEN_REG:15:VALIDITY"
+213. Port Connectivity Checks: "registers:\GEN_REG:15:INSTRUCTION_TYPE"
+214. Port Connectivity Checks: "registers:\GEN_REG:14:R_AFFECTED"
+215. Port Connectivity Checks: "registers:\GEN_REG:14:DATA"
+216. Port Connectivity Checks: "registers:\GEN_REG:14:VALIDITY"
+217. Port Connectivity Checks: "registers:\GEN_REG:14:INSTRUCTION_TYPE"
+218. Port Connectivity Checks: "registers:\GEN_REG:13:R_AFFECTED"
+219. Port Connectivity Checks: "registers:\GEN_REG:13:DATA"
+220. Port Connectivity Checks: "registers:\GEN_REG:13:VALIDITY"
+221. Port Connectivity Checks: "registers:\GEN_REG:13:INSTRUCTION_TYPE"
+222. Port Connectivity Checks: "registers:\GEN_REG:12:R_AFFECTED"
+223. Port Connectivity Checks: "registers:\GEN_REG:12:DATA"
+224. Port Connectivity Checks: "registers:\GEN_REG:12:VALIDITY"
+225. Port Connectivity Checks: "registers:\GEN_REG:12:INSTRUCTION_TYPE"
+226. Port Connectivity Checks: "registers:\GEN_REG:11:R_AFFECTED"
+227. Port Connectivity Checks: "registers:\GEN_REG:11:DATA"
+228. Port Connectivity Checks: "registers:\GEN_REG:11:VALIDITY"
+229. Port Connectivity Checks: "registers:\GEN_REG:11:INSTRUCTION_TYPE"
+230. Port Connectivity Checks: "registers:\GEN_REG:10:R_AFFECTED"
+231. Port Connectivity Checks: "registers:\GEN_REG:10:DATA"
+232. Port Connectivity Checks: "registers:\GEN_REG:10:VALIDITY"
+233. Port Connectivity Checks: "registers:\GEN_REG:10:INSTRUCTION_TYPE"
+234. Port Connectivity Checks: "registers:\GEN_REG:9:R_AFFECTED"
+235. Port Connectivity Checks: "registers:\GEN_REG:9:DATA"
+236. Port Connectivity Checks: "registers:\GEN_REG:9:VALIDITY"
+237. Port Connectivity Checks: "registers:\GEN_REG:9:INSTRUCTION_TYPE"
+238. Port Connectivity Checks: "registers:\GEN_REG:8:R_AFFECTED"
+239. Port Connectivity Checks: "registers:\GEN_REG:8:DATA"
+240. Port Connectivity Checks: "registers:\GEN_REG:8:VALIDITY"
+241. Port Connectivity Checks: "registers:\GEN_REG:8:INSTRUCTION_TYPE"
+242. Port Connectivity Checks: "registers:\GEN_REG:7:R_AFFECTED"
+243. Port Connectivity Checks: "registers:\GEN_REG:7:DATA"
+244. Port Connectivity Checks: "registers:\GEN_REG:7:VALIDITY"
+245. Port Connectivity Checks: "registers:\GEN_REG:7:INSTRUCTION_TYPE"
+246. Port Connectivity Checks: "registers:\GEN_REG:6:R_AFFECTED"
+247. Port Connectivity Checks: "registers:\GEN_REG:6:DATA"
+248. Port Connectivity Checks: "registers:\GEN_REG:6:VALIDITY"
+249. Port Connectivity Checks: "registers:\GEN_REG:6:INSTRUCTION_TYPE"
+250. Port Connectivity Checks: "registers:\GEN_REG:5:R_AFFECTED"
+251. Port Connectivity Checks: "registers:\GEN_REG:5:DATA"
+252. Port Connectivity Checks: "registers:\GEN_REG:5:VALIDITY"
+253. Port Connectivity Checks: "registers:\GEN_REG:5:INSTRUCTION_TYPE"
+254. Port Connectivity Checks: "registers:\GEN_REG:4:R_AFFECTED"
+255. Port Connectivity Checks: "registers:\GEN_REG:4:DATA"
+256. Port Connectivity Checks: "registers:\GEN_REG:4:VALIDITY"
+257. Port Connectivity Checks: "registers:\GEN_REG:4:INSTRUCTION_TYPE"
+258. Port Connectivity Checks: "registers:\GEN_REG:3:R_AFFECTED"
+259. Port Connectivity Checks: "registers:\GEN_REG:3:DATA"
+260. Port Connectivity Checks: "registers:\GEN_REG:3:VALIDITY"
+261. Port Connectivity Checks: "registers:\GEN_REG:3:INSTRUCTION_TYPE"
+262. Port Connectivity Checks: "registers:\GEN_REG:2:R_AFFECTED"
+263. Port Connectivity Checks: "registers:\GEN_REG:2:DATA"
+264. Port Connectivity Checks: "registers:\GEN_REG:2:VALIDITY"
+265. Port Connectivity Checks: "registers:\GEN_REG:2:INSTRUCTION_TYPE"
+266. Port Connectivity Checks: "registers:\GEN_REG:1:R_AFFECTED"
+267. Port Connectivity Checks: "registers:\GEN_REG:1:DATA"
+268. Port Connectivity Checks: "registers:\GEN_REG:1:VALIDITY"
+269. Port Connectivity Checks: "registers:\GEN_REG:1:INSTRUCTION_TYPE"
+270. Port Connectivity Checks: "registers:\GEN_REG:0:R_AFFECTED"
+271. Port Connectivity Checks: "registers:\GEN_REG:0:DATA"
+272. Port Connectivity Checks: "registers:\GEN_REG:0:VALIDITY"
+273. Port Connectivity Checks: "registers:\GEN_REG:0:INSTRUCTION_TYPE"
+274. Post-Synthesis Netlist Statistics for Top Partition
+275. Elapsed Time Per Partition
+276. Analysis & Synthesis Messages
 
 
 
@@ -309,7 +308,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 27 14:13:16 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 28 07:08:56 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; ROB                                         ;
 ; Top-level Entity Name              ; ROB                                         ;
@@ -482,97 +481,100 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                             ;
-+------------------------------------------+-----------------------------------------------------+
-; Register name                            ; Reason for Removal                                  ;
-+------------------------------------------+-----------------------------------------------------+
-; registers:\GEN_REG:31:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:30:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:29:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:28:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:27:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:26:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:25:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:24:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:23:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:22:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:21:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:20:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:19:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:18:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:17:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:16:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:15:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:14:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:13:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:12:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:11:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:10:VALIDITY|data[0]   ; Lost fanout                                         ;
-; registers:\GEN_REG:9:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:8:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:7:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:6:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:5:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:4:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:3:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:2:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:1:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:\GEN_REG:0:VALIDITY|data[0]    ; Lost fanout                                         ;
-; registers:top_pointer|data[1..4]         ; Merged with registers:top_pointer|data[0]           ;
-; registers:top_pointer|output[0..4]       ; Merged with registers:top_pointer|data[0]           ;
-; registers:bottom_pointer|output[4]       ; Merged with registers:bottom_pointer|data[4]        ;
-; registers:bottom_pointer|output[3]       ; Merged with registers:bottom_pointer|data[3]        ;
-; registers:bottom_pointer|output[2]       ; Merged with registers:bottom_pointer|data[2]        ;
-; registers:bottom_pointer|output[1]       ; Merged with registers:bottom_pointer|data[1]        ;
-; registers:bottom_pointer|output[0]       ; Merged with registers:bottom_pointer|data[0]        ;
-; registers:\GEN_REG:10:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:11:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:12:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:13:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:14:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:15:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:16:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:17:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:18:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:19:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:1:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:20:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:21:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:22:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:23:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:24:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:25:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:26:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:27:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:28:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:29:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:2:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:30:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:31:VALIDITY|output[0] ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:3:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:4:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:5:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:6:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:7:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:8:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:\GEN_REG:9:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|output[0] ;
-; registers:top_pointer|data[0]            ; Stuck at GND due to stuck port data_in              ;
-; registers:stall_manage|data[0]           ; Stuck at GND due to stuck port data_in              ;
-; registers:bottom_pointer|data[0..4]      ; Stuck at GND due to stuck port data_in              ;
-; registers:stall_manage|output[0]         ; Stuck at GND due to stuck port data_in              ;
-; Total Number of Removed Registers = 85   ;                                                     ;
-+------------------------------------------+-----------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++------------------------------------------+----------------------------------------------------+
+; Register name                            ; Reason for Removal                                 ;
++------------------------------------------+----------------------------------------------------+
+; registers:top_pointer|data[1..4]         ; Merged with registers:top_pointer|data[0]          ;
+; registers:top_pointer|output[0..4]       ; Merged with registers:top_pointer|data[0]          ;
+; registers:bottom_pointer|output[4]       ; Merged with registers:bottom_pointer|data[4]       ;
+; registers:bottom_pointer|output[3]       ; Merged with registers:bottom_pointer|data[3]       ;
+; registers:bottom_pointer|output[2]       ; Merged with registers:bottom_pointer|data[2]       ;
+; registers:bottom_pointer|output[1]       ; Merged with registers:bottom_pointer|data[1]       ;
+; registers:bottom_pointer|output[0]       ; Merged with registers:bottom_pointer|data[0]       ;
+; registers:\GEN_REG:0:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:0:VALIDITY|data[0]  ;
+; registers:\GEN_REG:1:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:1:VALIDITY|data[0]  ;
+; registers:\GEN_REG:2:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:2:VALIDITY|data[0]  ;
+; registers:\GEN_REG:3:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:3:VALIDITY|data[0]  ;
+; registers:\GEN_REG:4:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:4:VALIDITY|data[0]  ;
+; registers:\GEN_REG:5:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:5:VALIDITY|data[0]  ;
+; registers:\GEN_REG:6:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:6:VALIDITY|data[0]  ;
+; registers:\GEN_REG:7:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:7:VALIDITY|data[0]  ;
+; registers:\GEN_REG:8:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:8:VALIDITY|data[0]  ;
+; registers:\GEN_REG:9:VALIDITY|output[0]  ; Merged with registers:\GEN_REG:9:VALIDITY|data[0]  ;
+; registers:\GEN_REG:10:VALIDITY|output[0] ; Merged with registers:\GEN_REG:10:VALIDITY|data[0] ;
+; registers:\GEN_REG:11:VALIDITY|output[0] ; Merged with registers:\GEN_REG:11:VALIDITY|data[0] ;
+; registers:\GEN_REG:12:VALIDITY|output[0] ; Merged with registers:\GEN_REG:12:VALIDITY|data[0] ;
+; registers:\GEN_REG:13:VALIDITY|output[0] ; Merged with registers:\GEN_REG:13:VALIDITY|data[0] ;
+; registers:\GEN_REG:14:VALIDITY|output[0] ; Merged with registers:\GEN_REG:14:VALIDITY|data[0] ;
+; registers:\GEN_REG:15:VALIDITY|output[0] ; Merged with registers:\GEN_REG:15:VALIDITY|data[0] ;
+; registers:\GEN_REG:16:VALIDITY|output[0] ; Merged with registers:\GEN_REG:16:VALIDITY|data[0] ;
+; registers:\GEN_REG:17:VALIDITY|output[0] ; Merged with registers:\GEN_REG:17:VALIDITY|data[0] ;
+; registers:\GEN_REG:18:VALIDITY|output[0] ; Merged with registers:\GEN_REG:18:VALIDITY|data[0] ;
+; registers:\GEN_REG:19:VALIDITY|output[0] ; Merged with registers:\GEN_REG:19:VALIDITY|data[0] ;
+; registers:\GEN_REG:20:VALIDITY|output[0] ; Merged with registers:\GEN_REG:20:VALIDITY|data[0] ;
+; registers:\GEN_REG:21:VALIDITY|output[0] ; Merged with registers:\GEN_REG:21:VALIDITY|data[0] ;
+; registers:\GEN_REG:22:VALIDITY|output[0] ; Merged with registers:\GEN_REG:22:VALIDITY|data[0] ;
+; registers:\GEN_REG:23:VALIDITY|output[0] ; Merged with registers:\GEN_REG:23:VALIDITY|data[0] ;
+; registers:\GEN_REG:24:VALIDITY|output[0] ; Merged with registers:\GEN_REG:24:VALIDITY|data[0] ;
+; registers:\GEN_REG:25:VALIDITY|output[0] ; Merged with registers:\GEN_REG:25:VALIDITY|data[0] ;
+; registers:\GEN_REG:26:VALIDITY|output[0] ; Merged with registers:\GEN_REG:26:VALIDITY|data[0] ;
+; registers:\GEN_REG:27:VALIDITY|output[0] ; Merged with registers:\GEN_REG:27:VALIDITY|data[0] ;
+; registers:\GEN_REG:28:VALIDITY|output[0] ; Merged with registers:\GEN_REG:28:VALIDITY|data[0] ;
+; registers:\GEN_REG:29:VALIDITY|output[0] ; Merged with registers:\GEN_REG:29:VALIDITY|data[0] ;
+; registers:\GEN_REG:30:VALIDITY|output[0] ; Merged with registers:\GEN_REG:30:VALIDITY|data[0] ;
+; registers:\GEN_REG:31:VALIDITY|output[0] ; Merged with registers:\GEN_REG:31:VALIDITY|data[0] ;
+; registers:top_pointer|data[0]            ; Stuck at GND due to stuck port data_in             ;
+; registers:stall_manage|data[0]           ; Stuck at GND due to stuck port data_in             ;
+; registers:bottom_pointer|data[0..4]      ; Stuck at GND due to stuck port data_in             ;
+; registers:stall_manage|output[0]         ; Stuck at GND due to stuck port data_in             ;
+; registers:\GEN_REG:31:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:30:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:29:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:28:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:27:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:26:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:25:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:24:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:23:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:22:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:21:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:20:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:19:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:18:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:17:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:16:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:15:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:14:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:13:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:12:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:11:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:10:VALIDITY|data[0]   ; Lost fanout                                        ;
+; registers:\GEN_REG:9:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:8:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:7:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:6:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:5:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:4:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:3:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:2:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:1:VALIDITY|data[0]    ; Lost fanout                                        ;
+; registers:\GEN_REG:0:VALIDITY|data[0]    ; Lost fanout                                        ;
+; Total Number of Removed Registers = 86   ;                                                    ;
++------------------------------------------+----------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                  ;
-+-------------------------------+---------------------------+------------------------------------------------------------------+
-; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                           ;
-+-------------------------------+---------------------------+------------------------------------------------------------------+
-; registers:top_pointer|data[0] ; Stuck at GND              ; registers:stall_manage|data[0], registers:stall_manage|output[0] ;
-;                               ; due to stuck port data_in ;                                                                  ;
-+-------------------------------+---------------------------+------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++-------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++-------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; registers:top_pointer|data[0] ; Stuck at GND              ; registers:stall_manage|data[0], registers:stall_manage|output[0],             ;
+;                               ; due to stuck port data_in ; registers:\GEN_REG:5:VALIDITY|data[0], registers:\GEN_REG:4:VALIDITY|data[0], ;
+;                               ;                           ; registers:\GEN_REG:3:VALIDITY|data[0], registers:\GEN_REG:2:VALIDITY|data[0], ;
+;                               ;                           ; registers:\GEN_REG:1:VALIDITY|data[0], registers:\GEN_REG:0:VALIDITY|data[0]  ;
++-------------------------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1930,15 +1932,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "adds:adder1"       ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; data2[4..1] ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
-
-
 +-----------------------------------------+
 ; Port Connectivity Checks: "adds:adder0" ;
 +-------+-------+----------+--------------+
@@ -1962,18 +1955,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:31:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -1999,18 +1992,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:30:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2036,18 +2029,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:29:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2073,18 +2066,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:28:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2110,18 +2103,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:27:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2147,18 +2140,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:26:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2184,18 +2177,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:25:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2221,18 +2214,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:24:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2258,18 +2251,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:23:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2295,18 +2288,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:22:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2332,18 +2325,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:21:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2369,18 +2362,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:20:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2406,18 +2399,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:19:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2443,18 +2436,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:18:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2480,18 +2473,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:17:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2517,18 +2510,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:16:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2554,18 +2547,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:15:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2591,18 +2584,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:14:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2628,18 +2621,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:13:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2665,18 +2658,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:12:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2702,18 +2695,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:11:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2739,18 +2732,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:10:VALIDITY" ;
-+--------+-------+----------+--------------------------------+
-; Port   ; Type  ; Severity ; Details                        ;
-+--------+-------+----------+--------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                   ;
-; enable ; Input ; Info     ; Stuck at VCC                   ;
-+--------+-------+----------+--------------------------------+
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                    ;
++-------+-------+----------+---------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2776,18 +2769,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:9:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2813,18 +2806,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:8:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2850,18 +2843,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:7:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2887,18 +2880,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:6:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2924,18 +2917,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:5:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2961,18 +2954,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:4:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -2998,18 +2991,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:3:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -3035,18 +3028,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:2:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -3072,18 +3065,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:1:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -3109,18 +3102,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "registers:\GEN_REG:0:VALIDITY" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; input  ; Input ; Info     ; Stuck at VCC                  ;
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; input ; Input ; Info     ; Stuck at VCC                   ;
++-------+-------+----------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -3162,7 +3155,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Apr 27 14:12:58 2017
+    Info: Processing started: Fri Apr 28 07:08:43 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ROB -c ROB
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/inc.vhd
@@ -3190,15 +3183,559 @@ Warning (10541): VHDL Signal Declaration warning at ROB.vhd(21): used implicit d
 Warning (10541): VHDL Signal Declaration warning at ROB.vhd(38): used implicit default value for signal "inst_type_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 38
 Warning (10036): Verilog HDL or VHDL warning at ROB.vhd(38): object "inst_type_out" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 38
 Warning (10541): VHDL Signal Declaration warning at ROB.vhd(39): used implicit default value for signal "inst_type_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 39
-Warning (10541): VHDL Signal Declaration warning at ROB.vhd(39): used implicit default value for signal "rob_data_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 39
 Warning (10541): VHDL Signal Declaration warning at ROB.vhd(39): used implicit default value for signal "rob_r_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 39
-Warning (10541): VHDL Signal Declaration warning at ROB.vhd(40): used implicit default value for signal "rob_data_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 40
 Warning (10036): Verilog HDL or VHDL warning at ROB.vhd(40): object "rob_data_out" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 40
 Warning (10541): VHDL Signal Declaration warning at ROB.vhd(41): used implicit default value for signal "rob_r_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 41
 Warning (10036): Verilog HDL or VHDL warning at ROB.vhd(41): object "rob_r_out" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 41
 Warning (10541): VHDL Signal Declaration warning at ROB.vhd(44): used implicit default value for signal "bottom_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 44
 Warning (10631): VHDL Process Statement warning at ROB.vhd(124): inferring latch(es) for signal or variable "rob_valid_in", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
 Warning (10631): VHDL Process Statement warning at ROB.vhd(124): inferring latch(es) for signal or variable "rob_valid_en", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at ROB.vhd(124): inferring latch(es) for signal or variable "rob_data_in", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Warning (10631): VHDL Process Statement warning at ROB.vhd(124): inferring latch(es) for signal or variable "rob_data_en", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[31][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[30][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[29][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[28][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[27][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[26][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[25][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[24][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[23][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[22][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[21][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[20][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[19][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[18][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[17][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[16][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[15][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[14][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[13][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[12][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[11][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[10][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[9][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[8][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[7][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[6][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[5][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[4][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[3][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[2][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[1][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_en[0][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[31][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[30][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[29][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[28][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[27][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[26][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[25][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[24][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[23][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[22][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[21][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[20][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[19][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[18][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[17][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[16][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[15][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[14][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[13][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[12][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[11][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[10][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[9][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[8][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[7][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[6][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[5][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[4][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[3][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[2][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[1][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][1]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][2]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][3]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][4]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][5]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][6]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][7]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][8]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][9]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][10]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][11]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][12]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][13]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][14]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
+Info (10041): Inferred latch for "rob_data_in[0][15]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
 Info (10041): Inferred latch for "rob_valid_en[31][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
 Info (10041): Inferred latch for "rob_valid_en[30][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
 Info (10041): Inferred latch for "rob_valid_en[29][0]" at ROB.vhd(124) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 124
@@ -3531,9 +4068,9 @@ Info (21057): Implemented 253 device resources after synthesis - the final resou
     Info (21058): Implemented 220 input pins
     Info (21059): Implemented 33 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 268 warnings
-    Info: Peak virtual memory: 681 megabytes
-    Info: Processing ended: Thu Apr 27 14:13:16 2017
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 682 megabytes
+    Info: Processing ended: Fri Apr 28 07:08:57 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 
