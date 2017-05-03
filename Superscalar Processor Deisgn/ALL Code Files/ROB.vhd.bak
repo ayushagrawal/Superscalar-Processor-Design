@@ -6,8 +6,6 @@ use ieee.numeric_std.all;
 library work;
 use work.components.all;
 
--- ASSUMPTION : INSTRUCTIONS CAN BE TAKEN IN MULTIPLES OF 2
-
 entity ROB is
 	generic(N : integer := 32);			-- Represents total number of entries
 	port(	reset 	: in std_logic;
@@ -31,9 +29,6 @@ entity ROB is
 			 -- Data 							: 16 bits
 			 -- Validity of information 	: 1 bit
 			 -- Total							: 22 bits
-			 
-			 -- TO DECODE
-			 
 		 );
 		 
 end entity;
@@ -41,10 +36,10 @@ end entity;
 architecture files of ROB is
 	
 	signal inst_type_in,inst_type_out : main_array(0 to N-1)(1 downto 0);
-	signal rob_valid_in,rob_valid_en,rob_valid_out,rob_busy_in,rob_busy_en,rob_busy_out,inst_type_en,rob_data_en,rob_r_en : main_array(0 to N-1)(0 downto 0);
+	signal rob_valid_in,rob_valid_en,rob_valid_out,inst_type_en,rob_data_en,rob_r_en : main_array(0 to N-1)(0 downto 0);
 	signal rob_data_in,rob_data_out : main_array(0 to N-1)(15 downto 0);
 	signal rob_r_in, rob_r_out : main_array(0 to N-1)(2 downto 0);
-	signal top_in,top_out,bottom_in,bottom_out,top_add,bottom_add,top_add_one,top_add_in : std_logic_vector(natural(log2(real(N)))-1 downto 0);
+	signal top_in,top_out,bottom_in,bottom_out,top_add,bottom_add : std_logic_vector(natural(log2(real(N)))-1 downto 0);
 	signal manage_bit_in,manage_bit_out : std_logic_vector(0 downto 0);
 	signal top_en,bottom_en,manage_bit_en : std_logic;
 	
@@ -60,12 +55,6 @@ begin
 												   input => inst_type_in(I),
 												   enable => inst_type_en(I)(0),
 												   output => inst_type_out(I));
-					BUSY				 : registers generic map(N => 1)
-										  port map(reset => reset,
-												   clk   => clk,
-												   input => rob_busy_in(I),
-												   enable => rob_busy_en(I)(0),
-												   output => rob_busy_out(I));
 					VALIDITY 		 : registers generic map(N => 1)
 										  port map(reset => reset,
 												   clk   => clk,
@@ -103,7 +92,7 @@ begin
 													enable => bottom_en,
 													output => bottom_out);
 	
-	----------- TOP POINTER AND INCOMING INSTRUCTIONS' LOGIC ------------
+	----------- TOP POINTER LOGIC ------------
 	-- 1. This will control the top_pointer register enable bit.
 	-- 2. This will make decisions based on 'instruction1' and 'instruction2'
 	process(instruction1,instruction2)
@@ -111,8 +100,9 @@ begin
 		if(instruction1(0) = '1' and instruction2(0) = '1') then
 			top_add(1 downto 0) <= "10";
 			top_en <= '1';
-			rob_busy_in(to_integer(unsigned(top_add_one))) <= "1";
-			rob_busy_en(to_integer(unsigned(top_add_one))) <= "1";
+		elsif(instruction1(0) = '1' or instruction2(0) = '1') then
+			top_add(1 downto 0) <= "01";
+			top_en <= '1';
 		else											-- If no new valid instruction is entered, top is not updated
 			top_add(1 downto 0) <= "00";
 			top_en <= '0';
@@ -125,73 +115,75 @@ begin
 								 data2 => top_add,
 								 output => top_in);
 	
-	top_add_in <= (0 => '1',others => '0');
-	
-	adder1 : adds generic map(N => natural(log2(real(N))))
-					 port map(data1 => top_out,
-								 data2 => top_add_in,
-								 output => top_add_one);
-	
 	--________ TOP POINTER LOGIC ENDS ______--
 	
 	
-	----------- VALIDITY REGISTER LOGIC ------------
-	-- 1. This will make decisions based on broadcast
+	----------- BOTTOM POINTER AND VALIDITY REGISTER LOGIC ------------
+	-- 1. This will control the bottom_pointer register enable bit.
+	-- 2. This will make decisions based on broadcast
 	process(broadcast)
-	
+		variable count : integer := 0;
 	begin
-	
+		count := 0;
 		if(broadcast(0)(0) = '1') then
+			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_data_in(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1)))) <= broadcast(0)(21 downto 6);
 			rob_data_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		else
 			rob_valid_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '0';
-			rob_data_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		end if;
 		if(broadcast(1)(0) = '1') then
+			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_data_in(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1)))) <= broadcast(1)(21 downto 6);
 			rob_data_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		else
 			rob_valid_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '0';
-			rob_data_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(1)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		end if;
 		if(broadcast(2)(0) = '1') then
+			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_data_in(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1)))) <= broadcast(2)(21 downto 6);
 			rob_data_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		else
 			rob_valid_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '0';
-			rob_data_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(2)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		end if;
 		if(broadcast(3)(0) = '1') then
+			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_data_in(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1)))) <= broadcast(3)(21 downto 6);
 			rob_data_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		else
 			rob_valid_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '0';
-			rob_data_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(3)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		end if;
 		if(broadcast(4)(0) = '1') then
+			count := count + 1;
 			rob_valid_in(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_data_in(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1)))) <= broadcast(4)(21 downto 6);
 			rob_data_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		else
 			rob_valid_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '0';
-			rob_data_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '0';
+			rob_data_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '1';
 		end if;
-		
+		bottom_add <= std_logic_vector(to_unsigned(count,natural(log2(real(N)))));
 	end process;
 	
+	adder1 : adds generic map(N => natural(log2(real(N))))
+					 port map(data1 => bottom_out,
+								 data2 => bottom_add,
+								 output => bottom_in);
 	
-	
-	--________ VALIDITY REGISTER LOGIC ENDS ______--
+	--________ BOTTOM POINTER AND VALIDITY REGISTER LOGIC ENDS ______--
 	
 	
 	--------- POINTER REGISTERS END ----------
@@ -208,15 +200,15 @@ begin
 	process(top_out,bottom_out,rob_valid_out)
 	
 	begin
-		if((top_out = bottom_out) and (rob_busy_out(to_integer(unsigned(top_out)))(0) = '1')) then		-- This means false call
+		if((top_out = bottom_out) and (rob_valid_out(to_integer(unsigned(top_out)))(0) = '0')) then		-- This means false call
 			manage_bit_in <= "0";
 			manage_bit_en <= '1';
-		elsif((top_out = bottom_out) and (rob_busy_out(to_integer(unsigned(top_out)))(0) = '0')) then
+		elsif((top_out = bottom_out) and (rob_valid_out(to_integer(unsigned(top_out)))(0) = '0')) then
 			manage_bit_in <= "1";
 			manage_bit_en <= '1';
 		else
 			manage_bit_in <= "0";
-			manage_bit_en <= '1';
+			manage_bit_en <= '0';
 		end if;
 	end process;
 	

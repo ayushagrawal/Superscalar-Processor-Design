@@ -1,5 +1,5 @@
 Flow report for ROB
-Fri Apr 28 07:09:10 2017
+Wed May 03 09:38:24 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Apr 28 07:09:06 2017       ;
+; Flow Status                        ; Successful - Wed May 03 09:38:19 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; ROB                                         ;
 ; Top-level Entity Name              ; ROB                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0 / 15,408 ( 0 % )                          ;
-;     Total combinational functions  ; 0 / 15,408 ( 0 % )                          ;
-;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                          ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 2 / 15,408 ( < 1 % )                        ;
+;     Total combinational functions  ; 2 / 15,408 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 2 / 15,408 ( < 1 % )                        ;
+; Total registers                    ; 2                                           ;
 ; Total pins                         ; 253 / 344 ( 74 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/28/2017 07:08:44 ;
+; Start date & time ; 05/03/2017 09:37:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ROB                 ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149334352311512        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149378446609864        ; --            ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -92,11 +92,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 682 MB              ; 00:00:29                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 1124 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 567 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 637 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 684 MB              ; 00:00:34                           ;
+; Fitter                    ; 00:00:12     ; 1.0                     ; 1133 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 563 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 638 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:50                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
