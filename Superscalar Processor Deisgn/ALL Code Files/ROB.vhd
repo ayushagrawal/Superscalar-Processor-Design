@@ -113,9 +113,15 @@ begin
 			top_en <= '1';
 			rob_busy_in(to_integer(unsigned(top_add_one))) <= "1";
 			rob_busy_en(to_integer(unsigned(top_add_one))) <= "1";
+			rob_busy_in(to_integer(unsigned(top_in))) <= "1";
+			rob_busy_en(to_integer(unsigned(top_in))) <= "1";
 		else											-- If no new valid instruction is entered, top is not updated
 			top_add(1 downto 0) <= "00";
 			top_en <= '0';
+			rob_busy_in(to_integer(unsigned(top_add_one))) <= "0";
+			rob_busy_en(to_integer(unsigned(top_add_one))) <= "0";
+			rob_busy_in(to_integer(unsigned(top_in))) <= "0";
+			rob_busy_en(to_integer(unsigned(top_in))) <= "0";
 		end if;
 		top_add <= (others => '0');
 	end process;

@@ -1,5 +1,5 @@
 Flow report for ROB
-Wed May 03 09:38:24 2017
+Wed May 03 11:08:58 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 03 09:38:19 2017       ;
+; Flow Status                        ; Successful - Wed May 03 11:08:54 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; ROB                                         ;
 ; Top-level Entity Name              ; ROB                                         ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/03/2017 09:37:46 ;
+; Start date & time ; 05/03/2017 11:08:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ROB                 ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149378446609864        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149378990408220        ; --            ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -92,11 +92,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 684 MB              ; 00:00:34                           ;
-; Fitter                    ; 00:00:12     ; 1.0                     ; 1133 MB             ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 683 MB              ; 00:00:34                           ;
+; Fitter                    ; 00:00:10     ; 1.0                     ; 1135 MB             ; 00:00:10                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 563 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 638 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:50                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 639 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:47                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

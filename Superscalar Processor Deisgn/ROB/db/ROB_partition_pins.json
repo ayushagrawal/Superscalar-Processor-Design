@@ -14,6 +14,14 @@
 				{
 					"name" : "clk",
 					"strict" : false
+				},
+				{
+					"name" : "instruction1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction2[0]",
+					"strict" : false
 				}
 			]
 		}
