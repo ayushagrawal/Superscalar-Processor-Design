@@ -25,7 +25,7 @@ entity ROB is
 		 
 			-- FROM DECODE
 			 instruction1 : in std_logic_vector(21 downto 0);
-			 instruction2 : in std_logic_vector(21 downto 0)
+			 instruction2 : in std_logic_vector(21 downto 0);
 			 -- Instruction type 			: 2 bits
 			 -- Register affected 			: 3 bits
 			 -- Data 							: 16 bits
@@ -33,7 +33,17 @@ entity ROB is
 			 -- Total							: 22 bits
 			 
 			 -- TO DECODE
+			 inst1_tag : out std_logic_vector(natural(log2(real(N)))-1 downto 0);
+			 inst2_tag : out std_logic_vector(natural(log2(real(N)))-1 downto 0);
 			 
+			 -- TO COMPLETE
+			 complete1 : out std_logic_vector(35 downto 0);
+			 complete2 : out std_logic_vector(35 downto 0)
+			 -- Inst_type : 2 bits
+			 -- Register affected: 3 bits
+			 -- Memory affected : 16 bits
+			 -- Data				  : 16 bits
+			 -- validity		  : 1 bit
 		 );
 		 
 end entity;
@@ -111,18 +121,37 @@ begin
 		if(instruction1(0) = '1' and instruction2(0) = '1') then
 			top_add(1 downto 0) <= "10";
 			top_en <= '1';
-			rob_busy_in(to_integer(unsigned(top_add_one))) <= "1";
-			rob_busy_en(to_integer(unsigned(top_add_one))) <= "1";
+			inst1_tag <= top_in;
+			inst2_tag <= top_add_one;
 			rob_busy_in(to_integer(unsigned(top_in))) <= "1";
 			rob_busy_en(to_integer(unsigned(top_in))) <= "1";
+			-- Initially the result is invalid
+			rob_valid_in(to_integer(unsigned(top_in))) <= "0";
+			rob_valid_en(to_integer(unsigned(top_in))) <= "1";
+			inst_type_in(to_integer(unsigned(top_in))) <= instruction1(21 downto 20);
+			inst_type_en(to_integer(unsigned(top_in))) <= "1";
+			rob_r_in(to_integer(unsigned(top_in))) <= instruction1(19 downto 17);
+			rob_r_en(to_integer(unsigned(top_in))) <= "1";
+			
+			rob_busy_in(to_integer(unsigned(top_add_one))) <= "1";
+			rob_busy_en(to_integer(unsigned(top_add_one))) <= "1";
+			rob_valid_in(to_integer(unsigned(top_add_one))) <= "0";
+			rob_valid_en(to_integer(unsigned(top_add_one))) <= "1";
+			inst_type_in(to_integer(unsigned(top_add_one))) <= instruction2(21 downto 20);
+			inst_type_en(to_integer(unsigned(top_add_one))) <= "1";
+			rob_r_in(to_integer(unsigned(top_add_one))) <= instruction2(19 downto 17);
+			rob_r_en(to_integer(unsigned(top_add_one))) <= "1";
+			
 		else											-- If no new valid instruction is entered, top is not updated
 			top_add(1 downto 0) <= "00";
 			top_en <= '0';
-			rob_busy_in(to_integer(unsigned(top_add_one))) <= "0";
-			rob_busy_en(to_integer(unsigned(top_add_one))) <= "0";
 			rob_busy_in(to_integer(unsigned(top_in))) <= "0";
 			rob_busy_en(to_integer(unsigned(top_in))) <= "0";
+			rob_busy_in(to_integer(unsigned(top_add_one))) <= "0";
+			rob_busy_en(to_integer(unsigned(top_add_one))) <= "0";
 		end if;
+		
+		
 		top_add <= (others => '0');
 	end process;
 	
