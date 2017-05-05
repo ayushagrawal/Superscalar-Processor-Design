@@ -1,0 +1,17 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1000mV 85C Model Minimum Pulse Width 'broadcast[0][0]'
+Slack : -3.000
+TNS   : -1102.092
+
+Type  : Slow 1000mV 0C Model Minimum Pulse Width 'broadcast[0][0]'
+Slack : -3.000
+TNS   : -1406.209
+
+Type  : Fast 1000mV 0C Model Minimum Pulse Width 'broadcast[0][0]'
+Slack : -3.000
+TNS   : -285.035
+
+------------------------------------------------------------

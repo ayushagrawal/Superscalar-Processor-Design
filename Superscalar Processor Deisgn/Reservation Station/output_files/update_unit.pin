@@ -1,0 +1,851 @@
+ -- Copyright (C) 2016  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel MegaCore Function License Agreement, or other 
+ -- applicable license agreement, including, without limitation, 
+ -- that your use is for the sole purpose of programming logic 
+ -- devices manufactured by Intel and sold by Intel or its 
+ -- authorized distributors.  Please refer to the applicable 
+ -- agreement for further details.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.0V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+CHIP  "update_unit"  ASSIGNED TO AN: EP4CE115F29C9L
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+VCCIO8                       : A2        : power  :                   : 2.5V    : 8         :                
+data[11][2]                  : A3        : output : 2.5 V             :         : 8         : N              
+data[2][1]                   : A4        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : A5        : power  :                   : 2.5V    : 8         :                
+broadcast[2][0]              : A6        : input  : 2.5 V             :         : 8         : N              
+tag[11][1]                   : A7        : input  : 2.5 V             :         : 8         : N              
+data[9][11]                  : A8        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
+broadcast[3][1]              : A10       : input  : 2.5 V             :         : 8         : N              
+tag[1][1]                    : A11       : input  : 2.5 V             :         : 8         : N              
+tag[1][0]                    : A12       : input  : 2.5 V             :         : 8         : N              
+VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
+busy[4][0]                   : A14       : input  : 2.5 V             :         : 8         : N              
+tag[15][4]                   : A15       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
+broadcast[2][3]              : A17       : input  : 2.5 V             :         : 7         : N              
+data[14][8]                  : A18       : output : 2.5 V             :         : 7         : N              
+busy[2][0]                   : A19       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : A20       : power  :                   : 2.5V    : 7         :                
+data[11][12]                 : A21       : output : 2.5 V             :         : 7         : N              
+tag[11][2]                   : A22       : input  : 2.5 V             :         : 7         : N              
+tag[9][2]                    : A23       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : A24       : power  :                   : 2.5V    : 7         :                
+data[5][3]                   : A25       : output : 2.5 V             :         : 7         : N              
+tag[15][0]                   : A26       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : A27       : power  :                   : 2.5V    : 7         :                
+VCCIO2                       : AA1       : power  :                   : 2.5V    : 2         :                
+GND                          : AA2       : gnd    :                   :         :           :                
+broadcast[0][6]              : AA3       : input  : 2.5 V             :         : 2         : N              
+broadcast[1][19]             : AA4       : input  : 2.5 V             :         : 2         : N              
+data_en[4][0]                : AA5       : output : 2.5 V             :         : 2         : N              
+data[14][5]                  : AA6       : output : 2.5 V             :         : 2         : N              
+data_en[8][0]                : AA7       : output : 2.5 V             :         : 2         : N              
+data[6][8]                   : AA8       : output : 2.5 V             :         : 3         : N              
+GNDA1                        : AA9       : gnd    :                   :         :           :                
+data[6][15]                  : AA10      : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
+broadcast[1][16]             : AA12      : input  : 2.5 V             :         : 3         : N              
+broadcast[4][6]              : AA13      : input  : 2.5 V             :         : 3         : N              
+broadcast[2][18]             : AA14      : input  : 2.5 V             :         : 3         : N              
+broadcast[3][20]             : AA15      : input  : 2.5 V             :         : 4         : N              
+data[6][0]                   : AA16      : output : 2.5 V             :         : 4         : N              
+data[8][15]                  : AA17      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AA18      : power  :                   : 2.5V    : 4         :                
+data_en[14][0]               : AA19      : output : 2.5 V             :         : 4         : N              
+GNDA4                        : AA20      : gnd    :                   :         :           :                
+data[8][11]                  : AA21      : output : 2.5 V             :         : 4         : N              
+data[9][15]                  : AA22      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA23      :        :                   :         : 5         :                
+data[7][10]                  : AA24      : output : 2.5 V             :         : 5         : N              
+broadcast[0][13]             : AA25      : input  : 2.5 V             :         : 5         : N              
+broadcast[2][15]             : AA26      : input  : 2.5 V             :         : 5         : N              
+GND                          : AA27      : gnd    :                   :         :           :                
+VCCIO5                       : AA28      : power  :                   : 2.5V    : 5         :                
+broadcast[3][6]              : AB1       : input  : 2.5 V             :         : 2         : N              
+data[10][8]                  : AB2       : output : 2.5 V             :         : 2         : N              
+data[6][12]                  : AB3       : output : 2.5 V             :         : 2         : N              
+data_en[2][0]                : AB4       : output : 2.5 V             :         : 2         : N              
+validity_out[8][0]           : AB5       : output : 2.5 V             :         : 2         : N              
+validity_out[3][0]           : AB6       : output : 2.5 V             :         : 2         : N              
+data[14][9]                  : AB7       : output : 2.5 V             :         : 3         : N              
+data[5][15]                  : AB8       : output : 2.5 V             :         : 3         : N              
+data[12][6]                  : AB9       : output : 2.5 V             :         : 3         : N              
+broadcast[2][6]              : AB10      : input  : 2.5 V             :         : 3         : N              
+data[7][15]                  : AB11      : output : 2.5 V             :         : 3         : N              
+broadcast[0][16]             : AB12      : input  : 2.5 V             :         : 3         : N              
+data[7][7]                   : AB13      : output : 2.5 V             :         : 3         : N              
+broadcast[4][16]             : AB14      : input  : 2.5 V             :         : 3         : N              
+data[10][4]                  : AB15      : output : 2.5 V             :         : 4         : N              
+data[14][15]                 : AB16      : output : 2.5 V             :         : 4         : N              
+broadcast[4][19]             : AB17      : input  : 2.5 V             :         : 4         : N              
+data[13][5]                  : AB18      : output : 2.5 V             :         : 4         : N              
+data[2][13]                  : AB19      : output : 2.5 V             :         : 4         : N              
+data[7][14]                  : AB20      : output : 2.5 V             :         : 4         : N              
+data[8][2]                   : AB21      : output : 2.5 V             :         : 4         : N              
+data[0][11]                  : AB22      : output : 2.5 V             :         : 4         : N              
+validity_en[11][0]           : AB23      : output : 2.5 V             :         : 5         : N              
+data[11][10]                 : AB24      : output : 2.5 V             :         : 5         : N              
+broadcast[3][13]             : AB25      : input  : 2.5 V             :         : 5         : N              
+data[12][3]                  : AB26      : output : 2.5 V             :         : 5         : N              
+data[11][6]                  : AB27      : output : 2.5 V             :         : 5         : N              
+broadcast[0][21]             : AB28      : input  : 2.5 V             :         : 5         : N              
+broadcast[3][16]             : AC1       : input  : 2.5 V             :         : 2         : N              
+broadcast[1][14]             : AC2       : input  : 2.5 V             :         : 2         : N              
+broadcast[2][14]             : AC3       : input  : 2.5 V             :         : 2         : N              
+data[9][8]                   : AC4       : output : 2.5 V             :         : 2         : N              
+validity_en[4][0]            : AC5       : output : 2.5 V             :         : 2         : N              
+GND                          : AC6       : gnd    :                   :         :           :                
+data[1][15]                  : AC7       : output : 2.5 V             :         : 3         : N              
+data[11][15]                 : AC8       : output : 2.5 V             :         : 3         : N              
+GND                          : AC9       : gnd    :                   :         :           :                
+data[9][12]                  : AC10      : output : 2.5 V             :         : 3         : N              
+data[11][11]                 : AC11      : output : 2.5 V             :         : 3         : N              
+data[6][2]                   : AC12      : output : 2.5 V             :         : 3         : N              
+GND                          : AC13      : gnd    :                   :         :           :                
+data[15][12]                 : AC14      : output : 2.5 V             :         : 3         : N              
+data[4][7]                   : AC15      : output : 2.5 V             :         : 4         : N              
+GND                          : AC16      : gnd    :                   :         :           :                
+data[10][7]                  : AC17      : output : 2.5 V             :         : 4         : N              
+broadcast[0][20]             : AC18      : input  : 2.5 V             :         : 4         : N              
+data[6][1]                   : AC19      : output : 2.5 V             :         : 4         : N              
+GND                          : AC20      : gnd    :                   :         :           :                
+data[9][7]                   : AC21      : output : 2.5 V             :         : 4         : N              
+data_en[6][0]                : AC22      : output : 2.5 V             :         : 4         : N              
+GND                          : AC23      : gnd    :                   :         :           :                
+data[8][14]                  : AC24      : output : 2.5 V             :         : 5         : N              
+data_en[11][0]               : AC25      : output : 2.5 V             :         : 5         : N              
+broadcast[1][11]             : AC26      : input  : 2.5 V             :         : 5         : N              
+data[2][4]                   : AC27      : output : 2.5 V             :         : 5         : N              
+data[3][11]                  : AC28      : output : 2.5 V             :         : 5         : N              
+broadcast[1][12]             : AD1       : input  : 2.5 V             :         : 2         : N              
+broadcast[2][21]             : AD2       : input  : 2.5 V             :         : 2         : N              
+data[10][9]                  : AD3       : output : 2.5 V             :         : 2         : N              
+data_en[3][0]                : AD4       : output : 2.5 V             :         : 3         : N              
+validity_out[13][0]          : AD5       : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AD6       : power  :                   : 2.5V    : 3         :                
+data[7][9]                   : AD7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 3         :                
+VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
+data[15][0]                  : AD10      : output : 2.5 V             :         : 3         : N              
+data[11][8]                  : AD11      : output : 2.5 V             :         : 3         : N              
+broadcast[1][18]             : AD12      : input  : 2.5 V             :         : 3         : N              
+VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
+broadcast[4][18]             : AD14      : input  : 2.5 V             :         : 3         : N              
+data[12][7]                  : AD15      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
+data[4][4]                   : AD17      : output : 2.5 V             :         : 4         : N              
+broadcast[2][17]             : AD18      : input  : 2.5 V             :         : 4         : N              
+data[8][1]                   : AD19      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
+data[9][14]                  : AD21      : output : 2.5 V             :         : 4         : N              
+data[15][14]                 : AD22      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
+broadcast[2][13]             : AD24      : input  : 2.5 V             :         : 4         : N              
+data[7][8]                   : AD25      : output : 2.5 V             :         : 4         : N              
+data[4][6]                   : AD26      : output : 2.5 V             :         : 5         : N              
+broadcast[4][9]              : AD27      : input  : 2.5 V             :         : 5         : N              
+broadcast[2][20]             : AD28      : input  : 2.5 V             :         : 5         : N              
+data[3][7]                   : AE1       : output : 2.5 V             :         : 2         : N              
+data[0][14]                  : AE2       : output : 2.5 V             :         : 2         : N              
+data[11][14]                 : AE3       : output : 2.5 V             :         : 2         : N              
+validity_out[15][0]          : AE4       : output : 2.5 V             :         : 3         : N              
+data[15][6]                  : AE5       : output : 2.5 V             :         : 3         : N              
+data[9][0]                   : AE6       : output : 2.5 V             :         : 3         : N              
+data[2][14]                  : AE7       : output : 2.5 V             :         : 3         : N              
+data[14][12]                 : AE8       : output : 2.5 V             :         : 3         : N              
+data[12][12]                 : AE9       : output : 2.5 V             :         : 3         : N              
+data[2][12]                  : AE10      : output : 2.5 V             :         : 3         : N              
+data[1][12]                  : AE11      : output : 2.5 V             :         : 3         : N              
+data[4][9]                   : AE12      : output : 2.5 V             :         : 3         : N              
+broadcast[1][8]              : AE13      : input  : 2.5 V             :         : 3         : N              
+broadcast[3][18]             : AE14      : input  : 2.5 V             :         : 3         : N              
+broadcast[0][18]             : AE15      : input  : 2.5 V             :         : 4         : N              
+broadcast[4][20]             : AE16      : input  : 2.5 V             :         : 4         : N              
+broadcast[0][10]             : AE17      : input  : 2.5 V             :         : 4         : N              
+data[6][9]                   : AE18      : output : 2.5 V             :         : 4         : N              
+broadcast[1][10]             : AE19      : input  : 2.5 V             :         : 4         : N              
+data[6][14]                  : AE20      : output : 2.5 V             :         : 4         : N              
+broadcast[4][10]             : AE21      : input  : 2.5 V             :         : 4         : N              
+data[0][6]                   : AE22      : output : 2.5 V             :         : 4         : N              
+data[7][1]                   : AE23      : output : 2.5 V             :         : 4         : N              
+data[8][6]                   : AE24      : output : 2.5 V             :         : 4         : N              
+data[2][11]                  : AE25      : output : 2.5 V             :         : 4         : N              
+data[9][13]                  : AE26      : output : 2.5 V             :         : 5         : N              
+data[3][4]                   : AE27      : output : 2.5 V             :         : 5         : N              
+data[11][1]                  : AE28      : output : 2.5 V             :         : 5         : N              
+GND                          : AF1       : gnd    :                   :         :           :                
+data_en[7][0]                : AF2       : output : 2.5 V             :         : 2         : N              
+data[11][3]                  : AF3       : output : 2.5 V             :         : 3         : N              
+data[8][4]                   : AF4       : output : 2.5 V             :         : 3         : N              
+data[7][12]                  : AF5       : output : 2.5 V             :         : 3         : N              
+validity_out[12][0]          : AF6       : output : 2.5 V             :         : 3         : N              
+data[11][0]                  : AF7       : output : 2.5 V             :         : 3         : N              
+broadcast[3][14]             : AF8       : input  : 2.5 V             :         : 3         : N              
+data[13][10]                 : AF9       : output : 2.5 V             :         : 3         : N              
+data[3][8]                   : AF10      : output : 2.5 V             :         : 3         : N              
+broadcast[0][14]             : AF11      : input  : 2.5 V             :         : 3         : N              
+data[13][9]                  : AF12      : output : 2.5 V             :         : 3         : N              
+data[5][4]                   : AF13      : output : 2.5 V             :         : 3         : N              
+data[5][10]                  : AF14      : output : 2.5 V             :         : 3         : N              
+data[10][0]                  : AF15      : output : 2.5 V             :         : 4         : N              
+data[3][14]                  : AF16      : output : 2.5 V             :         : 4         : N              
+broadcast[4][11]             : AF17      : input  : 2.5 V             :         : 4         : N              
+data[3][13]                  : AF18      : output : 2.5 V             :         : 4         : N              
+data[3][6]                   : AF19      : output : 2.5 V             :         : 4         : N              
+data[11][7]                  : AF20      : output : 2.5 V             :         : 4         : N              
+broadcast[0][19]             : AF21      : input  : 2.5 V             :         : 4         : N              
+data[0][10]                  : AF22      : output : 2.5 V             :         : 4         : N              
+data[11][5]                  : AF23      : output : 2.5 V             :         : 4         : N              
+data[15][4]                  : AF24      : output : 2.5 V             :         : 4         : N              
+data[7][13]                  : AF25      : output : 2.5 V             :         : 4         : N              
+data[6][3]                   : AF26      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF27      :        :                   :         : 5         :                
+GND                          : AF28      : gnd    :                   :         :           :                
+VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
+GND                          : AG2       : gnd    :                   :         :           :                
+validity_out[10][0]          : AG3       : output : 2.5 V             :         : 3         : N              
+data[0][13]                  : AG4       : output : 2.5 V             :         : 3         : N              
+GND                          : AG5       : gnd    :                   :         :           :                
+data[7][11]                  : AG6       : output : 2.5 V             :         : 3         : N              
+data[8][9]                   : AG7       : output : 2.5 V             :         : 3         : N              
+data[1][10]                  : AG8       : output : 2.5 V             :         : 3         : N              
+GND                          : AG9       : gnd    :                   :         :           :                
+data[0][8]                   : AG10      : output : 2.5 V             :         : 3         : N              
+broadcast[2][16]             : AG11      : input  : 2.5 V             :         : 3         : N              
+data[0][12]                  : AG12      : output : 2.5 V             :         : 3         : N              
+GND                          : AG13      : gnd    :                   :         :           :                
+GND+                         : AG14      :        :                   :         : 3         :                
+GND+                         : AG15      :        :                   :         : 4         :                
+GND                          : AG16      : gnd    :                   :         :           :                
+data[6][11]                  : AG17      : output : 2.5 V             :         : 4         : N              
+data[5][6]                   : AG18      : output : 2.5 V             :         : 4         : N              
+data[9][1]                   : AG19      : output : 2.5 V             :         : 4         : N              
+GND                          : AG20      : gnd    :                   :         :           :                
+broadcast[3][12]             : AG21      : input  : 2.5 V             :         : 4         : N              
+broadcast[0][12]             : AG22      : input  : 2.5 V             :         : 4         : N              
+data[9][9]                   : AG23      : output : 2.5 V             :         : 4         : N              
+GND                          : AG24      : gnd    :                   :         :           :                
+data[9][4]                   : AG25      : output : 2.5 V             :         : 4         : N              
+validity_en[9][0]            : AG26      : output : 2.5 V             :         : 4         : N              
+GND                          : AG27      : gnd    :                   :         :           :                
+VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
+VCCIO3                       : AH2       : power  :                   : 2.5V    : 3         :                
+data[7][0]                   : AH3       : output : 2.5 V             :         : 3         : N              
+data[2][7]                   : AH4       : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH5       : power  :                   : 2.5V    : 3         :                
+data[0][9]                   : AH6       : output : 2.5 V             :         : 3         : N              
+data[8][10]                  : AH7       : output : 2.5 V             :         : 3         : N              
+data[4][15]                  : AH8       : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
+data[8][8]                   : AH10      : output : 2.5 V             :         : 3         : N              
+data[6][10]                  : AH11      : output : 2.5 V             :         : 3         : N              
+data[13][12]                 : AH12      : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
+GND+                         : AH14      :        :                   :         : 3         :                
+GND+                         : AH15      :        :                   :         : 4         :                
+VCCIO4                       : AH16      : power  :                   : 2.5V    : 4         :                
+broadcast[4][15]             : AH17      : input  : 2.5 V             :         : 4         : N              
+data[6][7]                   : AH18      : output : 2.5 V             :         : 4         : N              
+broadcast[4][13]             : AH19      : input  : 2.5 V             :         : 4         : N              
+VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
+data[12][15]                 : AH21      : output : 2.5 V             :         : 4         : N              
+broadcast[4][14]             : AH22      : input  : 2.5 V             :         : 4         : N              
+data[2][6]                   : AH23      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
+data[5][9]                   : AH25      : output : 2.5 V             :         : 4         : N              
+data[5][13]                  : AH26      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
+VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
+GND                          : B2        : gnd    :                   :         :           :                
+tag[9][0]                    : B3        : input  : 2.5 V             :         : 8         : N              
+tag[3][3]                    : B4        : input  : 2.5 V             :         : 8         : N              
+GND                          : B5        : gnd    :                   :         :           :                
+tag[5][1]                    : B6        : input  : 2.5 V             :         : 8         : N              
+tag[15][3]                   : B7        : input  : 2.5 V             :         : 8         : N              
+tag[7][2]                    : B8        : input  : 2.5 V             :         : 8         : N              
+GND                          : B9        : gnd    :                   :         :           :                
+broadcast[3][2]              : B10       : input  : 2.5 V             :         : 8         : N              
+tag[7][0]                    : B11       : input  : 2.5 V             :         : 8         : N              
+GND                          : B12       : gnd    :                   :         :           :                
+GND                          : B13       : gnd    :                   :         :           :                
+tag[4][4]                    : B14       : input  : 2.5 V             :         : 8         : N              
+tag[4][0]                    : B15       : input  : 2.5 V             :         : 7         : N              
+GND                          : B16       : gnd    :                   :         :           :                
+broadcast[0][5]              : B17       : input  : 2.5 V             :         : 7         : N              
+broadcast[3][0]              : B18       : input  : 2.5 V             :         : 7         : N              
+busy[6][0]                   : B19       : input  : 2.5 V             :         : 7         : N              
+GND                          : B20       : gnd    :                   :         :           :                
+data[5][2]                   : B21       : output : 2.5 V             :         : 7         : N              
+data[0][15]                  : B22       : output : 2.5 V             :         : 7         : N              
+validity_out[2][0]           : B23       : output : 2.5 V             :         : 7         : N              
+GND                          : B24       : gnd    :                   :         :           :                
+tag[8][2]                    : B25       : input  : 2.5 V             :         : 7         : N              
+tag[10][1]                   : B26       : input  : 2.5 V             :         : 7         : N              
+GND                          : B27       : gnd    :                   :         :           :                
+VCCIO6                       : B28       : power  :                   : 2.5V    : 6         :                
+GND                          : C1        : gnd    :                   :         :           :                
+tag[0][1]                    : C2        : input  : 2.5 V             :         : 1         : N              
+validity_en[15][0]           : C3        : output : 2.5 V             :         : 8         : N              
+data_en[15][0]               : C4        : output : 2.5 V             :         : 8         : N              
+validity_out[6][0]           : C5        : output : 2.5 V             :         : 8         : N              
+tag[14][4]                   : C6        : input  : 2.5 V             :         : 8         : N              
+tag[4][1]                    : C7        : input  : 2.5 V             :         : 8         : N              
+data[2][8]                   : C8        : output : 2.5 V             :         : 8         : N              
+broadcast[1][0]              : C9        : input  : 2.5 V             :         : 8         : N              
+tag[8][4]                    : C10       : input  : 2.5 V             :         : 8         : N              
+data[2][15]                  : C11       : output : 2.5 V             :         : 8         : N              
+broadcast[2][5]              : C12       : input  : 2.5 V             :         : 8         : N              
+busy[7][0]                   : C13       : input  : 2.5 V             :         : 8         : N              
+tag[2][0]                    : C14       : input  : 2.5 V             :         : 8         : N              
+broadcast[0][3]              : C15       : input  : 2.5 V             :         : 7         : N              
+tag[8][0]                    : C16       : input  : 2.5 V             :         : 7         : N              
+tag[13][3]                   : C17       : input  : 2.5 V             :         : 7         : N              
+tag[13][2]                   : C18       : input  : 2.5 V             :         : 7         : N              
+tag[0][3]                    : C19       : input  : 2.5 V             :         : 7         : N              
+tag[6][2]                    : C20       : input  : 2.5 V             :         : 7         : N              
+data[4][14]                  : C21       : output : 2.5 V             :         : 7         : N              
+tag[2][4]                    : C22       : input  : 2.5 V             :         : 7         : N              
+tag[0][4]                    : C23       : input  : 2.5 V             :         : 7         : N              
+tag[3][1]                    : C24       : input  : 2.5 V             :         : 7         : N              
+data[9][5]                   : C25       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C26       :        :                   :         : 7         :                
+data[1][0]                   : C27       : output : 2.5 V             :         : 6         : N              
+GND                          : C28       : gnd    :                   :         :           :                
+validity_en[10][0]           : D1        : output : 2.5 V             :         : 1         : N              
+tag[6][0]                    : D2        : input  : 2.5 V             :         : 1         : N              
+GND                          : D3        : gnd    :                   :         :           :                
+validity_en[5][0]            : D4        : output : 2.5 V             :         : 8         : N              
+data_en[1][0]                : D5        : output : 2.5 V             :         : 8         : N              
+busy[10][0]                  : D6        : input  : 2.5 V             :         : 8         : N              
+tag[8][1]                    : D7        : input  : 2.5 V             :         : 8         : N              
+tag[14][2]                   : D8        : input  : 2.5 V             :         : 8         : N              
+tag[6][1]                    : D9        : input  : 2.5 V             :         : 8         : N              
+tag[6][4]                    : D10       : input  : 2.5 V             :         : 8         : N              
+tag[10][0]                   : D11       : input  : 2.5 V             :         : 8         : N              
+broadcast[4][1]              : D12       : input  : 2.5 V             :         : 8         : N              
+tag[7][4]                    : D13       : input  : 2.5 V             :         : 8         : N              
+broadcast[1][1]              : D14       : input  : 2.5 V             :         : 8         : N              
+tag[2][1]                    : D15       : input  : 2.5 V             :         : 7         : N              
+broadcast[4][3]              : D16       : input  : 2.5 V             :         : 7         : N              
+busy[8][0]                   : D17       : input  : 2.5 V             :         : 7         : N              
+tag[2][2]                    : D18       : input  : 2.5 V             :         : 7         : N              
+tag[6][3]                    : D19       : input  : 2.5 V             :         : 7         : N              
+tag[13][4]                   : D20       : input  : 2.5 V             :         : 7         : N              
+data[13][13]                 : D21       : output : 2.5 V             :         : 7         : N              
+data[14][14]                 : D22       : output : 2.5 V             :         : 7         : N              
+tag[4][2]                    : D23       : input  : 2.5 V             :         : 7         : N              
+validity_out[1][0]           : D24       : output : 2.5 V             :         : 7         : N              
+broadcast[4][0]              : D25       : input  : 2.5 V             :         : 7         : N              
+data[0][2]                   : D26       : output : 2.5 V             :         : 6         : N              
+data[4][5]                   : D27       : output : 2.5 V             :         : 6         : N              
+data[7][2]                   : D28       : output : 2.5 V             :         : 6         : N              
+validity_en[7][0]            : E1        : output : 2.5 V             :         : 1         : N              
+~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
+tag[11][0]                   : E3        : input  : 2.5 V             :         : 1         : N              
+validity_en[13][0]           : E4        : output : 2.5 V             :         : 8         : N              
+validity_en[12][0]           : E5        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : E6        : power  :                   : 2.5V    : 8         :                
+busy[15][0]                  : E7        : input  : 2.5 V             :         : 8         : N              
+busy[5][0]                   : E8        : input  : 2.5 V             :         : 8         : N              
+VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
+busy[13][0]                  : E10       : input  : 2.5 V             :         : 8         : N              
+busy[9][0]                   : E11       : input  : 2.5 V             :         : 8         : N              
+data[13][8]                  : E12       : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : E13       : power  :                   : 2.5V    : 8         :                
+broadcast[4][2]              : E14       : input  : 2.5 V             :         : 8         : N              
+tag[0][2]                    : E15       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
+tag[5][2]                    : E17       : input  : 2.5 V             :         : 7         : N              
+tag[12][2]                   : E18       : input  : 2.5 V             :         : 7         : N              
+tag[12][3]                   : E19       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
+busy[14][0]                  : E21       : input  : 2.5 V             :         : 7         : N              
+tag[3][2]                    : E22       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : E23       : power  :                   : 2.5V    : 7         :                
+tag[7][3]                    : E24       : input  : 2.5 V             :         : 7         : N              
+data[15][15]                 : E25       : output : 2.5 V             :         : 7         : N              
+data[4][11]                  : E26       : output : 2.5 V             :         : 6         : N              
+data[12][13]                 : E27       : output : 2.5 V             :         : 6         : N              
+data[1][6]                   : E28       : output : 2.5 V             :         : 6         : N              
+tag[13][1]                   : F1        : input  : 2.5 V             :         : 1         : N              
+validity_out[14][0]          : F2        : output : 2.5 V             :         : 1         : N              
+tag[5][0]                    : F3        : input  : 2.5 V             :         : 1         : N              
+~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 2.5 V             :         : 1         : N              
+tag[12][1]                   : F5        : input  : 2.5 V             :         : 1         : N              
+GND                          : F6        : gnd    :                   :         :           :                
+tag[1][4]                    : F7        : input  : 2.5 V             :         : 8         : N              
+tag[11][4]                   : F8        : input  : 2.5 V             :         : 8         : N              
+GND                          : F9        : gnd    :                   :         :           :                
+tag[3][0]                    : F10       : input  : 2.5 V             :         : 8         : N              
+tag[12][4]                   : F11       : input  : 2.5 V             :         : 8         : N              
+tag[10][2]                   : F12       : input  : 2.5 V             :         : 8         : N              
+GND                          : F13       : gnd    :                   :         :           :                
+busy[11][0]                  : F14       : input  : 2.5 V             :         : 8         : N              
+tag[9][1]                    : F15       : input  : 2.5 V             :         : 7         : N              
+GND                          : F16       : gnd    :                   :         :           :                
+tag[4][3]                    : F17       : input  : 2.5 V             :         : 7         : N              
+data[12][5]                  : F18       : output : 2.5 V             :         : 7         : N              
+tag[5][3]                    : F19       : input  : 2.5 V             :         : 7         : N              
+GND                          : F20       : gnd    :                   :         :           :                
+tag[5][4]                    : F21       : input  : 2.5 V             :         : 7         : N              
+data[13][7]                  : F22       : output : 2.5 V             :         : 7         : N              
+GND                          : F23       : gnd    :                   :         :           :                
+tag[14][1]                   : F24       : input  : 2.5 V             :         : 6         : N              
+tag[8][3]                    : F25       : input  : 2.5 V             :         : 6         : N              
+data[0][0]                   : F26       : output : 2.5 V             :         : 6         : N              
+data[5][1]                   : F27       : output : 2.5 V             :         : 6         : N              
+validity_en[14][0]           : F28       : output : 2.5 V             :         : 6         : N              
+data[1][13]                  : G1        : output : 2.5 V             :         : 1         : N              
+data_en[9][0]                : G2        : output : 2.5 V             :         : 1         : N              
+tag[9][3]                    : G3        : input  : 2.5 V             :         : 1         : N              
+tag[14][3]                   : G4        : input  : 2.5 V             :         : 1         : N              
+validity_out[9][0]           : G5        : output : 2.5 V             :         : 1         : N              
+validity_en[0][0]            : G6        : output : 2.5 V             :         : 1         : N              
+data_en[13][0]               : G7        : output : 2.5 V             :         : 8         : N              
+tag[14][0]                   : G8        : input  : 2.5 V             :         : 8         : N              
+tag[13][0]                   : G9        : input  : 2.5 V             :         : 8         : N              
+busy[1][0]                   : G10       : input  : 2.5 V             :         : 8         : N              
+tag[7][1]                    : G11       : input  : 2.5 V             :         : 8         : N              
+tag[15][1]                   : G12       : input  : 2.5 V             :         : 8         : N              
+broadcast[0][2]              : G13       : input  : 2.5 V             :         : 8         : N              
+broadcast[0][1]              : G14       : input  : 2.5 V             :         : 8         : N              
+broadcast[3][4]              : G15       : input  : 2.5 V             :         : 7         : N              
+tag[9][4]                    : G16       : input  : 2.5 V             :         : 7         : N              
+tag[10][3]                   : G17       : input  : 2.5 V             :         : 7         : N              
+busy[3][0]                   : G18       : input  : 2.5 V             :         : 7         : N              
+broadcast[0][4]              : G19       : input  : 2.5 V             :         : 7         : N              
+data[13][3]                  : G20       : output : 2.5 V             :         : 7         : N              
+broadcast[1][3]              : G21       : input  : 2.5 V             :         : 7         : N              
+busy[0][0]                   : G22       : input  : 2.5 V             :         : 7         : N              
+validity_out[5][0]           : G23       : output : 2.5 V             :         : 6         : N              
+validity_en[8][0]            : G24       : output : 2.5 V             :         : 6         : N              
+tag[10][4]                   : G25       : input  : 2.5 V             :         : 6         : N              
+tag[0][0]                    : G26       : input  : 2.5 V             :         : 6         : N              
+data[15][1]                  : G27       : output : 2.5 V             :         : 6         : N              
+data[4][8]                   : G28       : output : 2.5 V             :         : 6         : N              
+VCCIO1                       : H1        : power  :                   : 2.5V    : 1         :                
+GND                          : H2        : gnd    :                   :         :           :                
+data_en[12][0]               : H3        : output : 2.5 V             :         : 1         : N              
+validity_out[11][0]          : H4        : output : 2.5 V             :         : 1         : N              
+data[14][4]                  : H5        : output : 2.5 V             :         : 1         : N              
+tag[11][3]                   : H6        : input  : 2.5 V             :         : 1         : N              
+validity_en[3][0]            : H7        : output : 2.5 V             :         : 1         : N              
+data[3][2]                   : H8        : output : 2.5 V             :         : 8         : N              
+GNDA3                        : H9        : gnd    :                   :         :           :                
+tag[15][2]                   : H10       : input  : 2.5 V             :         : 8         : N              
+VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
+broadcast[1][2]              : H12       : input  : 2.5 V             :         : 8         : N              
+tag[1][2]                    : H13       : input  : 2.5 V             :         : 8         : N              
+broadcast[1][5]              : H14       : input  : 2.5 V             :         : 8         : N              
+broadcast[3][3]              : H15       : input  : 2.5 V             :         : 7         : N              
+broadcast[4][4]              : H16       : input  : 2.5 V             :         : 7         : N              
+broadcast[0][0]              : H17       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
+tag[3][4]                    : H19       : input  : 2.5 V             :         : 7         : N              
+GNDA2                        : H20       : gnd    :                   :         :           :                
+tag[2][3]                    : H21       : input  : 2.5 V             :         : 7         : N              
+validity_en[2][0]            : H22       : output : 2.5 V             :         : 6         : N              
+data[11][13]                 : H23       : output : 2.5 V             :         : 6         : N              
+data[4][13]                  : H24       : output : 2.5 V             :         : 6         : N              
+data[14][7]                  : H25       : output : 2.5 V             :         : 6         : N              
+broadcast[2][12]             : H26       : input  : 2.5 V             :         : 6         : N              
+GND                          : H27       : gnd    :                   :         :           :                
+VCCIO6                       : H28       : power  :                   : 2.5V    : 6         :                
+tag[1][3]                    : J1        : input  : 2.5 V             :         : 1         : N              
+GND                          : J2        : gnd    :                   :         :           :                
+validity_en[1][0]            : J3        : output : 2.5 V             :         : 1         : N              
+data[3][0]                   : J4        : output : 2.5 V             :         : 1         : N              
+validity_out[7][0]           : J5        : output : 2.5 V             :         : 1         : N              
+data[14][2]                  : J6        : output : 2.5 V             :         : 1         : N              
+data[13][11]                 : J7        : output : 2.5 V             :         : 1         : N              
+VCCA3                        : J8        : power  :                   : 2.5V    :           :                
+VCCD_PLL3                    : J9        : power  :                   : 1.0V    :           :                
+tag[12][0]                   : J10       : input  : 2.5 V             :         : 8         : N              
+GND                          : J11       : gnd    :                   :         :           :                
+broadcast[2][2]              : J12       : input  : 2.5 V             :         : 8         : N              
+broadcast[2][1]              : J13       : input  : 2.5 V             :         : 8         : N              
+broadcast[3][5]              : J14       : input  : 2.5 V             :         : 8         : N              
+broadcast[4][5]              : J15       : input  : 2.5 V             :         : 7         : N              
+broadcast[1][4]              : J16       : input  : 2.5 V             :         : 7         : N              
+broadcast[2][4]              : J17       : input  : 2.5 V             :         : 7         : N              
+GND                          : J18       : gnd    :                   :         :           :                
+data[13][6]                  : J19       : output : 2.5 V             :         : 7         : N              
+VCCD_PLL2                    : J20       : power  :                   : 1.0V    :           :                
+VCCA2                        : J21       : power  :                   : 2.5V    :           :                
+data[13][14]                 : J22       : output : 2.5 V             :         : 6         : N              
+data[0][7]                   : J23       : output : 2.5 V             :         : 6         : N              
+busy[12][0]                  : J24       : input  : 2.5 V             :         : 6         : N              
+data[8][13]                  : J25       : output : 2.5 V             :         : 6         : N              
+broadcast[3][15]             : J26       : input  : 2.5 V             :         : 6         : N              
+broadcast[4][12]             : J27       : input  : 2.5 V             :         : 6         : N              
+broadcast[3][11]             : J28       : input  : 2.5 V             :         : 6         : N              
+data[14][11]                 : K1        : output : 2.5 V             :         : 1         : N              
+data_en[5][0]                : K2        : output : 2.5 V             :         : 1         : N              
+data[5][0]                   : K3        : output : 2.5 V             :         : 1         : N              
+data[4][1]                   : K4        : output : 2.5 V             :         : 1         : N              
+VCCIO1                       : K5        : power  :                   : 2.5V    : 1         :                
+GND                          : K6        : gnd    :                   :         :           :                
+data[14][0]                  : K7        : output : 2.5 V             :         : 1         : N              
+data[1][8]                   : K8        : output : 2.5 V             :         : 1         : N              
+VCCINT                       : K9        : power  :                   : 1.0V    :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+VCCINT                       : K11       : power  :                   : 1.0V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCCINT                       : K13       : power  :                   : 1.0V    :           :                
+GND                          : K14       : gnd    :                   :         :           :                
+VCCINT                       : K15       : power  :                   : 1.0V    :           :                
+GND                          : K16       : gnd    :                   :         :           :                
+VCCINT                       : K17       : power  :                   : 1.0V    :           :                
+GND                          : K18       : gnd    :                   :         :           :                
+VCCINT                       : K19       : power  :                   : 1.0V    :           :                
+GND                          : K20       : gnd    :                   :         :           :                
+data[10][10]                 : K21       : output : 2.5 V             :         : 6         : N              
+data[13][1]                  : K22       : output : 2.5 V             :         : 6         : N              
+GND                          : K23       : gnd    :                   :         :           :                
+VCCIO6                       : K24       : power  :                   : 2.5V    : 6         :                
+data[1][7]                   : K25       : output : 2.5 V             :         : 6         : N              
+data[8][5]                   : K26       : output : 2.5 V             :         : 6         : N              
+data[13][2]                  : K27       : output : 2.5 V             :         : 6         : N              
+data[10][2]                  : K28       : output : 2.5 V             :         : 6         : N              
+data[5][8]                   : L1        : output : 2.5 V             :         : 1         : N              
+broadcast[3][21]             : L2        : input  : 2.5 V             :         : 1         : N              
+data[3][3]                   : L3        : output : 2.5 V             :         : 1         : N              
+data[12][14]                 : L4        : output : 2.5 V             :         : 1         : N              
+data[13][4]                  : L5        : output : 2.5 V             :         : 1         : N              
+data[9][3]                   : L6        : output : 2.5 V             :         : 1         : N              
+data[5][5]                   : L7        : output : 2.5 V             :         : 1         : N              
+data[3][1]                   : L8        : output : 2.5 V             :         : 1         : N              
+GND                          : L9        : gnd    :                   :         :           :                
+VCCINT                       : L10       : power  :                   : 1.0V    :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+VCCINT                       : L12       : power  :                   : 1.0V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCCINT                       : L14       : power  :                   : 1.0V    :           :                
+GND                          : L15       : gnd    :                   :         :           :                
+VCCINT                       : L16       : power  :                   : 1.0V    :           :                
+GND                          : L17       : gnd    :                   :         :           :                
+VCCINT                       : L18       : power  :                   : 1.0V    :           :                
+GND                          : L19       : gnd    :                   :         :           :                
+VCCINT                       : L20       : power  :                   : 1.0V    :           :                
+data[9][2]                   : L21       : output : 2.5 V             :         : 6         : N              
+data[0][3]                   : L22       : output : 2.5 V             :         : 6         : N              
+broadcast[3][8]              : L23       : input  : 2.5 V             :         : 6         : N              
+data[0][4]                   : L24       : output : 2.5 V             :         : 6         : N              
+broadcast[4][7]              : L25       : input  : 2.5 V             :         : 6         : N              
+data[5][12]                  : L26       : output : 2.5 V             :         : 6         : N              
+data[8][3]                   : L27       : output : 2.5 V             :         : 6         : N              
+data[1][1]                   : L28       : output : 2.5 V             :         : 6         : N              
+broadcast[0][9]              : M1        : input  : 2.5 V             :         : 1         : N              
+broadcast[2][7]              : M2        : input  : 2.5 V             :         : 1         : N              
+data[3][12]                  : M3        : output : 2.5 V             :         : 1         : N              
+data[1][14]                  : M4        : output : 2.5 V             :         : 1         : N              
+data[4][2]                   : M5        : output : 2.5 V             :         : 1         : N              
+nSTATUS                      : M6        :        :                   :         : 1         :                
+data[15][11]                 : M7        : output : 2.5 V             :         : 1         : N              
+data[4][0]                   : M8        : output : 2.5 V             :         : 1         : N              
+VCCINT                       : M9        : power  :                   : 1.0V    :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+VCCINT                       : M11       : power  :                   : 1.0V    :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+VCCINT                       : M13       : power  :                   : 1.0V    :           :                
+GND                          : M14       : gnd    :                   :         :           :                
+VCCINT                       : M15       : power  :                   : 1.0V    :           :                
+GND                          : M16       : gnd    :                   :         :           :                
+VCCINT                       : M17       : power  :                   : 1.0V    :           :                
+GND                          : M18       : gnd    :                   :         :           :                
+VCCINT                       : M19       : power  :                   : 1.0V    :           :                
+GND                          : M20       : gnd    :                   :         :           :                
+data[2][5]                   : M21       : output : 2.5 V             :         : 6         : N              
+MSEL2                        : M22       :        :                   :         : 6         :                
+data[5][14]                  : M23       : output : 2.5 V             :         : 6         : N              
+data[10][3]                  : M24       : output : 2.5 V             :         : 6         : N              
+data[7][5]                   : M25       : output : 2.5 V             :         : 6         : N              
+data[14][13]                 : M26       : output : 2.5 V             :         : 6         : N              
+broadcast[0][8]              : M27       : input  : 2.5 V             :         : 6         : N              
+data[12][11]                 : M28       : output : 2.5 V             :         : 6         : N              
+VCCIO1                       : N1        : power  :                   : 2.5V    : 1         :                
+GND                          : N2        : gnd    :                   :         :           :                
+data[12][8]                  : N3        : output : 2.5 V             :         : 1         : N              
+data[12][1]                  : N4        : output : 2.5 V             :         : 1         : N              
+VCCIO1                       : N5        : power  :                   : 2.5V    : 1         :                
+GND                          : N6        : gnd    :                   :         :           :                
+~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : N7        : input  : 2.5 V             :         : 1         : N              
+data[14][10]                 : N8        : output : 2.5 V             :         : 1         : N              
+GND                          : N9        : gnd    :                   :         :           :                
+VCCINT                       : N10       : power  :                   : 1.0V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+VCCINT                       : N12       : power  :                   : 1.0V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCCINT                       : N14       : power  :                   : 1.0V    :           :                
+GND                          : N15       : gnd    :                   :         :           :                
+VCCINT                       : N16       : power  :                   : 1.0V    :           :                
+GND                          : N17       : gnd    :                   :         :           :                
+VCCINT                       : N18       : power  :                   : 1.0V    :           :                
+GND                          : N19       : gnd    :                   :         :           :                
+VCCINT                       : N20       : power  :                   : 1.0V    :           :                
+data[15][2]                  : N21       : output : 2.5 V             :         : 6         : N              
+MSEL0                        : N22       :        :                   :         : 6         :                
+GND                          : N23       : gnd    :                   :         :           :                
+VCCIO6                       : N24       : power  :                   : 2.5V    : 6         :                
+broadcast[1][9]              : N25       : input  : 2.5 V             :         : 6         : N              
+broadcast[3][9]              : N26       : input  : 2.5 V             :         : 6         : N              
+GND                          : N27       : gnd    :                   :         :           :                
+VCCIO6                       : N28       : power  :                   : 2.5V    : 6         :                
+data[15][8]                  : P1        : output : 2.5 V             :         : 1         : N              
+data[2][2]                   : P2        : output : 2.5 V             :         : 1         : N              
+~ALTERA_DCLK~                : P3        : output : 2.5 V             :         : 1         : N              
+nCONFIG                      : P4        :        :                   :         : 1         :                
+TCK                          : P5        : input  :                   :         : 1         :                
+TDO                          : P6        : output :                   :         : 1         :                
+TDI                          : P7        : input  :                   :         : 1         :                
+TMS                          : P8        : input  :                   :         : 1         :                
+VCCINT                       : P9        : power  :                   : 1.0V    :           :                
+GND                          : P10       : gnd    :                   :         :           :                
+VCCINT                       : P11       : power  :                   : 1.0V    :           :                
+GND                          : P12       : gnd    :                   :         :           :                
+VCCINT                       : P13       : power  :                   : 1.0V    :           :                
+GND                          : P14       : gnd    :                   :         :           :                
+VCCINT                       : P15       : power  :                   : 1.0V    :           :                
+GND                          : P16       : gnd    :                   :         :           :                
+VCCINT                       : P17       : power  :                   : 1.0V    :           :                
+GND                          : P18       : gnd    :                   :         :           :                
+VCCINT                       : P19       : power  :                   : 1.0V    :           :                
+GND                          : P20       : gnd    :                   :         :           :                
+data[3][5]                   : P21       : output : 2.5 V             :         : 5         : N              
+MSEL3                        : P22       :        :                   :         : 6         :                
+MSEL1                        : P23       :        :                   :         : 6         :                
+CONF_DONE                    : P24       :        :                   :         : 6         :                
+data[14][1]                  : P25       : output : 2.5 V             :         : 6         : N              
+broadcast[3][7]              : P26       : input  : 2.5 V             :         : 6         : N              
+data[12][2]                  : P27       : output : 2.5 V             :         : 6         : N              
+~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : P28       : output : 2.5 V             :         : 6         : N              
+data[10][5]                  : R1        : output : 2.5 V             :         : 2         : N              
+data[12][0]                  : R2        : output : 2.5 V             :         : 2         : N              
+data[13][0]                  : R3        : output : 2.5 V             :         : 2         : N              
+data[12][9]                  : R4        : output : 2.5 V             :         : 2         : N              
+data[1][5]                   : R5        : output : 2.5 V             :         : 2         : N              
+data[13][15]                 : R6        : output : 2.5 V             :         : 2         : N              
+data[10][15]                 : R7        : output : 2.5 V             :         : 2         : N              
+nCE                          : R8        :        :                   :         : 1         :                
+GND                          : R9        : gnd    :                   :         :           :                
+VCCINT                       : R10       : power  :                   : 1.0V    :           :                
+GND                          : R11       : gnd    :                   :         :           :                
+VCCINT                       : R12       : power  :                   : 1.0V    :           :                
+GND                          : R13       : gnd    :                   :         :           :                
+VCCINT                       : R14       : power  :                   : 1.0V    :           :                
+GND                          : R15       : gnd    :                   :         :           :                
+VCCINT                       : R16       : power  :                   : 1.0V    :           :                
+GND                          : R17       : gnd    :                   :         :           :                
+VCCINT                       : R18       : power  :                   : 1.0V    :           :                
+GND                          : R19       : gnd    :                   :         :           :                
+VCCINT                       : R20       : power  :                   : 1.0V    :           :                
+broadcast[0][11]             : R21       : input  : 2.5 V             :         : 5         : N              
+broadcast[2][8]              : R22       : input  : 2.5 V             :         : 5         : N              
+data[7][3]                   : R23       : output : 2.5 V             :         : 5         : N              
+data[15][3]                  : R24       : output : 2.5 V             :         : 5         : N              
+broadcast[1][17]             : R25       : input  : 2.5 V             :         : 5         : N              
+data[15][9]                  : R26       : output : 2.5 V             :         : 5         : N              
+data[14][3]                  : R27       : output : 2.5 V             :         : 5         : N              
+broadcast[2][11]             : R28       : input  : 2.5 V             :         : 5         : N              
+VCCIO2                       : T1        : power  :                   : 2.5V    : 2         :                
+GND                          : T2        : gnd    :                   :         :           :                
+data[1][3]                   : T3        : output : 2.5 V             :         : 2         : N              
+broadcast[2][9]              : T4        : input  : 2.5 V             :         : 2         : N              
+VCCIO2                       : T5        : power  :                   : 2.5V    : 2         :                
+GND                          : T6        : gnd    :                   :         :           :                
+data[3][15]                  : T7        : output : 2.5 V             :         : 2         : N              
+data[4][3]                   : T8        : output : 2.5 V             :         : 2         : N              
+VCCINT                       : T9        : power  :                   : 1.0V    :           :                
+GND                          : T10       : gnd    :                   :         :           :                
+VCCINT                       : T11       : power  :                   : 1.0V    :           :                
+GND                          : T12       : gnd    :                   :         :           :                
+VCCINT                       : T13       : power  :                   : 1.0V    :           :                
+GND                          : T14       : gnd    :                   :         :           :                
+VCCINT                       : T15       : power  :                   : 1.0V    :           :                
+GND                          : T16       : gnd    :                   :         :           :                
+VCCINT                       : T17       : power  :                   : 1.0V    :           :                
+GND                          : T18       : gnd    :                   :         :           :                
+VCCINT                       : T19       : power  :                   : 1.0V    :           :                
+GND                          : T20       : gnd    :                   :         :           :                
+broadcast[3][17]             : T21       : input  : 2.5 V             :         : 5         : N              
+broadcast[0][15]             : T22       : input  : 2.5 V             :         : 5         : N              
+GND                          : T23       : gnd    :                   :         :           :                
+VCCIO5                       : T24       : power  :                   : 2.5V    : 5         :                
+data[3][10]                  : T25       : output : 2.5 V             :         : 5         : N              
+broadcast[4][17]             : T26       : input  : 2.5 V             :         : 5         : N              
+GND                          : T27       : gnd    :                   :         :           :                
+VCCIO5                       : T28       : power  :                   : 2.5V    : 5         :                
+data[12][4]                  : U1        : output : 2.5 V             :         : 2         : N              
+data[5][11]                  : U2        : output : 2.5 V             :         : 2         : N              
+broadcast[1][7]              : U3        : input  : 2.5 V             :         : 2         : N              
+data[4][12]                  : U4        : output : 2.5 V             :         : 2         : N              
+data[2][10]                  : U5        : output : 2.5 V             :         : 2         : N              
+data[6][13]                  : U6        : output : 2.5 V             :         : 2         : N              
+data_en[0][0]                : U7        : output : 2.5 V             :         : 2         : N              
+data[14][6]                  : U8        : output : 2.5 V             :         : 2         : N              
+GND                          : U9        : gnd    :                   :         :           :                
+VCCINT                       : U10       : power  :                   : 1.0V    :           :                
+GND                          : U11       : gnd    :                   :         :           :                
+VCCINT                       : U12       : power  :                   : 1.0V    :           :                
+GND                          : U13       : gnd    :                   :         :           :                
+VCCINT                       : U14       : power  :                   : 1.0V    :           :                
+GND                          : U15       : gnd    :                   :         :           :                
+VCCINT                       : U16       : power  :                   : 1.0V    :           :                
+GND                          : U17       : gnd    :                   :         :           :                
+VCCINT                       : U18       : power  :                   : 1.0V    :           :                
+GND                          : U19       : gnd    :                   :         :           :                
+VCCINT                       : U20       : power  :                   : 1.0V    :           :                
+broadcast[1][15]             : U21       : input  : 2.5 V             :         : 5         : N              
+data[1][11]                  : U22       : output : 2.5 V             :         : 5         : N              
+broadcast[3][10]             : U23       : input  : 2.5 V             :         : 5         : N              
+data[10][13]                 : U24       : output : 2.5 V             :         : 5         : N              
+data[7][4]                   : U25       : output : 2.5 V             :         : 5         : N              
+data[6][5]                   : U26       : output : 2.5 V             :         : 5         : N              
+broadcast[2][19]             : U27       : input  : 2.5 V             :         : 5         : N              
+data[8][0]                   : U28       : output : 2.5 V             :         : 5         : N              
+data[4][10]                  : V1        : output : 2.5 V             :         : 2         : N              
+data[2][3]                   : V2        : output : 2.5 V             :         : 2         : N              
+data[0][1]                   : V3        : output : 2.5 V             :         : 2         : N              
+data[15][10]                 : V4        : output : 2.5 V             :         : 2         : N              
+data[10][12]                 : V5        : output : 2.5 V             :         : 2         : N              
+data[12][10]                 : V6        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 2         :                
+data[10][11]                 : V8        : output : 2.5 V             :         : 2         : N              
+VCCINT                       : V9        : power  :                   : 1.0V    :           :                
+GND                          : V10       : gnd    :                   :         :           :                
+VCCINT                       : V11       : power  :                   : 1.0V    :           :                
+GND                          : V12       : gnd    :                   :         :           :                
+VCCINT                       : V13       : power  :                   : 1.0V    :           :                
+GND                          : V14       : gnd    :                   :         :           :                
+VCCINT                       : V15       : power  :                   : 1.0V    :           :                
+GND                          : V16       : gnd    :                   :         :           :                
+VCCINT                       : V17       : power  :                   : 1.0V    :           :                
+GND                          : V18       : gnd    :                   :         :           :                
+VCCINT                       : V19       : power  :                   : 1.0V    :           :                
+GND                          : V20       : gnd    :                   :         :           :                
+broadcast[2][10]             : V21       : input  : 2.5 V             :         : 5         : N              
+data[0][5]                   : V22       : output : 2.5 V             :         : 5         : N              
+data[10][6]                  : V23       : output : 2.5 V             :         : 5         : N              
+broadcast[1][20]             : V24       : input  : 2.5 V             :         : 5         : N              
+data[10][14]                 : V25       : output : 2.5 V             :         : 5         : N              
+broadcast[4][8]              : V26       : input  : 2.5 V             :         : 5         : N              
+data[15][7]                  : V27       : output : 2.5 V             :         : 5         : N              
+data[6][6]                   : V28       : output : 2.5 V             :         : 5         : N              
+broadcast[0][17]             : W1        : input  : 2.5 V             :         : 2         : N              
+data[11][4]                  : W2        : output : 2.5 V             :         : 2         : N              
+validity_out[4][0]           : W3        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 2         :                
+VCCIO2                       : W5        : power  :                   : 2.5V    : 2         :                
+GND                          : W6        : gnd    :                   :         :           :                
+data[2][9]                   : W7        : output : 2.5 V             :         : 2         : N              
+data[1][4]                   : W8        : output : 2.5 V             :         : 2         : N              
+GND                          : W9        : gnd    :                   :         :           :                
+VCCINT                       : W10       : power  :                   : 1.0V    :           :                
+GND                          : W11       : gnd    :                   :         :           :                
+VCCINT                       : W12       : power  :                   : 1.0V    :           :                
+GND                          : W13       : gnd    :                   :         :           :                
+VCCINT                       : W14       : power  :                   : 1.0V    :           :                
+GND                          : W15       : gnd    :                   :         :           :                
+VCCINT                       : W16       : power  :                   : 1.0V    :           :                
+GND                          : W17       : gnd    :                   :         :           :                
+VCCINT                       : W18       : power  :                   : 1.0V    :           :                
+GND                          : W19       : gnd    :                   :         :           :                
+VCCINT                       : W20       : power  :                   : 1.0V    :           :                
+data[15][13]                 : W21       : output : 2.5 V             :         : 5         : N              
+data[15][5]                  : W22       : output : 2.5 V             :         : 5         : N              
+GND                          : W23       : gnd    :                   :         :           :                
+VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
+broadcast[4][21]             : W25       : input  : 2.5 V             :         : 5         : N              
+data[8][7]                   : W26       : output : 2.5 V             :         : 5         : N              
+data[3][9]                   : W27       : output : 2.5 V             :         : 5         : N              
+data[2][0]                   : W28       : output : 2.5 V             :         : 5         : N              
+GND+                         : Y1        :        :                   :         : 2         :                
+GND+                         : Y2        :        :                   :         : 2         :                
+data[9][10]                  : Y3        : output : 2.5 V             :         : 2         : N              
+data[6][4]                   : Y4        : output : 2.5 V             :         : 2         : N              
+data_en[10][0]               : Y5        : output : 2.5 V             :         : 2         : N              
+broadcast[1][13]             : Y6        : input  : 2.5 V             :         : 2         : N              
+data[1][9]                   : Y7        : output : 2.5 V             :         : 2         : N              
+VCCA1                        : Y8        : power  :                   : 2.5V    :           :                
+VCCD_PLL1                    : Y9        : power  :                   : 1.0V    :           :                
+validity_en[6][0]            : Y10       : output : 2.5 V             :         : 3         : N              
+GND                          : Y11       : gnd    :                   :         :           :                
+broadcast[1][6]              : Y12       : input  : 2.5 V             :         : 3         : N              
+data[11][9]                  : Y13       : output : 2.5 V             :         : 3         : N              
+data[5][7]                   : Y14       : output : 2.5 V             :         : 3         : N              
+data[8][12]                  : Y15       : output : 2.5 V             :         : 3         : N              
+broadcast[0][7]              : Y16       : input  : 2.5 V             :         : 4         : N              
+data[9][6]                   : Y17       : output : 2.5 V             :         : 4         : N              
+GND                          : Y18       : gnd    :                   :         :           :                
+data[7][6]                   : Y19       : output : 2.5 V             :         : 4         : N              
+VCCD_PLL4                    : Y20       : power  :                   : 1.0V    :           :                
+VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
+broadcast[3][19]             : Y22       : input  : 2.5 V             :         : 5         : N              
+validity_out[0][0]           : Y23       : output : 2.5 V             :         : 5         : N              
+data[10][1]                  : Y24       : output : 2.5 V             :         : 5         : N              
+data[1][2]                   : Y25       : output : 2.5 V             :         : 5         : N              
+broadcast[1][21]             : Y26       : input  : 2.5 V             :         : 5         : N              
+GND+                         : Y27       :        :                   :         : 5         :                
+GND+                         : Y28       :        :                   :         : 5         :                

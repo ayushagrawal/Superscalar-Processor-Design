@@ -14,16 +14,6 @@ package components is
 			 
 	end component;
 	
-	component comparator is
-		generic (tag_size : integer := 5;
-					tag_num : integer := 16);
-		port (to_match : in main_array(0 to 4)(tag_size downto 0);
-				tag_data : in main_array(0 to tag_num-1)(tag_size-1 downto 0);
-				busy		: in main_array(0 to tag_num-1)(0 downto 0);
-				index		: out main_array(0 to 4)(natural(log2(real(tag_num)))-1 downto 0);
-				valid		: out main_array(0 to 4)(0 downto 0));		
-	end component;
-	
 	component instruction_memory IS
 		PORT
 		(

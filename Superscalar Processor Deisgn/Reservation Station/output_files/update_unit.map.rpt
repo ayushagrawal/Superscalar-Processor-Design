@@ -1,0 +1,1326 @@
+Analysis & Synthesis report for update_unit
+Fri May 05 22:47:26 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |update_unit
+ 12. Parameter Settings for User Entity Instance: comparator:comparator1
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 05 22:47:26 2017       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; update_unit                                 ;
+; Top-level Entity Name              ; update_unit                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,570                                       ;
+;     Total combinational functions  ; 1,570                                       ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 535                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; update_unit        ; update_unit        ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++-----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
++-----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; ../ALL Code Files/components.vhd  ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd  ;         ;
+; ../ALL Code Files/update_unit.vhd ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd ;         ;
+; ../ALL Code Files/comparator.vhd  ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd  ;         ;
++-----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                         ;
++---------------------------------------------+---------------------------------------+
+; Resource                                    ; Usage                                 ;
++---------------------------------------------+---------------------------------------+
+; Estimated Total logic elements              ; 1,570                                 ;
+;                                             ;                                       ;
+; Total combinational functions               ; 1570                                  ;
+; Logic element usage by number of LUT inputs ;                                       ;
+;     -- 4 input functions                    ; 1151                                  ;
+;     -- 3 input functions                    ; 416                                   ;
+;     -- <=2 input functions                  ; 3                                     ;
+;                                             ;                                       ;
+; Logic elements by mode                      ;                                       ;
+;     -- normal mode                          ; 1570                                  ;
+;     -- arithmetic mode                      ; 0                                     ;
+;                                             ;                                       ;
+; Total registers                             ; 0                                     ;
+;     -- Dedicated logic registers            ; 0                                     ;
+;     -- I/O registers                        ; 0                                     ;
+;                                             ;                                       ;
+; I/O pins                                    ; 535                                   ;
+;                                             ;                                       ;
+; Embedded Multiplier 9-bit elements          ; 0                                     ;
+;                                             ;                                       ;
+; Maximum fan-out node                        ; comparator:comparator1|index[4][3]~21 ;
+; Maximum fan-out                             ; 273                                   ;
+; Total fan-out                               ; 6674                                  ;
+; Average fan-out                             ; 2.53                                  ;
++---------------------------------------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
+; |update_unit                ; 1570 (1144)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 535  ; 0            ; |update_unit                        ; update_unit ; work         ;
+;    |comparator:comparator1| ; 426 (426)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |update_unit|comparator:comparator1 ; comparator  ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; data[15][0]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][1]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][2]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][3]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][4]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][5]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][6]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][7]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][8]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][9]$latch                                    ; data[15][15]        ; yes                    ;
+; data[15][10]$latch                                   ; data[15][15]        ; yes                    ;
+; data[15][11]$latch                                   ; data[15][15]        ; yes                    ;
+; data[15][12]$latch                                   ; data[15][15]        ; yes                    ;
+; data[15][13]$latch                                   ; data[15][15]        ; yes                    ;
+; data[15][14]$latch                                   ; data[15][15]        ; yes                    ;
+; data[15][15]$latch                                   ; data[15][15]        ; yes                    ;
+; data[14][0]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][1]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][2]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][3]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][4]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][5]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][6]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][7]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][8]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][9]$latch                                    ; data[14][15]        ; yes                    ;
+; data[14][10]$latch                                   ; data[14][15]        ; yes                    ;
+; data[14][11]$latch                                   ; data[14][15]        ; yes                    ;
+; data[14][12]$latch                                   ; data[14][15]        ; yes                    ;
+; data[14][13]$latch                                   ; data[14][15]        ; yes                    ;
+; data[14][14]$latch                                   ; data[14][15]        ; yes                    ;
+; data[14][15]$latch                                   ; data[14][15]        ; yes                    ;
+; data[13][0]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][1]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][2]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][3]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][4]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][5]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][6]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][7]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][8]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][9]$latch                                    ; data[13][15]        ; yes                    ;
+; data[13][10]$latch                                   ; data[13][15]        ; yes                    ;
+; data[13][11]$latch                                   ; data[13][15]        ; yes                    ;
+; data[13][12]$latch                                   ; data[13][15]        ; yes                    ;
+; data[13][13]$latch                                   ; data[13][15]        ; yes                    ;
+; data[13][14]$latch                                   ; data[13][15]        ; yes                    ;
+; data[13][15]$latch                                   ; data[13][15]        ; yes                    ;
+; data[12][0]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][1]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][2]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][3]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][4]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][5]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][6]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][7]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][8]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][9]$latch                                    ; data[12][15]        ; yes                    ;
+; data[12][10]$latch                                   ; data[12][15]        ; yes                    ;
+; data[12][11]$latch                                   ; data[12][15]        ; yes                    ;
+; data[12][12]$latch                                   ; data[12][15]        ; yes                    ;
+; data[12][13]$latch                                   ; data[12][15]        ; yes                    ;
+; data[12][14]$latch                                   ; data[12][15]        ; yes                    ;
+; data[12][15]$latch                                   ; data[12][15]        ; yes                    ;
+; data[11][0]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][1]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][2]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][3]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][4]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][5]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][6]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][7]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][8]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][9]$latch                                    ; data[11][15]        ; yes                    ;
+; data[11][10]$latch                                   ; data[11][15]        ; yes                    ;
+; data[11][11]$latch                                   ; data[11][15]        ; yes                    ;
+; data[11][12]$latch                                   ; data[11][15]        ; yes                    ;
+; data[11][13]$latch                                   ; data[11][15]        ; yes                    ;
+; data[11][14]$latch                                   ; data[11][15]        ; yes                    ;
+; data[11][15]$latch                                   ; data[11][15]        ; yes                    ;
+; data[10][0]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][1]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][2]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][3]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][4]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][5]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][6]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][7]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][8]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][9]$latch                                    ; data[10][15]        ; yes                    ;
+; data[10][10]$latch                                   ; data[10][15]        ; yes                    ;
+; data[10][11]$latch                                   ; data[10][15]        ; yes                    ;
+; data[10][12]$latch                                   ; data[10][15]        ; yes                    ;
+; data[10][13]$latch                                   ; data[10][15]        ; yes                    ;
+; data[10][14]$latch                                   ; data[10][15]        ; yes                    ;
+; data[10][15]$latch                                   ; data[10][15]        ; yes                    ;
+; data[9][0]$latch                                     ; data[9][15]         ; yes                    ;
+; data[9][1]$latch                                     ; data[9][15]         ; yes                    ;
+; data[9][2]$latch                                     ; data[9][15]         ; yes                    ;
+; data[9][3]$latch                                     ; data[9][15]         ; yes                    ;
+; Number of user-specified and inferred latches = 256  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[15][10]  ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[14][7]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[13][7]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[12][0]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[11][7]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[10][7]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[9][15]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[8][7]    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[7][13]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[6][9]    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[5][3]    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[4][5]    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[3][3]    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[2][0]    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[1][12]   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |update_unit|data[0][15]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |update_unit ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 32    ; Signed Integer                                     ;
+; X              ; 16    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: comparator:comparator1 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; tag_size       ; 5     ; Signed Integer                             ;
+; tag_num        ; 16    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 535                         ;
+; cycloneiii_lcell_comb ; 1571                        ;
+;     normal            ; 1571                        ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 416                         ;
+;         4 data inputs ; 1151                        ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 11.14                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Fri May 05 22:47:06 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off update_unit -c update_unit
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/components.vhd
+    Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/update_unit.vhd
+    Info (12022): Found design unit 1: update_unit-UU File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 37
+    Info (12023): Found entity 1: update_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/comparator.vhd
+    Info (12022): Found design unit 1: comparator-Comp File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd Line: 20
+    Info (12023): Found entity 1: comparator File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd Line: 8
+Info (12127): Elaborating entity "update_unit" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at update_unit.vhd(64): signal "broadcast" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 64
+Warning (10631): VHDL Process Statement warning at update_unit.vhd(57): inferring latch(es) for signal or variable "validity_en", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Warning (10631): VHDL Process Statement warning at update_unit.vhd(57): inferring latch(es) for signal or variable "data_en", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Warning (10631): VHDL Process Statement warning at update_unit.vhd(57): inferring latch(es) for signal or variable "data", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Warning (10631): VHDL Process Statement warning at update_unit.vhd(57): inferring latch(es) for signal or variable "validity_out", which holds its previous value in one or more paths through the process File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[15][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[14][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[13][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[12][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[11][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[10][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[9][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[8][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[7][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[6][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[5][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[4][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[3][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[2][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[1][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_out[0][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[15][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[14][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[13][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[12][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[11][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[10][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[9][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[8][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[7][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[6][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[5][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[4][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[3][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[2][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[1][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][1]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][2]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][3]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][4]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][5]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][6]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][7]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][8]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][9]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][10]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][11]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][12]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][13]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][14]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data[0][15]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[15][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[14][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[13][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[12][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[11][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[10][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[9][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[8][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[7][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[6][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[5][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[4][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[3][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[2][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[1][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "data_en[0][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[15][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[14][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[13][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[12][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[11][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[10][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[9][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[8][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[7][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[6][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[5][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[4][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[3][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[2][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[1][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (10041): Inferred latch for "validity_en[0][0]" at update_unit.vhd(57) File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (12128): Elaborating entity "comparator" for hierarchy "comparator:comparator1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at comparator.vhd(33): signal "busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd Line: 33
+Warning (13012): Latch data[15][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[15][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[14][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[13][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[12][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[11][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[10][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[9][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[8][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[7][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[6][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[5][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[4][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[3][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[2][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[1][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][0]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][1]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][2]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][3]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][4]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][5]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][6]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][7]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][8]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][9]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][10]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][11]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][12]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][13]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][14]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13012): Latch data[0][15]$latch has unsafe behavior File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal broadcast[4][0] File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 15
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "validity_out[15][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[14][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[13][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[12][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[11][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[10][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[9][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[8][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[7][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[6][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[5][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[4][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[3][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[2][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[1][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_out[0][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[15][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[14][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[13][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[12][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[11][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[10][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[9][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[8][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[7][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[6][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[5][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[4][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[3][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[2][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[1][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "validity_en[0][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[15][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[14][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[13][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[12][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[11][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[10][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[9][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[8][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[7][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[6][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[5][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[4][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[3][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[2][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[1][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+    Warning (13410): Pin "data_en[0][0]" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 57
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2105 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 206 input pins
+    Info (21059): Implemented 329 output pins
+    Info (21061): Implemented 1570 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 568 warnings
+    Info: Peak virtual memory: 677 megabytes
+    Info: Processing ended: Fri May 05 22:47:26 2017
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:36
+
+
