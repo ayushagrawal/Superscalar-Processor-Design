@@ -12,7 +12,7 @@ entity registers is
 
 architecture reg of registers is
 begin
-	process(clk,enable)
+	process(clk,enable,reset)
 		variable data: std_logic_vector(N-1 downto 0);
 	begin
 		if(reset = '1') then
