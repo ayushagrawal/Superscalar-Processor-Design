@@ -35,6 +35,7 @@ architecture DU of dispatch_unit is
 	signal top_in,top_out : std_logic_vector(natural(log2(real(N)))-1 downto 0);
 	signal top_add : main_array(0 to 4)(natural(log2(real(N)))-1 downto 0);
 	signal bottom_in,bottom_out,bottom_out_add,bottom_add : std_logic_vector(natural(log2(real(N)))-1 downto 0);
+	signal top_en : std_logic;
 	
 begin	
 	

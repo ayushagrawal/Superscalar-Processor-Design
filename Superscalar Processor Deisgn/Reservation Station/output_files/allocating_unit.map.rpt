@@ -1,0 +1,920 @@
+Analysis & Synthesis report for allocating_unit
+Sat May 06 16:31:39 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |allocating_unit
+ 11. Parameter Settings for User Entity Instance: registers:\GEN_REG:0:BUFF_INDEX
+ 12. Parameter Settings for User Entity Instance: registers:\GEN_REG:0:BUFF_VALID
+ 13. Parameter Settings for User Entity Instance: registers:\GEN_REG:1:BUFF_INDEX
+ 14. Parameter Settings for User Entity Instance: registers:\GEN_REG:1:BUFF_VALID
+ 15. Parameter Settings for User Entity Instance: registers:\GEN_REG:2:BUFF_INDEX
+ 16. Parameter Settings for User Entity Instance: registers:\GEN_REG:2:BUFF_VALID
+ 17. Parameter Settings for User Entity Instance: registers:\GEN_REG:3:BUFF_INDEX
+ 18. Parameter Settings for User Entity Instance: registers:\GEN_REG:3:BUFF_VALID
+ 19. Parameter Settings for User Entity Instance: registers:top_pointer
+ 20. Parameter Settings for User Entity Instance: registers:bottom_pointer
+ 21. Parameter Settings for User Entity Instance: adds:adder0
+ 22. Parameter Settings for User Entity Instance: adds:adder1
+ 23. Port Connectivity Checks: "adds:adder0"
+ 24. Port Connectivity Checks: "registers:bottom_pointer"
+ 25. Port Connectivity Checks: "registers:top_pointer"
+ 26. Port Connectivity Checks: "registers:\GEN_REG:3:BUFF_INDEX"
+ 27. Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_INDEX"
+ 28. Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_INDEX"
+ 29. Port Connectivity Checks: "registers:\GEN_REG:0:BUFF_INDEX"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat May 06 16:31:39 2017       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; allocating_unit                             ;
+; Top-level Entity Name              ; allocating_unit                             ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 388                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; allocating_unit    ; allocating_unit    ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; 2                  ;                    ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++---------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
++---------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; ../ALL Code Files/adds.vhd            ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd            ;         ;
+; ../ALL Code Files/allocating_unit.vhd ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd ;         ;
+; ../ALL Code Files/registers.vhd       ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd       ;         ;
+; ../ALL Code Files/components.vhd      ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd      ;         ;
++---------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 388   ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 388   ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+; |allocating_unit           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 388  ; 0            ; |allocating_unit    ; allocating_unit ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; registers:\GEN_REG:3:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
+; registers:\GEN_REG:2:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
+; registers:\GEN_REG:1:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
+; registers:\GEN_REG:0:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 4   ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |allocating_unit ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                         ;
+; X              ; 62    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:0:BUFF_INDEX ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 2     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:0:BUFF_VALID ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 1     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:1:BUFF_INDEX ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 2     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:1:BUFF_VALID ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 1     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:2:BUFF_INDEX ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 2     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:2:BUFF_VALID ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 1     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:3:BUFF_INDEX ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 2     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:\GEN_REG:3:BUFF_VALID ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 1     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:top_pointer ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; n              ; 2     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:bottom_pointer ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 2     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adds:adder0 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 2     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adds:adder1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 2     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adds:adder0"                                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; data2[1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data2[0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "registers:bottom_pointer" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at VCC             ;
++--------+-------+----------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:top_pointer"                                                                ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:3:BUFF_INDEX"                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_INDEX"                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_INDEX"                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:0:BUFF_INDEX"                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 388                         ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Sat May 06 16:31:26 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off allocating_unit -c allocating_unit
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/adds.vhd
+    Info (12022): Found design unit 1: adds-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 19
+    Info (12023): Found entity 1: adds File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/allocating_unit.vhd
+    Info (12022): Found design unit 1: allocating_unit-AU File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 30
+    Info (12023): Found entity 1: allocating_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
+    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 13
+    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/components.vhd
+    Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd Line: 5
+Info (12127): Elaborating entity "allocating_unit" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(32): used implicit default value for signal "index_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 32
+Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(33): used implicit default value for signal "index_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(33): used implicit default value for signal "valid_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(33): used implicit default value for signal "valid_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(34): used implicit default value for signal "top_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at allocating_unit.vhd(34): object "top_out" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 34
+Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:BUFF_INDEX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 45
+Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:BUFF_VALID" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 51
+Info (12128): Elaborating entity "adds" for hierarchy "adds:adder0" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 73
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "stall_out" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 14
+    Warning (13410): Pin "only_one" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 15
+    Warning (13410): Pin "reg_data[3][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][23]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][24]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][25]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][26]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][27]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][28]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][29]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][30]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][31]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][32]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][33]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][34]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][35]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][36]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][37]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][38]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][39]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][40]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][41]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][42]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][43]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][44]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][45]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][46]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][47]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][48]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][49]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][50]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][51]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][52]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][53]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][54]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][55]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][56]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][57]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][58]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][59]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][60]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[3][61]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][23]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][24]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][25]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][26]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][27]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][28]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][29]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][30]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][31]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][32]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][33]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][34]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][35]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][36]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][37]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][38]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][39]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][40]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][41]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][42]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][43]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][44]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][45]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][46]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][47]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][48]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][49]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][50]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][51]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][52]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][53]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][54]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][55]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][56]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][57]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][58]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][59]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][60]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[2][61]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][23]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][24]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][25]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][26]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][27]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][28]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][29]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][30]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][31]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][32]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][33]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][34]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][35]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][36]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][37]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][38]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][39]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][40]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][41]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][42]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][43]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][44]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][45]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][46]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][47]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][48]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][49]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][50]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][51]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][52]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][53]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][54]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][55]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][56]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][57]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][58]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][59]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][60]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[1][61]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][23]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][24]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][25]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][26]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][27]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][28]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][29]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][30]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][31]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][32]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][33]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][34]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][35]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][36]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][37]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][38]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][39]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][40]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][41]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][42]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][43]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][44]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][45]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][46]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][47]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][48]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][49]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][50]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][51]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][52]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][53]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][54]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][55]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][56]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][57]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][58]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][59]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][60]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_data[0][61]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
+    Warning (13410): Pin "reg_en[3][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 22
+    Warning (13410): Pin "reg_en[2][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 22
+    Warning (13410): Pin "reg_en[1][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 22
+    Warning (13410): Pin "reg_en[0][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 22
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 134 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 12
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 13
+    Warning (15610): No output dependent on input pin "inst1[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[3]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[4]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[5]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[6]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[7]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[8]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[9]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[10]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[11]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[12]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[13]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[14]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[15]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[16]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[17]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[18]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[23]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[24]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[25]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[26]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[27]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[28]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[29]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[30]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[31]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[32]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[33]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[34]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[35]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[36]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[37]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[38]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[39]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[40]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[41]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[42]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[43]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[44]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[45]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[46]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[47]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[48]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[49]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[50]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[51]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[52]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[53]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[54]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[55]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[56]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[57]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[58]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[59]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[60]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[61]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst1[62]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
+    Warning (15610): No output dependent on input pin "inst2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[3]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[4]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[5]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[6]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[7]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[8]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[9]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[10]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[11]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[12]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[13]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[14]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[15]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[16]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[17]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[18]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[23]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[24]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[25]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[26]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[27]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[28]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[29]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[30]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[31]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[32]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[33]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[34]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[35]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[36]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[37]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[38]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[39]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[40]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[41]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[42]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[43]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[44]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[45]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[46]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[47]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[48]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[49]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[50]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[51]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[52]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[53]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[54]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[55]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[56]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[57]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[58]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[59]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[60]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[61]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "inst2[62]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 18
+    Warning (15610): No output dependent on input pin "index_allocate[1][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
+    Warning (15610): No output dependent on input pin "index_allocate[1][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
+    Warning (15610): No output dependent on input pin "index_allocate[0][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
+    Warning (15610): No output dependent on input pin "index_allocate[0][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
+    Warning (15610): No output dependent on input pin "valid_allocate[1][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 26
+    Warning (15610): No output dependent on input pin "valid_allocate[0][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 26
+Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 134 input pins
+    Info (21059): Implemented 254 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 396 warnings
+    Info: Peak virtual memory: 672 megabytes
+    Info: Processing ended: Sat May 06 16:31:39 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
+
+

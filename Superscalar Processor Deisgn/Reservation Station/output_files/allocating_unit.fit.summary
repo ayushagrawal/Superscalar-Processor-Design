@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat May 06 16:31:49 2017
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : allocating_unit
+Top-level Entity Name : allocating_unit
+Family : Cyclone IV E
+Device : EP4CE30F29C6
+Timing Models : Final
+Total logic elements : 0 / 28,848 ( 0 % )
+    Total combinational functions : 0 / 28,848 ( 0 % )
+    Dedicated logic registers : 0 / 28,848 ( 0 % )
+Total registers : 0
+Total pins : 388 / 533 ( 73 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
