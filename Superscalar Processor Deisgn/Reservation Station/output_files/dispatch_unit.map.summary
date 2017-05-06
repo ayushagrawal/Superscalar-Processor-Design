@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat May 06 00:57:52 2017
+Analysis & Synthesis Status : Successful - Sat May 06 11:12:00 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : dispatch_unit
 Top-level Entity Name : dispatch_unit
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 125
+Total logic elements : 73
+    Total combinational functions : 73
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 397
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

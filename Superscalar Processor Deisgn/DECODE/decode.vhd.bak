@@ -10,7 +10,6 @@ entity decode is
 
 	port(clk	: in std_logic;
 		  reset : in std_logic;
-		  stall_in : std_logic;
 		  inst1 : in std_logic_vector(15 downto 0);
 		  inst2 : in std_logic_vector(15 downto 0);
 		  PC1			: in std_logic_vector(7 downto 0);
@@ -25,8 +24,8 @@ entity decode is
 		  wren2 : in std_logic;
 		  ----------------------------------------
 		  ------- CALCULATED uOPS RESGITERS ------
-		  REG1	: out std_logic_vector(61 downto 0);
-		  REG2	: out std_logic_vector(61 downto 0));
+		  REG1	: out std_logic_vector(60 downto 0);
+		  REG2	: out std_logic_vector(60 downto 0));
 
 end entity;
 
@@ -41,11 +40,8 @@ architecture DEC of decode is
 	signal reg1_in,reg2_in : std_logic_vector(60 downto 0);
 	signal out1,out2,out3,out4 : std_logic_vector(15 downto 0);
 	signal out_val1,out_val2,out_val3,out_val4 : std_logic;
-	signal inst1_val,inst2_val : std_logic;
 begin
 
-	inst1_val <= not stall_in;
-	inst2_val <= not stall_in;
 	
 	opcode1 <= inst1(15 downto 12);
 	opcode2 <= inst2(15 downto 12);
@@ -93,7 +89,6 @@ begin
 										 );	
 	
 	------------------------- BAISC ASSIGNMENTS -------------------------
-	reg1_in(61)				 <= inst1_val;
 	reg1_in(60 downto 57) <= inst1(15 downto 12);
 	reg1_in(56 downto 55) <= inst1(1 downto 0);
 	reg1_in(54 downto 50) <= index1;				-- FROM REORDER BUFFER
@@ -104,7 +99,6 @@ begin
 	reg1_in(15 downto 0) <= PC1;
 	
 	
-	reg2_in(61)				 <= inst2_val;
 	reg2_in(60 downto 57) <= inst2(15 downto 12);
 	reg2_in(56 downto 55) <= inst2(1 downto 0);
 	reg2_in(54 downto 50) <= index2;				-- FROM REORDER BUFFER
@@ -116,13 +110,13 @@ begin
 	
 	---------------------------------------------------------------------
 	
-	out_reg1 : registers generic map(N => 62) port map(clk => clk,
+	out_reg1 : registers generic map(N => 61) port map(clk => clk,
 																	   reset => reset,
 																	   input => reg1_in,
 																	   output => REG1,
 																	   enable => not_stall);
 	
-	out_reg2 : registers generic map(N => 62) port map(clk => clk,
+	out_reg2 : registers generic map(N => 61) port map(clk => clk,
 																	   reset => reset,
 																	   input => reg2_in,
 																	   output => REG2,

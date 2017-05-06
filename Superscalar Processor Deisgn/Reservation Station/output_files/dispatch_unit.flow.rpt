@@ -1,5 +1,5 @@
 Flow report for dispatch_unit
-Sat May 06 00:58:05 2017
+Sat May 06 11:12:40 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat May 06 00:58:01 2017       ;
+; Flow Status                        ; Successful - Sat May 06 11:12:33 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; dispatch_unit                               ;
 ; Top-level Entity Name              ; dispatch_unit                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0 / 6,272 ( 0 % )                           ;
-;     Total combinational functions  ; 0 / 6,272 ( 0 % )                           ;
-;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 125 / 180 ( 69 % )                          ;
+; Total logic elements               ; 73 / 28,848 ( < 1 % )                       ;
+;     Total combinational functions  ; 73 / 28,848 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 2 / 28,848 ( < 1 % )                        ;
+; Total registers                    ; 2                                           ;
+; Total pins                         ; 397 / 533 ( 74 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
-; Device                             ; EP4CE6F17C6                                 ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Device                             ; EP4CE30F29C6                                ;
 ; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/06/2017 00:57:38 ;
+; Start date & time ; 05/06/2017 11:11:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; dispatch_unit       ;
 +-------------------+---------------------+
@@ -76,7 +76,8 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149401245808184        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149404930110868        ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -91,11 +92,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 675 MB              ; 00:00:31                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 1102 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 559 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 631 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 675 MB              ; 00:00:38                           ;
+; Fitter                    ; 00:00:28     ; 1.0                     ; 1182 MB             ; 00:00:30                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 566 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 663 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:54     ; --                      ; --                  ; 00:01:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

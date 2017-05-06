@@ -24,6 +24,28 @@ package components is
 				valid		: out main_array(0 to 4)(0 downto 0));		
 	end component;
 	
+	component dispatch_unit is
+		generic(N : integer := 4;				-- Number of registers in the reservation station
+				  X : integer := 62);			-- Size of each register
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  -- FROM THE RESERVATION SYSTEM
+			  reg_data : in main_array(0 to N-1)(X-1 downto 0);
+			  
+			  -- FROM THE UPDATE UNIT
+			  index_out : in main_array(0 to 4)(natural(log2(real(N)))-1 downto 0);
+			  index_val : in main_array(0 to 4)(0 downto 0);
+			  
+			  -- TO ALLOCATE
+			  index_allocate : out main_array(0 to 1)(natural(log2(real(N)))-1 downto 0);
+			  valid_allocate : out main_array(0 to 1)(0 downto 0);
+			  
+			  -- TO EXECUTE
+			  execute1 : out std_logic_vector(62 downto 0);		-- 1 extra bit for validity
+			  execute2 : out std_logic_vector(62 downto 0)
+			  );
+	end component;	
+	
 	component instruction_memory IS
 		PORT
 		(

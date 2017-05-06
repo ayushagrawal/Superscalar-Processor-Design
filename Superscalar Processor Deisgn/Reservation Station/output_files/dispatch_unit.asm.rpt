@@ -1,5 +1,5 @@
 Assembler report for dispatch_unit
-Sat May 06 00:58:01 2017
+Sat May 06 11:12:33 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -38,11 +38,11 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat May 06 00:58:01 2017 ;
+; Assembler Status      ; Successful - Sat May 06 11:12:33 2017 ;
 ; Revision Name         ; dispatch_unit                         ;
 ; Top-level Entity Name ; dispatch_unit                         ;
 ; Family                ; Cyclone IV E                          ;
-; Device                ; EP4CE6F17C6                           ;
+; Device                ; EP4CE30F29C6                          ;
 +-----------------------+---------------------------------------+
 
 
@@ -67,9 +67,9 @@ agreement for further details.
 +----------------+--------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                            ;
 +----------------+--------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP4CE6F17C6                                                                                                        ;
-; JTAG usercode  ; 0x00087578                                                                                                         ;
-; Checksum       ; 0x00087578                                                                                                         ;
+; Device         ; EP4CE30F29C6                                                                                                       ;
+; JTAG usercode  ; 0x001F0CE0                                                                                                         ;
+; Checksum       ; 0x001F0CE0                                                                                                         ;
 +----------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -79,15 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat May 06 00:58:00 2017
+    Info: Processing started: Sat May 06 11:12:31 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off dispatch_unit -c dispatch_unit
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 560 megabytes
-    Info: Processing ended: Sat May 06 00:58:01 2017
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 567 megabytes
+    Info: Processing ended: Sat May 06 11:12:33 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
