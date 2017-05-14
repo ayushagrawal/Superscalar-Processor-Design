@@ -1,5 +1,5 @@
 Analysis & Synthesis report for allocating_unit
-Sat May 06 16:31:39 2017
+Sun May 14 21:04:29 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -28,16 +28,23 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  20. Parameter Settings for User Entity Instance: registers:bottom_pointer
  21. Parameter Settings for User Entity Instance: adds:adder0
  22. Parameter Settings for User Entity Instance: adds:adder1
- 23. Port Connectivity Checks: "adds:adder0"
- 24. Port Connectivity Checks: "registers:bottom_pointer"
- 25. Port Connectivity Checks: "registers:top_pointer"
- 26. Port Connectivity Checks: "registers:\GEN_REG:3:BUFF_INDEX"
- 27. Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_INDEX"
- 28. Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_INDEX"
- 29. Port Connectivity Checks: "registers:\GEN_REG:0:BUFF_INDEX"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+ 23. Parameter Settings for User Entity Instance: adds:adder2
+ 24. Parameter Settings for User Entity Instance: adds:adder3
+ 25. Port Connectivity Checks: "adds:adder3"
+ 26. Port Connectivity Checks: "adds:adder0"
+ 27. Port Connectivity Checks: "registers:bottom_pointer"
+ 28. Port Connectivity Checks: "registers:top_pointer"
+ 29. Port Connectivity Checks: "registers:\GEN_REG:3:BUFF_VALID"
+ 30. Port Connectivity Checks: "registers:\GEN_REG:3:BUFF_INDEX"
+ 31. Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_VALID"
+ 32. Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_INDEX"
+ 33. Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_VALID"
+ 34. Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_INDEX"
+ 35. Port Connectivity Checks: "registers:\GEN_REG:0:BUFF_VALID"
+ 36. Port Connectivity Checks: "registers:\GEN_REG:0:BUFF_INDEX"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -64,7 +71,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 06 16:31:39 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun May 14 21:04:29 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; allocating_unit                             ;
 ; Top-level Entity Name              ; allocating_unit                             ;
@@ -196,35 +203,35 @@ agreement for further details.
 +---------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 388   ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 388   ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+;                                             ;                  ;
+; Total combinational functions               ; 0                ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 0                ;
+;     -- 3 input functions                    ; 0                ;
+;     -- <=2 input functions                  ; 0                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 0                ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 0                ;
+;     -- Dedicated logic registers            ; 0                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 388              ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; stall_out~output ;
+; Maximum fan-out                             ; 1                ;
+; Total fan-out                               ; 388              ;
+; Average fan-out                             ; 0.50             ;
++---------------------------------------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -237,17 +244,17 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                    ;
-+-----------------------------------------+---------------------------------------------+
-; Register name                           ; Reason for Removal                          ;
-+-----------------------------------------+---------------------------------------------+
-; registers:\GEN_REG:3:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; registers:\GEN_REG:2:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; registers:\GEN_REG:1:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; registers:\GEN_REG:0:BUFF_VALID|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 4   ;                                             ;
-+-----------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++-----------------------------------------+-----------------------------------------------------+
+; Register name                           ; Reason for Removal                                  ;
++-----------------------------------------+-----------------------------------------------------+
+; registers:\GEN_REG:1:BUFF_VALID|data[0] ; Merged with registers:\GEN_REG:0:BUFF_VALID|data[0] ;
+; registers:\GEN_REG:2:BUFF_VALID|data[0] ; Merged with registers:\GEN_REG:0:BUFF_VALID|data[0] ;
+; registers:\GEN_REG:3:BUFF_VALID|data[0] ; Merged with registers:\GEN_REG:0:BUFF_VALID|data[0] ;
+; registers:\GEN_REG:0:BUFF_VALID|data[0] ; Stuck at VCC due to stuck port data_in              ;
+; Total Number of Removed Registers = 4   ;                                                     ;
++-----------------------------------------+-----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -396,6 +403,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adds:adder2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 2     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adds:adder3 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 2     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adds:adder3"                                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; data2[1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data2[0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "adds:adder0"                                                                            ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -416,14 +454,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registers:top_pointer"                                                                ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "registers:top_pointer" ;
++--------+-------+----------+-----------------------+
+; Port   ; Type  ; Severity ; Details               ;
++--------+-------+----------+-----------------------+
+; enable ; Input ; Info     ; Stuck at VCC          ;
++--------+-------+----------+-----------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:3:BUFF_VALID" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -432,25 +478,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reset  ; Input  ; Info     ; Stuck at GND                                                                        ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_INDEX"                                                      ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_VALID" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_INDEX"                                                      ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:2:BUFF_INDEX"                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; input[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; output   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reset    ; Input  ; Info     ; Stuck at GND                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_VALID" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:1:BUFF_INDEX"                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; input[1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; output   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reset    ; Input  ; Info     ; Stuck at GND                                                                        ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "registers:\GEN_REG:0:BUFF_VALID" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -458,7 +536,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
+; input  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reset  ; Input  ; Info     ; Stuck at GND                                                                        ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -468,9 +548,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 388                         ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 2                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -492,14 +572,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat May 06 16:31:26 2017
+    Info: Processing started: Sun May 14 21:04:13 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off allocating_unit -c allocating_unit
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/adds.vhd
     Info (12022): Found design unit 1: adds-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 19
     Info (12023): Found entity 1: adds File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/allocating_unit.vhd
-    Info (12022): Found design unit 1: allocating_unit-AU File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 30
+    Info (12022): Found design unit 1: allocating_unit-AU File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 32
     Info (12023): Found entity 1: allocating_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
     Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 13
@@ -507,17 +587,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 0 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/components.vhd
     Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd Line: 5
 Info (12127): Elaborating entity "allocating_unit" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(32): used implicit default value for signal "index_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 32
-Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(33): used implicit default value for signal "index_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 33
-Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(33): used implicit default value for signal "valid_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 33
-Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(33): used implicit default value for signal "valid_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 33
-Warning (10541): VHDL Signal Declaration warning at allocating_unit.vhd(34): used implicit default value for signal "top_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 34
-Warning (10036): Verilog HDL or VHDL warning at allocating_unit.vhd(34): object "top_out" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 34
-Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:BUFF_INDEX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 45
-Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:BUFF_VALID" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 51
-Info (12128): Elaborating entity "adds" for hierarchy "adds:adder0" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 73
+Warning (10036): Verilog HDL or VHDL warning at allocating_unit.vhd(38): object "not_stall" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 38
+Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:BUFF_INDEX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 47
+Info (12128): Elaborating entity "registers" for hierarchy "registers:\GEN_REG:0:BUFF_VALID" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 53
+Info (12128): Elaborating entity "adds" for hierarchy "adds:adder0" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 75
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "stall_out" is stuck at VCC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 14
+    Warning (13410): Pin "stall_out" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 14
     Warning (13410): Pin "only_one" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 15
     Warning (13410): Pin "reg_data[3][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
     Warning (13410): Pin "reg_data[3][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 21
@@ -774,8 +849,6 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 134 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 12
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 13
     Warning (15610): No output dependent on input pin "inst1[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
     Warning (15610): No output dependent on input pin "inst1[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
     Warning (15610): No output dependent on input pin "inst1[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 17
@@ -906,15 +979,17 @@ Warning (21074): Design contains 134 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "index_allocate[1][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
     Warning (15610): No output dependent on input pin "index_allocate[0][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
     Warning (15610): No output dependent on input pin "index_allocate[0][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
-    Warning (15610): No output dependent on input pin "valid_allocate[1][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 26
-    Warning (15610): No output dependent on input pin "valid_allocate[0][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 26
+    Warning (15610): No output dependent on input pin "valid_allocate[1][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 27
+    Warning (15610): No output dependent on input pin "valid_allocate[0][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 27
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 12
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 13
 Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 134 input pins
     Info (21059): Implemented 254 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 396 warnings
-    Info: Peak virtual memory: 672 megabytes
-    Info: Processing ended: Sat May 06 16:31:39 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 391 warnings
+    Info: Peak virtual memory: 670 megabytes
+    Info: Processing ended: Sun May 14 21:04:29 2017
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:37
 
 

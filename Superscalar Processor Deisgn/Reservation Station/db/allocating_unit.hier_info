@@ -1,14 +1,24 @@
 |allocating_unit
-reset => registers:GEN_REG:0:BUFF_INDEX.reset
-reset => registers:GEN_REG:0:BUFF_VALID.reset
-reset => registers:GEN_REG:1:BUFF_INDEX.reset
-reset => registers:GEN_REG:1:BUFF_VALID.reset
-reset => registers:GEN_REG:2:BUFF_INDEX.reset
-reset => registers:GEN_REG:2:BUFF_VALID.reset
-reset => registers:GEN_REG:3:BUFF_INDEX.reset
-reset => registers:GEN_REG:3:BUFF_VALID.reset
+reset => top_add[1].OUTPUTSELECT
+reset => top_add[0].OUTPUTSELECT
 reset => registers:top_pointer.reset
 reset => registers:bottom_pointer.reset
+reset => registers:GEN_REG:1:BUFF_INDEX.input[0]
+reset => registers:GEN_REG:2:BUFF_INDEX.input[1]
+reset => registers:GEN_REG:3:BUFF_INDEX.input[1]
+reset => registers:GEN_REG:3:BUFF_INDEX.input[0]
+reset => registers:GEN_REG:0:BUFF_INDEX.enable
+reset => registers:GEN_REG:1:BUFF_INDEX.enable
+reset => registers:GEN_REG:2:BUFF_INDEX.enable
+reset => registers:GEN_REG:3:BUFF_INDEX.enable
+reset => registers:GEN_REG:0:BUFF_VALID.input[0]
+reset => registers:GEN_REG:1:BUFF_VALID.input[0]
+reset => registers:GEN_REG:2:BUFF_VALID.input[0]
+reset => registers:GEN_REG:3:BUFF_VALID.input[0]
+reset => registers:GEN_REG:0:BUFF_VALID.enable
+reset => registers:GEN_REG:1:BUFF_VALID.enable
+reset => registers:GEN_REG:2:BUFF_VALID.enable
+reset => registers:GEN_REG:3:BUFF_VALID.enable
 clk => registers:GEN_REG:0:BUFF_INDEX.clk
 clk => registers:GEN_REG:0:BUFF_VALID.clk
 clk => registers:GEN_REG:1:BUFF_INDEX.clk
@@ -21,7 +31,9 @@ clk => registers:top_pointer.clk
 clk => registers:bottom_pointer.clk
 stall_out <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 only_one <= only_one.DB_MAX_OUTPUT_PORT_TYPE
-inst1[0] => ~NO_FANOUT~
+inst1[0] => bottom_add[1].DATAB
+inst1[0] => bottom_add[0].DATAA
+inst1[0] => bottom_add[0].DATAB
 inst1[1] => ~NO_FANOUT~
 inst1[2] => ~NO_FANOUT~
 inst1[3] => ~NO_FANOUT~
@@ -146,7 +158,7 @@ inst2[58] => ~NO_FANOUT~
 inst2[59] => ~NO_FANOUT~
 inst2[60] => ~NO_FANOUT~
 inst2[61] => ~NO_FANOUT~
-inst2[62] => adds:adder1.data2[1]
+inst2[62] => bottom_add[1].OUTPUTSELECT
 inst2[62] => bottom_add[0].OUTPUTSELECT
 reg_data[3][0] <= <GND>
 reg_data[3][1] <= <GND>
@@ -404,8 +416,10 @@ index_allocate[1][0] => ~NO_FANOUT~
 index_allocate[1][1] => ~NO_FANOUT~
 index_allocate[0][0] => ~NO_FANOUT~
 index_allocate[0][1] => ~NO_FANOUT~
-valid_allocate[1][0] => ~NO_FANOUT~
-valid_allocate[0][0] => ~NO_FANOUT~
+valid_allocate[1][0] => process_0.IN0
+valid_allocate[1][0] => top_add.IN0
+valid_allocate[0][0] => process_0.IN1
+valid_allocate[0][0] => top_add.IN1
 
 
 |allocating_unit|registers:\GEN_REG:0:BUFF_INDEX
@@ -528,6 +542,24 @@ output[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |allocating_unit|adds:adder1
+data1[0] => Add0.IN2
+data1[1] => Add0.IN1
+data2[0] => Add0.IN4
+data2[1] => Add0.IN3
+output[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|allocating_unit|adds:adder2
+data1[0] => Add0.IN2
+data1[1] => Add0.IN1
+data2[0] => Add0.IN4
+data2[1] => Add0.IN3
+output[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|allocating_unit|adds:adder3
 data1[0] => Add0.IN2
 data1[1] => Add0.IN1
 data2[0] => Add0.IN4
