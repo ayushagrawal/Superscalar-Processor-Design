@@ -70,109 +70,109 @@ CHIP  "allocating_unit"  ASSIGNED TO AN: EP4CE30F29C6
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A2        : power  :                   : 2.5V    : 8         :                
-reg_data[1][53]              : A3        : output : 2.5 V             :         : 8         : N              
-reg_data[0][10]              : A4        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][53]          : A3        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[0][10]          : A4        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : A5        : power  :                   : 2.5V    : 8         :                
 inst2[56]                    : A6        : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
 inst1[46]                    : A8        : input  : 2.5 V             :         : 8         : N              
 VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
-reg_data[1][4]               : A10       : output : 2.5 V             :         : 8         : N              
-reg_data[0][8]               : A11       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][4]           : A10       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[0][8]           : A11       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 8         :                
 VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
 GND+                         : A14       :        :                   :         : 8         :                
 inst2[14]                    : A15       : input  : 2.5 V             :         : 7         : N              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 inst2[40]                    : A17       : input  : 2.5 V             :         : 7         : N              
-reg_data[2][44]              : A18       : output : 2.5 V             :         : 7         : N              
-reg_data[2][14]              : A19       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][44]          : A18       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][14]          : A19       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A20       : power  :                   : 2.5V    : 7         :                
-reg_data[2][29]              : A21       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][29]          : A21       : output : 2.5 V             :         : 7         : N              
 inst2[47]                    : A22       : input  : 2.5 V             :         : 7         : N              
-reg_data[1][29]              : A23       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[1][29]          : A23       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A24       : power  :                   : 2.5V    : 7         :                
-reg_data[3][45]              : A25       : output : 2.5 V             :         : 7         : N              
-reg_data[0][20]              : A26       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][45]          : A25       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][20]          : A26       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A27       : power  :                   : 2.5V    : 7         :                
 VCCIO2                       : AA1       : power  :                   : 2.5V    : 2         :                
 GND                          : AA2       : gnd    :                   :         :           :                
-reg_data[2][39]              : AA3       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][39]          : AA3       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 2         :                
-reg_en[3][0]                 : AA5       : output : 2.5 V             :         : 2         : N              
-reg_data[2][49]              : AA6       : output : 2.5 V             :         : 2         : N              
-reg_data[1][17]              : AA7       : output : 2.5 V             :         : 2         : N              
+reg_alu_en[3][0]             : AA5       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][49]          : AA6       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[1][17]          : AA7       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :         : 2         :                
 GNDA1                        : AA9       : gnd    :                   :         :           :                
 inst2[7]                     : AA10      : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
-valid_allocate[0][0]         : AA12      : input  : 2.5 V             :         : 3         : N              
+valid_alu_allocate[0][0]     : AA12      : input  : 2.5 V             :         : 3         : N              
 inst1[35]                    : AA13      : input  : 2.5 V             :         : 3         : N              
-reg_data[1][26]              : AA14      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][26]          : AA14      : output : 2.5 V             :         : 3         : N              
 inst2[49]                    : AA15      : input  : 2.5 V             :         : 4         : N              
-reg_data[0][44]              : AA16      : output : 2.5 V             :         : 4         : N              
-reg_data[1][5]               : AA17      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][44]          : AA16      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][5]           : AA17      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AA18      : power  :                   : 2.5V    : 4         :                
-reg_data[1][2]               : AA19      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][2]           : AA19      : output : 2.5 V             :         : 4         : N              
 GNDA4                        : AA20      : gnd    :                   :         :           :                
 inst1[43]                    : AA21      : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA23      :        :                   :         : 5         :                
-reg_data[0][11]              : AA24      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[0][11]          : AA24      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA25      :        :                   :         : 5         :                
 inst2[55]                    : AA26      : input  : 2.5 V             :         : 5         : N              
 GND                          : AA27      : gnd    :                   :         :           :                
 VCCIO5                       : AA28      : power  :                   : 2.5V    : 5         :                
-index_allocate[0][1]         : AB1       : input  : 2.5 V             :         : 2         : N              
-reg_data[2][50]              : AB2       : output : 2.5 V             :         : 2         : N              
-reg_data[2][27]              : AB3       : output : 2.5 V             :         : 2         : N              
-reg_data[1][39]              : AB4       : output : 2.5 V             :         : 2         : N              
+index_alu_allocate[0][1]     : AB1       : input  : 2.5 V             :         : 2         : N              
+reg_alu_data[2][50]          : AB2       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][27]          : AB3       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[1][39]          : AB4       : output : 2.5 V             :         : 2         : N              
 inst2[58]                    : AB5       : input  : 2.5 V             :         : 2         : N              
-reg_data[3][52]              : AB6       : output : 2.5 V             :         : 2         : N              
-reg_data[3][15]              : AB7       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][52]          : AB6       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][15]          : AB7       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 2         :                
 inst2[51]                    : AB9       : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AB10      : power  :                   : 2.5V    : 3         :                
-reg_data[2][19]              : AB11      : output : 2.5 V             :         : 3         : N              
-valid_allocate[1][0]         : AB12      : input  : 2.5 V             :         : 3         : N              
-reg_en[0][0]                 : AB13      : output : 2.5 V             :         : 3         : N              
-reg_data[1][49]              : AB14      : output : 2.5 V             :         : 3         : N              
-reg_data[2][5]               : AB15      : output : 2.5 V             :         : 4         : N              
-reg_data[1][28]              : AB16      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[2][19]          : AB11      : output : 2.5 V             :         : 3         : N              
+valid_alu_allocate[1][0]     : AB12      : input  : 2.5 V             :         : 3         : N              
+reg_alu_en[0][0]             : AB13      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][49]          : AB14      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][5]           : AB15      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][28]          : AB16      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
 clk                          : AB18      : input  : 2.5 V             :         : 4         : N              
 inst1[60]                    : AB19      : input  : 2.5 V             :         : 4         : N              
-reg_data[2][17]              : AB20      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[2][17]          : AB20      : output : 2.5 V             :         : 4         : N              
 inst1[40]                    : AB21      : input  : 2.5 V             :         : 4         : N              
-reg_data[2][42]              : AB22      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[2][42]          : AB22      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 5         :                
-reg_data[2][15]              : AB24      : output : 2.5 V             :         : 5         : N              
-reg_data[0][0]               : AB25      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[2][15]          : AB24      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[0][0]           : AB25      : output : 2.5 V             :         : 5         : N              
 inst1[28]                    : AB26      : input  : 2.5 V             :         : 5         : N              
-reg_data[1][0]               : AB27      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[1][0]           : AB27      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB28      :        :                   :         : 5         :                
 inst2[35]                    : AC1       : input  : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC2       :        :                   :         : 2         :                
-reg_data[3][7]               : AC3       : output : 2.5 V             :         : 2         : N              
-reg_data[3][20]              : AC4       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][7]           : AC3       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][20]          : AC4       : output : 2.5 V             :         : 2         : N              
 inst2[3]                     : AC5       : input  : 2.5 V             :         : 2         : N              
 GND                          : AC6       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC7       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC8       :        :                   :         : 3         :                
 GND                          : AC9       : gnd    :                   :         :           :                
-reg_data[1][57]              : AC10      : output : 2.5 V             :         : 3         : N              
-reg_data[2][47]              : AC11      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][57]          : AC10      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][47]          : AC11      : output : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC12      :        :                   :         : 3         :                
 GND                          : AC13      : gnd    :                   :         :           :                
-reg_data[0][23]              : AC14      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][23]          : AC14      : output : 2.5 V             :         : 3         : N              
 inst2[2]                     : AC15      : input  : 2.5 V             :         : 4         : N              
 GND                          : AC16      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC17      :        :                   :         : 4         :                
-reg_data[0][41]              : AC18      : output : 2.5 V             :         : 4         : N              
-reg_data[0][18]              : AC19      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][41]          : AC18      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][18]          : AC19      : output : 2.5 V             :         : 4         : N              
 GND                          : AC20      : gnd    :                   :         :           :                
-reg_data[1][13]              : AC21      : output : 2.5 V             :         : 4         : N              
-reg_data[1][12]              : AC22      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][13]          : AC21      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][12]          : AC22      : output : 2.5 V             :         : 4         : N              
 GND                          : AC23      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC24      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5         :                
@@ -181,83 +181,83 @@ inst1[62]                    : AC27      : input  : 2.5 V             :         
 inst1[27]                    : AC28      : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD1       :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD2       :        :                   :         : 2         :                
-reg_data[3][41]              : AD3       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][41]          : AD3       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD4       :        :                   :         : 2         :                
-reg_data[2][31]              : AD5       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][31]          : AD5       : output : 2.5 V             :         : 2         : N              
 VCCIO3                       : AD6       : power  :                   : 2.5V    : 3         :                
 inst2[27]                    : AD7       : input  : 2.5 V             :         : 3         : N              
 inst1[54]                    : AD8       : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD10      :        :                   :         : 3         :                
 inst1[38]                    : AD11      : input  : 2.5 V             :         : 3         : N              
-reg_data[2][40]              : AD12      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][40]          : AD12      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
-reg_data[1][54]              : AD14      : output : 2.5 V             :         : 3         : N              
-reg_data[1][34]              : AD15      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][54]          : AD14      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][34]          : AD15      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
-reg_data[3][55]              : AD17      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][55]          : AD17      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD18      :        :                   :         : 4         :                
 inst2[52]                    : AD19      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
-reg_data[0][61]              : AD21      : output : 2.5 V             :         : 4         : N              
-reg_data[2][38]              : AD22      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][61]          : AD21      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[2][38]          : AD22      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
 inst1[45]                    : AD24      : input  : 2.5 V             :         : 5         : N              
-reg_data[3][3]               : AD25      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[3][3]           : AD25      : output : 2.5 V             :         : 5         : N              
 inst1[1]                     : AD26      : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD27      :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD28      :        :                   :         : 5         :                
-reg_data[3][0]               : AE1       : output : 2.5 V             :         : 2         : N              
-reg_data[0][43]              : AE2       : output : 2.5 V             :         : 2         : N              
-reg_data[0][17]              : AE3       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][0]           : AE1       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][43]          : AE2       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][17]          : AE3       : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE4       :        :                   :         : 2         :                
-reg_data[3][10]              : AE5       : output : 2.5 V             :         : 3         : N              
-reg_data[0][58]              : AE6       : output : 2.5 V             :         : 3         : N              
-reg_data[3][42]              : AE7       : output : 2.5 V             :         : 3         : N              
-reg_data[3][16]              : AE8       : output : 2.5 V             :         : 3         : N              
-reg_data[0][38]              : AE9       : output : 2.5 V             :         : 3         : N              
-reg_data[1][38]              : AE10      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][10]          : AE5       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][58]          : AE6       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][42]          : AE7       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][16]          : AE8       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][38]          : AE9       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][38]          : AE10      : output : 2.5 V             :         : 3         : N              
 inst1[4]                     : AE11      : input  : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 3         :                
-reg_data[3][19]              : AE13      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][19]          : AE13      : output : 2.5 V             :         : 3         : N              
 inst1[39]                    : AE14      : input  : 2.5 V             :         : 3         : N              
-reg_data[2][24]              : AE15      : output : 2.5 V             :         : 4         : N              
-reg_data[1][25]              : AE16      : output : 2.5 V             :         : 4         : N              
-reg_data[3][33]              : AE17      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[2][24]          : AE15      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][25]          : AE16      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][33]          : AE17      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE18      :        :                   :         : 4         :                
-reg_data[3][39]              : AE19      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][39]          : AE19      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE20      :        :                   :         : 4         :                
-reg_data[0][3]               : AE21      : output : 2.5 V             :         : 4         : N              
-reg_data[3][17]              : AE22      : output : 2.5 V             :         : 4         : N              
-reg_data[0][22]              : AE23      : output : 2.5 V             :         : 4         : N              
-reg_data[2][13]              : AE24      : output : 2.5 V             :         : 4         : N              
-reg_data[0][48]              : AE25      : output : 2.5 V             :         : 4         : N              
-reg_data[1][1]               : AE26      : output : 2.5 V             :         : 5         : N              
-reg_data[0][12]              : AE27      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[0][3]           : AE21      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][17]          : AE22      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][22]          : AE23      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[2][13]          : AE24      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][48]          : AE25      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][1]           : AE26      : output : 2.5 V             :         : 5         : N              
+reg_alu_data[0][12]          : AE27      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5         :                
 GND                          : AF1       : gnd    :                   :         :           :                
-reg_data[0][53]              : AF2       : output : 2.5 V             :         : 2         : N              
-reg_data[0][5]               : AF3       : output : 2.5 V             :         : 2         : N              
-reg_data[2][54]              : AF4       : output : 2.5 V             :         : 3         : N              
-reg_data[1][7]               : AF5       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][53]          : AF2       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][5]           : AF3       : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][54]          : AF4       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][7]           : AF5       : output : 2.5 V             :         : 3         : N              
 inst1[49]                    : AF6       : input  : 2.5 V             :         : 3         : N              
-reg_data[0][32]              : AF7       : output : 2.5 V             :         : 3         : N              
-reg_data[0][7]               : AF8       : output : 2.5 V             :         : 3         : N              
-reg_data[0][4]               : AF9       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][32]          : AF7       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][7]           : AF8       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][4]           : AF9       : output : 2.5 V             :         : 3         : N              
 inst1[3]                     : AF10      : input  : 2.5 V             :         : 3         : N              
 inst1[25]                    : AF11      : input  : 2.5 V             :         : 3         : N              
-reg_data[0][31]              : AF12      : output : 2.5 V             :         : 3         : N              
-reg_data[1][59]              : AF13      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][31]          : AF12      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][59]          : AF13      : output : 2.5 V             :         : 3         : N              
 inst2[62]                    : AF14      : input  : 2.5 V             :         : 3         : N              
 inst1[24]                    : AF15      : input  : 2.5 V             :         : 4         : N              
-reg_data[3][46]              : AF16      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][46]          : AF16      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF17      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF18      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF19      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF20      :        :                   :         : 4         :                
 inst2[29]                    : AF21      : input  : 2.5 V             :         : 4         : N              
 inst2[42]                    : AF22      : input  : 2.5 V             :         : 4         : N              
-reg_data[3][40]              : AF23      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][40]          : AF23      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF24      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF25      :        :                   :         : 4         :                
 inst2[44]                    : AF26      : input  : 2.5 V             :         : 4         : N              
@@ -265,43 +265,43 @@ only_one                     : AF27      : output : 2.5 V             :         
 GND                          : AF28      : gnd    :                   :         :           :                
 VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
 GND                          : AG2       : gnd    :                   :         :           :                
-reg_data[3][22]              : AG3       : output : 2.5 V             :         : 3         : N              
-reg_data[2][59]              : AG4       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][22]          : AG3       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][59]          : AG4       : output : 2.5 V             :         : 3         : N              
 GND                          : AG5       : gnd    :                   :         :           :                
-reg_data[2][51]              : AG6       : output : 2.5 V             :         : 3         : N              
-reg_data[2][60]              : AG7       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][51]          : AG6       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][60]          : AG7       : output : 2.5 V             :         : 3         : N              
 inst2[25]                    : AG8       : input  : 2.5 V             :         : 3         : N              
 GND                          : AG9       : gnd    :                   :         :           :                
-reg_data[1][43]              : AG10      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[1][43]          : AG10      : output : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 3         :                
-reg_data[0][25]              : AG12      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[0][25]          : AG12      : output : 2.5 V             :         : 3         : N              
 GND                          : AG13      : gnd    :                   :         :           :                
 inst1[10]                    : AG14      : input  : 2.5 V             :         : 3         : N              
 GND+                         : AG15      :        :                   :         : 4         :                
 GND                          : AG16      : gnd    :                   :         :           :                
-reg_data[1][8]               : AG17      : output : 2.5 V             :         : 4         : N              
-reg_data[0][46]              : AG18      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][8]           : AG17      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][46]          : AG18      : output : 2.5 V             :         : 4         : N              
 inst1[47]                    : AG19      : input  : 2.5 V             :         : 4         : N              
 GND                          : AG20      : gnd    :                   :         :           :                
-reg_data[3][61]              : AG21      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][61]          : AG21      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG22      :        :                   :         : 4         :                
-reg_data[0][56]              : AG23      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[0][56]          : AG23      : output : 2.5 V             :         : 4         : N              
 GND                          : AG24      : gnd    :                   :         :           :                
 inst1[50]                    : AG25      : input  : 2.5 V             :         : 4         : N              
 inst2[9]                     : AG26      : input  : 2.5 V             :         : 4         : N              
 GND                          : AG27      : gnd    :                   :         :           :                
 VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
 VCCIO3                       : AH2       : power  :                   : 2.5V    : 3         :                
-reg_data[3][59]              : AH3       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][59]          : AH3       : output : 2.5 V             :         : 3         : N              
 inst1[14]                    : AH4       : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH5       : power  :                   : 2.5V    : 3         :                
 inst2[30]                    : AH6       : input  : 2.5 V             :         : 3         : N              
 inst1[12]                    : AH7       : input  : 2.5 V             :         : 3         : N              
 inst2[8]                     : AH8       : input  : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
-reg_data[2][43]              : AH10      : output : 2.5 V             :         : 3         : N              
-reg_data[2][21]              : AH11      : output : 2.5 V             :         : 3         : N              
-reg_data[3][6]               : AH12      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][43]          : AH10      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[2][21]          : AH11      : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][6]           : AH12      : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
 inst1[11]                    : AH14      : input  : 2.5 V             :         : 3         : N              
 GND+                         : AH15      :        :                   :         : 4         :                
@@ -314,19 +314,19 @@ inst1[21]                    : AH21      : input  : 2.5 V             :         
 inst2[45]                    : AH22      : input  : 2.5 V             :         : 4         : N              
 inst1[41]                    : AH23      : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
-reg_data[1][60]              : AH25      : output : 2.5 V             :         : 4         : N              
-reg_data[2][16]              : AH26      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][60]          : AH25      : output : 2.5 V             :         : 4         : N              
+reg_alu_data[2][16]          : AH26      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
 VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
-reg_data[2][37]              : B3        : output : 2.5 V             :         : 8         : N              
-reg_data[2][20]              : B4        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][37]          : B3        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][20]          : B4        : output : 2.5 V             :         : 8         : N              
 GND                          : B5        : gnd    :                   :         :           :                
-reg_data[1][14]              : B6        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][14]          : B6        : output : 2.5 V             :         : 8         : N              
 inst2[57]                    : B7        : input  : 2.5 V             :         : 8         : N              
-reg_data[2][33]              : B8        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][33]          : B8        : output : 2.5 V             :         : 8         : N              
 GND                          : B9        : gnd    :                   :         :           :                
-reg_data[2][55]              : B10       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][55]          : B10       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 8         :                
 GND                          : B12       : gnd    :                   :         :           :                
 GND                          : B13       : gnd    :                   :         :           :                
@@ -339,7 +339,7 @@ inst1[58]                    : B19       : input  : 2.5 V             :         
 GND                          : B20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 7         :                
 inst2[6]                     : B22       : input  : 2.5 V             :         : 7         : N              
-reg_data[2][0]               : B23       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][0]           : B23       : output : 2.5 V             :         : 7         : N              
 GND                          : B24       : gnd    :                   :         :           :                
 inst2[46]                    : B25       : input  : 2.5 V             :         : 7         : N              
 inst1[55]                    : B26       : input  : 2.5 V             :         : 7         : N              
@@ -347,98 +347,98 @@ GND                          : B27       : gnd    :                   :         
 VCCIO6                       : B28       : power  :                   : 2.5V    : 6         :                
 GND                          : C1        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
-reg_data[1][30]              : C3        : output : 2.5 V             :         : 8         : N              
-reg_data[1][6]               : C4        : output : 2.5 V             :         : 8         : N              
-reg_data[1][58]              : C5        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][30]          : C3        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][6]           : C4        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][58]          : C5        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
 inst1[57]                    : C7        : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
-reg_data[1][55]              : C9        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][55]          : C9        : output : 2.5 V             :         : 8         : N              
 inst2[1]                     : C10       : input  : 2.5 V             :         : 8         : N              
-reg_data[2][25]              : C11       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][25]          : C11       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 8         :                
 inst1[16]                    : C14       : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
 inst2[12]                    : C16       : input  : 2.5 V             :         : 7         : N              
-reg_data[3][31]              : C17       : output : 2.5 V             :         : 7         : N              
-reg_data[2][61]              : C18       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][31]          : C17       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][61]          : C18       : output : 2.5 V             :         : 7         : N              
 inst2[22]                    : C19       : input  : 2.5 V             :         : 7         : N              
-reg_data[1][50]              : C20       : output : 2.5 V             :         : 7         : N              
-reg_data[3][58]              : C21       : output : 2.5 V             :         : 7         : N              
-reg_data[3][49]              : C22       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[1][50]          : C20       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][58]          : C21       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][49]          : C22       : output : 2.5 V             :         : 7         : N              
 inst2[38]                    : C23       : input  : 2.5 V             :         : 7         : N              
-reg_data[1][33]              : C24       : output : 2.5 V             :         : 7         : N              
-reg_data[3][44]              : C25       : output : 2.5 V             :         : 7         : N              
-reg_data[0][15]              : C26       : output : 2.5 V             :         : 6         : N              
-reg_data[1][37]              : C27       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[1][33]          : C24       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][44]          : C25       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][15]          : C26       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[1][37]          : C27       : output : 2.5 V             :         : 6         : N              
 GND                          : C28       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1         :                
-reg_data[0][21]              : D2        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[0][21]          : D2        : output : 2.5 V             :         : 1         : N              
 GND                          : D3        : gnd    :                   :         :           :                
-reg_data[3][50]              : D4        : output : 2.5 V             :         : 8         : N              
-reg_data[2][58]              : D5        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[3][50]          : D4        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][58]          : D5        : output : 2.5 V             :         : 8         : N              
 inst1[31]                    : D6        : input  : 2.5 V             :         : 8         : N              
-reg_data[1][16]              : D7        : output : 2.5 V             :         : 8         : N              
-reg_data[1][11]              : D8        : output : 2.5 V             :         : 8         : N              
-reg_data[2][23]              : D9        : output : 2.5 V             :         : 8         : N              
-reg_data[1][15]              : D10       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][16]          : D7        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][11]          : D8        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][23]          : D9        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][15]          : D10       : output : 2.5 V             :         : 8         : N              
 inst2[60]                    : D11       : input  : 2.5 V             :         : 8         : N              
 inst2[61]                    : D12       : input  : 2.5 V             :         : 8         : N              
-reg_data[0][55]              : D13       : output : 2.5 V             :         : 8         : N              
-reg_data[2][10]              : D14       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[0][55]          : D13       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][10]          : D14       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                
-reg_data[3][14]              : D16       : output : 2.5 V             :         : 7         : N              
-reg_data[0][24]              : D17       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][14]          : D16       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][24]          : D17       : output : 2.5 V             :         : 7         : N              
 inst2[28]                    : D18       : input  : 2.5 V             :         : 7         : N              
-reg_data[0][45]              : D19       : output : 2.5 V             :         : 7         : N              
-reg_data[2][34]              : D20       : output : 2.5 V             :         : 7         : N              
-reg_data[0][34]              : D21       : output : 2.5 V             :         : 7         : N              
-reg_data[1][27]              : D22       : output : 2.5 V             :         : 7         : N              
-reg_data[3][28]              : D23       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][45]          : D19       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][34]          : D20       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][34]          : D21       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[1][27]          : D22       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][28]          : D23       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D24       :        :                   :         : 6         :                
-reg_data[0][42]              : D25       : output : 2.5 V             :         : 6         : N              
-reg_data[3][51]              : D26       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][42]          : D25       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[3][51]          : D26       : output : 2.5 V             :         : 6         : N              
 inst1[52]                    : D27       : input  : 2.5 V             :         : 6         : N              
-reg_data[1][3]               : D28       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[1][3]           : D28       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1         :                
-reg_data[2][2]               : E5        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[2][2]           : E5        : output : 2.5 V             :         : 1         : N              
 VCCIO8                       : E6        : power  :                   : 2.5V    : 8         :                
-reg_data[3][54]              : E7        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[3][54]          : E7        : output : 2.5 V             :         : 8         : N              
 inst2[39]                    : E8        : input  : 2.5 V             :         : 8         : N              
 VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
 inst2[33]                    : E10       : input  : 2.5 V             :         : 8         : N              
-reg_data[3][32]              : E11       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[3][32]          : E11       : output : 2.5 V             :         : 8         : N              
 inst1[56]                    : E12       : input  : 2.5 V             :         : 8         : N              
 VCCIO8                       : E13       : power  :                   : 2.5V    : 8         :                
-reg_data[2][52]              : E14       : output : 2.5 V             :         : 8         : N              
-reg_data[2][22]              : E15       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][52]          : E14       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][22]          : E15       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
 inst1[61]                    : E17       : input  : 2.5 V             :         : 7         : N              
-reg_data[3][11]              : E18       : output : 2.5 V             :         : 7         : N              
-reg_data[0][19]              : E19       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][11]          : E18       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][19]          : E19       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
 inst1[48]                    : E21       : input  : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 7         :                
 VCCIO7                       : E23       : power  :                   : 2.5V    : 7         :                
-reg_data[0][49]              : E24       : output : 2.5 V             :         : 6         : N              
-reg_data[0][52]              : E25       : output : 2.5 V             :         : 6         : N              
-reg_data[0][47]              : E26       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][49]          : E24       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][52]          : E25       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][47]          : E26       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E27       :        :                   :         : 6         :                
-reg_en[2][0]                 : E28       : output : 2.5 V             :         : 6         : N              
-reg_data[0][2]               : F1        : output : 2.5 V             :         : 1         : N              
+reg_alu_en[2][0]             : E28       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][2]           : F1        : output : 2.5 V             :         : 1         : N              
 inst1[51]                    : F2        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1         :                
 GND                          : F6        : gnd    :                   :         :           :                
-reg_data[3][12]              : F7        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[3][12]          : F7        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
 GND                          : F9        : gnd    :                   :         :           :                
-reg_data[1][21]              : F10       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][21]          : F10       : output : 2.5 V             :         : 8         : N              
 inst2[16]                    : F11       : input  : 2.5 V             :         : 8         : N              
 inst2[53]                    : F12       : input  : 2.5 V             :         : 8         : N              
 GND                          : F13       : gnd    :                   :         :           :                
@@ -447,69 +447,69 @@ inst2[5]                     : F15       : input  : 2.5 V             :         
 GND                          : F16       : gnd    :                   :         :           :                
 inst2[11]                    : F17       : input  : 2.5 V             :         : 7         : N              
 inst1[17]                    : F18       : input  : 2.5 V             :         : 7         : N              
-reg_data[3][48]              : F19       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][48]          : F19       : output : 2.5 V             :         : 7         : N              
 GND                          : F20       : gnd    :                   :         :           :                
-reg_data[2][4]               : F21       : output : 2.5 V             :         : 7         : N              
-reg_data[3][1]               : F22       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][4]           : F21       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][1]           : F22       : output : 2.5 V             :         : 7         : N              
 GND                          : F23       : gnd    :                   :         :           :                
 inst1[23]                    : F24       : input  : 2.5 V             :         : 6         : N              
-reg_data[2][3]               : F25       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[2][3]           : F25       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F26       :        :                   :         : 6         :                
-reg_data[2][12]              : F27       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[2][12]          : F27       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F28       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
-reg_data[2][1]               : G2        : output : 2.5 V             :         : 1         : N              
-reg_data[0][57]              : G3        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[2][1]           : G2        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[0][57]          : G3        : output : 2.5 V             :         : 1         : N              
 inst1[22]                    : G4        : input  : 2.5 V             :         : 1         : N              
-reg_data[3][8]               : G5        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][8]           : G5        : output : 2.5 V             :         : 1         : N              
 inst2[23]                    : G6        : input  : 2.5 V             :         : 1         : N              
-reg_data[2][56]              : G7        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[2][56]          : G7        : output : 2.5 V             :         : 1         : N              
 inst1[7]                     : G8        : input  : 2.5 V             :         : 8         : N              
-reg_data[2][7]               : G9        : output : 2.5 V             :         : 8         : N              
-reg_data[2][18]              : G10       : output : 2.5 V             :         : 8         : N              
-reg_data[0][29]              : G11       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][7]           : G9        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][18]          : G10       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[0][29]          : G11       : output : 2.5 V             :         : 8         : N              
 inst2[18]                    : G12       : input  : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G13       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G14       :        :                   :         : 8         :                
 inst1[26]                    : G15       : input  : 2.5 V             :         : 7         : N              
-reg_data[2][45]              : G16       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][45]          : G16       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7         :                
-reg_data[1][56]              : G18       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[1][56]          : G18       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G19       :        :                   :         : 7         :                
-reg_data[2][32]              : G20       : output : 2.5 V             :         : 7         : N              
-reg_data[3][38]              : G21       : output : 2.5 V             :         : 7         : N              
-reg_data[3][13]              : G22       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[2][32]          : G20       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][38]          : G21       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][13]          : G22       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G23       :        :                   :         : 6         :                
 inst1[18]                    : G24       : input  : 2.5 V             :         : 6         : N              
-reg_data[3][37]              : G25       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[3][37]          : G25       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G26       :        :                   :         : 6         :                
-reg_data[1][61]              : G27       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[1][61]          : G27       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G28       :        :                   :         : 6         :                
 VCCIO1                       : H1        : power  :                   : 2.5V    : 1         :                
 GND                          : H2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 1         :                
-reg_data[3][34]              : H5        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][34]          : H5        : output : 2.5 V             :         : 1         : N              
 inst1[33]                    : H6        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 1         :                
-reg_data[1][22]              : H8        : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][22]          : H8        : output : 2.5 V             :         : 8         : N              
 GNDA3                        : H9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 8         :                
 VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
-reg_data[2][28]              : H12       : output : 2.5 V             :         : 8         : N              
-reg_data[0][6]               : H13       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[2][28]          : H12       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[0][6]           : H13       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 7         :                
 inst2[17]                    : H15       : input  : 2.5 V             :         : 7         : N              
-reg_data[0][9]               : H16       : output : 2.5 V             :         : 7         : N              
-reg_data[3][4]               : H17       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][9]           : H16       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[3][4]           : H17       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
-reg_data[2][8]               : H19       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[2][8]           : H19       : output : 2.5 V             :         : 7         : N              
 GNDA2                        : H20       : gnd    :                   :         :           :                
 inst1[15]                    : H21       : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H22       :        :                   :         : 6         :                
-reg_data[1][41]              : H23       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[1][41]          : H23       : output : 2.5 V             :         : 6         : N              
 inst1[37]                    : H24       : input  : 2.5 V             :         : 6         : N              
-reg_data[3][60]              : H25       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[3][60]          : H25       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H26       :        :                   :         : 6         :                
 GND                          : H27       : gnd    :                   :         :           :                
 VCCIO6                       : H28       : power  :                   : 2.5V    : 6         :                
@@ -518,36 +518,36 @@ GND                          : J2        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J5        :        :                   :         : 1         :                
-reg_data[3][43]              : J6        : output : 2.5 V             :         : 1         : N              
-reg_data[3][21]              : J7        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][43]          : J6        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][21]          : J7        : output : 2.5 V             :         : 1         : N              
 VCCA3                        : J8        : power  :                   : 2.5V    :           :                
 VCCD_PLL3                    : J9        : power  :                   : 1.2V    :           :                
 inst2[4]                     : J10       : input  : 2.5 V             :         : 8         : N              
 GND                          : J11       : gnd    :                   :         :           :                
-reg_data[1][24]              : J12       : output : 2.5 V             :         : 8         : N              
+reg_alu_data[1][24]          : J12       : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : J13       : power  :                   : 2.5V    : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 7         :                
 VCCIO7                       : J15       : power  :                   : 2.5V    : 7         :                
-reg_data[0][26]              : J16       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[0][26]          : J16       : output : 2.5 V             :         : 7         : N              
 inst1[9]                     : J17       : input  : 2.5 V             :         : 7         : N              
 GND                          : J18       : gnd    :                   :         :           :                
 inst2[24]                    : J19       : input  : 2.5 V             :         : 7         : N              
 VCCD_PLL2                    : J20       : power  :                   : 1.2V    :           :                
 VCCA2                        : J21       : power  :                   : 2.5V    :           :                
-index_allocate[1][1]         : J22       : input  : 2.5 V             :         : 6         : N              
-reg_data[1][44]              : J23       : output : 2.5 V             :         : 6         : N              
+index_alu_allocate[1][1]     : J22       : input  : 2.5 V             :         : 6         : N              
+reg_alu_data[1][44]          : J23       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J24       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J25       :        :                   :         : 6         :                
-reg_data[2][53]              : J26       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[2][53]          : J26       : output : 2.5 V             :         : 6         : N              
 inst2[21]                    : J27       : input  : 2.5 V             :         : 6         : N              
 inst2[20]                    : J28       : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 1         :                
-reg_data[3][53]              : K2        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][53]          : K2        : output : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K3        :        :                   :         : 1         :                
-reg_data[3][35]              : K4        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][35]          : K4        : output : 2.5 V             :         : 1         : N              
 VCCIO1                       : K5        : power  :                   : 2.5V    : 1         :                
 GND                          : K6        : gnd    :                   :         :           :                
-reg_data[1][35]              : K7        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[1][35]          : K7        : output : 2.5 V             :         : 1         : N              
 VCCIO1                       : K8        : power  :                   : 2.5V    : 1         :                
 VCCINT                       : K9        : power  :                   : 1.2V    :           :                
 GND                          : K10       : gnd    :                   :         :           :                
@@ -555,28 +555,28 @@ VCCINT                       : K11       : power  :                   : 1.2V    
 GND                          : K12       : gnd    :                   :         :           :                
 inst1[13]                    : K13       : input  : 2.5 V             :         : 8         : N              
 GND                          : K14       : gnd    :                   :         :           :                
-reg_data[1][40]              : K15       : output : 2.5 V             :         : 7         : N              
+reg_alu_data[1][40]          : K15       : output : 2.5 V             :         : 7         : N              
 GND                          : K16       : gnd    :                   :         :           :                
 VCCINT                       : K17       : power  :                   : 1.2V    :           :                
 GND                          : K18       : gnd    :                   :         :           :                
 VCCINT                       : K19       : power  :                   : 1.2V    :           :                
 GND                          : K20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K21       :        :                   :         : 6         :                
-reg_data[2][9]               : K22       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[2][9]           : K22       : output : 2.5 V             :         : 6         : N              
 GND                          : K23       : gnd    :                   :         :           :                
 VCCIO6                       : K24       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K25       :        :                   :         : 6         :                
 inst1[30]                    : K26       : input  : 2.5 V             :         : 6         : N              
 inst1[29]                    : K27       : input  : 2.5 V             :         : 6         : N              
-reg_data[3][57]              : K28       : output : 2.5 V             :         : 6         : N              
-reg_data[0][36]              : L1        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][57]          : K28       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][36]          : L1        : output : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 1         :                
-reg_data[0][60]              : L3        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[0][60]          : L3        : output : 2.5 V             :         : 1         : N              
 inst2[31]                    : L4        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : L5        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L6        :        :                   :         : 1         :                
-reg_data[1][47]              : L7        : output : 2.5 V             :         : 1         : N              
-reg_data[1][42]              : L8        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[1][47]          : L7        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[1][42]          : L8        : output : 2.5 V             :         : 1         : N              
 GND                          : L9        : gnd    :                   :         :           :                
 VCCINT                       : L10       : power  :                   : 1.2V    :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -593,19 +593,19 @@ VCCIO6                       : L21       : power  :                   : 2.5V    
 inst1[53]                    : L22       : input  : 2.5 V             :         : 6         : N              
 inst1[5]                     : L23       : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : L24       :        :                   :         : 6         :                
-reg_data[0][33]              : L25       : output : 2.5 V             :         : 6         : N              
-reg_data[1][45]              : L26       : output : 2.5 V             :         : 6         : N              
-reg_data[0][50]              : L27       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][33]          : L25       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[1][45]          : L26       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][50]          : L27       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : L28       :        :                   :         : 6         :                
-reg_data[3][25]              : M1        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][25]          : M1        : output : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M5        :        :                   :         : 1         :                
 nSTATUS                      : M6        :        :                   :         : 1         :                
-reg_data[2][57]              : M7        : output : 2.5 V             :         : 1         : N              
-reg_data[3][26]              : M8        : output : 2.5 V             :         : 1         : N              
-reg_data[2][36]              : M9        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[2][57]          : M7        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][26]          : M8        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[2][36]          : M9        : output : 2.5 V             :         : 1         : N              
 GND                          : M10       : gnd    :                   :         :           :                
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                
 GND                          : M12       : gnd    :                   :         :           :                
@@ -617,7 +617,7 @@ VCCINT                       : M17       : power  :                   : 1.2V    
 GND                          : M18       : gnd    :                   :         :           :                
 VCCINT                       : M19       : power  :                   : 1.2V    :           :                
 GND                          : M20       : gnd    :                   :         :           :                
-reg_data[0][37]              : M21       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][37]          : M21       : output : 2.5 V             :         : 6         : N              
 MSEL2                        : M22       :        :                   :         : 6         :                
 stall_out                    : M23       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M24       :        :                   :         : 6         :                
@@ -627,12 +627,12 @@ inst2[37]                    : M27       : input  : 2.5 V             :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : M28       :        :                   :         : 6         :                
 VCCIO1                       : N1        : power  :                   : 2.5V    : 1         :                
 GND                          : N2        : gnd    :                   :         :           :                
-reg_data[3][29]              : N3        : output : 2.5 V             :         : 1         : N              
-reg_data[2][11]              : N4        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][29]          : N3        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[2][11]          : N4        : output : 2.5 V             :         : 1         : N              
 VCCIO1                       : N5        : power  :                   : 2.5V    : 1         :                
 GND                          : N6        : gnd    :                   :         :           :                
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : N7        : input  : 2.5 V             :         : 1         : N              
-reg_data[0][40]              : N8        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[0][40]          : N8        : output : 2.5 V             :         : 1         : N              
 GND                          : N9        : gnd    :                   :         :           :                
 VCCINT                       : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
@@ -650,10 +650,10 @@ MSEL0                        : N22       :        :                   :         
 GND                          : N23       : gnd    :                   :         :           :                
 VCCIO6                       : N24       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N25       :        :                   :         : 6         :                
-reg_data[0][14]              : N26       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][14]          : N26       : output : 2.5 V             :         : 6         : N              
 GND                          : N27       : gnd    :                   :         :           :                
 VCCIO6                       : N28       : power  :                   : 2.5V    : 6         :                
-reg_data[3][36]              : P1        : output : 2.5 V             :         : 1         : N              
+reg_alu_data[3][36]          : P1        : output : 2.5 V             :         : 1         : N              
 inst1[44]                    : P2        : input  : 2.5 V             :         : 1         : N              
 ~ALTERA_DCLK~                : P3        : output : 2.5 V             :         : 1         : N              
 nCONFIG                      : P4        :        :                   :         : 1         :                
@@ -677,17 +677,17 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : P21       :        :                   :      
 MSEL3                        : P22       :        :                   :         : 6         :                
 MSEL1                        : P23       :        :                   :         : 6         :                
 CONF_DONE                    : P24       :        :                   :         : 6         :                
-reg_data[3][24]              : P25       : output : 2.5 V             :         : 6         : N              
-reg_data[0][59]              : P26       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[3][24]          : P25       : output : 2.5 V             :         : 6         : N              
+reg_alu_data[0][59]          : P26       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P27       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : P28       : output : 2.5 V             :         : 6         : N              
-reg_data[3][9]               : R1        : output : 2.5 V             :         : 2         : N              
-reg_data[0][30]              : R2        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][9]           : R1        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][30]          : R2        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
 inst2[43]                    : R6        : input  : 2.5 V             :         : 2         : N              
-reg_data[3][27]              : R7        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][27]          : R7        : output : 2.5 V             :         : 2         : N              
 nCE                          : R8        :        :                   :         : 1         :                
 GND                          : R9        : gnd    :                   :         :           :                
 VCCINT                       : R10       : power  :                   : 1.2V    :           :                
@@ -702,22 +702,22 @@ VCCINT                       : R18       : power  :                   : 1.2V    
 GND                          : R19       : gnd    :                   :         :           :                
 VCCINT                       : R20       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R21       :        :                   :         : 5         :                
-reg_data[1][23]              : R22       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[1][23]          : R22       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R23       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R24       :        :                   :         : 5         :                
-reg_data[0][35]              : R25       : output : 2.5 V             :         : 5         : N              
-reg_data[3][23]              : R26       : output : 2.5 V             :         : 5         : N              
-reg_data[2][6]               : R27       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[0][35]          : R25       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[3][23]          : R26       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[2][6]           : R27       : output : 2.5 V             :         : 5         : N              
 inst2[34]                    : R28       : input  : 2.5 V             :         : 5         : N              
 VCCIO2                       : T1        : power  :                   : 2.5V    : 2         :                
 GND                          : T2        : gnd    :                   :         :           :                
-reg_data[0][28]              : T3        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][28]          : T3        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 2         :                
 VCCIO2                       : T5        : power  :                   : 2.5V    : 2         :                
 GND                          : T6        : gnd    :                   :         :           :                
-reg_data[2][30]              : T7        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][30]          : T7        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 2         :                
-reg_data[3][2]               : T9        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][2]           : T9        : output : 2.5 V             :         : 2         : N              
 GND                          : T10       : gnd    :                   :         :           :                
 VCCINT                       : T11       : power  :                   : 1.2V    :           :                
 GND                          : T12       : gnd    :                   :         :           :                
@@ -729,22 +729,22 @@ VCCINT                       : T17       : power  :                   : 1.2V    
 GND                          : T18       : gnd    :                   :         :           :                
 VCCINT                       : T19       : power  :                   : 1.2V    :           :                
 GND                          : T20       : gnd    :                   :         :           :                
-reg_data[2][48]              : T21       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[2][48]          : T21       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5         :                
 GND                          : T23       : gnd    :                   :         :           :                
 VCCIO5                       : T24       : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T25       :        :                   :         : 5         :                
-reg_data[1][9]               : T26       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[1][9]           : T26       : output : 2.5 V             :         : 5         : N              
 GND                          : T27       : gnd    :                   :         :           :                
 VCCIO5                       : T28       : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2         :                
 inst1[0]                     : U2        : input  : 2.5 V             :         : 2         : N              
 inst1[20]                    : U3        : input  : 2.5 V             :         : 2         : N              
-reg_data[3][5]               : U4        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][5]           : U4        : output : 2.5 V             :         : 2         : N              
 inst2[36]                    : U5        : input  : 2.5 V             :         : 2         : N              
 inst2[59]                    : U6        : input  : 2.5 V             :         : 2         : N              
-reg_data[1][36]              : U7        : output : 2.5 V             :         : 2         : N              
-reg_data[1][20]              : U8        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[1][36]          : U7        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[1][20]          : U8        : output : 2.5 V             :         : 2         : N              
 GND                          : U9        : gnd    :                   :         :           :                
 VCCINT                       : U10       : power  :                   : 1.2V    :           :                
 GND                          : U11       : gnd    :                   :         :           :                
@@ -756,21 +756,21 @@ VCCINT                       : U16       : power  :                   : 1.2V    
 GND                          : U17       : gnd    :                   :         :           :                
 VCCINT                       : U18       : power  :                   : 1.2V    :           :                
 GND                          : U19       : gnd    :                   :         :           :                
-reg_data[2][35]              : U20       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[2][35]          : U20       : output : 2.5 V             :         : 5         : N              
 VCCIO5                       : U21       : power  :                   : 2.5V    : 5         :                
 inst2[10]                    : U22       : input  : 2.5 V             :         : 5         : N              
-reg_data[1][48]              : U23       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[1][48]          : U23       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U24       :        :                   :         : 5         :                
 inst1[42]                    : U25       : input  : 2.5 V             :         : 5         : N              
 inst2[41]                    : U26       : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U27       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U28       :        :                   :         : 5         :                
-reg_data[2][26]              : V1        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][26]          : V1        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V2        :        :                   :         : 2         :                
-reg_data[2][46]              : V3        : output : 2.5 V             :         : 2         : N              
-reg_data[0][39]              : V4        : output : 2.5 V             :         : 2         : N              
-reg_data[3][47]              : V5        : output : 2.5 V             :         : 2         : N              
-reg_data[1][51]              : V6        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[2][46]          : V3        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][39]          : V4        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][47]          : V5        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[1][51]          : V6        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V8        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 2         :                
@@ -785,22 +785,22 @@ VCCINT                       : V17       : power  :                   : 1.2V    
 GND                          : V18       : gnd    :                   :         :           :                
 VCCINT                       : V19       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 5         :                
-index_allocate[1][0]         : V21       : input  : 2.5 V             :         : 5         : N              
+index_alu_allocate[1][0]     : V21       : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
-reg_data[1][19]              : V23       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[1][19]          : V23       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V24       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V25       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V26       :        :                   :         : 5         :                
-reg_data[2][41]              : V27       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[2][41]          : V27       : output : 2.5 V             :         : 5         : N              
 inst1[8]                     : V28       : input  : 2.5 V             :         : 5         : N              
-reg_data[1][31]              : W1        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[1][31]          : W1        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
-reg_data[0][54]              : W3        : output : 2.5 V             :         : 2         : N              
-reg_data[1][32]              : W4        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][54]          : W3        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[1][32]          : W4        : output : 2.5 V             :         : 2         : N              
 VCCIO2                       : W5        : power  :                   : 2.5V    : 2         :                
 GND                          : W6        : gnd    :                   :         :           :                
 VCCIO2                       : W7        : power  :                   : 2.5V    : 2         :                
-reg_data[0][1]               : W8        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][1]           : W8        : output : 2.5 V             :         : 2         : N              
 inst1[36]                    : W9        : input  : 2.5 V             :         : 2         : N              
 inst1[32]                    : W10       : input  : 2.5 V             :         : 3         : N              
 GND                          : W11       : gnd    :                   :         :           :                
@@ -808,43 +808,43 @@ VCCINT                       : W12       : power  :                   : 1.2V    
 GND                          : W13       : gnd    :                   :         :           :                
 VCCINT                       : W14       : power  :                   : 1.2V    :           :                
 GND                          : W15       : gnd    :                   :         :           :                
-reg_data[1][52]              : W16       : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][52]          : W16       : output : 2.5 V             :         : 4         : N              
 GND                          : W17       : gnd    :                   :         :           :                
 VCCINT                       : W18       : power  :                   : 1.2V    :           :                
 GND                          : W19       : gnd    :                   :         :           :                
 inst1[2]                     : W20       : input  : 2.5 V             :         : 5         : N              
-reg_data[0][51]              : W21       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[0][51]          : W21       : output : 2.5 V             :         : 5         : N              
 inst2[32]                    : W22       : input  : 2.5 V             :         : 5         : N              
 GND                          : W23       : gnd    :                   :         :           :                
 VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W25       :        :                   :         : 5         :                
 inst1[34]                    : W26       : input  : 2.5 V             :         : 5         : N              
 inst2[48]                    : W27       : input  : 2.5 V             :         : 5         : N              
-reg_data[1][46]              : W28       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[1][46]          : W28       : output : 2.5 V             :         : 5         : N              
 GND+                         : Y1        :        :                   :         : 2         :                
 GND+                         : Y2        :        :                   :         : 2         :                
-reg_data[3][56]              : Y3        : output : 2.5 V             :         : 2         : N              
-reg_data[0][16]              : Y4        : output : 2.5 V             :         : 2         : N              
-reg_data[0][13]              : Y5        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[3][56]          : Y3        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][16]          : Y4        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][13]          : Y5        : output : 2.5 V             :         : 2         : N              
 inst2[50]                    : Y6        : input  : 2.5 V             :         : 2         : N              
-reg_data[0][27]              : Y7        : output : 2.5 V             :         : 2         : N              
+reg_alu_data[0][27]          : Y7        : output : 2.5 V             :         : 2         : N              
 VCCA1                        : Y8        : power  :                   : 2.5V    :           :                
 VCCD_PLL1                    : Y9        : power  :                   : 1.2V    :           :                
-reg_data[3][18]              : Y10       : output : 2.5 V             :         : 3         : N              
+reg_alu_data[3][18]          : Y10       : output : 2.5 V             :         : 3         : N              
 GND                          : Y11       : gnd    :                   :         :           :                
 inst1[59]                    : Y12       : input  : 2.5 V             :         : 3         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 3         :                
-index_allocate[0][0]         : Y14       : input  : 2.5 V             :         : 3         : N              
-reg_en[1][0]                 : Y15       : output : 2.5 V             :         : 3         : N              
+index_alu_allocate[0][0]     : Y14       : input  : 2.5 V             :         : 3         : N              
+reg_alu_en[1][0]             : Y15       : output : 2.5 V             :         : 3         : N              
 VCCIO4                       : Y16       : power  :                   : 2.5V    : 4         :                
-reg_data[3][30]              : Y17       : output : 2.5 V             :         : 4         : N              
+reg_alu_data[3][30]          : Y17       : output : 2.5 V             :         : 4         : N              
 GND                          : Y18       : gnd    :                   :         :           :                
-reg_data[1][18]              : Y19       : output : 2.5 V             :         : 4         : N              
+reg_alu_data[1][18]          : Y19       : output : 2.5 V             :         : 4         : N              
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y23       :        :                   :         : 5         :                
-reg_data[1][10]              : Y24       : output : 2.5 V             :         : 5         : N              
+reg_alu_data[1][10]          : Y24       : output : 2.5 V             :         : 5         : N              
 inst2[54]                    : Y25       : input  : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y26       :        :                   :         : 5         :                
 GND+                         : Y27       :        :                   :         : 5         :                

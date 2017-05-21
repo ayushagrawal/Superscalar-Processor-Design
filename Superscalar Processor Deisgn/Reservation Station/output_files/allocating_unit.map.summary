@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Sun May 21 16:47:05 2017
+Analysis & Synthesis Status : Successful - Sun May 21 18:02:53 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : allocating_unit
 Top-level Entity Name : allocating_unit
@@ -7,7 +7,7 @@ Total logic elements : 0
     Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 388
+Total pins : 1,920
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
