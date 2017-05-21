@@ -1,19 +1,3 @@
-
--- 
--- DIRECTLY INTERFACED WITH THE DEOCDE STAGE OR THE REGISTER FILE
--- AS MAYBE THE CASE
--- _______________________________________________________________
--- THIS IS CENTRAL IN CASE OF THE DISTRIBUTED RESERVATION STATION|
--- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
---
-
--- THIS DESIGN IS FOR THE DISTRIBUTED RESERVATION SYSTEM SYSTEM:
--- FREE QUEUE IS MAINTAINED FOR:
--- 	1. ALU TYPE INSTRUCTIONS
---		2. BRANCH TYPE INSTRUCTIONS
---		3. LOAD/STORE TYPE INSTRUCTIONS
-
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.math_real.all;
@@ -29,16 +13,13 @@ entity allocating_unit is
 			  clk : in std_logic;
 			  stall_out : out std_logic;
 			  only_one : out std_logic;
-			  
 			  -- FROM DECODE
 			  inst1 : in std_logic_vector(62 downto 0);
 			  inst2 : in std_logic_vector(62 downto 0);
 			  
-			  -- FROM RESERVATION STATION (NEED TO CONSIDER FROM ALL THE RESERVATION STATION)
+			  -- FROM RESERVATION STATION
 			  reg_data : out main_array(0 to N-1)(X-1 downto 0);
 			  reg_en   : out main_array(0 to N-1)(0 downto 0);
-			  
-			  -- TO RESERVATION STATION
 			  
 			  -- FROM DISPATCHING UNIT
 			  index_allocate : in main_array(0 to 1)(natural(log2(real(N)))-1 downto 0);
@@ -52,12 +33,8 @@ architecture AU of allocating_unit is
 	
 	signal index_in,index_out : main_array(0 to N-1)(natural(log2(real(N)))-1 downto 0);
 	signal index_en,valid_in,valid_out,valid_en : main_array(0 to N-1)(0 downto 0);
-	
---	 FOR KEEPING A TRACK OF VALID INSTRUCTION_________________________________________________________________
-	signal top_alu_in,top_alu_out,top_alu_add,top_alu_add_one : std_logic_vector(natural(log2(real(N)))-1 downto 0);
+	signal top_in,top_out,top_add,top_add_one : std_logic_vector(natural(log2(real(N)))-1 downto 0);
 	signal bottom_in,bottom_out,bottom_out_add,bottom_add : std_logic_vector(natural(log2(real(N)))-1 downto 0);
---	____________________________________________________________________________________________________________
-	
 	signal stall,not_stall : std_logic;
 	
 begin	
@@ -81,11 +58,11 @@ begin
 															 enable=> valid_en(I)(0));
 				 end generate;
 	
-	top_alu_pointer 	: registers generic map(N => natural(log2(real(N))))
+	top_pointer 	: registers generic map(N => natural(log2(real(N))))
 										port map(reset => reset,
 													clk   => clk,
-													input => top_alu_in,
-													output=> top_alu_out,
+													input => top_in,
+													output=> top_out,
 													enable=> '1');
 												
 	bottom_pointer : registers generic map(N => natural(log2(real(N))))
@@ -103,15 +80,15 @@ begin
 																						 data2 => bottom_add,
 																						 output => bottom_in);
 	
-	adder2 : adds generic map(N => natural(log2(real(N)))) port map(data1 => top_alu_out,
-																						 data2 => top_alu_add,
-																						 output => top_alu_in);
+	adder2 : adds generic map(N => natural(log2(real(N)))) port map(data1 => top_out,
+																						 data2 => top_add,
+																						 output => top_in);
 																						 
 	adder3 : adds generic map(N => natural(log2(real(N)))) port map(data1 => bottom_out,
 																						 data2 => (0 => '1',others => '0'),
-																						 output => top_alu_add_one);																					 
+																						 output => top_add_one);																					 
 	
-	process(valid_out,inst1,index_out,bottom_out_add,inst2,bottom_in,not_stall,reset,valid_allocate,index_allocate,top_alu_add_one,top_alu_in,index_in,index_en,valid_in,valid_en)
+	process(valid_out,inst1,index_out,bottom_out_add,inst2,bottom_in,not_stall,reset,valid_allocate,index_allocate,top_add_one,top_in,index_in,index_en,valid_in,valid_en)
 		variable count : integer;
 	begin
 		count := 0;
@@ -158,41 +135,41 @@ begin
 				valid_in(I)(0) <= '1';
 				valid_en(I)(0) <= '1';
 			end loop;
-			top_alu_add <= (others => '0');
+			top_add <= (others => '0');
 		else
 			-- General update policy: Using Dispatching data
 			if (valid_allocate(0)(0) = '1' and valid_allocate(1)(0) = '1') then		-- Indicates 2 instructions are dispatched
-				top_alu_add <= (1 => '1', others => '0');
-				index_in(to_integer(unsigned(top_alu_add_one))) <= index_allocate(0);
-				index_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-				index_in(to_integer(unsigned(top_alu_in))) <= index_allocate(1);
-				index_en(to_integer(unsigned(top_alu_in)))(0) <= '1';
+				top_add <= (1 => '1', others => '0');
+				index_in(to_integer(unsigned(top_add_one))) <= index_allocate(0);
+				index_en(to_integer(unsigned(top_add_one)))(0) <= '1';
+				index_in(to_integer(unsigned(top_in))) <= index_allocate(1);
+				index_en(to_integer(unsigned(top_in)))(0) <= '1';
 				index_in <= (others => (others => '0'));
 				index_en <= (others => (others => '0'));
-				valid_in(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-				valid_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-				valid_in(to_integer(unsigned(top_alu_in)))(0) <= '1';
-				valid_en(to_integer(unsigned(top_alu_in)))(0) <= '1';
+				valid_in(to_integer(unsigned(top_add_one)))(0) <= '1';
+				valid_en(to_integer(unsigned(top_add_one)))(0) <= '1';
+				valid_in(to_integer(unsigned(top_in)))(0) <= '1';
+				valid_en(to_integer(unsigned(top_in)))(0) <= '1';
 				valid_in <= (others => (others => '0'));
 				valid_en <= (others => (others => '0'));
 			else
-				top_alu_add <= (0 => valid_allocate(0)(0) and valid_allocate(1)(0), others => '0');
+				top_add <= (0 => valid_allocate(0)(0) and valid_allocate(1)(0), others => '0');
 				if (valid_allocate(0)(0) = '1') then
-					index_in(to_integer(unsigned(top_alu_add_one))) <= index_allocate(0);
-					index_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
+					index_in(to_integer(unsigned(top_add_one))) <= index_allocate(0);
+					index_en(to_integer(unsigned(top_add_one)))(0) <= '1';
 					index_in <= (others => (others => '0'));
 					index_en <= (others => (others => '0'));
-					valid_in(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					valid_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
+					valid_in(to_integer(unsigned(top_add_one)))(0) <= '1';
+					valid_en(to_integer(unsigned(top_add_one)))(0) <= '1';
 					valid_in <= (others => (others => '0'));
 					valid_en <= (others => (others => '0'));
 				elsif(valid_allocate(1)(0) = '1') then
-					index_in(to_integer(unsigned(top_alu_add_one))) <= index_allocate(1);
-					index_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
+					index_in(to_integer(unsigned(top_add_one))) <= index_allocate(1);
+					index_en(to_integer(unsigned(top_add_one)))(0) <= '1';
 					index_in <= (others => (others => '0'));
 					index_en <= (others => (others => '0'));
-					valid_in(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					valid_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
+					valid_in(to_integer(unsigned(top_add_one)))(0) <= '1';
+					valid_en(to_integer(unsigned(top_add_one)))(0) <= '1';
 					valid_in <= (others => (others => '0'));
 					valid_en <= (others => (others => '0'));
 				else

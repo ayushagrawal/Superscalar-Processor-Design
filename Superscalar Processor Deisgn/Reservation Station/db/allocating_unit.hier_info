@@ -1,7 +1,7 @@
 |allocating_unit
-reset => top_add[1].OUTPUTSELECT
-reset => top_add[0].OUTPUTSELECT
-reset => registers:top_pointer.reset
+reset => top_alu_add[1].OUTPUTSELECT
+reset => top_alu_add[0].OUTPUTSELECT
+reset => registers:top_alu_pointer.reset
 reset => registers:bottom_pointer.reset
 reset => registers:GEN_REG:1:BUFF_INDEX.input[0]
 reset => registers:GEN_REG:2:BUFF_INDEX.input[1]
@@ -27,7 +27,7 @@ clk => registers:GEN_REG:2:BUFF_INDEX.clk
 clk => registers:GEN_REG:2:BUFF_VALID.clk
 clk => registers:GEN_REG:3:BUFF_INDEX.clk
 clk => registers:GEN_REG:3:BUFF_VALID.clk
-clk => registers:top_pointer.clk
+clk => registers:top_alu_pointer.clk
 clk => registers:bottom_pointer.clk
 stall_out <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 only_one <= only_one.DB_MAX_OUTPUT_PORT_TYPE
@@ -417,9 +417,9 @@ index_allocate[1][1] => ~NO_FANOUT~
 index_allocate[0][0] => ~NO_FANOUT~
 index_allocate[0][1] => ~NO_FANOUT~
 valid_allocate[1][0] => process_0.IN0
-valid_allocate[1][0] => top_add.IN0
+valid_allocate[1][0] => top_alu_add.IN0
 valid_allocate[0][0] => process_0.IN1
-valid_allocate[0][0] => top_add.IN1
+valid_allocate[0][0] => top_alu_add.IN1
 
 
 |allocating_unit|registers:\GEN_REG:0:BUFF_INDEX
@@ -506,7 +506,7 @@ clk => data[0].CLK
 reset => data[0].ACLR
 
 
-|allocating_unit|registers:top_pointer
+|allocating_unit|registers:top_alu_pointer
 input[0] => data[0].DATAIN
 input[1] => data[1].DATAIN
 enable => data[0].ENA
