@@ -34,7 +34,7 @@ entity allocating_unit is
 			  only_one_bch : out std_logic;
 			  only_one_lst : out std_logic;
 			  
-			  -- FROM DECODE
+			  -- FROM DECODE [validity:tag:______]
 			  inst1 : in std_logic_vector(62 downto 0);
 			  inst2 : in std_logic_vector(62 downto 0);
 			  
@@ -84,6 +84,8 @@ architecture AU of allocating_unit is
 	
 	signal stall_alu,stall_bch,stall_lst,not_stall_alu,not_stall_bch,not_stall_lst : std_logic;
 	
+	signal inst1_alu,inst1_bch,inst1_lst,inst2_alu,inst2_bch,inst2_lst : std_logic_vector(62 downto 0);
+	
 begin	
 	
 	stall_out <= stall_alu and stall_bch and stall_lst;
@@ -91,6 +93,7 @@ begin
 	not_stall_bch <= not stall_bch;
 	not_stall_lst <= not stall_lst;
 	
+--	_______________________________________________________________________________________________
 	GEN_ALU : for I in 0 to N_alu-1
 				 generate
 				 BUFF_I_ALU : registers generic map(N => natural(log2(real(N_alu))))
@@ -137,7 +140,8 @@ begin
 															 input => valid_lst_in(I),
 															 output=> valid_lst_out(I),
 															 enable=> valid_lst_en(I)(0));
-				 end generate;
+				 end generate;																									
+-- __________________________________________________________________________________________________
 	
 	top_alu_pointer 	: registers generic map(N => natural(log2(real(N_alu))))
 										port map(reset => reset,
@@ -233,7 +237,42 @@ begin
 	
 -- _____________________________________________________________________________________________________	
 	
-	process(valid_alu_out,inst1,index_alu_out,bottom_alu_out_add,inst2,bottom_alu_in,not_stall_alu,reset,valid_alu_allocate,index_alu_allocate,top_alu_add_one,top_alu_in,index_alu_in,index_alu_en,valid_alu_in,valid_alu_en)
+	process(inst1,inst2)
+	
+	begin
+	
+		if(inst1(61) = '0') then
+			inst1_alu <= inst1;
+			inst1_bch <= (others => '0');
+			inst1_lst <= (others => '0');
+		elsif(inst1(61 downto 60) = "11") then
+			inst1_bch <= inst1;
+			inst1_alu <= (others => '0');
+			inst1_lst <= (others => '0');
+		else
+			inst1_lst <= inst1;
+			inst1_bch <= (others => '0');
+			inst1_alu <= (others => '0');
+		end if;
+		
+		if(inst2(61) = '0') then
+			inst2_alu <= inst2;
+			inst2_bch <= (others => '0');
+			inst2_lst <= (others => '0');
+		elsif(inst1(61 downto 60) = "11") then
+			inst2_bch <= inst2;
+			inst2_alu <= (others => '0');
+			inst2_lst <= (others => '0');
+		else
+			inst2_lst <= inst2;
+			inst2_bch <= (others => '0');
+			inst2_alu <= (others => '0');
+		end if;
+	
+	end process;
+	
+-- _____________________________________________________________________________________________________	
+	process(valid_alu_out,inst1_alu,index_alu_out,bottom_alu_out_add,inst2_alu,bottom_alu_in,not_stall_alu,reset,valid_alu_allocate,index_alu_allocate,top_alu_add_one,top_alu_in,index_alu_in,index_alu_en,valid_alu_in,valid_alu_en)
 		variable count : integer;
 	begin
 		count := 0;
@@ -255,17 +294,17 @@ begin
 			only_one_alu <= '0';
 		end if;
 		
-		if(inst1(62) = '1') then		-- VALID INSTRUCTION
-			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= inst1;
+		if(inst1_alu(62) = '1') then		-- VALID INSTRUCTION
+			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= inst1_alu;
 			reg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= "1";
 		end if;
 		
-		if(inst2(62) = '1') then
-			bottom_alu_add <= (0 =>  not inst1(0), 1 => inst1(0), others => '0');
-			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= inst1;
+		if(inst2_alu(62) = '1') then
+			bottom_alu_add <= (0 =>  not inst1_alu(0), 1 => inst1_alu(0), others => '0');
+			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= inst1_alu;
 			reg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= "1";
 		else
-			bottom_alu_add <= (0 => inst1(0), others => '0');
+			bottom_alu_add <= (0 => inst1_alu(0), others => '0');
 		end if;
 		
 		reg_alu_data <= (others => (others => '0')); 
@@ -327,7 +366,7 @@ begin
 		end if;
 	end process;
 	----------------------------------------------------------------------------------------------------------
-	process(valid_bch_out,inst1,index_bch_out,bottom_bch_out_add,inst2,bottom_bch_in,not_stall_bch,reset,valid_bch_allocate,index_bch_allocate,top_bch_add_one,top_bch_in,index_bch_in,index_bch_en,valid_bch_in,valid_bch_en)
+	process(valid_bch_out,inst1_bch,index_bch_out,bottom_bch_out_add,inst2_bch,bottom_bch_in,not_stall_bch,reset,valid_bch_allocate,index_bch_allocate,top_bch_add_one,top_bch_in,index_bch_in,index_bch_en,valid_bch_in,valid_bch_en)
 		variable count : integer;
 	begin
 		count := 0;
@@ -349,17 +388,17 @@ begin
 			only_one_bch <= '0';
 		end if;
 		
-		if(inst1(62) = '1') then		-- VALID INSTRUCTION
-			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= inst1;
+		if(inst1_bch(62) = '1') then		-- VALID INSTRUCTION
+			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= inst1_bch;
 			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
 		end if;
 		
-		if(inst2(62) = '1') then
-			bottom_bch_add <= (0 =>  not inst1(0), 1 => inst1(0), others => '0');
-			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= inst1;
+		if(inst2_bch(62) = '1') then
+			bottom_bch_add <= (0 =>  not inst1_bch(0), 1 => inst1_bch(0), others => '0');
+			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= inst1_bch;
 			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
 		else
-			bottom_bch_add <= (0 => inst1(0), others => '0');
+			bottom_bch_add <= (0 => inst1_bch(0), others => '0');
 		end if;
 		
 		reg_bch_data <= (others => (others => '0')); 
@@ -421,7 +460,7 @@ begin
 		end if;
 	end process;
 	----------------------------------------------------------------------------------------------------------
-	process(valid_lst_out,inst1,index_lst_out,bottom_lst_out_add,inst2,bottom_lst_in,not_stall_bch,reset,valid_lst_allocate,index_lst_allocate,top_lst_add_one,top_lst_in,index_lst_in,index_lst_en,valid_lst_in,valid_lst_en)
+	process(valid_lst_out,inst1_lst,index_lst_out,bottom_lst_out_add,inst2_lst,bottom_lst_in,not_stall_bch,reset,valid_lst_allocate,index_lst_allocate,top_lst_add_one,top_lst_in,index_lst_in,index_lst_en,valid_lst_in,valid_lst_en)
 		variable count : integer;
 	begin
 		count := 0;
@@ -443,17 +482,17 @@ begin
 			only_one_lst <= '0';
 		end if;
 		
-		if(inst1(62) = '1') then		-- VALID INSTRUCTION
-			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= inst1;
+		if(inst1_lst(62) = '1') then		-- VALID INSTRUCTION
+			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= inst1_lst;
 			reg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= "1";
 		end if;
 		
-		if(inst2(62) = '1') then
-			bottom_lst_add <= (0 =>  not inst1(0), 1 => inst1(0), others => '0');
-			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= inst1;
+		if(inst2_lst(62) = '1') then
+			bottom_lst_add <= (0 =>  not inst1_lst(0), 1 => inst1_lst(0), others => '0');
+			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= inst1_lst;
 			reg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= "1";
 		else
-			bottom_lst_add <= (0 => inst1(0), others => '0');
+			bottom_lst_add <= (0 => inst1_lst(0), others => '0');
 		end if;
 		
 		reg_lst_data <= (others => (others => '0')); 

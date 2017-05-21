@@ -1,5 +1,5 @@
 Fitter report for allocating_unit
-Sun May 21 18:02:55 2017
+Sun May 21 19:42:34 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Failed - Sun May 21 18:02:55 2017           ;
+; Fitter Status                      ; Failed - Sun May 21 19:42:34 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; allocating_unit                             ;
 ; Top-level Entity Name              ; allocating_unit                             ;
@@ -162,7 +162,7 @@ Error (119027): Design requires 1768 I/O Output Buffer resources -- too many to 
 Error (119003): Cannot find device that meets Compiler settings specifications
 Error: Quartus Prime Fitter was unsuccessful. 2 errors, 0 warnings
     Error: Peak virtual memory: 751 megabytes
-    Error: Processing ended: Sun May 21 18:02:55 2017
+    Error: Processing ended: Sun May 21 19:42:34 2017
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
