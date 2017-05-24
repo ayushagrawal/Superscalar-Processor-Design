@@ -19,15 +19,15 @@ entity reservation_station is
 			  only_one_lst : out std_logic;
 			  
 			  -- TO ALU EXECUTING UNIT
-			  alu_inst1 : out std_logic_vector(62 downto 0);
-			  alu_inst2 : out std_logic_vector(62 downto 0);
+			  alu_inst1 : out std_logic_vector(42 downto 0);
+			  alu_inst2 : out std_logic_vector(42 downto 0);
 			  
 			  -- TO BRANCH EXECUTING UNIT
-			  bch_inst1 : out std_logic_vector(62 downto 0);
+			  bch_inst1 : out std_logic_vector(58 downto 0);
 			  
 			  -- TO LOAD/STORE EXECUTING UNIT
-			  lst_inst1 : out std_logic_vector(62 downto 0);
-			  lst_inst2 : out std_logic_vector(62 downto 0);
+			  lst_inst1 : out std_logic_vector(42 downto 0);
+			  lst_inst2 : out std_logic_vector(42 downto 0);
 			  
 			  
 			  -- FROM EXECUTING UNITS
@@ -58,14 +58,25 @@ architecture RS of reservation_station is
 	signal index_out_bch 				  : main_array(0 to 4)(1 downto 0);
 	signal index_val_alu,index_val_lst : main_array(0 to 4)(0 downto 0);
 	signal index_val_bch					  : main_array(0 to 4)(0 downto 0);
+	
+	signal busy_alu,busy_lst : main_array(0 to 7)(0 downto 0);
+	signal bust_bch			 : main_array(0 to 3)(0 downto 0);
+	
+	signal rs_valid_in_alu,rs_valid_in_lst : main_array(0 to 7)(0 downto 0);
+	signal rs_valid_in_bch 						: main_array(0 to 3)(0 downto 0);
+	signal rs_valid_en_alu,rs_valid_en_lst : main_array(0 to 7)(0 downto 0);
+	signal rs_valid_en_bch 						: main_array(0 to 3)(0 downto 0);
 
 begin
 	
 	ALLOC_UNIT : allocating unit generic map(N_alu => 8,
 														  N_bch => 4,
-														  N_lst => 8)
-										  port map	 (reset => reset,
-														  clk	  => clk,
+														  N_lst => 8,
+														  X_alu => 43,
+														  X_bch => 59,
+														  X_lst => 43)
+										  port map	 (reset     => reset,
+														  clk	      => clk,
 														  stall_out => ,
 														  only_one_alu => only_one_alu,
 														  only_one_bch => only_one_bch,
@@ -75,11 +86,11 @@ begin
 														  inst2 => instruction2,
 														  
 														  reg_alu_data => rs_data_in_alu,
-														  reg_alu_en => rs_data_en_alu,
+														  reg_alu_en   => rs_data_en_alu,
 														  reg_bch_data => rs_data_in_bch,
-														  reg_bch_en => rs_data_en_bch,
+														  reg_bch_en   => rs_data_en_bch,
 														  reg_lst_data => rs_data_in_lst,
-														  reg_lst_en => rs_data_en_lst,
+														  reg_lst_en   => rs_data_en_lst,
 														  
 														  index_alu_allocate => index_alu_allocate,
 														  valid_alu_allocate => valid_alu_allocate,
@@ -90,42 +101,42 @@ begin
 	
 	-------------------------------------------------------------------------------------
 	RESRV_ALU  : reservation_station generic map(N => 8,                                
-																X => 63)					-- Data Length                               
-												port map   (clk   => clk,                          
-																reset => reset,                        
-																busy_in => ,                            
-																busy_en => ,
-																busy_out => ,
-																ready_in => ,
-																ready_en => ;
+																X => 43)					-- Data Length                               
+												port map   (clk      => clk,                          
+																reset    => reset,                        
+																busy_in  => ,                            
+																busy_en  => ,
+																busy_out => busy_alu,
+																ready_in => rs_valid_in_alu,
+																ready_en => rs_valid_en_alu,
 																ready_out => ,
 																data_in => rs_data_in_alu,
 																data_en => rs_data_en_alu,
 																data_out => rs_data_alu);
 	
 	RESRV_BCH  : reservation_station generic map(N => 4,
-																X => 63)					-- Data Length
+																X => 59)					-- Data Length
 												port map   (clk   => clk,
 																reset => reset,
 																busy_in => ,
 																busy_en => ,
-																busy_out => ,
-																ready_in => ,
-																ready_en => ;
+																busy_out => busy_bch,
+																ready_in => rs_valid_in_bch,
+																ready_en => rs_valid_en_bch,
 																ready_out => ,
 																data_in => rs_data_in_bch,
 																data_en => rs_data_en_bch,
 																data_out => rs_data_bch);
 	
 	RESRV_LST  : reservation_station generic map(N => 8,
-																X => 63)					-- Data Length
+																X => 43)					-- Data Length
 												port map   (clk   => clk,
 																reset => reset,
 																busy_in => ,
 																busy_en => ,
-																busy_out => ,
-																ready_in => ,
-																ready_en => ;
+																busy_out => busy_lst,
+																ready_in => rs_valid_in_lst,
+																ready_en => rs_valid_en_lst,
 																ready_out => ,
 																data_in => rs_data_in_lst,
 																data_en => rs_data_en_lst,
@@ -185,10 +196,10 @@ begin
 	UPDATE_ALU : update unit generic map(N => 32,			-- Entries in ROB
 													 X => 8)				-- Entries in RF
 									 port map   (broadcast => broadcast,
-													 tag => ,
-													 busy => ,
-													 validity_out => ,
-													 valildity_en => ,
+													 tag => rs_data_alu(0 to 7)(39 downto 35),
+													 busy => busy_alu,
+													 validity_out => rs_valid_in_alu,
+													 valildity_en => rs_valid_en_alu,
 													 data => ,
 													 data_en => ,
 													 index_out => index_out_alu,
@@ -197,11 +208,14 @@ begin
 	UPDATE_BCH : update unit generic map(N => 32,			-- Entries in ROB
 													 X => 4)				-- Entries in RF
 									 port map   (broadcast => broadcast,
-													 tag => ,
-													 busy => ,
-													 validity_out => ,
-													 valildity_en => ,
+													 tag => rs_data_bch(0 to 3)(55 downto 51),
+													 busy => busy_bch,
+													 validity_out => rs_valid_in_bch,
+													 valildity_en => rs_valid_en_bch,
 													 data => ,
+													 busy => busy_lst,
+													 validity_out => rs_valid_in_lst,
+													 valildity_en => rs_valid_en_lst,
 													 data_en => ,
 													 index_out => index_out_bch,
 													 index_val => index_val_bch);
@@ -209,12 +223,9 @@ begin
 	UPDATE_LST : update unit generic map(N => 32,			-- Entries in ROB
 													 X => 8)				-- Entries in RF
 									 port map   (broadcast => broadcast,
-													 tag => ,
-													 busy => ,
-													 validity_out => ,
-													 valildity_en => ,
-													 data => ,
-													 data_en => ,
+													 tag => rs_data_lst(0 to 7)(39 downto 35),
+													 data      => ,
+													 data_en   => ,
 													 index_out => index_out_lst,
 													 index_val => index_val_lst);
 													 

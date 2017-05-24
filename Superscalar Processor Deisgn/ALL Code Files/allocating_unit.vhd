@@ -24,9 +24,11 @@ use work.components.all;
 
 entity allocating_unit is
 		generic(N_alu 	: integer := 8;			-- Number of registers in the ALU reservation station = Number of entries in the Free Queue
-				  N_bch 	: integer := 4;			-- Number of registers in the ALU reservation station = Number of entries in the Free Queue
-				  N_lst 	: integer := 16;			-- Number of registers in the ALU reservation station = Number of entries in the Free Queue
-				  X 		: integer := 62);			-- Size of each register
+				  N_bch 	: integer := 4;			-- Number of registers in the BCH reservation station = Number of entries in the Free Queue
+				  N_lst 	: integer := 16;			-- Number of registers in the LST reservation station = Number of entries in the Free Queue
+				  X_alu	: integer := 43;
+				  X_bch	: integer := 59;
+				  X_lst	: integer := 43);			-- Size of each register
 		port(reset : in std_logic;
 			  clk : in std_logic;
 			  stall_out : out std_logic;
@@ -39,11 +41,11 @@ entity allocating_unit is
 			  inst2 : in std_logic_vector(62 downto 0);
 			  
 			  -- TO RESERVATION STATION (NEED TO CONSIDER FROM ALL THE RESERVATION STATION)
-			  reg_alu_data : out main_array(0 to N_alu-1)(X-1 downto 0);
+			  reg_alu_data : out main_array(0 to N_alu-1)(X_alu-1 downto 0);
 			  reg_alu_en   : out main_array(0 to N_alu-1)(0 downto 0);
-			  reg_bch_data : out main_array(0 to N_bch-1)(X-1 downto 0);
+			  reg_bch_data : out main_array(0 to N_bch-1)(X_bch-1 downto 0);
 			  reg_bch_en   : out main_array(0 to N_bch-1)(0 downto 0);
-			  reg_lst_data : out main_array(0 to N_lst-1)(X-1 downto 0);
+			  reg_lst_data : out main_array(0 to N_lst-1)(X_lst-1 downto 0);
 			  reg_lst_en   : out main_array(0 to N_lst-1)(0 downto 0);
 			  
 			  
