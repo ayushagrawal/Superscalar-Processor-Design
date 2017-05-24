@@ -1,5 +1,5 @@
 Analysis & Synthesis report for decode
-Sat May 06 09:13:57 2017
+Wed May 24 07:07:01 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat May 06 09:13:57 2017           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 24 07:07:01 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; decode                                      ;
 ; Top-level Entity Name              ; decode                                      ;
@@ -162,43 +162,32 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat May 06 09:13:41 2017
+    Info: Processing started: Wed May 24 07:06:46 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off decode -c decode
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file arf.vhd
-    Info (12022): Found design unit 1: ARF-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/ARF.vhd Line: 34
-    Info (12023): Found entity 1: ARF File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/ARF.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file registers.vhd
-    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/registers.vhd Line: 13
-    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/registers.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
-    Info (12022): Found design unit 1: register_file-rFile File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/register_file.vhd Line: 47
-    Info (12023): Found entity 1: register_file File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/register_file.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file reorder_buffer.vhd
-    Info (12022): Found design unit 1: reorder_buffer-ROB File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/reorder_buffer.vhd Line: 26
-    Info (12023): Found entity 1: reorder_buffer File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/reorder_buffer.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file multiplexer.vhd
-    Info (12022): Found design unit 1: multiplexer-m File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/multiplexer.vhd Line: 17
-    Info (12023): Found entity 1: multiplexer File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/multiplexer.vhd Line: 9
-Info (12021): Found 1 design units, including 0 entities, in source file components.vhd
-    Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/components.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file decode.vhd
-    Info (12022): Found design unit 1: decode-DEC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 33
-    Info (12023): Found entity 1: decode File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 9
-Info (12127): Elaborating entity "decode" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at decode.vhd(39): used implicit default value for signal "wr_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 39
-Warning (10541): VHDL Signal Declaration warning at decode.vhd(40): used implicit default value for signal "input" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 40
-Warning (10036): Verilog HDL or VHDL warning at decode.vhd(40): object "output" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 40
-Error (10344): VHDL expression error at decode.vhd(89): expression has 16 elements, but must have 3 elements File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 89
-Error (10344): VHDL expression error at decode.vhd(90): expression has 16 elements, but must have 3 elements File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 90
-Error (10346): VHDL error at decode.vhd(64): formal port or parameter "toWrite1" must have actual or default value File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 64
-Error (10346): VHDL error at decode.vhd(64): formal port or parameter "toWrite2" must have actual or default value File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/DECODE/decode.vhd Line: 64
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 4 warnings
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
+    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 13
+    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/multiplexer.vhd
+    Info (12022): Found design unit 1: multiplexer-m File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd Line: 17
+    Info (12023): Found entity 1: multiplexer File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/demux.vhd
+    Info (12022): Found design unit 1: demux-dm File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/demux.vhd Line: 17
+    Info (12023): Found entity 1: demux File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/demux.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/decode.vhd
+    Info (12022): Found design unit 1: decode-DEC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 33
+    Info (12023): Found entity 1: decode File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/components.vhd
+    Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/arf.vhd
+    Info (12022): Found design unit 1: ARF-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 40
+    Info (12023): Found entity 1: ARF File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 8
+Error (10349): VHDL Association List error at decode.vhd(59): formal "index1" does not exist File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 59
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 661 megabytes
-    Error: Processing ended: Sat May 06 09:13:57 2017
-    Error: Elapsed time: 00:00:16
+    Error: Processing ended: Wed May 24 07:07:01 2017
+    Error: Elapsed time: 00:00:15
     Error: Total CPU time (on all processors): 00:00:33
 
 

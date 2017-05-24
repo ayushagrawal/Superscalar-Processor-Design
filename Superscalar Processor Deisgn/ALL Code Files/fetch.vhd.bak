@@ -9,8 +9,12 @@ entity fetch is
 	port(clk 		: in std_logic;
 		  reset		: in std_logic;
 		  stall		: in std_logic;
-		  inst1		: out std_logic_vector(22 downto 0);
-		  inst2		: out std_logic_vector(22 downto 0));
+		  inst1		: out std_logic_vector(15 downto 0);
+		  inst2		: out std_logic_vector(15 downto 0);
+		  
+		  pc1			: out std_logic_vector(6 downto 0);
+		  pc2			: out std_logic_vector(6 downto 0)
+		  );
 end entity;
 
 architecture fetching of fetch is
@@ -48,13 +52,13 @@ begin
 																	  reset	=> reset,
 																	  enable => not_stall,
 																	  input  => reg1_in,
-																	  output => inst1(15 downto 0));
+																	  output => inst1);
 	
 	reg2	  : registers generic map(N => 16) port map(clk    => clk,
 																	  reset 	=> reset,
 																	  enable => not_stall,
 																	  input  => reg2_in,
-																	  output => inst2(15 downto 0));
+																	  output => inst2);
 	
 	pc_reg  : registers generic map(N => 7) port map(clk	  => clk,
 																	 reset  => reset,
@@ -66,13 +70,13 @@ begin
 																	 reset  => reset,
 																	 enable => not_stall,
 																	 input  => mux_pc,
-																	 output => inst1(22 downto 16));
+																	 output => pc1);
 															
 	pc2_reg : registers generic map(N => 7) port map(clk	  => clk,
 																	 reset  => reset,
 																	 enable => not_stall,
 																	 input  => add_pc,
-																	 output => inst2(22 downto 16));
+																	 output => pc2);
 	
 	BP		  : branch_predictor port map(pc 	 => pc_out,
 													clk	 => clk,

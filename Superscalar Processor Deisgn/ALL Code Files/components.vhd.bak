@@ -113,6 +113,19 @@ package components is
 			  
 	end component;
 	
+	component reorder_buffer is
+	
+		generic(N : integer);		-- Represets total number of entries
+		port(input			: in std_logic_vector(21 downto 0);
+			  wr_en			: in std_logic;								-- When writing to ROB
+			  
+			  clk				: in std_logic;
+			  reset			: in std_logic;
+			  stall			: out std_logic;
+			  output			: out std_logic_vector(21 downto 0));
+
+	end component;
+	
 	component ARF is
 		port(reset : in std_logic;
 			  clk   : in std_logic;
@@ -144,44 +157,5 @@ package components is
 			  osel4	 : in std_logic_vector(2 downto 0));
 		
 	end component;
-	
-	component ROB is
-		generic(N : integer := 32);			-- Represents total number of entries
-		port(	reset 	: in std_logic;
-				clk	: in std_logic;
-				stall_out : out std_logic;
-				broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
-				-- Data 		= 16 bits
-				-- Tag  		= 5  bits (RRF size)
-				-- Validity = 1 bit
-				-- (In the above order) --
-				
-				valid_in : in main_array(0 to N-1)(0 downto 0);
-				valid_out : out main_array(0 to N-1)(0 downto 0);
-				valid_en : in main_array(0 to N-1)(0 downto 0);
-			 
-				-- FROM DECODE
-				 instruction1 : in std_logic_vector(21 downto 0);
-				 instruction2 : in std_logic_vector(21 downto 0);
-				 -- Instruction type 			: 2 bits
-				 -- Register affected 			: 3 bits
-				 -- Data 							: 16 bits
-				 -- Validity of information 	: 1 bit
-				 -- Total							: 22 bits
-				 
-				 -- TO DECODE
-				 inst1_tag : out std_logic_vector(natural(log2(real(N)))-1 downto 0);
-				 inst2_tag : out std_logic_vector(natural(log2(real(N)))-1 downto 0);
-				 
-				 -- TO COMPLETE
-				 complete1 : out std_logic_vector(35 downto 0);
-				 complete2 : out std_logic_vector(35 downto 0)
-				 -- Inst_type : 2 bits
-				 -- Register affected: 3 bits
-				 -- Memory affected : 16 bits
-				 -- Data				  : 16 bits
-				 -- validity		  : 1 bit
-			 );
-	end component; 
-	
+
 end package;

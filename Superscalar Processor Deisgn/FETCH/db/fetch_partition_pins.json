@@ -68,6 +68,34 @@
 					"strict" : false
 				},
 				{
+					"name" : "inst1[16]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[17]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[18]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[19]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[20]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[21]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[22]",
+					"strict" : false
+				},
+				{
 					"name" : "inst2[0]",
 					"strict" : false
 				},
@@ -132,59 +160,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "pc1[0]",
+					"name" : "inst2[17]",
 					"strict" : false
 				},
 				{
-					"name" : "pc1[1]",
+					"name" : "inst2[18]",
 					"strict" : false
 				},
 				{
-					"name" : "pc1[2]",
+					"name" : "inst2[19]",
 					"strict" : false
 				},
 				{
-					"name" : "pc1[3]",
+					"name" : "inst2[20]",
 					"strict" : false
 				},
 				{
-					"name" : "pc1[4]",
+					"name" : "inst2[21]",
 					"strict" : false
 				},
 				{
-					"name" : "pc1[5]",
+					"name" : "inst2[22]",
 					"strict" : false
 				},
 				{
-					"name" : "pc1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "pc2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "pc2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "pc2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "pc2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "pc2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "pc2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "stall",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
@@ -192,7 +192,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "stall",
 					"strict" : false
 				}
 			]
