@@ -1,5 +1,5 @@
 Fitter report for allocating_unit
-Sun May 21 19:42:34 2017
+Thu May 25 18:18:03 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -38,16 +38,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Failed - Sun May 21 19:42:34 2017           ;
+; Fitter Status                      ; Failed - Thu May 25 18:18:03 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; allocating_unit                             ;
 ; Top-level Entity Name              ; allocating_unit                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 1,920                                       ;
+; Total logic elements               ; 65                                          ;
+;     Total combinational functions  ; 65                                          ;
+;     Dedicated logic registers      ; 9                                           ;
+; Total registers                    ; 9                                           ;
+; Total pins                         ; 1,532                                       ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -158,12 +158,12 @@ agreement for further details.
 ; Fitter Messages ;
 +-----------------+
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
-Error (119027): Design requires 1768 I/O Output Buffer resources -- too many to fit in 523 available in the selected device or any device in the device family
+Error (119027): Design requires 1380 I/O Output Buffer resources -- too many to fit in 523 available in the selected device or any device in the device family
 Error (119003): Cannot find device that meets Compiler settings specifications
 Error: Quartus Prime Fitter was unsuccessful. 2 errors, 0 warnings
-    Error: Peak virtual memory: 751 megabytes
-    Error: Processing ended: Sun May 21 19:42:34 2017
-    Error: Elapsed time: 00:00:01
+    Error: Peak virtual memory: 748 megabytes
+    Error: Processing ended: Thu May 25 18:18:03 2017
+    Error: Elapsed time: 00:00:02
     Error: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,5 @@
 Fitter report for reservation_station
-Fri May 05 10:15:15 2017
+Thu May 25 13:28:52 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -38,16 +38,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Failed - Fri May 05 10:15:15 2017           ;
+; Fitter Status                      ; Failed - Thu May 25 13:28:52 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; reservation_station                         ;
 ; Top-level Entity Name              ; reservation_station                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 272                                         ;
-;     Total combinational functions  ; 16                                          ;
+; Total logic elements               ; 280                                         ;
+;     Total combinational functions  ; 280                                         ;
 ;     Dedicated logic registers      ; 272                                         ;
 ; Total registers                    ; 272                                         ;
-; Total pins                         ; 570                                         ;
+; Total pins                         ; 834                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -61,6 +61,7 @@ agreement for further details.
 ; Option                                                                     ; Setting                               ; Default Value                         ;
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Device                                                                     ; AUTO                                  ;                                       ;
+; Maximum processors allowed for parallel compilation                        ; 2                                     ;                                       ;
 ; Fit Attempts to Skip                                                       ; 0                                     ; 0.0                                   ;
 ; Use smart compilation                                                      ; Off                                   ; Off                                   ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
@@ -156,14 +157,13 @@ agreement for further details.
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Error (119027): Design requires 570 I/O pad resources -- too many to fit in 544 available in the selected device or any device in the device family
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Error (119027): Design requires 562 I/O Input Buffer resources -- too many to fit in 543 available in the selected device or any device in the device family
 Error (119003): Cannot find device that meets Compiler settings specifications
-Error: Quartus Prime Fitter was unsuccessful. 2 errors, 1 warning
+Error: Quartus Prime Fitter was unsuccessful. 2 errors, 0 warnings
     Error: Peak virtual memory: 748 megabytes
-    Error: Processing ended: Fri May 05 10:15:15 2017
-    Error: Elapsed time: 00:00:01
+    Error: Processing ended: Thu May 25 13:28:52 2017
+    Error: Elapsed time: 00:00:03
     Error: Total CPU time (on all processors): 00:00:01
 
 

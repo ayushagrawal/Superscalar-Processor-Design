@@ -10,8 +10,8 @@ use work.components.all;
 -- NOTE : Tag length of the register in RRF is equivalent to tag length of ROB
 
 entity update_unit is
-		generic(N  : integer := 32;			-- Specifies the number of entiries in the ROB
-				  X  : integer := 16);			-- Specifies the number of entries in the reservation station
+		generic(N : integer := 62;				-- DATA LENGTH 
+				  X : integer := 16);			-- Specifies the number of entries in the reservation station
 		port(broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
 			  -- Data 		= 16 bits
 			  -- Tag  		= 5  bits (RRF size)
@@ -19,18 +19,18 @@ entity update_unit is
 			  -- (In the above order) --
 			  
 			  -- FROM the RS
-			  tag : in main_array(0 to X-1)(natural(log2(real(N)))-1 downto 0);	-- ROB TAG
-			  busy: in main_array(0 to X-1)(0 downto 0);									-- INDICATES OCCUPANCY OF A RS ENTRY
+			  busy : in main_array(0 to X-1)(0 downto 0);									-- INDICATES OCCUPANCY OF A RS ENTRY
+			  data_in : in main_array(0 to X-1)(N-1 downto 0);
 			  
 			  -- To RS
 			  validity_out : out main_array(0 to X-1)(0 downto 0);
 			  validity_en	: out main_array(0 to X-1)(0 downto 0);
-			  data			: out main_array(0 to X-1)(15 downto 0);
+			  data			: out main_array(0 to X-1)(N-1 downto 0);
 			  data_en		: out main_array(0 to X-1)(0 downto 0);
 			  
 			  -- To Dispatch unit
-			  index_out : out main_array(0 to 4)(natural(log2(real(X)))-1 downto 0);
-			  index_val : out main_array(0 to 4)(0 downto 0)
+			  index_out : out main_array(0 to 4)(natural(log2(real(X)))-1 downto 0);		-- INDICATES READY REGISTERS
+			  index_val : out main_array(0 to 4)(0 downto 0)										-- INDICATES READY REGISTERS
 			);
 	end entity;
 
@@ -40,13 +40,11 @@ architecture UU of update_unit is
 begin
 	
 	-- This gives me the index of the entries in the RS which match with the broadcast
-	comparator1 : comparator generic map(tag_size => natural(log2(real(N))), tag_num => X)
-								 port map(to_match(0) => broadcast(0)(5 downto 0),
-											 to_match(1) => broadcast(1)(5 downto 0),
-											 to_match(2) => broadcast(2)(5 downto 0),
-											 to_match(3) => broadcast(3)(5 downto 0),
-											 to_match(4) => broadcast(4)(5 downto 0),
-											 tag_data => tag,
+	comparator1 : comparator generic map(tag_size => natural(log2(real(X))), tag_num => X, N => N)
+								 port map(to_match => broadcast,
+											 
+											 data_out => data,
+											 data_in => data_in,
 											 busy		 => busy,
 											 index	 => index,		-- Corresponds to that in the RS
 											 valid	 => valid);		-- Indicates if an index is valid or garbage
@@ -61,7 +59,6 @@ begin
 			if (valid(I)(0) = '1') then
 				validity_en(to_integer(unsigned(index(I))))(0) <= '1';
 				data_en(to_integer(unsigned(index(I))))(0) <= '1';
-				data(to_integer(unsigned(index(I)))) <= broadcast(I)(21 downto 6);
 				validity_out(to_integer(unsigned(index(I))))(0) <= '1';
 			end if;
 		end loop;

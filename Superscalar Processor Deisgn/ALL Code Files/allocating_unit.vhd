@@ -43,10 +43,16 @@ entity allocating_unit is
 			  -- TO RESERVATION STATION (NEED TO CONSIDER FROM ALL THE RESERVATION STATION)
 			  reg_alu_data : out main_array(0 to N_alu-1)(X_alu-1 downto 0);
 			  reg_alu_en   : out main_array(0 to N_alu-1)(0 downto 0);
+			  busy_alu		: out main_array(0 to N_alu-1)(0 downto 0);
+			  busy_alu_en	: out main_array(0 to N_alu-1)(0 downto 0);
 			  reg_bch_data : out main_array(0 to N_bch-1)(X_bch-1 downto 0);
 			  reg_bch_en   : out main_array(0 to N_bch-1)(0 downto 0);
+			  busy_bch		: out main_array(0 to N_bch-1)(0 downto 0);
+			  busy_bch_en	: out main_array(0 to N_bch-1)(0 downto 0);
 			  reg_lst_data : out main_array(0 to N_lst-1)(X_lst-1 downto 0);
 			  reg_lst_en   : out main_array(0 to N_lst-1)(0 downto 0);
+			  busy_lst		: out main_array(0 to N_lst-1)(0 downto 0);
+			  busy_lst_en	: out main_array(0 to N_lst-1)(0 downto 0);
 			  
 			  
 			  
@@ -61,8 +67,16 @@ entity allocating_unit is
 					--Indicates the validity of the above data
 			  index_lst_allocate : in main_array(0 to 1)(natural(log2(real(N_lst)))-1 downto 0);
 					-- Indicates the indices of the freed entries in the RS
-			  valid_lst_allocate : in main_array(0 to 1)(0 downto 0)
+			  valid_lst_allocate : in main_array(0 to 1)(0 downto 0);
 					--Indicates the validity of the above data
+			  
+			  -- TO DISPATCH UNIT
+			  inst_ready_alu : out main_array(0 to 1)(0 downto 0);
+			  inst_ready_bch : out main_array(0 to 1)(0 downto 0);
+			  inst_ready_lst : out main_array(0 to 1)(0 downto 0);
+			  indx_alloc_alu : out main_array(0 to 1)(natural(log2(real(N_alu)))-1 downto 0);
+			  indx_alloc_bch : out main_array(0 to 1)(natural(log2(real(N_bch)))-1 downto 0);
+			  indx_alloc_lst : out main_array(0 to 1)(natural(log2(real(N_lst)))-1 downto 0)
 			  );
 	end entity;
 
@@ -94,6 +108,7 @@ begin
 	not_stall_alu <= not stall_alu;
 	not_stall_bch <= not stall_bch;
 	not_stall_lst <= not stall_lst;
+	
 	
 --	_______________________________________________________________________________________________
 	GEN_ALU : for I in 0 to N_alu-1
@@ -247,28 +262,46 @@ begin
 			inst1_alu <= inst1;
 			inst1_bch <= (others => '0');
 			inst1_lst <= (others => '0');
+			inst_ready_alu(0)(0) <= inst1(33) and inst1(16) and inst1(62);
+			inst_ready_bch(0) <= "0";
+			inst_ready_lst(0) <= "0";
 		elsif(inst1(61 downto 60) = "11") then
 			inst1_bch <= inst1;
 			inst1_alu <= (others => '0');
 			inst1_lst <= (others => '0');
+			inst_ready_bch(0)(0) <= inst1(33) and inst1(16) and inst1(62);
+			inst_ready_alu(0) <= "0";
+			inst_ready_lst(0) <= "0";
 		else
 			inst1_lst <= inst1;
 			inst1_bch <= (others => '0');
 			inst1_alu <= (others => '0');
+			inst_ready_lst(0)(0) <= inst1(33) and inst1(16) and inst1(62);
+			inst_ready_bch(0) <= "0";
+			inst_ready_alu(0) <= "0";
 		end if;
 		
 		if(inst2(61) = '0') then
 			inst2_alu <= inst2;
 			inst2_bch <= (others => '0');
 			inst2_lst <= (others => '0');
+			inst_ready_alu(1)(0) <= inst2(33) and inst2(16) and inst2(62);
+			inst_ready_bch(1) <= "0";
+			inst_ready_lst(1) <= "0";
 		elsif(inst1(61 downto 60) = "11") then
 			inst2_bch <= inst2;
 			inst2_alu <= (others => '0');
 			inst2_lst <= (others => '0');
+			inst_ready_bch(1)(0) <= inst2(33) and inst2(16) and inst2(62);
+			inst_ready_alu(1) <= "0";
+			inst_ready_lst(1) <= "0";
 		else
 			inst2_lst <= inst2;
 			inst2_bch <= (others => '0');
 			inst2_alu <= (others => '0');
+			inst_ready_lst(1)(0) <= inst2(33) and inst2(16) and inst2(62);
+			inst_ready_bch(1) <= "0";
+			inst_ready_alu(1) <= "0";
 		end if;
 	
 	end process;
@@ -299,18 +332,26 @@ begin
 		if(inst1_alu(62) = '1') then		-- VALID INSTRUCTION
 			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= inst1_alu;
 			reg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= "1";
+			busy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= "1";
+			busy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= "1";
+			indx_alloc_alu(0) <= index_alu_out(to_integer(unsigned(bottom_alu_out_add)));
 		end if;
 		
 		if(inst2_alu(62) = '1') then
 			bottom_alu_add <= (0 =>  not inst1_alu(0), 1 => inst1_alu(0), others => '0');
 			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= inst1_alu;
 			reg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= "1";
+			busy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= "1";
+			busy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= "1";
+			indx_alloc_alu(1) <= index_alu_out(to_integer(unsigned(bottom_alu_in)));
 		else
 			bottom_alu_add <= (0 => inst1_alu(0), others => '0');
 		end if;
 		
 		reg_alu_data <= (others => (others => '0')); 
 		reg_alu_en <= (others => (others => '0')); 
+		busy_alu <= (others => (others => '0')); 
+		busy_alu_en <= (others => (others => '0'));
 		
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
@@ -393,19 +434,26 @@ begin
 		if(inst1_bch(62) = '1') then		-- VALID INSTRUCTION
 			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= inst1_bch;
 			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
+			busy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
+			busy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
+			indx_alloc_bch(0) <= index_bch_out(to_integer(unsigned(bottom_bch_out_add)));
 		end if;
 		
 		if(inst2_bch(62) = '1') then
 			bottom_bch_add <= (0 =>  not inst1_bch(0), 1 => inst1_bch(0), others => '0');
 			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= inst1_bch;
 			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
+			busy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
+			busy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
+			indx_alloc_bch(1) <= index_bch_out(to_integer(unsigned(bottom_bch_in)));
 		else
 			bottom_bch_add <= (0 => inst1_bch(0), others => '0');
 		end if;
 		
 		reg_bch_data <= (others => (others => '0')); 
 		reg_bch_en <= (others => (others => '0')); 
-		
+		busy_bch <= (others => (others => '0')); 
+		busy_bch_en <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
@@ -487,19 +535,26 @@ begin
 		if(inst1_lst(62) = '1') then		-- VALID INSTRUCTION
 			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= inst1_lst;
 			reg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= "1";
+			busy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= "1";
+			busy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= "1";
+			indx_alloc_lst(0) <= index_lst_out(to_integer(unsigned(bottom_lst_out_add)));
 		end if;
 		
 		if(inst2_lst(62) = '1') then
 			bottom_lst_add <= (0 =>  not inst1_lst(0), 1 => inst1_lst(0), others => '0');
 			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= inst1_lst;
 			reg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= "1";
+			busy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= "1";
+			busy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= "1";
+			indx_alloc_lst(1) <= index_lst_out(to_integer(unsigned(bottom_lst_in)));
 		else
 			bottom_lst_add <= (0 => inst1_lst(0), others => '0');
 		end if;
 		
 		reg_lst_data <= (others => (others => '0')); 
 		reg_lst_en <= (others => (others => '0')); 
-		
+		busy_lst <= (others => (others => '0')); 
+		busy_lst_en <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then

@@ -1,5 +1,5 @@
 Flow report for reservation_station
-Fri May 05 10:15:15 2017
+Thu May 25 13:28:52 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Fri May 05 10:15:15 2017      ;
+; Flow Status                        ; Flow Failed - Thu May 25 13:28:52 2017      ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; reservation_station                         ;
 ; Top-level Entity Name              ; reservation_station                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 272                                         ;
-;     Total combinational functions  ; 16                                          ;
+; Total logic elements               ; 280                                         ;
+;     Total combinational functions  ; 280                                         ;
 ;     Dedicated logic registers      ; 272                                         ;
 ; Total registers                    ; 272                                         ;
-; Total pins                         ; 570                                         ;
+; Total pins                         ; 834                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -63,7 +63,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/05/2017 10:14:59 ;
+; Start date & time ; 05/25/2017 13:28:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; reservation_station ;
 +-------------------+---------------------+
@@ -74,7 +74,8 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149395949902020        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149569911311768        ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -89,9 +90,9 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 677 MB              ; 00:00:32                           ;
-; Fitter               ; 00:00:01     ; 1.0                     ; 747 MB              ; 00:00:01                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 675 MB              ; 00:00:31                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 747 MB              ; 00:00:01                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -2,7 +2,152 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "inst_ready_alu[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_ready_alu[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_ready_bch[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_ready_bch[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_ready_lst[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_ready_lst[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_alu[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_alu[1][1]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_alu[1][2]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_alu[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_alu[0][1]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_alu[0][2]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_bch[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_bch[1][1]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_bch[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_bch[0][1]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[1][1]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[1][2]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[1][3]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[0][1]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[0][2]",
+					"strict" : false
+				},
+				{
+					"name" : "indx_alloc_lst[0][3]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2[16]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2[33]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2[62]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2[61]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[16]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[33]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[62]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[61]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[60]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
