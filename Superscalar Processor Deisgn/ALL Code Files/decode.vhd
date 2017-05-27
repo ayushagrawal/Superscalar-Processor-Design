@@ -10,11 +10,15 @@ entity decode is
 
 	port(clk	: in std_logic;
 		  reset : in std_logic;
-		  stall_in : std_logic;
+		  stall_in : in std_logic;
 		  inst1 : in std_logic_vector(15 downto 0);
 		  inst2 : in std_logic_vector(15 downto 0);
-		  PC1			: in std_logic_vector(7 downto 0);
-		  PC2			: in std_logic_vector(7 downto 0);
+		  PC1			: in std_logic_vector(6 downto 0);
+		  PC2			: in std_logic_vector(6 downto 0);
+		  
+		  ------------ FROM REORDER BUFFER -----------
+		  index1 : in std_logic_vector(4 downto 0);
+		  index2 : in std_logic_vector(4 downto 0);
 		  
 		  ------------ FROM WRITE BACK -----------
 		  in_sel1: in std_logic_vector(2 downto 0);
@@ -25,104 +29,81 @@ entity decode is
 		  wren2 : in std_logic;
 		  ----------------------------------------
 		  ------- CALCULATED uOPS RESGITERS ------
-		  REG1	: out std_logic_vector(61 downto 0);
-		  REG2	: out std_logic_vector(61 downto 0));
+		  REG1	: out std_logic_vector(40 downto 0);
+		  REG2	: out std_logic_vector(40 downto 0));
+		  --*** (VALIDITY:OPCODE:ROB-INDEX:WB_REG:REG1:REG2:PC) ***--
 
 end entity;
 
 architecture DEC of decode is
-	signal opcode1,opcode2 : std_logic_vector(3 downto 0);
-	signal rden1,rden2,rden3,rden4 : std_logic;
-	signal wr1,wr2 : std_logic;
-	signal toWrite1, toWrite2 : std_logic_vector(15 downto 0);
-	signal index1,index2 : std_logic_vector(4 downto 0);
-	signal stall, wr_en, not_stall : std_logic;
-	signal input,output : std_logic_vector(21 downto 0);
-	signal reg1_in,reg2_in : std_logic_vector(60 downto 0);
-	signal out1,out2,out3,out4 : std_logic_vector(15 downto 0);
-	signal out_val1,out_val2,out_val3,out_val4 : std_logic;
+
 	signal inst1_val,inst2_val : std_logic;
+	
+	signal opcode_reduced1,opcode_reduced2 : std_logic_vector(3 downto 0);
+	signal opcode1,opcode2 : std_logic_vector(3 downto 0);
+	signal regA_1,regB_1,regA_2,regB_2,regWB_1,regWB_2: std_logic_vector(2 downto 0);
+	
+	signal not_stall : std_logic;
+	
+	signal reg1_in,reg2_in : std_logic_vector(40 downto 0);
+	signal PC_1,PC_2 : std_logic_vector(15 downto 0);
+	
+	signal extra1,extra2 : std_logic_vector(2 downto 0);
+	signal isWB_1,isWB_2,isA_1,isA_2,isB_1,isB_2 : std_logic;
+	
 begin
 
-	inst1_val <= not stall_in;
-	inst2_val <= not stall_in;
+	inst1_val <= not_stall;
+	inst2_val <= not_stall;
 	
+	-- TO BE PROCESSED IN PARALLEL
 	opcode1 <= inst1(15 downto 12);
 	opcode2 <= inst2(15 downto 12);
-
-	ROB: reorder_buffer generic map(N => 32) port map(clk => clk,
-																		reset => reset,
-																		stall => stall,
-																		input => input,
-																		output => output,
-																		wr_en => wr_en,
-																		index1 => index1,
-																		index2 => index2);
 																		
-	not_stall <= not stall;
+	not_stall <= not stall_in;
 	
-	rf : register_file port map(clk => clk,
-										 reset => reset,
-										 in_sel1 => in_sel1,
-										 in_sel2 => in_sel2,
-										 input1 => input1,
-										 input2 => input2,
-										 wren1 => wren1,
-										 wren2 => wren2,
-										 out1 => out1,
-										 out2 => out2,
-										 out3 => out3,
-										 out4 => out4,
-										 out_val1 => out_val1,
-										 out_val2 => out_val2,
-										 out_val3 => out_val3,
-										 out_val4 => out_val4,
-										 osel1 => inst1(11 downto 9),
-										 osel2 => inst1(8 downto 6),
-										 osel3 => inst2(11 downto 9),
-										 osel4 => inst2(8 downto 6),
-										 rden1 => rden1,				-- Decided by decoding
-										 rden2 => rden2,				-- Decided by decoding
-										 rden3 => rden3,				-- Decided by decoding
-										 rden4 => rden4,				-- Decided by decoding
-										 
-										 toWrite1 => toWrite1,
-										 toWrite2 => toWrite2,
-										 wr1		 => wr1,			-- Decided by decoding
-										 wr2		 => wr2			-- Decided by decoding
-										 );	
+	PC_1(6 downto 0)  <= PC1;
+	PC_1(15 downto 7) <= "000000000";
+	PC_2(6 downto 0)  <= PC2;
+	PC_2(15 downto 7) <= "000000000";
 	
 	------------------------- BAISC ASSIGNMENTS -------------------------
-	reg1_in(61)				 <= inst1_val;
-	reg1_in(60 downto 57) <= inst1(15 downto 12);
-	reg1_in(56 downto 55) <= inst1(1 downto 0);
-	reg1_in(54 downto 50) <= index1;				-- FROM REORDER BUFFER
-	reg1_in(49 downto 34) <= out1;
-	reg1_in(33) <= out_val1;
-	reg1_in(32 downto 17) <= out2;
-	reg1_in(16) <= out_val2;
-	reg1_in(15 downto 0) <= PC1;
+	--******** (VALIDITY:OPCODE:ROB-INDEX:WB_REG:REG1:REG2:PC) ********--
+	
+	reg1_in(40)				 <= inst1_val;
+	reg1_in(39 downto 36) <= opcode_reduced1;
+	reg1_in(35 downto 31) <= index1;				-- FROM REORDER BUFFER
+	reg1_in(30)				 <= isWB_1;
+	reg1_in(29)				 <= isA_1;
+	reg1_in(28)				 <= isB_1;
+	reg1_in(27 downto 25) <= regWB_1;
+	reg1_in(24 downto 22) <= regA_1;
+	reg1_in(21 downto 19) <= regB_1;
+	reg1_in(18 downto 16) <= extra1;
+	reg1_in(15 downto  0) <= PC_1;
 	
 	
-	reg2_in(61)				 <= inst2_val;
-	reg2_in(60 downto 57) <= inst2(15 downto 12);
-	reg2_in(56 downto 55) <= inst2(1 downto 0);
-	reg2_in(54 downto 50) <= index2;				-- FROM REORDER BUFFER
-	reg2_in(49 downto 34) <= out3;
-	reg2_in(33) <= out_val3;
-	reg2_in(32 downto 17) <= out4;
-	reg2_in(16) <= out_val4;
-	reg2_in(15 downto 0) <= PC2;
+	reg2_in(40)				 <= inst2_val;
+	reg2_in(39 downto 36) <= opcode_reduced2;
+	reg2_in(35 downto 31) <= index2;				-- FROM REORDER BUFFER
+	reg2_in(30)				 <= isWB_2;
+	reg2_in(29)				 <= isA_2;
+	reg2_in(28)				 <= isB_2;
+	reg2_in(27 downto 25) <= regWB_2;
+	reg2_in(24 downto 22) <= regA_2;
+	reg2_in(21 downto 19) <= regB_2;
+	reg2_in(18 downto 16) <= extra2;
+	reg2_in(15 downto  0) <= PC_2;
 	
 	---------------------------------------------------------------------
 	
-	out_reg1 : registers generic map(N => 62) port map(clk => clk,
+	out_reg1 : registers generic map(N => 41) port map(clk => clk,
 																	   reset => reset,
 																	   input => reg1_in,
 																	   output => REG1,
 																	   enable => not_stall);
 	
-	out_reg2 : registers generic map(N => 62) port map(clk => clk,
+	out_reg2 : registers generic map(N => 41) port map(clk => clk,
 																	   reset => reset,
 																	   input => reg2_in,
 																	   output => REG2,
@@ -130,136 +111,244 @@ begin
 	
 	--------------------------- DECODING --------------------------------
 	
-	process(opcode1,opcode2)
-		variable rden1v,rden2v,rden3v,rden4v : std_logic;
-		variable wr1v,wr2v : std_logic;
-		variable toWrite1v,toWrite2v : std_logic_vector(2 downto 0);
+	--						ALU GENERAL STRUCTURE
+	--
+	--
+	--
+	--
+	
+	process(opcode1,opcode2,inst1,inst2)
 	begin
 		-- For 1st instruction
 		if(opcode1 = "0000") then		-- ADD
-			rden1v := '1';
-			rden2v := '1';
-			wr1v := '1';
-			toWrite1v := inst1(5 downto 3);
+			regA_1			 <= inst1(11 downto 9);
+			regB_1			 <= inst1(8 downto 6);
+			regWB_1			 <= inst1(5 downto 3);
+			opcode_reduced1(3 downto 2) <= "00";
+			opcode_reduced1(1 downto 0) <= inst1(1 downto 0);
+			isWB_1 <= '1';
+			isA_1  <= '1';
+			isB_1  <= '1';
+			extra1 <= "000";
+			
 		elsif(opcode1 = "0001") then	-- ADI
-			rden1v := '1';
-			rden2v := '0';
-			wr1v := '1';
-			toWrite1v := inst1(8 downto 6);
+			regA_1			 <= inst1(11 downto 9);
+			regB_1			 <= inst1(5 downto 3);
+			regWB_1			 <= inst1(8 downto 6);
+			extra1 			 <= inst1(2 downto 0);
+			isWB_1 			 <= '1';
+			isA_1  <= '1';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "00";
+			opcode_reduced1(1 downto 0) <= "11";
+			
 		elsif(opcode1 = "0010") then	-- NAND
-			rden1v := '1';
-			rden2v := '1';
-			wr1v := '1';
-			toWrite1v := inst1(5 downto 3);
+			regA_1			 <= inst1(11 downto 9);
+			regB_1			 <= inst1(8 downto 6);
+			regWB_1			 <= inst1(5 downto 3);
+			opcode_reduced1(3 downto 2) <= "01";
+			opcode_reduced1(1 downto 0) <= inst1(1 downto 0);
+			isWB_1 <= '1';
+			isA_1  <= '1';
+			isB_1  <= '1';
+			extra1			<= "000";
+			
 		elsif(opcode1 = "0011") then	-- LHI
-			rden1v := '0';
-			rden2v := '0';
-			wr1v := '1';
-			toWrite1v := inst1(11 downto 9);
-		elsif(opcode1 = "0100") then	-- LOAD
-			rden1v := '0';
-			rden2v := '1';
-			wr1v := '1';
-			toWrite1v := inst1(11 downto 9);
+			regA_1			 <= inst1(8 downto 6);
+			regB_1			 <= inst1(5 downto 3);
+			regWB_1			 <= inst1(11 downto 9);
+			extra1 			 <= inst1(2 downto 0);
+			isWB_1 			 <= '1';
+			isA_1  <= '0';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "10";
+			opcode_reduced1(1 downto 0) <= "00";
+			
+		elsif(opcode1 = "0100") then	-- LOAD RA,RB,IMM
+			regA_1			 <= inst1(8 downto 6);		-- RB is first operand
+			regB_1			 <= inst1(5 downto 3);		-- Immediate
+			regWB_1			 <= inst1(11 downto 9);		-- RA is for write back
+			extra1 			 <= inst1(2 downto 0);		-- Immediate
+			isWB_1 			 <= '1';
+			isA_1  <= '1';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "10";
+			opcode_reduced1(1 downto 0) <= "01";
+			
 		elsif(opcode1 = "0101") then	-- STORE
-			rden1v := '1';
-			rden2v := '1';
-			wr1v := '0';
-			toWrite1v := inst1(5 downto 3);-------------------------------
-		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
-			rden1v := '1';
-			rden2v := '0';
-			wr1v := '1';
-			toWrite1v := "000";		-----------------CHANGE!!!!!!!!!
-		elsif(opcode1 = "0111") then	-- STORE MULTIPLE
-			rden1v := '1';
-			rden2v := '0';
-			wr1v := '0';
-			toWrite1v := inst1(5 downto 3);
+			regA_1			 <= inst1(8 downto 6);		-- RB is first operand
+			regB_1			 <= inst1(5 downto 3);		-- Immediate
+			regWB_1			 <= inst1(11 downto 9);		-- RA is for store
+			extra1 			 <= inst1(2 downto 0);		-- Immediate
+			isWB_1 			 <= '0';							-- No write back
+			isA_1  <= '1';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "10";
+			opcode_reduced1(1 downto 0) <= "10";
+			
+--		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
+--			rden1v := '1';
+--			rden2v := '0';
+--			wr1v := '1';
+--			toWrite1v := "000";		-----------------CHANGE!!!!!!!!!
+--			
+--		elsif(opcode1 = "0111") then	-- STORE MULTIPLE
+--			rden1v := '1';
+--			rden2v := '0';
+--			wr1v := '0';
+--			toWrite1v := inst1(5 downto 3);
+			
 		elsif(opcode1 = "1100") then	-- BEQ
-			rden1v := '1';
-			rden2v := '1';
-			wr1v := '0';
-			toWrite1v := inst1(5 downto 3);
+			regA_1			 <= inst1(8 downto 6);		-- RB is second operand
+			regB_1			 <= inst1(5 downto 3);		-- Immediate
+			regWB_1			 <= inst1(11 downto 9);		-- RA is first operand
+			extra1 			 <= inst1(2 downto 0);		-- Immediate
+			isWB_1 			 <= '0';							-- No write back
+			isA_1  <= '1';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "11";
+			opcode_reduced1(1 downto 0) <= "00";
+			
 		elsif(opcode1 = "1000") then	-- JAL
-			rden1v := '0';
-			rden2v := '0';
-			wr1v := '1';
-			toWrite1v := inst1(11 downto 9);
+			regA_1			 <= inst1(8 downto 6);		-- Immediate
+			regB_1			 <= inst1(5 downto 3);		-- Immediate
+			regWB_1			 <= inst1(11 downto 9);		-- RA is WB
+			extra1 			 <= inst1(2 downto 0);		-- Immediate
+			isWB_1 			 <= '1';							-- Write back
+			isA_1  <= '0';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "11";
+			opcode_reduced1(1 downto 0) <= "01";
+			
 		else									-- JLR
-			rden1v := '0';
-			rden2v := '1';
-			wr1v := '1';
-			toWrite1v := inst1(11 downto 9);
+			regA_1			 <= inst1(8 downto 6);		-- RB us first operand
+			regB_1			 <= inst1(5 downto 3);		-- Nothing
+			regWB_1			 <= inst1(11 downto 9);		-- RA is WB
+			extra1 			 <= inst1(2 downto 0);		-- Nothing
+			isWB_1 			 <= '1';							-- Write back
+			isA_1  <= '1';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "11";
+			opcode_reduced1(1 downto 0) <= "10";
+			
 		end if;
 	
-		-- For 2nd instruction -------------
+		-- ###################### For 2nd instruction #################### --
+		---------------------------------------------------------------------
+		-- ############################################################### --
+		
 		if(opcode2 = "0000") then		-- ADD
-			rden3v := '1';
-			rden4v := '1';
-			wr2v := '1';
-			toWrite2v := inst2(5 downto 3);
+			regA_2			 <= inst2(11 downto 9);
+			regB_2			 <= inst2(8 downto 6);
+			regWB_2			 <= inst2(5 downto 3);
+			opcode_reduced2(3 downto 2) <= "00";
+			opcode_reduced2(1 downto 0) <= inst2(1 downto 0);
+			isWB_2 <= '1';
+			isA_2  <= '1';
+			isB_2  <= '1';
+			extra2 <= "000";
+			
 		elsif(opcode2 = "0001") then	-- ADI
-			rden3v := '1';
-			rden4v := '0';
-			wr2v := '1';
-			toWrite2v := inst2(8 downto 6);
-		elsif(opcode2 = "0010") then	-- NAND
-			rden3v := '1';
-			rden4v := '1';
-			wr2v := '1';
-			toWrite2v := inst2(5 downto 3);
-		elsif(opcode2= "0011") then	-- LHI
-			rden3v := '0';
-			rden4v := '0';
-			wr2v := '1';
-			toWrite2v := inst2(11 downto 9);
-		elsif(opcode2 = "0100") then	-- LOAD
-			rden3v := '0';
-			rden4v := '1';
-			wr2v := '1';
-			toWrite2v := inst1(11 downto 9);
-		elsif(opcode2 = "0101") then	-- STORE
-			rden3v := '1';
-			rden4v := '1';
-			wr2v := '0';
-			toWrite2v := inst2(5 downto 3);---------------------------
-		elsif(opcode2 = "0110") then	-- LOAD MULTIPLE
-			rden3v := '1';
-			rden4v := '0';
-			wr2v := '1';
-			toWrite2v := "000"; --------------CHANGE!!!!!!!!!!!!!!!!!!!!!!!
-		elsif(opcode1 = "0111") then	-- STORE MULTIPLE
-			rden4v := '1';
-			rden4v := '0';
-			wr2v := '0';
-			toWrite2v := inst2(5 downto 3);
-		elsif(opcode2 = "1100") then	-- BEQ
-			rden3v := '1';
-			rden4v := '1';
-			wr1v := '0';
-			toWrite2v := inst2(5 downto 3);
-		elsif(opcode2 = "1000") then	-- JAL
-			rden3v := '0';
-			rden4v := '0';
-			wr2v := '1';
-			toWrite2v := inst2(11 downto 9);
+			regA_2			 <= inst2(11 downto 9);
+			regB_2			 <= inst2(5 downto 3);
+			regWB_2			 <= inst2(8 downto 6);
+			extra2 			 <= inst2(2 downto 0);
+			isWB_2 			 <= '1';
+			isA_2  <= '1';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "00";
+			opcode_reduced2(1 downto 0) <= "11";
+			
+		elsif(opcode1 = "0010") then	-- NAND
+			regA_2			 <= inst2(11 downto 9);
+			regB_2			 <= inst2(8 downto 6);
+			regWB_2			 <= inst2(5 downto 3);
+			opcode_reduced2(3 downto 2) <= "01";
+			opcode_reduced2(1 downto 0) <= inst2(1 downto 0);
+			isWB_2 <= '1';
+			isA_2  <= '1';
+			isB_2  <= '1';
+			extra2			<= "000";
+			
+		elsif(opcode1 = "0011") then	-- LHI
+			regA_2			 <= inst2(8 downto 6);
+			regB_2			 <= inst2(5 downto 3);
+			regWB_2			 <= inst2(11 downto 9);
+			extra2 			 <= inst2(2 downto 0);
+			isWB_2 			 <= '1';
+			isA_2  <= '0';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "10";
+			opcode_reduced2(1 downto 0) <= "00";
+			
+		elsif(opcode1 = "0100") then	-- LOAD RA,RB,IMM
+			regA_2			 <= inst2(8 downto 6);		-- RB is first operand
+			regB_2			 <= inst2(5 downto 3);		-- Immediate
+			regWB_2			 <= inst2(11 downto 9);		-- RA is for write back
+			extra2 			 <= inst2(2 downto 0);		-- Immediate
+			isWB_2 			 <= '1';
+			isA_2  <= '1';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "10";
+			opcode_reduced2(1 downto 0) <= "01";
+			
+		elsif(opcode1 = "0101") then	-- STORE
+			regA_2			 <= inst2(8 downto 6);		-- RB is first operand
+			regB_2			 <= inst2(5 downto 3);		-- Immediate
+			regWB_2			 <= inst2(11 downto 9);		-- RA is for store
+			extra2 			 <= inst2(2 downto 0);		-- Immediate
+			isWB_2 			 <= '0';							-- No write back
+			isA_2  <= '1';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "10";
+			opcode_reduced2(1 downto 0) <= "10";
+			
+--		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
+--			rden1v := '1';
+--			rden2v := '0';
+--			wr1v := '1';
+--			toWrite1v := "000";		-----------------CHANGE!!!!!!!!!
+--			
+--		elsif(opcode1 = "0111") then	-- STORE MULTIPLE
+--			rden1v := '1';
+--			rden2v := '0';
+--			wr1v := '0';
+--			toWrite1v := inst2(5 downto 3);
+			
+		elsif(opcode1 = "1100") then	-- BEQ
+			regA_2			 <= inst2(8 downto 6);		-- RB is second operand
+			regB_2			 <= inst2(5 downto 3);		-- Immediate
+			regWB_2			 <= inst2(11 downto 9);		-- RA is first operand
+			extra2 			 <= inst2(2 downto 0);		-- Immediate
+			isWB_2 			 <= '0';							-- No write back
+			isA_2  <= '1';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "11";
+			opcode_reduced2(1 downto 0) <= "00";
+			
+		elsif(opcode1 = "1000") then	-- JAL
+			regA_2			 <= inst2(8 downto 6);		-- Immediate
+			regB_2			 <= inst2(5 downto 3);		-- Immediate
+			regWB_2			 <= inst2(11 downto 9);		-- RA is WB
+			extra2 			 <= inst2(2 downto 0);		-- Immediate
+			isWB_2 			 <= '1';							-- Write back
+			isA_2  <= '0';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "11";
+			opcode_reduced2(1 downto 0) <= "01";
+			
 		else									-- JLR
-			rden3v := '0';
-			rden4v := '1';
-			wr2v := '1';
-			toWrite2v := inst2(11 downto 9);
+			regA_2			 <= inst2(8 downto 6);		-- RB us first operand
+			regB_2			 <= inst2(5 downto 3);		-- Nothing
+			regWB_2			 <= inst2(11 downto 9);		-- RA is WB
+			extra2 			 <= inst2(2 downto 0);		-- Nothing
+			isWB_2 			 <= '1';							-- Write back
+			isA_2  <= '1';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "11";
+			opcode_reduced2(1 downto 0) <= "10";
+			
 		end if;
-	
-	rden1 <= rden1v;
-	rden2 <= rden2v;
-	rden3 <= rden3v;
-	rden4 <= rden4v;
-	wr1 <= wr1v;
-	wr2 <= wr2v;
-	
-	toWrite1 <= toWrite1v;
-	toWrite2 <= toWrite2v;
 	end process;
 	
 	---------------------------------------------------------------------

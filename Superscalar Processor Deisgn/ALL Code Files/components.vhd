@@ -104,6 +104,13 @@ package components is
 		
 	end component;	
 	
+	component branch_predictor is
+		port(pc		: in std_logic_vector(6 downto 0);
+			  clk		: in std_logic;
+			  bp_out : out std_logic_vector(6 downto 0);
+			  sel 	: out std_logic);
+	end component;
+	
 	component comparator is
 		generic(tag_size : integer := 5;
 				  tag_num : integer := 16;
@@ -114,6 +121,38 @@ package components is
 				busy		: in main_array(0 to tag_num-1)(0 downto 0);
 				index		: out main_array(0 to 4)(natural(log2(real(tag_num)))-1 downto 0);
 				valid		: out main_array(0 to 4)(0 downto 0));		
+	end component;
+	
+	component decode is
+		port(clk	: in std_logic;
+			  reset : in std_logic;
+			  stall_in : in std_logic;
+			  inst1 : in std_logic_vector(15 downto 0);
+			  inst2 : in std_logic_vector(15 downto 0);
+			  PC1			: in std_logic_vector(7 downto 0);
+			  PC2			: in std_logic_vector(7 downto 0);
+			  
+			  ------------ FROM WRITE BACK -----------
+			  in_sel1: in std_logic_vector(2 downto 0);
+			  in_sel2 : in std_logic_vector(2 downto 0);
+			  input1 : in std_logic_vector(15 downto 0);
+			  input2 : in std_logic_vector(15 downto 0);
+			  wren1 : in std_logic;
+			  wren2 : in std_logic;
+			  ----------------------------------------
+			  ------- CALCULATED uOPS RESGITERS ------
+			  REG1	: out std_logic_vector(61 downto 0);
+			  REG2	: out std_logic_vector(61 downto 0));
+	end component;
+	
+	component demux is
+	
+		generic(X : integer;			-- NUMBER OF PORTS IN THE DEMUX
+				  Y : integer);		-- DATA WIDTH OF THE DEMUX
+		port(input : in std_logic_vector(Y-1 downto 0);
+			  output  : out main_array(0 to X-1)(Y-1 downto 0);
+			  sel		: in std_logic_vector(natural(log2(real(X)))-1 downto 0));
+			  
 	end component;
 	
 	component dispatch_unit is
@@ -170,6 +209,23 @@ package components is
 			  );
 	end component;
 	
+	component fetch is
+		port(clk 		: in std_logic;
+			  reset		: in std_logic;
+			  stall		: in std_logic;
+			  inst1		: out std_logic_vector(22 downto 0);
+			  inst2		: out std_logic_vector(22 downto 0));
+	end component;
+	
+	component inc IS
+		PORT
+		(
+			data0x		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+			data1x		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+			result		: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+		);
+	END component;
+	
 	component instruction_memory IS
 		PORT
 		(
@@ -192,22 +248,6 @@ package components is
 				output : out std_logic_vector(N-1 downto 0));
 	end component;
 	
-	component inc IS
-		PORT
-		(
-			data0x		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
-			data1x		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
-			result		: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
-		);
-	END component;
-	
-	component branch_predictor is
-		port(pc		: in std_logic_vector(6 downto 0);
-			  clk		: in std_logic;
-			  bp_out : out std_logic_vector(6 downto 0);
-			  sel 	: out std_logic);
-	end component;
-	
 	component registers is
 		generic(N  : integer);
 		port(input : in std_logic_vector(N-1 downto 0);
@@ -225,16 +265,6 @@ package components is
 			  input  : in main_array(0 to X-1)(Y-1 downto 0);
 			  sel		: in std_logic_vector(natural(log2(real(X)))-1 downto 0));
 
-	end component;
-	
-	component demux is
-	
-		generic(X : integer;			-- NUMBER OF PORTS IN THE DEMUX
-				  Y : integer);		-- DATA WIDTH OF THE DEMUX
-		port(input : in std_logic_vector(Y-1 downto 0);
-			  output  : out main_array(0 to X-1)(Y-1 downto 0);
-			  sel		: in std_logic_vector(natural(log2(real(X)))-1 downto 0));
-			  
 	end component;
 	
 	component reservation_station is
