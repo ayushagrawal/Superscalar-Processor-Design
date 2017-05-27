@@ -62,6 +62,9 @@ begin
 				validity_out(to_integer(unsigned(index(I))))(0) <= '1';
 			end if;
 		end loop;
+		validity_en  <= (others => (others => '0'));
+		data_en		 <= (others => (others => '0'));
+		validity_out <= (others => (others => '0'));
 	end process;
 	
 end;

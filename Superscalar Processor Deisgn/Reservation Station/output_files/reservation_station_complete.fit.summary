@@ -1,14 +1,16 @@
-Fitter Status : Failed - Thu May 25 22:12:43 2017
+Fitter Status : Successful - Sat May 27 09:40:25 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : reservation_station_complete
 Top-level Entity Name : reservation_station_complete
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
+Device : EP4CE30F29C6
+Timing Models : Final
+Total logic elements : 0 / 28,848 ( 0 % )
+    Total combinational functions : 0 / 28,848 ( 0 % )
+    Dedicated logic registers : 0 / 28,848 ( 0 % )
 Total registers : 0
-Total pins : 531
+Total pins : 474 / 533 ( 89 % )
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

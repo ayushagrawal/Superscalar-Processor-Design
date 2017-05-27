@@ -98,17 +98,13 @@ architecture AU of allocating_unit is
 	signal bottom_lst_in,bottom_lst_out,bottom_lst_out_add,bottom_lst_add : std_logic_vector(natural(log2(real(N_lst)))-1 downto 0);
 --	____________________________________________________________________________________________________________
 	
-	signal stall_alu,stall_bch,stall_lst,not_stall_alu,not_stall_bch,not_stall_lst : std_logic;
+	signal stall_alu,stall_bch,stall_lst : std_logic;
 	
 	signal inst1_alu,inst1_bch,inst1_lst,inst2_alu,inst2_bch,inst2_lst : std_logic_vector(62 downto 0);
 	
 begin	
 	
-	stall_out <= stall_alu and stall_bch and stall_lst;
-	not_stall_alu <= not stall_alu;
-	not_stall_bch <= not stall_bch;
-	not_stall_lst <= not stall_lst;
-	
+	stall_out <= stall_alu and stall_bch and stall_lst;	
 	
 --	_______________________________________________________________________________________________
 	GEN_ALU : for I in 0 to N_alu-1
@@ -307,7 +303,7 @@ begin
 	end process;
 	
 -- _____________________________________________________________________________________________________	
-	process(valid_alu_out,inst1_alu,index_alu_out,bottom_alu_out_add,inst2_alu,bottom_alu_in,not_stall_alu,reset,valid_alu_allocate,index_alu_allocate,top_alu_add_one,top_alu_in,index_alu_in,index_alu_en,valid_alu_in,valid_alu_en)
+	process(valid_alu_out,inst1_alu,index_alu_out,bottom_alu_out_add,inst2_alu,bottom_alu_in,reset,valid_alu_allocate,index_alu_allocate,top_alu_add_one,top_alu_in,index_alu_in,index_alu_en,valid_alu_in,valid_alu_en)
 		variable count : integer;
 	begin
 		count := 0;
@@ -352,7 +348,7 @@ begin
 		reg_alu_en <= (others => (others => '0')); 
 		busy_alu <= (others => (others => '0')); 
 		busy_alu_en <= (others => (others => '0'));
-		
+		indx_alloc_alu <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
@@ -409,7 +405,7 @@ begin
 		end if;
 	end process;
 	----------------------------------------------------------------------------------------------------------
-	process(valid_bch_out,inst1_bch,index_bch_out,bottom_bch_out_add,inst2_bch,bottom_bch_in,not_stall_bch,reset,valid_bch_allocate,index_bch_allocate,top_bch_add_one,top_bch_in,index_bch_in,index_bch_en,valid_bch_in,valid_bch_en)
+	process(valid_bch_out,inst1_bch,index_bch_out,bottom_bch_out_add,inst2_bch,bottom_bch_in,reset,valid_bch_allocate,index_bch_allocate,top_bch_add_one,top_bch_in,index_bch_in,index_bch_en,valid_bch_in,valid_bch_en)
 		variable count : integer;
 	begin
 		count := 0;
@@ -454,6 +450,7 @@ begin
 		reg_bch_en <= (others => (others => '0')); 
 		busy_bch <= (others => (others => '0')); 
 		busy_bch_en <= (others => (others => '0'));
+		indx_alloc_bch <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
@@ -510,7 +507,7 @@ begin
 		end if;
 	end process;
 	----------------------------------------------------------------------------------------------------------
-	process(valid_lst_out,inst1_lst,index_lst_out,bottom_lst_out_add,inst2_lst,bottom_lst_in,not_stall_bch,reset,valid_lst_allocate,index_lst_allocate,top_lst_add_one,top_lst_in,index_lst_in,index_lst_en,valid_lst_in,valid_lst_en)
+	process(valid_lst_out,inst1_lst,index_lst_out,bottom_lst_out_add,inst2_lst,bottom_lst_in,reset,valid_lst_allocate,index_lst_allocate,top_lst_add_one,top_lst_in,index_lst_in,index_lst_en,valid_lst_in,valid_lst_en)
 		variable count : integer;
 	begin
 		count := 0;
@@ -555,6 +552,7 @@ begin
 		reg_lst_en <= (others => (others => '0')); 
 		busy_lst <= (others => (others => '0')); 
 		busy_lst_en <= (others => (others => '0'));
+		indx_alloc_lst <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then

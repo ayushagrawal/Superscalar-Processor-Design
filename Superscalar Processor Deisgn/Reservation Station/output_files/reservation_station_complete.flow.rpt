@@ -1,5 +1,5 @@
 Flow report for reservation_station_complete
-Thu May 25 22:12:43 2017
+Sat May 27 09:40:35 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,20 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Thu May 25 22:12:43 2017      ;
+; Flow Status                        ; Successful - Sat May 27 09:40:30 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; reservation_station_complete                ;
 ; Top-level Entity Name              ; reservation_station_complete                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
+; Total logic elements               ; 0 / 28,848 ( 0 % )                          ;
+;     Total combinational functions  ; 0 / 28,848 ( 0 % )                          ;
+;     Dedicated logic registers      ; 0 / 28,848 ( 0 % )                          ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 531                                         ;
+; Total pins                         ; 474 / 533 ( 89 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; Device                             ; EP4CE30F29C6                                ;
+; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -63,7 +65,7 @@ agreement for further details.
 +-------------------+------------------------------+
 ; Option            ; Setting                      ;
 +-------------------+------------------------------+
-; Start date & time ; 05/25/2017 22:12:16          ;
+; Start date & time ; 05/27/2017 09:39:43          ;
 ; Main task         ; Compilation                  ;
 ; Revision Name     ; reservation_station_complete ;
 +-------------------+------------------------------+
@@ -74,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149573053613248        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149585818314396        ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -84,25 +86,29 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 692 MB              ; 00:00:39                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 764 MB              ; 00:00:05                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:44                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:27     ; 1.0                     ; 698 MB              ; 00:00:35                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 1162 MB             ; 00:00:13                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 566 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 665 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:49     ; --                      ; --                  ; 00:00:53                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-0KA507F  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-0KA507F  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-0KA507F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-0KA507F  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-0KA507F  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-0KA507F  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
 
 
 ------------
@@ -110,6 +116,8 @@ agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off reservation_station_complete -c reservation_station_complete
 quartus_fit --read_settings_files=off --write_settings_files=off reservation_station_complete -c reservation_station_complete
+quartus_asm --read_settings_files=off --write_settings_files=off reservation_station_complete -c reservation_station_complete
+quartus_sta reservation_station_complete -c reservation_station_complete
 
 
 

@@ -68,7 +68,7 @@ begin
 															output=> data_out(I));
 						end generate;
 	
-	process(data_en_updte)
+	process(data_en_updte,data_in_updte,data_in_alloc,data_en_alloc)
 	begin
 		for I in 0 to N-1 loop
 			if(data_en_updte(I) = "1") then

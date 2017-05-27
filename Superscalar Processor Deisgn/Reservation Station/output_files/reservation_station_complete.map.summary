@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Thu May 25 22:12:36 2017
+Analysis & Synthesis Status : Successful - Sat May 27 09:40:09 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : reservation_station_complete
 Top-level Entity Name : reservation_station_complete
@@ -7,7 +7,7 @@ Total logic elements : 0
     Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 531
+Total pins : 474
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

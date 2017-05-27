@@ -151,7 +151,7 @@ begin
 																						 data2 => (0 => '1',others => '0'),
 																						 output => top_add(7));
 	
-	process(index_out,index_val,top_add,top_out,inst_ready)
+	process(index_out,index_val,top_add,top_out,inst_ready,indx_alloc)
 		variable count : integer;
 	begin
 		count := 0;

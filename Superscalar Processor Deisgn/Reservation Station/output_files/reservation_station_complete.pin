@@ -1,0 +1,851 @@
+ -- Copyright (C) 2016  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel MegaCore Function License Agreement, or other 
+ -- applicable license agreement, including, without limitation, 
+ -- that your use is for the sole purpose of programming logic 
+ -- devices manufactured by Intel and sold by Intel or its 
+ -- authorized distributors.  Please refer to the applicable 
+ -- agreement for further details.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+CHIP  "reservation_station_complete"  ASSIGNED TO AN: EP4CE30F29C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+VCCIO8                       : A2        : power  :                   : 2.5V    : 8         :                
+bch_inst1_out[11]            : A3        : output : 2.5 V             :         : 8         : N              
+bch_inst1_out[28]            : A4        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : A5        : power  :                   : 2.5V    : 8         :                
+instruction2[28]             : A6        : input  : 2.5 V             :         : 8         : N              
+alu_inst1_out[36]            : A7        : output : 2.5 V             :         : 8         : N              
+instruction2[35]             : A8        : input  : 2.5 V             :         : 8         : N              
+VCCIO8                       : A9        : power  :                   : 2.5V    : 8         :                
+instruction2[15]             : A10       : input  : 2.5 V             :         : 8         : N              
+bch_inst1_out[34]            : A11       : output : 2.5 V             :         : 8         : N              
+only_one_bch                 : A12       : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
+broadcast[4][10]             : A14       : input  : 2.5 V             :         : 8         : N              
+broadcast[4][4]              : A15       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
+broadcast[3][9]              : A17       : input  : 2.5 V             :         : 7         : N              
+broadcast[1][17]             : A18       : input  : 2.5 V             :         : 7         : N              
+lst_inst2_out[29]            : A19       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : A20       : power  :                   : 2.5V    : 7         :                
+lst_inst2_out[28]            : A21       : output : 2.5 V             :         : 7         : N              
+alu_inst2_out[12]            : A22       : output : 2.5 V             :         : 7         : N              
+alu_inst2_out[0]             : A23       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : A24       : power  :                   : 2.5V    : 7         :                
+lst_inst1_out[42]            : A25       : output : 2.5 V             :         : 7         : N              
+alu_inst2_out[30]            : A26       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : A27       : power  :                   : 2.5V    : 7         :                
+VCCIO2                       : AA1       : power  :                   : 2.5V    : 2         :                
+GND                          : AA2       : gnd    :                   :         :           :                
+lst_inst1_out[0]             : AA3       : output : 2.5 V             :         : 2         : N              
+bch_inst1_out[55]            : AA4       : output : 2.5 V             :         : 2         : N              
+alu_inst1_out[40]            : AA5       : output : 2.5 V             :         : 2         : N              
+reset                        : AA6       : input  : 2.5 V             :         : 2         : N              
+lst_inst2_out[17]            : AA7       : output : 2.5 V             :         : 2         : N              
+broadcast[4][1]              : AA8       : input  : 2.5 V             :         : 2         : N              
+GNDA1                        : AA9       : gnd    :                   :         :           :                
+bch_inst1_out[16]            : AA10      : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
+instruction2[54]             : AA12      : input  : 2.5 V             :         : 3         : N              
+alu_inst2_out[32]            : AA13      : output : 2.5 V             :         : 3         : N              
+lst_inst2_out[11]            : AA14      : output : 2.5 V             :         : 3         : N              
+alu_inst1_out[4]             : AA15      : output : 2.5 V             :         : 4         : N              
+lst_inst1_out[2]             : AA16      : output : 2.5 V             :         : 4         : N              
+instruction2[38]             : AA17      : input  : 2.5 V             :         : 4         : N              
+VCCIO4                       : AA18      : power  :                   : 2.5V    : 4         :                
+broadcast[4][2]              : AA19      : input  : 2.5 V             :         : 4         : N              
+GNDA4                        : AA20      : gnd    :                   :         :           :                
+broadcast[0][0]              : AA21      : input  : 2.5 V             :         : 5         : N              
+lst_inst1_out[25]            : AA22      : output : 2.5 V             :         : 5         : N              
+instruction1[59]             : AA23      : input  : 2.5 V             :         : 5         : N              
+broadcast[3][21]             : AA24      : input  : 2.5 V             :         : 5         : N              
+lst_inst1_out[31]            : AA25      : output : 2.5 V             :         : 5         : N              
+lst_inst1_out[33]            : AA26      : output : 2.5 V             :         : 5         : N              
+GND                          : AA27      : gnd    :                   :         :           :                
+VCCIO5                       : AA28      : power  :                   : 2.5V    : 5         :                
+instruction1[43]             : AB1       : input  : 2.5 V             :         : 2         : N              
+alu_inst1_out[10]            : AB2       : output : 2.5 V             :         : 2         : N              
+bch_inst1_out[27]            : AB3       : output : 2.5 V             :         : 2         : N              
+instruction2[6]              : AB4       : input  : 2.5 V             :         : 2         : N              
+broadcast[1][3]              : AB5       : input  : 2.5 V             :         : 2         : N              
+alu_inst2_out[39]            : AB6       : output : 2.5 V             :         : 2         : N              
+instruction1[53]             : AB7       : input  : 2.5 V             :         : 2         : N              
+bch_inst1_out[1]             : AB8       : output : 2.5 V             :         : 2         : N              
+bch_inst1_out[33]            : AB9       : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AB10      : power  :                   : 2.5V    : 3         :                
+alu_inst1_out[37]            : AB11      : output : 2.5 V             :         : 3         : N              
+bch_inst1_out[54]            : AB12      : output : 2.5 V             :         : 3         : N              
+lst_inst2_out[23]            : AB13      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB14      :        :                   :         : 3         :                
+broadcast[2][6]              : AB15      : input  : 2.5 V             :         : 4         : N              
+bch_inst1_out[44]            : AB16      : output : 2.5 V             :         : 4         : N              
+lst_inst2_out[3]             : AB17      : output : 2.5 V             :         : 4         : N              
+alu_inst2_out[40]            : AB18      : output : 2.5 V             :         : 4         : N              
+lst_inst2_out[39]            : AB19      : output : 2.5 V             :         : 4         : N              
+instruction1[17]             : AB20      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4         :                
+broadcast[3][12]             : AB22      : input  : 2.5 V             :         : 5         : N              
+broadcast[0][9]              : AB23      : input  : 2.5 V             :         : 5         : N              
+instruction1[26]             : AB24      : input  : 2.5 V             :         : 5         : N              
+lst_inst1_out[8]             : AB25      : output : 2.5 V             :         : 5         : N              
+instruction1[13]             : AB26      : input  : 2.5 V             :         : 5         : N              
+broadcast[4][14]             : AB27      : input  : 2.5 V             :         : 5         : N              
+lst_inst1_out[15]            : AB28      : output : 2.5 V             :         : 5         : N              
+instruction2[52]             : AC1       : input  : 2.5 V             :         : 2         : N              
+alu_inst2_out[35]            : AC2       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC3       :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC4       :        :                   :         : 2         :                
+lst_inst2_out[30]            : AC5       : output : 2.5 V             :         : 2         : N              
+GND                          : AC6       : gnd    :                   :         :           :                
+broadcast[3][8]              : AC7       : input  : 2.5 V             :         : 2         : N              
+lst_inst1_out[4]             : AC8       : output : 2.5 V             :         : 3         : N              
+GND                          : AC9       : gnd    :                   :         :           :                
+alu_inst2_out[22]            : AC10      : output : 2.5 V             :         : 3         : N              
+alu_inst2_out[17]            : AC11      : output : 2.5 V             :         : 3         : N              
+lst_inst2_out[2]             : AC12      : output : 2.5 V             :         : 3         : N              
+GND                          : AC13      : gnd    :                   :         :           :                
+lst_inst1_out[22]            : AC14      : output : 2.5 V             :         : 3         : N              
+broadcast[1][15]             : AC15      : input  : 2.5 V             :         : 4         : N              
+GND                          : AC16      : gnd    :                   :         :           :                
+alu_inst2_out[24]            : AC17      : output : 2.5 V             :         : 4         : N              
+alu_inst1_out[31]            : AC18      : output : 2.5 V             :         : 4         : N              
+instruction1[3]              : AC19      : input  : 2.5 V             :         : 4         : N              
+GND                          : AC20      : gnd    :                   :         :           :                
+lst_inst1_out[40]            : AC21      : output : 2.5 V             :         : 4         : N              
+instruction2[59]             : AC22      : input  : 2.5 V             :         : 4         : N              
+GND                          : AC23      : gnd    :                   :         :           :                
+lst_inst1_out[11]            : AC24      : output : 2.5 V             :         : 5         : N              
+lst_inst2_out[25]            : AC25      : output : 2.5 V             :         : 5         : N              
+instruction1[28]             : AC26      : input  : 2.5 V             :         : 5         : N              
+lst_inst2_out[5]             : AC27      : output : 2.5 V             :         : 5         : N              
+broadcast[4][21]             : AC28      : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD1       :        :                   :         : 2         :                
+alu_inst2_out[3]             : AD2       : output : 2.5 V             :         : 2         : N              
+instruction2[44]             : AD3       : input  : 2.5 V             :         : 2         : N              
+broadcast[2][17]             : AD4       : input  : 2.5 V             :         : 2         : N              
+bch_inst1_out[45]            : AD5       : output : 2.5 V             :         : 2         : N              
+VCCIO3                       : AD6       : power  :                   : 2.5V    : 3         :                
+bch_inst1_out[41]            : AD7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 3         :                
+VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
+broadcast[4][16]             : AD10      : input  : 2.5 V             :         : 3         : N              
+alu_inst2_out[43]            : AD11      : output : 2.5 V             :         : 3         : N              
+broadcast[0][2]              : AD12      : input  : 2.5 V             :         : 3         : N              
+VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
+instruction2[3]              : AD14      : input  : 2.5 V             :         : 3         : N              
+bch_inst1_out[30]            : AD15      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
+bch_inst1_out[35]            : AD17      : output : 2.5 V             :         : 4         : N              
+broadcast[1][13]             : AD18      : input  : 2.5 V             :         : 4         : N              
+alu_inst1_out[7]             : AD19      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
+instruction2[34]             : AD21      : input  : 2.5 V             :         : 4         : N              
+instruction1[0]              : AD22      : input  : 2.5 V             :         : 4         : N              
+VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD24      :        :                   :         : 5         :                
+alu_inst1_out[23]            : AD25      : output : 2.5 V             :         : 5         : N              
+broadcast[4][0]              : AD26      : input  : 2.5 V             :         : 5         : N              
+instruction2[57]             : AD27      : input  : 2.5 V             :         : 5         : N              
+lst_inst1_out[20]            : AD28      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE1       :        :                   :         : 2         :                
+broadcast[1][5]              : AE2       : input  : 2.5 V             :         : 2         : N              
+broadcast[1][14]             : AE3       : input  : 2.5 V             :         : 2         : N              
+alu_inst1_out[15]            : AE4       : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE5       :        :                   :         : 3         :                
+alu_inst2_out[15]            : AE6       : output : 2.5 V             :         : 3         : N              
+alu_inst2_out[28]            : AE7       : output : 2.5 V             :         : 3         : N              
+broadcast[3][20]             : AE8       : input  : 2.5 V             :         : 3         : N              
+alu_inst2_out[20]            : AE9       : output : 2.5 V             :         : 3         : N              
+lst_inst2_out[27]            : AE10      : output : 2.5 V             :         : 3         : N              
+alu_inst2_out[23]            : AE11      : output : 2.5 V             :         : 3         : N              
+alu_inst1_out[35]            : AE12      : output : 2.5 V             :         : 3         : N              
+instruction1[45]             : AE13      : input  : 2.5 V             :         : 3         : N              
+bch_inst1_out[42]            : AE14      : output : 2.5 V             :         : 3         : N              
+bch_inst1_out[31]            : AE15      : output : 2.5 V             :         : 4         : N              
+instruction1[37]             : AE16      : input  : 2.5 V             :         : 4         : N              
+bch_inst1_out[56]            : AE17      : output : 2.5 V             :         : 4         : N              
+instruction2[13]             : AE18      : input  : 2.5 V             :         : 4         : N              
+broadcast[1][8]              : AE19      : input  : 2.5 V             :         : 4         : N              
+instruction2[56]             : AE20      : input  : 2.5 V             :         : 4         : N              
+alu_inst1_out[14]            : AE21      : output : 2.5 V             :         : 4         : N              
+alu_inst2_out[36]            : AE22      : output : 2.5 V             :         : 4         : N              
+alu_inst1_out[20]            : AE23      : output : 2.5 V             :         : 4         : N              
+instruction2[8]              : AE24      : input  : 2.5 V             :         : 4         : N              
+lst_inst1_out[35]            : AE25      : output : 2.5 V             :         : 4         : N              
+instruction1[39]             : AE26      : input  : 2.5 V             :         : 5         : N              
+alu_inst1_out[11]            : AE27      : output : 2.5 V             :         : 5         : N              
+broadcast[2][12]             : AE28      : input  : 2.5 V             :         : 5         : N              
+GND                          : AF1       : gnd    :                   :         :           :                
+only_one_lst                 : AF2       : output : 2.5 V             :         : 2         : N              
+instruction1[10]             : AF3       : input  : 2.5 V             :         : 2         : N              
+instruction1[58]             : AF4       : input  : 2.5 V             :         : 3         : N              
+broadcast[0][17]             : AF5       : input  : 2.5 V             :         : 3         : N              
+alu_inst2_out[16]            : AF6       : output : 2.5 V             :         : 3         : N              
+alu_inst1_out[2]             : AF7       : output : 2.5 V             :         : 3         : N              
+broadcast[3][5]              : AF8       : input  : 2.5 V             :         : 3         : N              
+instruction2[9]              : AF9       : input  : 2.5 V             :         : 3         : N              
+instruction1[5]              : AF10      : input  : 2.5 V             :         : 3         : N              
+broadcast[2][16]             : AF11      : input  : 2.5 V             :         : 3         : N              
+instruction1[51]             : AF12      : input  : 2.5 V             :         : 3         : N              
+instruction1[29]             : AF13      : input  : 2.5 V             :         : 3         : N              
+alu_inst1_out[19]            : AF14      : output : 2.5 V             :         : 3         : N              
+broadcast[0][16]             : AF15      : input  : 2.5 V             :         : 4         : N              
+instruction1[8]              : AF16      : input  : 2.5 V             :         : 4         : N              
+instruction2[14]             : AF17      : input  : 2.5 V             :         : 4         : N              
+lst_inst2_out[4]             : AF18      : output : 2.5 V             :         : 4         : N              
+broadcast[2][19]             : AF19      : input  : 2.5 V             :         : 4         : N              
+instruction1[20]             : AF20      : input  : 2.5 V             :         : 4         : N              
+alu_inst1_out[3]             : AF21      : output : 2.5 V             :         : 4         : N              
+bch_inst1_out[19]            : AF22      : output : 2.5 V             :         : 4         : N              
+alu_inst2_out[13]            : AF23      : output : 2.5 V             :         : 4         : N              
+alu_inst1_out[29]            : AF24      : output : 2.5 V             :         : 4         : N              
+instruction2[11]             : AF25      : input  : 2.5 V             :         : 4         : N              
+broadcast[4][17]             : AF26      : input  : 2.5 V             :         : 4         : N              
+broadcast[0][8]              : AF27      : input  : 2.5 V             :         : 5         : N              
+GND                          : AF28      : gnd    :                   :         :           :                
+VCCIO2                       : AG1       : power  :                   : 2.5V    : 2         :                
+GND                          : AG2       : gnd    :                   :         :           :                
+alu_inst1_out[9]             : AG3       : output : 2.5 V             :         : 3         : N              
+instruction1[31]             : AG4       : input  : 2.5 V             :         : 3         : N              
+GND                          : AG5       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG6       :        :                   :         : 3         :                
+bch_inst1_out[24]            : AG7       : output : 2.5 V             :         : 3         : N              
+instruction1[7]              : AG8       : input  : 2.5 V             :         : 3         : N              
+GND                          : AG9       : gnd    :                   :         :           :                
+lst_inst2_out[34]            : AG10      : output : 2.5 V             :         : 3         : N              
+lst_inst2_out[13]            : AG11      : output : 2.5 V             :         : 3         : N              
+alu_inst2_out[10]            : AG12      : output : 2.5 V             :         : 3         : N              
+GND                          : AG13      : gnd    :                   :         :           :                
+GND+                         : AG14      :        :                   :         : 3         :                
+GND+                         : AG15      :        :                   :         : 4         :                
+GND                          : AG16      : gnd    :                   :         :           :                
+instruction1[38]             : AG17      : input  : 2.5 V             :         : 4         : N              
+lst_inst2_out[12]            : AG18      : output : 2.5 V             :         : 4         : N              
+instruction1[55]             : AG19      : input  : 2.5 V             :         : 4         : N              
+GND                          : AG20      : gnd    :                   :         :           :                
+alu_inst1_out[8]             : AG21      : output : 2.5 V             :         : 4         : N              
+instruction1[24]             : AG22      : input  : 2.5 V             :         : 4         : N              
+instruction1[32]             : AG23      : input  : 2.5 V             :         : 4         : N              
+GND                          : AG24      : gnd    :                   :         :           :                
+broadcast[2][4]              : AG25      : input  : 2.5 V             :         : 4         : N              
+bch_inst1_out[29]            : AG26      : output : 2.5 V             :         : 4         : N              
+GND                          : AG27      : gnd    :                   :         :           :                
+VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
+VCCIO3                       : AH2       : power  :                   : 2.5V    : 3         :                
+alu_inst1_out[38]            : AH3       : output : 2.5 V             :         : 3         : N              
+instruction1[12]             : AH4       : input  : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH5       : power  :                   : 2.5V    : 3         :                
+lst_inst2_out[18]            : AH6       : output : 2.5 V             :         : 3         : N              
+broadcast[4][15]             : AH7       : input  : 2.5 V             :         : 3         : N              
+alu_inst2_out[19]            : AH8       : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
+bch_inst1_out[36]            : AH10      : output : 2.5 V             :         : 3         : N              
+lst_inst1_out[13]            : AH11      : output : 2.5 V             :         : 3         : N              
+alu_inst1_out[27]            : AH12      : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
+GND+                         : AH14      :        :                   :         : 3         :                
+GND+                         : AH15      :        :                   :         : 4         :                
+VCCIO4                       : AH16      : power  :                   : 2.5V    : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH17      :        :                   :         : 4         :                
+lst_inst2_out[26]            : AH18      : output : 2.5 V             :         : 4         : N              
+lst_inst1_out[7]             : AH19      : output : 2.5 V             :         : 4         : N              
+VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
+bch_inst1_out[4]             : AH21      : output : 2.5 V             :         : 4         : N              
+instruction2[43]             : AH22      : input  : 2.5 V             :         : 4         : N              
+broadcast[2][10]             : AH23      : input  : 2.5 V             :         : 4         : N              
+VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
+broadcast[1][9]              : AH25      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4         :                
+VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
+VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
+GND                          : B2        : gnd    :                   :         :           :                
+broadcast[2][1]              : B3        : input  : 2.5 V             :         : 8         : N              
+bch_inst1_out[32]            : B4        : output : 2.5 V             :         : 8         : N              
+GND                          : B5        : gnd    :                   :         :           :                
+broadcast[1][6]              : B6        : input  : 2.5 V             :         : 8         : N              
+instruction1[60]             : B7        : input  : 2.5 V             :         : 8         : N              
+lst_inst2_out[42]            : B8        : output : 2.5 V             :         : 8         : N              
+GND                          : B9        : gnd    :                   :         :           :                
+alu_inst1_out[34]            : B10       : output : 2.5 V             :         : 8         : N              
+bch_inst1_out[6]             : B11       : output : 2.5 V             :         : 8         : N              
+GND                          : B12       : gnd    :                   :         :           :                
+GND                          : B13       : gnd    :                   :         :           :                
+broadcast[4][11]             : B14       : input  : 2.5 V             :         : 8         : N              
+broadcast[4][5]              : B15       : input  : 2.5 V             :         : 7         : N              
+GND                          : B16       : gnd    :                   :         :           :                
+broadcast[3][10]             : B17       : input  : 2.5 V             :         : 7         : N              
+bch_inst1_out[8]             : B18       : output : 2.5 V             :         : 7         : N              
+broadcast[2][14]             : B19       : input  : 2.5 V             :         : 7         : N              
+GND                          : B20       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 7         :                
+instruction1[50]             : B22       : input  : 2.5 V             :         : 7         : N              
+instruction2[12]             : B23       : input  : 2.5 V             :         : 7         : N              
+GND                          : B24       : gnd    :                   :         :           :                
+lst_inst2_out[37]            : B25       : output : 2.5 V             :         : 7         : N              
+instruction2[48]             : B26       : input  : 2.5 V             :         : 7         : N              
+GND                          : B27       : gnd    :                   :         :           :                
+VCCIO6                       : B28       : power  :                   : 2.5V    : 6         :                
+GND                          : C1        : gnd    :                   :         :           :                
+bch_inst1_out[39]            : C2        : output : 2.5 V             :         : 1         : N              
+instruction2[33]             : C3        : input  : 2.5 V             :         : 8         : N              
+lst_inst1_out[32]            : C4        : output : 2.5 V             :         : 8         : N              
+alu_inst1_out[32]            : C5        : output : 2.5 V             :         : 8         : N              
+instruction1[11]             : C6        : input  : 2.5 V             :         : 8         : N              
+instruction2[29]             : C7        : input  : 2.5 V             :         : 8         : N              
+instruction1[2]              : C8        : input  : 2.5 V             :         : 8         : N              
+alu_inst2_out[37]            : C9        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 8         :                
+lst_inst2_out[0]             : C11       : output : 2.5 V             :         : 8         : N              
+instruction2[23]             : C12       : input  : 2.5 V             :         : 8         : N              
+broadcast[4][9]              : C13       : input  : 2.5 V             :         : 8         : N              
+instruction1[18]             : C14       : input  : 2.5 V             :         : 8         : N              
+instruction1[46]             : C15       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
+alu_inst1_out[0]             : C17       : output : 2.5 V             :         : 7         : N              
+broadcast[0][14]             : C18       : input  : 2.5 V             :         : 7         : N              
+broadcast[3][7]              : C19       : input  : 2.5 V             :         : 7         : N              
+bch_inst1_out[52]            : C20       : output : 2.5 V             :         : 7         : N              
+bch_inst1_out[3]             : C21       : output : 2.5 V             :         : 7         : N              
+broadcast[3][19]             : C22       : input  : 2.5 V             :         : 7         : N              
+alu_inst2_out[26]            : C23       : output : 2.5 V             :         : 7         : N              
+broadcast[4][18]             : C24       : input  : 2.5 V             :         : 7         : N              
+instruction2[39]             : C25       : input  : 2.5 V             :         : 7         : N              
+lst_inst1_out[28]            : C26       : output : 2.5 V             :         : 6         : N              
+instruction1[22]             : C27       : input  : 2.5 V             :         : 6         : N              
+GND                          : C28       : gnd    :                   :         :           :                
+bch_inst1_out[58]            : D1        : output : 2.5 V             :         : 1         : N              
+broadcast[2][0]              : D2        : input  : 2.5 V             :         : 1         : N              
+GND                          : D3        : gnd    :                   :         :           :                
+instruction2[62]             : D4        : input  : 2.5 V             :         : 8         : N              
+alu_inst1_out[13]            : D5        : output : 2.5 V             :         : 8         : N              
+alu_inst2_out[2]             : D6        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8         :                
+instruction2[17]             : D8        : input  : 2.5 V             :         : 8         : N              
+lst_inst1_out[6]             : D9        : output : 2.5 V             :         : 8         : N              
+alu_inst2_out[27]            : D10       : output : 2.5 V             :         : 8         : N              
+instruction1[25]             : D11       : input  : 2.5 V             :         : 8         : N              
+broadcast[3][16]             : D12       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 8         :                
+broadcast[1][21]             : D14       : input  : 2.5 V             :         : 8         : N              
+lst_inst2_out[24]            : D15       : output : 2.5 V             :         : 7         : N              
+instruction2[18]             : D16       : input  : 2.5 V             :         : 7         : N              
+broadcast[2][3]              : D17       : input  : 2.5 V             :         : 7         : N              
+lst_inst1_out[14]            : D18       : output : 2.5 V             :         : 7         : N              
+lst_inst2_out[1]             : D19       : output : 2.5 V             :         : 7         : N              
+bch_inst1_out[48]            : D20       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 7         :                
+bch_inst1_out[5]             : D22       : output : 2.5 V             :         : 7         : N              
+broadcast[2][2]              : D23       : input  : 2.5 V             :         : 7         : N              
+bch_inst1_out[18]            : D24       : output : 2.5 V             :         : 6         : N              
+instruction2[24]             : D25       : input  : 2.5 V             :         : 6         : N              
+lst_inst1_out[29]            : D26       : output : 2.5 V             :         : 6         : N              
+alu_inst1_out[26]            : D27       : output : 2.5 V             :         : 6         : N              
+alu_inst2_out[38]            : D28       : output : 2.5 V             :         : 6         : N              
+instruction2[40]             : E1        : input  : 2.5 V             :         : 1         : N              
+~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
+instruction2[2]              : E3        : input  : 2.5 V             :         : 1         : N              
+instruction2[51]             : E4        : input  : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 1         :                
+VCCIO8                       : E6        : power  :                   : 2.5V    : 8         :                
+instruction2[19]             : E7        : input  : 2.5 V             :         : 8         : N              
+lst_inst2_out[7]             : E8        : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : E9        : power  :                   : 2.5V    : 8         :                
+alu_inst1_out[43]            : E10       : output : 2.5 V             :         : 8         : N              
+broadcast[1][20]             : E11       : input  : 2.5 V             :         : 8         : N              
+instruction2[27]             : E12       : input  : 2.5 V             :         : 8         : N              
+VCCIO8                       : E13       : power  :                   : 2.5V    : 8         :                
+lst_inst1_out[12]            : E14       : output : 2.5 V             :         : 8         : N              
+clk                          : E15       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : E16       : power  :                   : 2.5V    : 7         :                
+alu_inst2_out[21]            : E17       : output : 2.5 V             :         : 7         : N              
+lst_inst1_out[23]            : E18       : output : 2.5 V             :         : 7         : N              
+bch_inst1_out[12]            : E19       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : E20       : power  :                   : 2.5V    : 7         :                
+lst_inst2_out[14]            : E21       : output : 2.5 V             :         : 7         : N              
+bch_inst1_out[0]             : E22       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : E23       : power  :                   : 2.5V    : 7         :                
+broadcast[1][4]              : E24       : input  : 2.5 V             :         : 6         : N              
+broadcast[1][12]             : E25       : input  : 2.5 V             :         : 6         : N              
+broadcast[0][3]              : E26       : input  : 2.5 V             :         : 6         : N              
+bch_inst1_out[10]            : E27       : output : 2.5 V             :         : 6         : N              
+broadcast[1][16]             : E28       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
+broadcast[3][13]             : F2        : input  : 2.5 V             :         : 1         : N              
+instruction1[40]             : F3        : input  : 2.5 V             :         : 1         : N              
+~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 2.5 V             :         : 1         : N              
+lst_inst2_out[22]            : F5        : output : 2.5 V             :         : 1         : N              
+GND                          : F6        : gnd    :                   :         :           :                
+broadcast[3][14]             : F7        : input  : 2.5 V             :         : 8         : N              
+instruction1[56]             : F8        : input  : 2.5 V             :         : 8         : N              
+GND                          : F9        : gnd    :                   :         :           :                
+instruction2[50]             : F10       : input  : 2.5 V             :         : 8         : N              
+instruction2[31]             : F11       : input  : 2.5 V             :         : 8         : N              
+bch_inst1_out[49]            : F12       : output : 2.5 V             :         : 8         : N              
+GND                          : F13       : gnd    :                   :         :           :                
+lst_inst1_out[37]            : F14       : output : 2.5 V             :         : 8         : N              
+broadcast[2][13]             : F15       : input  : 2.5 V             :         : 7         : N              
+GND                          : F16       : gnd    :                   :         :           :                
+lst_inst2_out[33]            : F17       : output : 2.5 V             :         : 7         : N              
+lst_inst2_out[31]            : F18       : output : 2.5 V             :         : 7         : N              
+alu_inst2_out[5]             : F19       : output : 2.5 V             :         : 7         : N              
+GND                          : F20       : gnd    :                   :         :           :                
+instruction2[26]             : F21       : input  : 2.5 V             :         : 7         : N              
+bch_inst1_out[20]            : F22       : output : 2.5 V             :         : 7         : N              
+GND                          : F23       : gnd    :                   :         :           :                
+instruction2[61]             : F24       : input  : 2.5 V             :         : 6         : N              
+broadcast[0][12]             : F25       : input  : 2.5 V             :         : 6         : N              
+bch_inst1_out[51]            : F26       : output : 2.5 V             :         : 6         : N              
+bch_inst1_out[23]            : F27       : output : 2.5 V             :         : 6         : N              
+instruction2[25]             : F28       : input  : 2.5 V             :         : 6         : N              
+bch_inst1_out[22]            : G1        : output : 2.5 V             :         : 1         : N              
+broadcast[1][1]              : G2        : input  : 2.5 V             :         : 1         : N              
+alu_inst1_out[17]            : G3        : output : 2.5 V             :         : 1         : N              
+broadcast[0][18]             : G4        : input  : 2.5 V             :         : 1         : N              
+instruction1[62]             : G5        : input  : 2.5 V             :         : 1         : N              
+lst_inst2_out[16]            : G6        : output : 2.5 V             :         : 1         : N              
+instruction2[45]             : G7        : input  : 2.5 V             :         : 1         : N              
+alu_inst2_out[31]            : G8        : output : 2.5 V             :         : 8         : N              
+alu_inst1_out[1]             : G9        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8         :                
+lst_inst1_out[21]            : G11       : output : 2.5 V             :         : 8         : N              
+broadcast[1][0]              : G12       : input  : 2.5 V             :         : 8         : N              
+lst_inst2_out[21]            : G13       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G14       :        :                   :         : 8         :                
+lst_inst2_out[8]             : G15       : output : 2.5 V             :         : 7         : N              
+lst_inst1_out[3]             : G16       : output : 2.5 V             :         : 7         : N              
+broadcast[0][6]              : G17       : input  : 2.5 V             :         : 7         : N              
+instruction2[4]              : G18       : input  : 2.5 V             :         : 7         : N              
+alu_inst1_out[18]            : G19       : output : 2.5 V             :         : 7         : N              
+alu_inst1_out[6]             : G20       : output : 2.5 V             :         : 7         : N              
+instruction2[20]             : G21       : input  : 2.5 V             :         : 7         : N              
+lst_inst2_out[35]            : G22       : output : 2.5 V             :         : 6         : N              
+instruction1[33]             : G23       : input  : 2.5 V             :         : 6         : N              
+alu_inst1_out[33]            : G24       : output : 2.5 V             :         : 6         : N              
+instruction2[32]             : G25       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G26       :        :                   :         : 6         :                
+broadcast[2][5]              : G27       : input  : 2.5 V             :         : 6         : N              
+alu_inst1_out[28]            : G28       : output : 2.5 V             :         : 6         : N              
+VCCIO1                       : H1        : power  :                   : 2.5V    : 1         :                
+GND                          : H2        : gnd    :                   :         :           :                
+lst_inst2_out[41]            : H3        : output : 2.5 V             :         : 1         : N              
+lst_inst1_out[39]            : H4        : output : 2.5 V             :         : 1         : N              
+lst_inst2_out[15]            : H5        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H6        :        :                   :         : 1         :                
+lst_inst2_out[40]            : H7        : output : 2.5 V             :         : 1         : N              
+bch_inst1_out[47]            : H8        : output : 2.5 V             :         : 8         : N              
+GNDA3                        : H9        : gnd    :                   :         :           :                
+alu_inst1_out[22]            : H10       : output : 2.5 V             :         : 8         : N              
+VCCIO8                       : H11       : power  :                   : 2.5V    : 8         :                
+alu_inst2_out[42]            : H12       : output : 2.5 V             :         : 8         : N              
+broadcast[3][3]              : H13       : input  : 2.5 V             :         : 8         : N              
+lst_inst1_out[10]            : H14       : output : 2.5 V             :         : 7         : N              
+lst_inst2_out[38]            : H15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 7         :                
+instruction2[36]             : H17       : input  : 2.5 V             :         : 7         : N              
+VCCIO7                       : H18       : power  :                   : 2.5V    : 7         :                
+instruction1[57]             : H19       : input  : 2.5 V             :         : 7         : N              
+GNDA2                        : H20       : gnd    :                   :         :           :                
+lst_inst1_out[36]            : H21       : output : 2.5 V             :         : 6         : N              
+instruction1[44]             : H22       : input  : 2.5 V             :         : 6         : N              
+broadcast[0][21]             : H23       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H24       :        :                   :         : 6         :                
+broadcast[4][20]             : H25       : input  : 2.5 V             :         : 6         : N              
+broadcast[3][15]             : H26       : input  : 2.5 V             :         : 6         : N              
+GND                          : H27       : gnd    :                   :         :           :                
+VCCIO6                       : H28       : power  :                   : 2.5V    : 6         :                
+GND+                         : J1        :        :                   :         : 1         :                
+GND                          : J2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1         :                
+instruction1[6]              : J4        : input  : 2.5 V             :         : 1         : N              
+instruction2[37]             : J5        : input  : 2.5 V             :         : 1         : N              
+lst_inst1_out[5]             : J6        : output : 2.5 V             :         : 1         : N              
+instruction1[41]             : J7        : input  : 2.5 V             :         : 1         : N              
+VCCA3                        : J8        : power  :                   : 2.5V    :           :                
+VCCD_PLL3                    : J9        : power  :                   : 1.2V    :           :                
+lst_inst2_out[9]             : J10       : output : 2.5 V             :         : 8         : N              
+GND                          : J11       : gnd    :                   :         :           :                
+broadcast[2][15]             : J12       : input  : 2.5 V             :         : 8         : N              
+VCCIO8                       : J13       : power  :                   : 2.5V    : 8         :                
+alu_inst1_out[24]            : J14       : output : 2.5 V             :         : 7         : N              
+VCCIO7                       : J15       : power  :                   : 2.5V    : 7         :                
+alu_inst1_out[5]             : J16       : output : 2.5 V             :         : 7         : N              
+alu_inst2_out[1]             : J17       : output : 2.5 V             :         : 7         : N              
+GND                          : J18       : gnd    :                   :         :           :                
+instruction2[21]             : J19       : input  : 2.5 V             :         : 7         : N              
+VCCD_PLL2                    : J20       : power  :                   : 1.2V    :           :                
+VCCA2                        : J21       : power  :                   : 2.5V    :           :                
+alu_inst2_out[33]            : J22       : output : 2.5 V             :         : 6         : N              
+instruction1[21]             : J23       : input  : 2.5 V             :         : 6         : N              
+instruction1[35]             : J24       : input  : 2.5 V             :         : 6         : N              
+broadcast[0][19]             : J25       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J26       :        :                   :         : 6         :                
+broadcast[1][11]             : J27       : input  : 2.5 V             :         : 6         : N              
+broadcast[1][10]             : J28       : input  : 2.5 V             :         : 6         : N              
+broadcast[4][13]             : K1        : input  : 2.5 V             :         : 1         : N              
+lst_inst2_out[10]            : K2        : output : 2.5 V             :         : 1         : N              
+alu_inst2_out[7]             : K3        : output : 2.5 V             :         : 1         : N              
+instruction1[52]             : K4        : input  : 2.5 V             :         : 1         : N              
+VCCIO1                       : K5        : power  :                   : 2.5V    : 1         :                
+GND                          : K6        : gnd    :                   :         :           :                
+instruction1[42]             : K7        : input  : 2.5 V             :         : 1         : N              
+VCCIO1                       : K8        : power  :                   : 2.5V    : 1         :                
+VCCINT                       : K9        : power  :                   : 1.2V    :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+VCCINT                       : K11       : power  :                   : 1.2V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+broadcast[3][6]              : K13       : input  : 2.5 V             :         : 8         : N              
+GND                          : K14       : gnd    :                   :         :           :                
+lst_inst1_out[1]             : K15       : output : 2.5 V             :         : 7         : N              
+GND                          : K16       : gnd    :                   :         :           :                
+VCCINT                       : K17       : power  :                   : 1.2V    :           :                
+GND                          : K18       : gnd    :                   :         :           :                
+VCCINT                       : K19       : power  :                   : 1.2V    :           :                
+GND                          : K20       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K21       :        :                   :         : 6         :                
+instruction1[30]             : K22       : input  : 2.5 V             :         : 6         : N              
+GND                          : K23       : gnd    :                   :         :           :                
+VCCIO6                       : K24       : power  :                   : 2.5V    : 6         :                
+broadcast[3][2]              : K25       : input  : 2.5 V             :         : 6         : N              
+lst_inst1_out[19]            : K26       : output : 2.5 V             :         : 6         : N              
+broadcast[4][3]              : K27       : input  : 2.5 V             :         : 6         : N              
+broadcast[3][18]             : K28       : input  : 2.5 V             :         : 6         : N              
+lst_inst2_out[20]            : L1        : output : 2.5 V             :         : 1         : N              
+lst_inst1_out[41]            : L2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 1         :                
+bch_inst1_out[13]            : L5        : output : 2.5 V             :         : 1         : N              
+broadcast[2][7]              : L6        : input  : 2.5 V             :         : 1         : N              
+lst_inst1_out[30]            : L7        : output : 2.5 V             :         : 1         : N              
+broadcast[2][11]             : L8        : input  : 2.5 V             :         : 1         : N              
+GND                          : L9        : gnd    :                   :         :           :                
+VCCINT                       : L10       : power  :                   : 1.2V    :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+VCCINT                       : L12       : power  :                   : 1.2V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCCINT                       : L14       : power  :                   : 1.2V    :           :                
+GND                          : L15       : gnd    :                   :         :           :                
+VCCINT                       : L16       : power  :                   : 1.2V    :           :                
+GND                          : L17       : gnd    :                   :         :           :                
+VCCINT                       : L18       : power  :                   : 1.2V    :           :                
+GND                          : L19       : gnd    :                   :         :           :                
+broadcast[0][4]              : L20       : input  : 2.5 V             :         : 6         : N              
+VCCIO6                       : L21       : power  :                   : 2.5V    : 6         :                
+broadcast[0][13]             : L22       : input  : 2.5 V             :         : 6         : N              
+broadcast[0][7]              : L23       : input  : 2.5 V             :         : 6         : N              
+instruction2[47]             : L24       : input  : 2.5 V             :         : 6         : N              
+instruction1[9]              : L25       : input  : 2.5 V             :         : 6         : N              
+bch_inst1_out[2]             : L26       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L27       :        :                   :         : 6         :                
+broadcast[0][5]              : L28       : input  : 2.5 V             :         : 6         : N              
+broadcast[2][9]              : M1        : input  : 2.5 V             :         : 1         : N              
+only_one_alu                 : M2        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 1         :                
+lst_inst1_out[18]            : M4        : output : 2.5 V             :         : 1         : N              
+broadcast[1][19]             : M5        : input  : 2.5 V             :         : 1         : N              
+nSTATUS                      : M6        :        :                   :         : 1         :                
+instruction1[19]             : M7        : input  : 2.5 V             :         : 1         : N              
+instruction2[41]             : M8        : input  : 2.5 V             :         : 1         : N              
+bch_inst1_out[7]             : M9        : output : 2.5 V             :         : 1         : N              
+GND                          : M10       : gnd    :                   :         :           :                
+VCCINT                       : M11       : power  :                   : 1.2V    :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+VCCINT                       : M13       : power  :                   : 1.2V    :           :                
+GND                          : M14       : gnd    :                   :         :           :                
+VCCINT                       : M15       : power  :                   : 1.2V    :           :                
+GND                          : M16       : gnd    :                   :         :           :                
+VCCINT                       : M17       : power  :                   : 1.2V    :           :                
+GND                          : M18       : gnd    :                   :         :           :                
+VCCINT                       : M19       : power  :                   : 1.2V    :           :                
+GND                          : M20       : gnd    :                   :         :           :                
+instruction2[46]             : M21       : input  : 2.5 V             :         : 6         : N              
+MSEL2                        : M22       :        :                   :         : 6         :                
+alu_inst2_out[6]             : M23       : output : 2.5 V             :         : 6         : N              
+broadcast[1][7]              : M24       : input  : 2.5 V             :         : 6         : N              
+bch_inst1_out[37]            : M25       : output : 2.5 V             :         : 6         : N              
+instruction2[55]             : M26       : input  : 2.5 V             :         : 6         : N              
+bch_inst1_out[46]            : M27       : output : 2.5 V             :         : 6         : N              
+alu_inst2_out[41]            : M28       : output : 2.5 V             :         : 6         : N              
+VCCIO1                       : N1        : power  :                   : 2.5V    : 1         :                
+GND                          : N2        : gnd    :                   :         :           :                
+bch_inst1_out[21]            : N3        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :         : 1         :                
+VCCIO1                       : N5        : power  :                   : 2.5V    : 1         :                
+GND                          : N6        : gnd    :                   :         :           :                
+~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : N7        : input  : 2.5 V             :         : 1         : N              
+bch_inst1_out[43]            : N8        : output : 2.5 V             :         : 1         : N              
+GND                          : N9        : gnd    :                   :         :           :                
+VCCINT                       : N10       : power  :                   : 1.2V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+VCCINT                       : N12       : power  :                   : 1.2V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCCINT                       : N14       : power  :                   : 1.2V    :           :                
+GND                          : N15       : gnd    :                   :         :           :                
+VCCINT                       : N16       : power  :                   : 1.2V    :           :                
+GND                          : N17       : gnd    :                   :         :           :                
+VCCINT                       : N18       : power  :                   : 1.2V    :           :                
+GND                          : N19       : gnd    :                   :         :           :                
+VCCINT                       : N20       : power  :                   : 1.2V    :           :                
+broadcast[4][12]             : N21       : input  : 2.5 V             :         : 6         : N              
+MSEL0                        : N22       :        :                   :         : 6         :                
+GND                          : N23       : gnd    :                   :         :           :                
+VCCIO6                       : N24       : power  :                   : 2.5V    : 6         :                
+alu_inst1_out[25]            : N25       : output : 2.5 V             :         : 6         : N              
+alu_inst1_out[30]            : N26       : output : 2.5 V             :         : 6         : N              
+GND                          : N27       : gnd    :                   :         :           :                
+VCCIO6                       : N28       : power  :                   : 2.5V    : 6         :                
+alu_inst2_out[34]            : P1        : output : 2.5 V             :         : 1         : N              
+alu_inst2_out[29]            : P2        : output : 2.5 V             :         : 1         : N              
+~ALTERA_DCLK~                : P3        : output : 2.5 V             :         : 1         : N              
+nCONFIG                      : P4        :        :                   :         : 1         :                
+TCK                          : P5        : input  :                   :         : 1         :                
+TDO                          : P6        : output :                   :         : 1         :                
+TDI                          : P7        : input  :                   :         : 1         :                
+TMS                          : P8        : input  :                   :         : 1         :                
+VCCINT                       : P9        : power  :                   : 1.2V    :           :                
+GND                          : P10       : gnd    :                   :         :           :                
+VCCINT                       : P11       : power  :                   : 1.2V    :           :                
+GND                          : P12       : gnd    :                   :         :           :                
+VCCINT                       : P13       : power  :                   : 1.2V    :           :                
+GND                          : P14       : gnd    :                   :         :           :                
+VCCINT                       : P15       : power  :                   : 1.2V    :           :                
+GND                          : P16       : gnd    :                   :         :           :                
+VCCINT                       : P17       : power  :                   : 1.2V    :           :                
+GND                          : P18       : gnd    :                   :         :           :                
+VCCINT                       : P19       : power  :                   : 1.2V    :           :                
+GND                          : P20       : gnd    :                   :         :           :                
+broadcast[0][1]              : P21       : input  : 2.5 V             :         : 5         : N              
+MSEL3                        : P22       :        :                   :         : 6         :                
+MSEL1                        : P23       :        :                   :         : 6         :                
+CONF_DONE                    : P24       :        :                   :         : 6         :                
+alu_inst2_out[11]            : P25       : output : 2.5 V             :         : 6         : N              
+lst_inst1_out[24]            : P26       : output : 2.5 V             :         : 6         : N              
+alu_inst2_out[8]             : P27       : output : 2.5 V             :         : 6         : N              
+~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : P28       : output : 2.5 V             :         : 6         : N              
+instruction2[16]             : R1        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
+alu_inst1_out[12]            : R3        : output : 2.5 V             :         : 2         : N              
+alu_inst2_out[14]            : R4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 2         :                
+broadcast[4][7]              : R7        : input  : 2.5 V             :         : 2         : N              
+nCE                          : R8        :        :                   :         : 1         :                
+GND                          : R9        : gnd    :                   :         :           :                
+VCCINT                       : R10       : power  :                   : 1.2V    :           :                
+GND                          : R11       : gnd    :                   :         :           :                
+VCCINT                       : R12       : power  :                   : 1.2V    :           :                
+GND                          : R13       : gnd    :                   :         :           :                
+VCCINT                       : R14       : power  :                   : 1.2V    :           :                
+GND                          : R15       : gnd    :                   :         :           :                
+VCCINT                       : R16       : power  :                   : 1.2V    :           :                
+GND                          : R17       : gnd    :                   :         :           :                
+VCCINT                       : R18       : power  :                   : 1.2V    :           :                
+GND                          : R19       : gnd    :                   :         :           :                
+VCCINT                       : R20       : power  :                   : 1.2V    :           :                
+broadcast[3][17]             : R21       : input  : 2.5 V             :         : 5         : N              
+instruction2[58]             : R22       : input  : 2.5 V             :         : 5         : N              
+alu_inst2_out[18]            : R23       : output : 2.5 V             :         : 5         : N              
+instruction2[5]              : R24       : input  : 2.5 V             :         : 5         : N              
+instruction1[23]             : R25       : input  : 2.5 V             :         : 5         : N              
+alu_inst1_out[21]            : R26       : output : 2.5 V             :         : 5         : N              
+instruction1[14]             : R27       : input  : 2.5 V             :         : 5         : N              
+instruction1[1]              : R28       : input  : 2.5 V             :         : 5         : N              
+VCCIO2                       : T1        : power  :                   : 2.5V    : 2         :                
+GND                          : T2        : gnd    :                   :         :           :                
+alu_inst1_out[41]            : T3        : output : 2.5 V             :         : 2         : N              
+broadcast[0][11]             : T4        : input  : 2.5 V             :         : 2         : N              
+VCCIO2                       : T5        : power  :                   : 2.5V    : 2         :                
+GND                          : T6        : gnd    :                   :         :           :                
+broadcast[0][20]             : T7        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 2         :                
+broadcast[1][2]              : T9        : input  : 2.5 V             :         : 2         : N              
+GND                          : T10       : gnd    :                   :         :           :                
+VCCINT                       : T11       : power  :                   : 1.2V    :           :                
+GND                          : T12       : gnd    :                   :         :           :                
+VCCINT                       : T13       : power  :                   : 1.2V    :           :                
+GND                          : T14       : gnd    :                   :         :           :                
+VCCINT                       : T15       : power  :                   : 1.2V    :           :                
+GND                          : T16       : gnd    :                   :         :           :                
+VCCINT                       : T17       : power  :                   : 1.2V    :           :                
+GND                          : T18       : gnd    :                   :         :           :                
+VCCINT                       : T19       : power  :                   : 1.2V    :           :                
+GND                          : T20       : gnd    :                   :         :           :                
+broadcast[0][10]             : T21       : input  : 2.5 V             :         : 5         : N              
+instruction1[54]             : T22       : input  : 2.5 V             :         : 5         : N              
+GND                          : T23       : gnd    :                   :         :           :                
+VCCIO5                       : T24       : power  :                   : 2.5V    : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T25       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T26       :        :                   :         : 5         :                
+GND                          : T27       : gnd    :                   :         :           :                
+VCCIO5                       : T28       : power  :                   : 2.5V    : 5         :                
+broadcast[4][6]              : U1        : input  : 2.5 V             :         : 2         : N              
+instruction2[60]             : U2        : input  : 2.5 V             :         : 2         : N              
+instruction2[7]              : U3        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
+instruction2[53]             : U5        : input  : 2.5 V             :         : 2         : N              
+instruction2[42]             : U6        : input  : 2.5 V             :         : 2         : N              
+lst_inst2_out[6]             : U7        : output : 2.5 V             :         : 2         : N              
+instruction1[48]             : U8        : input  : 2.5 V             :         : 2         : N              
+GND                          : U9        : gnd    :                   :         :           :                
+VCCINT                       : U10       : power  :                   : 1.2V    :           :                
+GND                          : U11       : gnd    :                   :         :           :                
+VCCINT                       : U12       : power  :                   : 1.2V    :           :                
+GND                          : U13       : gnd    :                   :         :           :                
+VCCINT                       : U14       : power  :                   : 1.2V    :           :                
+GND                          : U15       : gnd    :                   :         :           :                
+VCCINT                       : U16       : power  :                   : 1.2V    :           :                
+GND                          : U17       : gnd    :                   :         :           :                
+VCCINT                       : U18       : power  :                   : 1.2V    :           :                
+GND                          : U19       : gnd    :                   :         :           :                
+broadcast[3][4]              : U20       : input  : 2.5 V             :         : 5         : N              
+VCCIO5                       : U21       : power  :                   : 2.5V    : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U22       :        :                   :         : 5         :                
+instruction2[30]             : U23       : input  : 2.5 V             :         : 5         : N              
+instruction1[16]             : U24       : input  : 2.5 V             :         : 5         : N              
+instruction1[15]             : U25       : input  : 2.5 V             :         : 5         : N              
+instruction1[27]             : U26       : input  : 2.5 V             :         : 5         : N              
+lst_inst1_out[34]            : U27       : output : 2.5 V             :         : 5         : N              
+alu_inst2_out[9]             : U28       : output : 2.5 V             :         : 5         : N              
+bch_inst1_out[50]            : V1        : output : 2.5 V             :         : 2         : N              
+alu_inst1_out[16]            : V2        : output : 2.5 V             :         : 2         : N              
+instruction2[22]             : V3        : input  : 2.5 V             :         : 2         : N              
+bch_inst1_out[38]            : V4        : output : 2.5 V             :         : 2         : N              
+alu_inst2_out[25]            : V5        : output : 2.5 V             :         : 2         : N              
+broadcast[3][0]              : V6        : input  : 2.5 V             :         : 2         : N              
+bch_inst1_out[40]            : V7        : output : 2.5 V             :         : 2         : N              
+broadcast[2][21]             : V8        : input  : 2.5 V             :         : 2         : N              
+bch_inst1_out[26]            : V9        : output : 2.5 V             :         : 2         : N              
+GND                          : V10       : gnd    :                   :         :           :                
+VCCINT                       : V11       : power  :                   : 1.2V    :           :                
+GND                          : V12       : gnd    :                   :         :           :                
+VCCINT                       : V13       : power  :                   : 1.2V    :           :                
+GND                          : V14       : gnd    :                   :         :           :                
+VCCINT                       : V15       : power  :                   : 1.2V    :           :                
+GND                          : V16       : gnd    :                   :         :           :                
+VCCINT                       : V17       : power  :                   : 1.2V    :           :                
+GND                          : V18       : gnd    :                   :         :           :                
+VCCINT                       : V19       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 5         :                
+instruction1[61]             : V21       : input  : 2.5 V             :         : 5         : N              
+instruction1[49]             : V22       : input  : 2.5 V             :         : 5         : N              
+bch_inst1_out[9]             : V23       : output : 2.5 V             :         : 5         : N              
+instruction1[36]             : V24       : input  : 2.5 V             :         : 5         : N              
+bch_inst1_out[17]            : V25       : output : 2.5 V             :         : 5         : N              
+instruction1[47]             : V26       : input  : 2.5 V             :         : 5         : N              
+bch_inst1_out[53]            : V27       : output : 2.5 V             :         : 5         : N              
+broadcast[2][20]             : V28       : input  : 2.5 V             :         : 5         : N              
+lst_inst2_out[19]            : W1        : output : 2.5 V             :         : 2         : N              
+bch_inst1_out[57]            : W2        : output : 2.5 V             :         : 2         : N              
+lst_inst1_out[27]            : W3        : output : 2.5 V             :         : 2         : N              
+broadcast[1][18]             : W4        : input  : 2.5 V             :         : 2         : N              
+VCCIO2                       : W5        : power  :                   : 2.5V    : 2         :                
+GND                          : W6        : gnd    :                   :         :           :                
+VCCIO2                       : W7        : power  :                   : 2.5V    : 2         :                
+broadcast[4][19]             : W8        : input  : 2.5 V             :         : 2         : N              
+broadcast[4][8]              : W9        : input  : 2.5 V             :         : 2         : N              
+lst_inst1_out[17]            : W10       : output : 2.5 V             :         : 3         : N              
+GND                          : W11       : gnd    :                   :         :           :                
+VCCINT                       : W12       : power  :                   : 1.2V    :           :                
+GND                          : W13       : gnd    :                   :         :           :                
+VCCINT                       : W14       : power  :                   : 1.2V    :           :                
+GND                          : W15       : gnd    :                   :         :           :                
+bch_inst1_out[14]            : W16       : output : 2.5 V             :         : 4         : N              
+GND                          : W17       : gnd    :                   :         :           :                
+VCCINT                       : W18       : power  :                   : 1.2V    :           :                
+GND                          : W19       : gnd    :                   :         :           :                
+instruction1[4]              : W20       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W21       :        :                   :         : 5         :                
+lst_inst1_out[16]            : W22       : output : 2.5 V             :         : 5         : N              
+GND                          : W23       : gnd    :                   :         :           :                
+VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
+instruction2[49]             : W25       : input  : 2.5 V             :         : 5         : N              
+lst_inst1_out[38]            : W26       : output : 2.5 V             :         : 5         : N              
+instruction2[10]             : W27       : input  : 2.5 V             :         : 5         : N              
+bch_inst1_out[25]            : W28       : output : 2.5 V             :         : 5         : N              
+GND+                         : Y1        :        :                   :         : 2         :                
+GND+                         : Y2        :        :                   :         : 2         :                
+lst_inst2_out[32]            : Y3        : output : 2.5 V             :         : 2         : N              
+lst_inst1_out[9]             : Y4        : output : 2.5 V             :         : 2         : N              
+broadcast[3][11]             : Y5        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 2         :                
+VCCA1                        : Y8        : power  :                   : 2.5V    :           :                
+VCCD_PLL1                    : Y9        : power  :                   : 1.2V    :           :                
+alu_inst1_out[39]            : Y10       : output : 2.5 V             :         : 3         : N              
+GND                          : Y11       : gnd    :                   :         :           :                
+broadcast[2][8]              : Y12       : input  : 2.5 V             :         : 3         : N              
+bch_inst1_out[15]            : Y13       : output : 2.5 V             :         : 3         : N              
+broadcast[0][15]             : Y14       : input  : 2.5 V             :         : 3         : N              
+broadcast[2][18]             : Y15       : input  : 2.5 V             :         : 3         : N              
+VCCIO4                       : Y16       : power  :                   : 2.5V    : 4         :                
+broadcast[3][1]              : Y17       : input  : 2.5 V             :         : 4         : N              
+GND                          : Y18       : gnd    :                   :         :           :                
+alu_inst1_out[42]            : Y19       : output : 2.5 V             :         : 4         : N              
+VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
+VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y22       :        :                   :         : 5         :                
+instruction1[34]             : Y23       : input  : 2.5 V             :         : 5         : N              
+lst_inst2_out[36]            : Y24       : output : 2.5 V             :         : 5         : N              
+alu_inst2_out[4]             : Y25       : output : 2.5 V             :         : 5         : N              
+lst_inst1_out[26]            : Y26       : output : 2.5 V             :         : 5         : N              
+instruction2[1]              : Y27       : input  : 2.5 V             :         : 5         : N              
+instruction2[0]              : Y28       : input  : 2.5 V             :         : 5         : N              

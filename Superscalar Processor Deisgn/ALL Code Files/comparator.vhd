@@ -47,6 +47,7 @@ begin
 		end loop;
 		index <= Nindex;
 		valid <= Nvalid;
+		data_out <= (others => (others => '0'));
 	end process;
 
 end Comp;
