@@ -1,6 +1,6 @@
 Analysis & Synthesis report for register_file
-Sun May 28 09:59:54 2017
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Sun May 28 11:05:54 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -389,7 +389,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -409,8 +409,8 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 28 09:59:54 2017       ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Sun May 28 11:05:54 2017       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
 ; Family                             ; Cyclone IV E                                ;
@@ -4515,8 +4515,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun May 28 09:59:39 2017
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Sun May 28 11:05:35 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register_file -c register_file
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/adds.vhd
@@ -4949,9 +4949,9 @@ Info (21057): Implemented 477 device resources after synthesis - the final resou
     Info (21059): Implemented 217 output pins
     Info (21061): Implemented 36 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 388 warnings
-    Info: Peak virtual memory: 677 megabytes
-    Info: Processing ended: Sun May 28 09:59:54 2017
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 680 megabytes
+    Info: Processing ended: Sun May 28 11:05:54 2017
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:36
 
 

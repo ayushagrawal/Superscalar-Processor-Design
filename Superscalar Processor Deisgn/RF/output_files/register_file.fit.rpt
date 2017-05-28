@@ -1,6 +1,6 @@
 Fitter report for register_file
-Sun May 28 10:00:07 2017
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Sun May 28 11:06:09 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -46,7 +46,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -66,8 +66,8 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun May 28 10:00:07 2017       ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Fitter Status                      ; Successful - Sun May 28 11:06:09 2017       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; register_file                               ;
 ; Top-level Entity Name              ; register_file                               ;
 ; Family                             ; Cyclone IV E                                ;
@@ -4029,13 +4029,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/RF/output_files/register_file.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1170 megabytes
-    Info: Processing ended: Sun May 28 10:00:07 2017
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 1171 megabytes
+    Info: Processing ended: Sun May 28 11:06:10 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+

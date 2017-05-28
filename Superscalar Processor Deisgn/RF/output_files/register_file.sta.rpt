@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for register_file
-Sun May 28 10:00:16 2017
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Sun May 28 11:06:19 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -53,7 +53,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -73,7 +73,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------+
 ; TimeQuest Timing Analyzer Summary                                           ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Quartus Prime Version ; Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Timing Analyzer       ; TimeQuest                                           ;
 ; Revision Name         ; register_file                                       ;
 ; Device Family         ; Cyclone IV E                                        ;
@@ -97,7 +97,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -1614,8 +1614,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun May 28 10:00:12 2017
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Sun May 28 11:06:15 2017
 Info: Command: quartus_sta register_file -c register_file
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
@@ -1670,8 +1670,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 662 megabytes
-    Info: Processing ended: Sun May 28 10:00:16 2017
+    Info: Peak virtual memory: 676 megabytes
+    Info: Processing ended: Sun May 28 11:06:19 2017
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 

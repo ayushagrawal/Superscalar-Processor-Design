@@ -8,7 +8,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "inst2_tag[0]",
+					"name" : "inst1_tag[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1_tag[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1_tag[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1_tag[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inst1_tag[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2_tag[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2_tag[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2_tag[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inst2_tag[4]",
 					"strict" : false
 				},
 				{

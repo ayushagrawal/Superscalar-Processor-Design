@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun May 28 09:27:07 2017
-Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Sun May 28 16:08:47 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : ROB
 Top-level Entity Name : ROB
 Family : Cyclone IV E
-Total logic elements : 2
-    Total combinational functions : 1
-    Dedicated logic registers : 1
-Total registers : 1
-Total pins : 241
+Total logic elements : 14
+    Total combinational functions : 14
+    Dedicated logic registers : 5
+Total registers : 5
+Total pins : 245
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
