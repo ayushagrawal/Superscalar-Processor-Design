@@ -75,10 +75,13 @@ package components is
 	component ARF is
 		port(reset : in std_logic;
 			  clk   : in std_logic;
-			  in_sel1: in std_logic_vector(2 downto 0);
+			  
+			  in_sel1 : in std_logic_vector(2 downto 0);
 			  in_sel2 : in std_logic_vector(2 downto 0);
-			  in_sel3: in std_logic_vector(2 downto 0);
+			  in_sel3 : in std_logic_vector(2 downto 0);
 			  in_sel4 : in std_logic_vector(2 downto 0);
+			  
+			  --
 			  input1 : in std_logic_vector(15 downto 0);
 			  input2 : in std_logic_vector(15 downto 0);
 			  input3 : in std_logic_vector(15 downto 0);
@@ -89,20 +92,23 @@ package components is
 			  wren4 : in std_logic;
 			  
 			  validity_in : in main_array(0 to 7)(0 downto 0);
-			  validity_out : out main_array(0 to 7)(0 downto 0);
 			  
 			  val_en_ch : in main_array(0 to 7)(0 downto 0);	-- DEFAULT is '1' ;change to 0 indicate action to be performed
 			  
-			  output1 : out std_logic_vector(15 downto 0);
-			  output2 : out std_logic_vector(15 downto 0);
-			  output3 : out std_logic_vector(15 downto 0);
-			  output4 : out std_logic_vector(15 downto 0);
+			  -- TO THE REGISTER FILE
+			  -- MSB is the validity of the data
+			  output1 : out std_logic_vector(16 downto 0);
+			  output2 : out std_logic_vector(16 downto 0);
+			  output3 : out std_logic_vector(16 downto 0);
+			  output4 : out std_logic_vector(16 downto 0);
+			  
+			  -- FROM REGISTER FILE
 			  osel1	 : in std_logic_vector(2 downto 0);
 			  osel2	 : in std_logic_vector(2 downto 0);
 			  osel3	 : in std_logic_vector(2 downto 0);
 			  osel4	 : in std_logic_vector(2 downto 0));
 		
-	end component;	
+	end component;
 	
 	component branch_predictor is
 		port(pc		: in std_logic_vector(6 downto 0);
@@ -292,7 +298,7 @@ package components is
 	
 	component ROB is
 		generic(N : integer := 32);			-- Represents total number of entries
-		port(	reset 	: in std_logic;
+		port(reset 	: in std_logic;
 				clk	: in std_logic;
 				stall_out : out std_logic;
 				broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
@@ -300,19 +306,16 @@ package components is
 				-- Tag  		= 5  bits (RRF size)
 				-- Validity = 1 bit
 				-- (In the above order) --
-				
-				valid_in : in main_array(0 to N-1)(0 downto 0);
-				valid_out : out main_array(0 to N-1)(0 downto 0);
-				valid_en : in main_array(0 to N-1)(0 downto 0);
 			 
 				-- FROM DECODE
-				 instruction1 : in std_logic_vector(21 downto 0);
-				 instruction2 : in std_logic_vector(21 downto 0);
-				 -- Instruction type 			: 2 bits
-				 -- Register affected 			: 3 bits
+				 instruction1 : in std_logic_vector(22 downto 0);
+				 instruction2 : in std_logic_vector(22 downto 0);
+				 -- If write back					: 1  bit
+				 -- Instruction type 			: 2  bits
+				 -- Register affected 			: 3  bits
 				 -- Data 							: 16 bits
-				 -- Validity of information 	: 1 bit
-				 -- Total							: 22 bits
+				 -- Validity of information 	: 1  bit
+				 -- Total							: 23 bits
 				 
 				 -- TO DECODE
 				 inst1_tag : out std_logic_vector(natural(log2(real(N)))-1 downto 0);
@@ -327,7 +330,9 @@ package components is
 				 -- Data				  : 16 bits
 				 -- validity		  : 1 bit
 			 );
-	end component; 
+			 
+	end component;
+
 	
 	component update_unit is
 		generic(N : integer := 62;				-- DATA LENGTH 

@@ -16,10 +16,6 @@ entity decode is
 		  PC1			: in std_logic_vector(6 downto 0);
 		  PC2			: in std_logic_vector(6 downto 0);
 		  
-		  ------------ FROM REORDER BUFFER -----------
-		  index1 : in std_logic_vector(4 downto 0);
-		  index2 : in std_logic_vector(4 downto 0);
-		  
 		  ------------ FROM WRITE BACK -----------
 		  in_sel1: in std_logic_vector(2 downto 0);
 		  in_sel2 : in std_logic_vector(2 downto 0);
@@ -29,8 +25,8 @@ entity decode is
 		  wren2 : in std_logic;
 		  ----------------------------------------
 		  ------- CALCULATED uOPS RESGITERS ------
-		  REG1	: out std_logic_vector(40 downto 0);
-		  REG2	: out std_logic_vector(40 downto 0));
+		  REG1	: out std_logic_vector(35 downto 0);
+		  REG2	: out std_logic_vector(35 downto 0));
 		  --*** (VALIDITY:OPCODE:ROB-INDEX:WB_REG:REG1:REG2:PC) ***--
 
 end entity;
@@ -45,7 +41,7 @@ architecture DEC of decode is
 	
 	signal not_stall : std_logic;
 	
-	signal reg1_in,reg2_in : std_logic_vector(40 downto 0);
+	signal reg1_in,reg2_in : std_logic_vector(35 downto 0);
 	signal PC_1,PC_2 : std_logic_vector(15 downto 0);
 	
 	signal extra1,extra2 : std_logic_vector(2 downto 0);
@@ -70,9 +66,8 @@ begin
 	------------------------- BAISC ASSIGNMENTS -------------------------
 	--******** (VALIDITY:OPCODE:ROB-INDEX:WB_REG:REG1:REG2:PC) ********--
 	
-	reg1_in(40)				 <= inst1_val;
-	reg1_in(39 downto 36) <= opcode_reduced1;
-	reg1_in(35 downto 31) <= index1;				-- FROM REORDER BUFFER
+	reg1_in(35)				 <= inst1_val;
+	reg1_in(34 downto 31) <= opcode_reduced1;
 	reg1_in(30)				 <= isWB_1;
 	reg1_in(29)				 <= isA_1;
 	reg1_in(28)				 <= isB_1;
@@ -83,9 +78,8 @@ begin
 	reg1_in(15 downto  0) <= PC_1;
 	
 	
-	reg2_in(40)				 <= inst2_val;
-	reg2_in(39 downto 36) <= opcode_reduced2;
-	reg2_in(35 downto 31) <= index2;				-- FROM REORDER BUFFER
+	reg2_in(35)				 <= inst2_val;
+	reg2_in(34 downto 31) <= opcode_reduced2;
 	reg2_in(30)				 <= isWB_2;
 	reg2_in(29)				 <= isA_2;
 	reg2_in(28)				 <= isB_2;
@@ -97,13 +91,13 @@ begin
 	
 	---------------------------------------------------------------------
 	
-	out_reg1 : registers generic map(N => 41) port map(clk => clk,
+	out_reg1 : registers generic map(N => 36) port map(clk => clk,
 																	   reset => reset,
 																	   input => reg1_in,
 																	   output => REG1,
 																	   enable => not_stall);
 	
-	out_reg2 : registers generic map(N => 41) port map(clk => clk,
+	out_reg2 : registers generic map(N => 36) port map(clk => clk,
 																	   reset => reset,
 																	   input => reg2_in,
 																	   output => REG2,
@@ -132,10 +126,10 @@ begin
 			extra1 <= "000";
 			
 		elsif(opcode1 = "0001") then	-- ADI
-			regA_1			 <= inst1(11 downto 9);
-			regB_1			 <= inst1(5 downto 3);
-			regWB_1			 <= inst1(8 downto 6);
-			extra1 			 <= inst1(2 downto 0);
+			regA_1			 <= inst1(11 downto 9);			-- RA is first operand
+			regB_1			 <= inst1(5 downto 3);			-- Immediate
+			regWB_1			 <= inst1(8 downto 6);			-- RB is WB
+			extra1 			 <= inst1(2 downto 0);			-- Immediate
 			isWB_1 			 <= '1';
 			isA_1  <= '1';
 			isB_1  <= '0';
@@ -154,10 +148,10 @@ begin
 			extra1			<= "000";
 			
 		elsif(opcode1 = "0011") then	-- LHI
-			regA_1			 <= inst1(8 downto 6);
-			regB_1			 <= inst1(5 downto 3);
-			regWB_1			 <= inst1(11 downto 9);
-			extra1 			 <= inst1(2 downto 0);
+			regA_1			 <= inst1(8 downto 6);		-- Immediate(2)
+			regB_1			 <= inst1(5 downto 3);		-- Immediate(1)
+			regWB_1			 <= inst1(11 downto 9);		-- RA is WB
+			extra1 			 <= inst1(2 downto 0);		-- Immediate(0)
 			isWB_1 			 <= '1';
 			isA_1  <= '0';
 			isB_1  <= '0';
@@ -176,9 +170,9 @@ begin
 			opcode_reduced1(1 downto 0) <= "01";
 			
 		elsif(opcode1 = "0101") then	-- STORE
-			regA_1			 <= inst1(8 downto 6);		-- RB is first operand
-			regB_1			 <= inst1(5 downto 3);		-- Immediate
-			regWB_1			 <= inst1(11 downto 9);		-- RA is for store
+			regA_1			 <= inst1(11 downto 9);		-- RA is for store
+			regB_1			 <= inst1(8 downto 6);		-- RB is first operand
+			regWB_1			 <= inst1(5 downto 3);		-- Immediate
 			extra1 			 <= inst1(2 downto 0);		-- Immediate
 			isWB_1 			 <= '0';							-- No write back
 			isA_1  <= '1';
@@ -199,9 +193,9 @@ begin
 --			toWrite1v := inst1(5 downto 3);
 			
 		elsif(opcode1 = "1100") then	-- BEQ
-			regA_1			 <= inst1(8 downto 6);		-- RB is second operand
-			regB_1			 <= inst1(5 downto 3);		-- Immediate
-			regWB_1			 <= inst1(11 downto 9);		-- RA is first operand
+			regA_1			 <= inst1(11 downto 9);		-- RA is first operand
+			regB_1			 <= inst1(8 downto 6);		-- RB is second operand
+			regWB_1			 <= inst1(5 downto 3);		-- Immediate
 			extra1 			 <= inst1(2 downto 0);		-- Immediate
 			isWB_1 			 <= '0';							-- No write back
 			isA_1  <= '1';
@@ -210,10 +204,10 @@ begin
 			opcode_reduced1(1 downto 0) <= "00";
 			
 		elsif(opcode1 = "1000") then	-- JAL
-			regA_1			 <= inst1(8 downto 6);		-- Immediate
-			regB_1			 <= inst1(5 downto 3);		-- Immediate
+			regA_1			 <= inst1(8 downto 6);		-- Immediate(2)
+			regB_1			 <= inst1(5 downto 3);		-- Immediate(1)
 			regWB_1			 <= inst1(11 downto 9);		-- RA is WB
-			extra1 			 <= inst1(2 downto 0);		-- Immediate
+			extra1 			 <= inst1(2 downto 0);		-- Immediate(0)
 			isWB_1 			 <= '1';							-- Write back
 			isA_1  <= '0';
 			isB_1  <= '0';

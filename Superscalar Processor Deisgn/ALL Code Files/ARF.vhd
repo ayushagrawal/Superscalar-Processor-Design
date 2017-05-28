@@ -1,6 +1,11 @@
+-- INTERFACING WITH REGISTER FILE:
+--	1. It will receive the index of the registers demanded from the respective instructions.
+-- 2. Due to the architecture, there can be a maximum of 4 demands, therefore 4 output ports are required.
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.math_real.all;
 
 library work;
 use work.components.all;
@@ -8,10 +13,13 @@ use work.components.all;
 entity ARF is
 	port(reset : in std_logic;
 		  clk   : in std_logic;
+		  
 		  in_sel1 : in std_logic_vector(2 downto 0);
 		  in_sel2 : in std_logic_vector(2 downto 0);
 		  in_sel3 : in std_logic_vector(2 downto 0);
 		  in_sel4 : in std_logic_vector(2 downto 0);
+		  
+		  --
 		  input1 : in std_logic_vector(15 downto 0);
 		  input2 : in std_logic_vector(15 downto 0);
 		  input3 : in std_logic_vector(15 downto 0);
@@ -22,14 +30,17 @@ entity ARF is
 		  wren4 : in std_logic;
 		  
 		  validity_in : in main_array(0 to 7)(0 downto 0);
-		  validity_out : out main_array(0 to 7)(0 downto 0);
 		  
 		  val_en_ch : in main_array(0 to 7)(0 downto 0);	-- DEFAULT is '1' ;change to 0 indicate action to be performed
 		  
-		  output1 : out std_logic_vector(15 downto 0);
-		  output2 : out std_logic_vector(15 downto 0);
-		  output3 : out std_logic_vector(15 downto 0);
-		  output4 : out std_logic_vector(15 downto 0);
+		  -- TO THE REGISTER FILE
+		  -- MSB is the validity of the data
+		  output1 : out std_logic_vector(16 downto 0);
+		  output2 : out std_logic_vector(16 downto 0);
+		  output3 : out std_logic_vector(16 downto 0);
+		  output4 : out std_logic_vector(16 downto 0);
+		  
+		  -- FROM REGISTER FILE
 		  osel1	 : in std_logic_vector(2 downto 0);
 		  osel2	 : in std_logic_vector(2 downto 0);
 		  osel3	 : in std_logic_vector(2 downto 0);
@@ -42,6 +53,7 @@ architecture files of ARF is
 	signal data_out : main_array(0 to 7)(15 downto 0);	-- CONTAINS OUTPUT OF EACH REGISTER
 	signal input : main_array(0 to 7)(15 downto 0);		-- CONTAINS INPUT FOR EACH REGISTER
 	signal enable_data : main_array(0 to 7)(0 downto 0);
+	signal validity_out : main_array(0 to 7)(0 downto 0);
 
 begin
 	
@@ -69,26 +81,35 @@ begin
 	
 	-------------	DEFINING THE 4 OUTPUT PORTS' LOGIC --------------------
 	
-	mux1 : multiplexer generic map(X => 8, Y => 16) 
-							 port map(output => output1,
+	mux1 : multiplexer generic map(X => 8, Y => 16)			-- (NUM_PORTS,DATA_WIDTH)
+							 port map(output => output1(15 downto 0),
 										 input  => data_out,
 										 sel	  => osel1);
+										 
+	output1(16) <= validity_out(to_integer(unsigned(osel1)))(0);
 	
 	mux2 : multiplexer generic map(X => 8, Y => 16) 
-							 port map(output => output2,
+							 port map(output => output2(15 downto 0),
 										 input  => data_out,
 										 sel	  => osel2);
 	
+	output2(16) <= validity_out(to_integer(unsigned(osel2)))(0);
+	
 	mux3 : multiplexer generic map(X => 8, Y => 16) 
-							 port map(output => output3,
+							 port map(output => output3(15 downto 0),
 										 input  => data_out,
 										 sel	  => osel3);
 	
+	output3(16) <= validity_out(to_integer(unsigned(osel3)))(0);
+	
 	mux4 : multiplexer generic map(X => 8, Y => 16) 
-							 port map(output => output4,
+							 port map(output => output4(15 downto 0),
 										 input  => data_out,
 										 sel	  => osel4);
-	----------------------------------------------------------------------
+										 
+	output4(16) <= validity_out(to_integer(unsigned(osel4)))(0);
+										 
+	--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--
 	
 	-------------------------- DECODER LOGIC -----------------------------
 	----------------------- FOR DATA-REGISTERS ---------------------------

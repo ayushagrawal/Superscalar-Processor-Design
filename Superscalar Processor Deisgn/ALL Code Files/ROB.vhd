@@ -10,7 +10,7 @@ use work.components.all;
 
 entity ROB is
 	generic(N : integer := 32);			-- Represents total number of entries
-	port(	reset 	: in std_logic;
+	port(reset 	: in std_logic;
 			clk	: in std_logic;
 			stall_out : out std_logic;
 			broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
@@ -18,19 +18,16 @@ entity ROB is
 			-- Tag  		= 5  bits (RRF size)
 			-- Validity = 1 bit
 			-- (In the above order) --
-			
-			valid_in : in main_array(0 to N-1)(0 downto 0);
-			valid_out : out main_array(0 to N-1)(0 downto 0);
-			valid_en : in main_array(0 to N-1)(0 downto 0);
 		 
 			-- FROM DECODE
-			 instruction1 : in std_logic_vector(21 downto 0);
-			 instruction2 : in std_logic_vector(21 downto 0);
-			 -- Instruction type 			: 2 bits
-			 -- Register affected 			: 3 bits
+			 instruction1 : in std_logic_vector(22 downto 0);
+			 instruction2 : in std_logic_vector(22 downto 0);
+			 -- If write back					: 1  bit
+			 -- Instruction type 			: 2  bits
+			 -- Register affected 			: 3  bits
 			 -- Data 							: 16 bits
-			 -- Validity of information 	: 1 bit
-			 -- Total							: 22 bits
+			 -- Validity of information 	: 1  bit
+			 -- Total							: 23 bits
 			 
 			 -- TO DECODE
 			 inst1_tag : out std_logic_vector(natural(log2(real(N)))-1 downto 0);
@@ -116,7 +113,7 @@ begin
 	----------- TOP POINTER AND INCOMING INSTRUCTIONS' LOGIC ------------
 	-- 1. This will control the top_pointer register enable bit.
 	-- 2. This will make decisions based on 'instruction1' and 'instruction2'
-	process(instruction1,instruction2)
+	process(instruction1,instruction2,broadcast,top_in,top_add_one)
 	begin
 		if(instruction1(0) = '1' and instruction2(0) = '1') then
 			top_add(1 downto 0) <= "10";
@@ -149,33 +146,21 @@ begin
 			rob_busy_en(to_integer(unsigned(top_in))) <= "0";
 			rob_busy_in(to_integer(unsigned(top_add_one))) <= "0";
 			rob_busy_en(to_integer(unsigned(top_add_one))) <= "0";
+			inst1_tag <= "00000";			-- Don't Care because no new instructions would be coming
+			inst2_tag <= "00000";			-- Don't Care because no new instructions would be coming
 		end if;
 		
-		
+		rob_busy_in <= (others => (others => '0'));
+		rob_busy_en <= (others => (others => '0'));
 		top_add <= (others => '0');
-	end process;
-	
-	adder0 : adds generic map(N => natural(log2(real(N))))
-					 port map(data1 => top_out,
-								 data2 => top_add,
-								 output => top_in);
-	
-	top_add_in <= (0 => '1',others => '0');
-	
-	adder1 : adds generic map(N => natural(log2(real(N))))
-					 port map(data1 => top_out,
-								 data2 => top_add_in,
-								 output => top_add_one);
-	
-	--________ TOP POINTER LOGIC ENDS ______--
-	
-	
-	----------- VALIDITY REGISTER LOGIC ------------
-	-- 1. This will make decisions based on broadcast
-	process(broadcast)
-	
-	begin
-	
+		inst_type_in <= (others => (others => '0'));
+		inst_type_en <= (others => (others => '0'));
+		rob_r_in	<= (others => (others => '0'));
+		rob_r_en	<= (others => (others => '0'));
+		
+		----------- VALIDITY REGISTER LOGIC ------------
+		-- 1. This will make decisions based on broadcast
+		
 		if(broadcast(0)(0) = '1') then
 			rob_valid_in(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
 			rob_valid_en(to_integer(unsigned(broadcast(0)(natural(log2(real(N))) downto 1))))(0) <= '1';
@@ -222,11 +207,27 @@ begin
 			rob_data_en(to_integer(unsigned(broadcast(4)(natural(log2(real(N))) downto 1))))(0) <= '0';
 		end if;
 		
+		rob_valid_in <= (others => (others => '0'));
+		rob_valid_en <= (others => (others => '0'));
+		rob_data_in <= (others => (others => '0'));
+		rob_data_en <= (others => (others => '0'));
+		
 	end process;
 	
+	adder0 : adds generic map(N => natural(log2(real(N))))
+					 port map(data1 => top_out,
+								 data2 => top_add,
+								 output => top_in);
 	
+	top_add_in <= (0 => '1',others => '0');
 	
-	--________ VALIDITY REGISTER LOGIC ENDS ______--
+	adder1 : adds generic map(N => natural(log2(real(N))))
+					 port map(data1 => top_out,
+								 data2 => top_add_in,
+								 output => top_add_one);
+	
+	--________ TOP POINTER LOGIC ENDS ______--
+	
 	
 	
 	--------- POINTER REGISTERS END ----------
@@ -240,7 +241,7 @@ begin
 													enable => manage_bit_en,
 													output => manage_bit_out);
 	stall_out <= manage_bit_out(0);
-	process(top_out,bottom_out,rob_valid_out)
+	process(top_out,bottom_out,rob_busy_out)
 	
 	begin
 		if((top_out = bottom_out) and (rob_busy_out(to_integer(unsigned(top_out)))(0) = '1')) then		-- This means false call

@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed May 03 11:42:43 2017
+Fitter Status : Successful - Sun May 28 09:27:16 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : ROB
 Top-level Entity Name : ROB
 Family : Cyclone IV E
-Device : EP4CE30F29C6
+Device : EP4CE15F23C6
 Timing Models : Final
-Total logic elements : 2 / 28,848 ( < 1 % )
-    Total combinational functions : 2 / 28,848 ( < 1 % )
-    Dedicated logic registers : 2 / 28,848 ( < 1 % )
-Total registers : 2
-Total pins : 325 / 533 ( 61 % )
+Total logic elements : 2 / 15,408 ( < 1 % )
+    Total combinational functions : 2 / 15,408 ( < 1 % )
+    Dedicated logic registers : 1 / 15,408 ( < 1 % )
+Total registers : 1
+Total pins : 241 / 344 ( 70 % )
 Total virtual pins : 0
-Total memory bits : 0 / 608,256 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

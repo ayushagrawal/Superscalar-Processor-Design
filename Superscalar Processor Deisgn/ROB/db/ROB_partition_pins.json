@@ -8,11 +8,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
+					"name" : "inst2_tag[0]",
 					"strict" : false
 				},
 				{
@@ -21,6 +17,14 @@
 				},
 				{
 					"name" : "instruction2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
 					"strict" : false
 				}
 			]
