@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat May 27 20:56:38 2017
-Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Mon May 29 19:43:10 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : decode
 Top-level Entity Name : decode
 Family : Cyclone IV E
-Total logic elements : 78
-    Total combinational functions : 62
+Total logic elements : 70
+    Total combinational functions : 54
     Dedicated logic registers : 54
 Total registers : 54
 Total pins : 161

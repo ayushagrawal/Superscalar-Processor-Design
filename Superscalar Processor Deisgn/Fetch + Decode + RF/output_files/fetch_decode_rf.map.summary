@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 29 20:30:39 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : fetch_decode_rf
+Top-level Entity Name : fetch_decode_rf
+Family : Cyclone IV E
+Total logic elements : 167
+    Total combinational functions : 85
+    Dedicated logic registers : 145
+Total registers : 145
+Total pins : 372
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

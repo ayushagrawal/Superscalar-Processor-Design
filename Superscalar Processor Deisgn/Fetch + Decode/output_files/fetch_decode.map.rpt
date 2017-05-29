@@ -1,6 +1,6 @@
 Analysis & Synthesis report for fetch_decode
-Sat May 27 10:11:11 2017
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Mon May 29 20:24:25 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -10,14 +10,42 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated
+ 14. Parameter Settings for User Entity Instance: fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: fetch:fetch_unit|mux2:mux
+ 16. Parameter Settings for User Entity Instance: fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component
+ 17. Parameter Settings for User Entity Instance: fetch:fetch_unit|inc:adder1|parallel_add:parallel_add_component
+ 18. Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:reg1
+ 19. Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:reg2
+ 20. Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:pc_reg
+ 21. Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:pc1_reg
+ 22. Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:pc2_reg
+ 23. Parameter Settings for User Entity Instance: decode:decode_unt|registers:out_reg1
+ 24. Parameter Settings for User Entity Instance: decode:decode_unt|registers:out_reg2
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "decode:decode_unt|registers:out_reg2"
+ 27. Port Connectivity Checks: "decode:decode_unt|registers:out_reg1"
+ 28. Port Connectivity Checks: "fetch:fetch_unit|inc:adder1"
+ 29. Port Connectivity Checks: "fetch:fetch_unit|inc:adder"
+ 30. Port Connectivity Checks: "fetch:fetch_unit|instruction_memory:mem_map"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,20 +65,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat May 27 10:11:11 2017           ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Mon May 29 20:24:25 2017       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; fetch_decode                                ;
 ; Top-level Entity Name              ; fetch_decode                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 117                                         ;
+;     Total combinational functions  ; 63                                          ;
+;     Dedicated logic registers      ; 98                                          ;
+; Total registers                    ; 98                                          ;
+; Total pins                         ; 75                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 2,048                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -61,6 +89,8 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Top-level entity name                                                      ; fetch_decode       ; fetch_decode       ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -69,7 +99,6 @@ agreement for further details.
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
 ; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
 ; Safe State Machine                                                         ; Off                ; Off                ;
 ; Extract Verilog State Machines                                             ; On                 ; On                 ;
@@ -148,11 +177,480 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
++------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; ../ALL Code Files/instruction_memory.vhd ; yes             ; User Wizard-Generated File   ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd ;         ;
+; ../ALL Code Files/mux2.vhd               ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd               ;         ;
+; ../ALL Code Files/inc.vhd                ; yes             ; User Wizard-Generated File   ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd                ;         ;
+; ../ALL Code Files/branch_predictor.vhd   ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd   ;         ;
+; ../ALL Code Files/registers.vhd          ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd          ;         ;
+; ../ALL Code Files/components.vhd         ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd         ;         ;
+; ../ALL Code Files/fetch.vhd              ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd              ;         ;
+; ../ALL Code Files/decode.vhd             ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd             ;         ;
+; ../ALL Code Files/fetch_decode.vhd       ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd       ;         ;
+; altsyncram.tdf                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                        ;         ;
+; stratix_ram_block.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;         ;
+; lpm_mux.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                           ;         ;
+; lpm_decode.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                        ;         ;
+; aglobal170.inc                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                        ;         ;
+; a_rdenreg.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                         ;         ;
+; altrom.inc                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                            ;         ;
+; altram.inc                               ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                            ;         ;
+; altdpram.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                          ;         ;
+; db/altsyncram_0vt3.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Fetch + Decode/db/altsyncram_0vt3.tdf ;         ;
+; parallel_add.tdf                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/parallel_add.tdf                      ;         ;
+; pcpa_add.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/pcpa_add.inc                          ;         ;
+; csa_add.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/csa_add.inc                           ;         ;
+; altshift.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.inc                          ;         ;
+; db/par_add_fse.tdf                       ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Fetch + Decode/db/par_add_fse.tdf     ;         ;
++------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 117       ;
+;                                             ;           ;
+; Total combinational functions               ; 63        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 35        ;
+;     -- 3 input functions                    ; 20        ;
+;     -- <=2 input functions                  ; 8         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 63        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 98        ;
+;     -- Dedicated logic registers            ; 98        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 75        ;
+; Total memory bits                           ; 2048      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 114       ;
+; Total fan-out                               ; 953       ;
+; Average fan-out                             ; 2.91      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                      ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name        ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |fetch_decode                                  ; 63 (1)              ; 98 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 75   ; 0            ; |fetch_decode                                                                                                            ; fetch_decode       ; work         ;
+;    |decode:decode_unt|                         ; 54 (54)             ; 53 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|decode:decode_unt                                                                                          ; decode             ; work         ;
+;       |registers:out_reg1|                     ; 0 (0)               ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|decode:decode_unt|registers:out_reg1                                                                       ; registers          ; work         ;
+;       |registers:out_reg2|                     ; 0 (0)               ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|decode:decode_unt|registers:out_reg2                                                                       ; registers          ; work         ;
+;    |fetch:fetch_unit|                          ; 8 (0)               ; 45 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit                                                                                           ; fetch              ; work         ;
+;       |inc:adder|                              ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|inc:adder                                                                                 ; inc                ; work         ;
+;          |parallel_add:parallel_add_component| ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component                                             ; parallel_add       ; work         ;
+;             |par_add_fse:auto_generated|       ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component|par_add_fse:auto_generated                  ; par_add_fse        ; work         ;
+;       |instruction_memory:mem_map|             ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|instruction_memory:mem_map                                                                ; instruction_memory ; work         ;
+;          |altsyncram:altsyncram_component|     ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component                                ; altsyncram         ; work         ;
+;             |altsyncram_0vt3:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated ; altsyncram_0vt3    ; work         ;
+;       |registers:pc1_reg|                      ; 0 (0)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|registers:pc1_reg                                                                         ; registers          ; work         ;
+;       |registers:pc2_reg|                      ; 2 (2)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|registers:pc2_reg                                                                         ; registers          ; work         ;
+;       |registers:reg1|                         ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|registers:reg1                                                                            ; registers          ; work         ;
+;       |registers:reg2|                         ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode|fetch:fetch_unit|registers:reg2                                                                            ; registers          ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                        ;
++-----------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                  ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+; fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 128          ; 16           ; 128          ; 16           ; 2048 ; None ;
++-----------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++--------------------------------------------------+--------------------------------------------------------+
+; Register name                                    ; Reason for Removal                                     ;
++--------------------------------------------------+--------------------------------------------------------+
+; decode:decode_unt|registers:out_reg2|data[7..15] ; Stuck at GND due to stuck port data_in                 ;
+; decode:decode_unt|registers:out_reg1|data[7..15] ; Stuck at GND due to stuck port data_in                 ;
+; fetch:fetch_unit|registers:pc_reg|data[0]        ; Merged with fetch:fetch_unit|registers:pc2_reg|data[0] ;
+; fetch:fetch_unit|registers:pc_reg|data[1]        ; Merged with fetch:fetch_unit|registers:pc2_reg|data[1] ;
+; fetch:fetch_unit|registers:pc_reg|data[2]        ; Merged with fetch:fetch_unit|registers:pc2_reg|data[2] ;
+; fetch:fetch_unit|registers:pc_reg|data[3]        ; Merged with fetch:fetch_unit|registers:pc2_reg|data[3] ;
+; fetch:fetch_unit|registers:pc_reg|data[4]        ; Merged with fetch:fetch_unit|registers:pc2_reg|data[4] ;
+; fetch:fetch_unit|registers:pc_reg|data[5]        ; Merged with fetch:fetch_unit|registers:pc2_reg|data[5] ;
+; fetch:fetch_unit|registers:pc_reg|data[6]        ; Merged with fetch:fetch_unit|registers:pc2_reg|data[6] ;
+; fetch:fetch_unit|registers:pc2_reg|data[0]       ; Stuck at GND due to stuck port data_in                 ;
+; decode:decode_unt|registers:out_reg2|data[0]     ; Stuck at GND due to stuck port data_in                 ;
+; Total Number of Removed Registers = 27           ;                                                        ;
++--------------------------------------------------+--------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++-----------------------------------------------+---------------------------+-----------------------------------------------+
+; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register        ;
++-----------------------------------------------+---------------------------+-----------------------------------------------+
+; decode:decode_unt|registers:out_reg2|data[9]  ; Stuck at GND              ; decode:decode_unt|registers:out_reg1|data[7]  ;
+;                                               ; due to stuck port data_in ;                                               ;
+; decode:decode_unt|registers:out_reg2|data[10] ; Stuck at GND              ; decode:decode_unt|registers:out_reg1|data[8]  ;
+;                                               ; due to stuck port data_in ;                                               ;
+; decode:decode_unt|registers:out_reg2|data[11] ; Stuck at GND              ; decode:decode_unt|registers:out_reg1|data[9]  ;
+;                                               ; due to stuck port data_in ;                                               ;
+; decode:decode_unt|registers:out_reg2|data[12] ; Stuck at GND              ; decode:decode_unt|registers:out_reg1|data[10] ;
+;                                               ; due to stuck port data_in ;                                               ;
+; decode:decode_unt|registers:out_reg2|data[13] ; Stuck at GND              ; decode:decode_unt|registers:out_reg1|data[11] ;
+;                                               ; due to stuck port data_in ;                                               ;
+; decode:decode_unt|registers:out_reg2|data[14] ; Stuck at GND              ; decode:decode_unt|registers:out_reg1|data[12] ;
+;                                               ; due to stuck port data_in ;                                               ;
+; decode:decode_unt|registers:out_reg2|data[15] ; Stuck at GND              ; decode:decode_unt|registers:out_reg1|data[13] ;
+;                                               ; due to stuck port data_in ;                                               ;
+; fetch:fetch_unit|registers:pc2_reg|data[0]    ; Stuck at GND              ; decode:decode_unt|registers:out_reg2|data[0]  ;
+;                                               ; due to stuck port data_in ;                                               ;
++-----------------------------------------------+---------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 98    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 98    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 98    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fetch_decode|decode:decode_unt|registers:out_reg1|data[34] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |fetch_decode|decode:decode_unt|registers:out_reg1|data[17] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fetch_decode|decode:decode_unt|registers:out_reg2|data[28] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |fetch_decode|decode:decode_unt|registers:out_reg2|data[18] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fetch_decode|decode:decode_unt|registers:out_reg1|data[25] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fetch_decode|decode:decode_unt|registers:out_reg2|data[25] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                  ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                   ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component ;
++------------------------------------+------------------------+------------------------------------------------------------+
+; Parameter Name                     ; Value                  ; Type                                                       ;
++------------------------------------+------------------------+------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                      ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                     ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                    ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE                                             ;
+; WIDTH_BYTEENA                      ; 1                      ; Untyped                                                    ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT        ; Untyped                                                    ;
+; WIDTH_A                            ; 16                     ; Signed Integer                                             ;
+; WIDTHAD_A                          ; 7                      ; Signed Integer                                             ;
+; NUMWORDS_A                         ; 128                    ; Signed Integer                                             ;
+; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                                                    ;
+; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                                                    ;
+; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                                                    ;
+; INDATA_ACLR_A                      ; NONE                   ; Untyped                                                    ;
+; BYTEENA_ACLR_A                     ; NONE                   ; Untyped                                                    ;
+; WIDTH_B                            ; 16                     ; Signed Integer                                             ;
+; WIDTHAD_B                          ; 7                      ; Signed Integer                                             ;
+; NUMWORDS_B                         ; 128                    ; Signed Integer                                             ;
+; INDATA_REG_B                       ; CLOCK0                 ; Untyped                                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0                 ; Untyped                                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1                 ; Untyped                                                    ;
+; ADDRESS_REG_B                      ; CLOCK0                 ; Untyped                                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED           ; Untyped                                                    ;
+; BYTEENA_REG_B                      ; CLOCK1                 ; Untyped                                                    ;
+; INDATA_ACLR_B                      ; NONE                   ; Untyped                                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                   ; Untyped                                                    ;
+; ADDRESS_ACLR_B                     ; NONE                   ; Untyped                                                    ;
+; OUTDATA_ACLR_B                     ; NONE                   ; Untyped                                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                   ; Untyped                                                    ;
+; BYTEENA_ACLR_B                     ; NONE                   ; Untyped                                                    ;
+; WIDTH_BYTEENA_A                    ; 1                      ; Signed Integer                                             ;
+; WIDTH_BYTEENA_B                    ; 1                      ; Signed Integer                                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                   ; Untyped                                                    ;
+; BYTE_SIZE                          ; 8                      ; Signed Integer                                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE              ; Untyped                                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_WITH_NBE_READ ; Untyped                                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_WITH_NBE_READ ; Untyped                                                    ;
+; INIT_FILE                          ; instruction.hex        ; Untyped                                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A                 ; Untyped                                                    ;
+; MAXIMUM_DEPTH                      ; 0                      ; Signed Integer                                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                 ; Untyped                                                    ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS                 ; Untyped                                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                 ; Untyped                                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                 ; Untyped                                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN        ; Untyped                                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                                                    ;
+; ENABLE_ECC                         ; FALSE                  ; Untyped                                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                                                    ;
+; WIDTH_ECCSTATUS                    ; 3                      ; Signed Integer                                             ;
+; DEVICE_FAMILY                      ; Cyclone IV E           ; Untyped                                                    ;
+; CBXI_PARAMETER                     ; altsyncram_0vt3        ; Untyped                                                    ;
++------------------------------------+------------------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|mux2:mux ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 7     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component ;
++------------------------+--------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                ;
++------------------------+--------------+---------------------------------------------------------------------+
+; width                  ; 7            ; Signed Integer                                                      ;
+; size                   ; 2            ; Signed Integer                                                      ;
+; WIDTHR                 ; 7            ; Signed Integer                                                      ;
+; SHIFT                  ; 0            ; Signed Integer                                                      ;
+; REPRESENTATION         ; UNSIGNED     ; Untyped                                                             ;
+; PIPELINE               ; 0            ; Signed Integer                                                      ;
+; MSW_SUBTRACT           ; NO           ; Untyped                                                             ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                             ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                                             ;
+; CBXI_PARAMETER         ; par_add_fse  ; Untyped                                                             ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                      ;
++------------------------+--------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|inc:adder1|parallel_add:parallel_add_component ;
++------------------------+--------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                 ;
++------------------------+--------------+----------------------------------------------------------------------+
+; width                  ; 7            ; Signed Integer                                                       ;
+; size                   ; 2            ; Signed Integer                                                       ;
+; WIDTHR                 ; 7            ; Signed Integer                                                       ;
+; SHIFT                  ; 0            ; Signed Integer                                                       ;
+; REPRESENTATION         ; UNSIGNED     ; Untyped                                                              ;
+; PIPELINE               ; 0            ; Signed Integer                                                       ;
+; MSW_SUBTRACT           ; NO           ; Untyped                                                              ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                                              ;
+; CBXI_PARAMETER         ; par_add_fse  ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                       ;
++------------------------+--------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:reg1 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:reg2 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:pc_reg ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:pc1_reg ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch:fetch_unit|registers:pc2_reg ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode:decode_unt|registers:out_reg1 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 36    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode:decode_unt|registers:out_reg2 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 36    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                        ;
++-------------------------------------------+-----------------------------------------------------------------------------+
+; Name                                      ; Value                                                                       ;
++-------------------------------------------+-----------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                           ;
+; Entity Instance                           ; fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                             ;
+;     -- WIDTH_A                            ; 16                                                                          ;
+;     -- NUMWORDS_A                         ; 128                                                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                ;
+;     -- WIDTH_B                            ; 16                                                                          ;
+;     -- NUMWORDS_B                         ; 128                                                                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                   ;
++-------------------------------------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "decode:decode_unt|registers:out_reg2" ;
++--------------+-------+----------+--------------------------------+
+; Port         ; Type  ; Severity ; Details                        ;
++--------------+-------+----------+--------------------------------+
+; input[15..7] ; Input ; Info     ; Stuck at GND                   ;
++--------------+-------+----------+--------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "decode:decode_unt|registers:out_reg1" ;
++--------------+-------+----------+--------------------------------+
+; Port         ; Type  ; Severity ; Details                        ;
++--------------+-------+----------+--------------------------------+
+; input[15..7] ; Input ; Info     ; Stuck at GND                   ;
++--------------+-------+----------+--------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "fetch:fetch_unit|inc:adder1" ;
++--------------+-------+----------+-----------------------+
+; Port         ; Type  ; Severity ; Details               ;
++--------------+-------+----------+-----------------------+
+; data1x[6..1] ; Input ; Info     ; Stuck at GND          ;
+; data1x[0]    ; Input ; Info     ; Stuck at VCC          ;
++--------------+-------+----------+-----------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "fetch:fetch_unit|inc:adder" ;
++--------------+-------+----------+----------------------+
+; Port         ; Type  ; Severity ; Details              ;
++--------------+-------+----------+----------------------+
+; data1x[6..1] ; Input ; Info     ; Stuck at GND         ;
+; data1x[0]    ; Input ; Info     ; Stuck at VCC         ;
++--------------+-------+----------+----------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "fetch:fetch_unit|instruction_memory:mem_map" ;
++--------+-------+----------+---------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                     ;
++--------+-------+----------+---------------------------------------------+
+; data_a ; Input ; Info     ; Stuck at GND                                ;
+; data_b ; Input ; Info     ; Stuck at GND                                ;
+; wren_a ; Input ; Info     ; Stuck at GND                                ;
+; wren_b ; Input ; Info     ; Stuck at GND                                ;
++--------+-------+----------+---------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 75                          ;
+; cycloneiii_ff         ; 98                          ;
+;     ENA CLR           ; 98                          ;
+; cycloneiii_lcell_comb ; 63                          ;
+;     normal            ; 63                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 35                          ;
+; cycloneiii_ram_block  ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 0.98                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -160,27 +658,153 @@ agreement for further details.
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat May 27 10:10:57 2017
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Mon May 29 20:24:09 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fetch_decode -c fetch_decode
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/instruction_memory.vhd
+    Info (12022): Found design unit 1: instruction_memory-SYN File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 59
+    Info (12023): Found entity 1: instruction_memory File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/mux2.vhd
+    Info (12022): Found design unit 1: mux2-Behave File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd Line: 11
+    Info (12023): Found entity 1: mux2 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/inc.vhd
+    Info (12022): Found design unit 1: inc-SYN File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 53
+    Info (12023): Found entity 1: inc File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/branch_predictor.vhd
+    Info (12022): Found design unit 1: branch_predictor-BP File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd Line: 11
+    Info (12023): Found entity 1: branch_predictor File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
+    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 13
+    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 4
 Info (12021): Found 1 design units, including 0 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/components.vhd
     Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/fetch.vhd
     Info (12022): Found design unit 1: fetch-fetching File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 16
     Info (12023): Found entity 1: fetch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/decode.vhd
-    Info (12022): Found design unit 1: decode-DEC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 33
+    Info (12022): Found design unit 1: decode-DEC File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 31
     Info (12023): Found entity 1: decode File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/fetch_decode.vhd
-    Info (12022): Found design unit 1: fetch_decode-fd File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 24
+    Info (12022): Found design unit 1: fetch_decode-fd File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 17
     Info (12023): Found entity 1: fetch_decode File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 7
-Error (10482): VHDL error at decode.vhd(53): object "reorder_buffer" is used but not declared File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 53
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 660 megabytes
-    Error: Processing ended: Sat May 27 10:11:11 2017
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:31
+Info (12127): Elaborating entity "fetch_decode" for the top level hierarchy
+Info (12128): Elaborating entity "fetch" for hierarchy "fetch:fetch_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 23
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "fetch:fetch_unit|instruction_memory:mem_map" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 25
+Info (12128): Elaborating entity "altsyncram" for hierarchy "fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
+Info (12130): Elaborated megafunction instantiation "fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
+Info (12133): Instantiated megafunction "fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "instruction.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "128"
+    Info (12134): Parameter "numwords_b" = "128"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_WITH_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_WITH_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "7"
+    Info (12134): Parameter "widthad_b" = "7"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0vt3.tdf
+    Info (12023): Found entity 1: altsyncram_0vt3 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Fetch + Decode/db/altsyncram_0vt3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_0vt3" for hierarchy "fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "mux2" for hierarchy "fetch:fetch_unit|mux2:mux" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 35
+Info (12128): Elaborating entity "inc" for hierarchy "fetch:fetch_unit|inc:adder" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 40
+Info (12128): Elaborating entity "parallel_add" for hierarchy "fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
+Info (12130): Elaborated megafunction instantiation "fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
+Info (12133): Instantiated megafunction "fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" with the following parameter: File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
+    Info (12134): Parameter "width" = "7"
+    Info (12134): Parameter "size" = "2"
+    Info (12134): Parameter "widthr" = "7"
+    Info (12134): Parameter "shift" = "0"
+    Info (12134): Parameter "msw_subtract" = "NO"
+    Info (12134): Parameter "representation" = "UNSIGNED"
+    Info (12134): Parameter "pipeline" = "0"
+    Info (12134): Parameter "result_alignment" = "LSB"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "parallel_add"
+Info (12021): Found 1 design units, including 1 entities, in source file db/par_add_fse.tdf
+    Info (12023): Found entity 1: par_add_fse File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Fetch + Decode/db/par_add_fse.tdf Line: 25
+Info (12128): Elaborating entity "par_add_fse" for hierarchy "fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component|par_add_fse:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/parallel_add.tdf Line: 148
+Info (12128): Elaborating entity "registers" for hierarchy "fetch:fetch_unit|registers:reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 47
+Info (12128): Elaborating entity "registers" for hierarchy "fetch:fetch_unit|registers:pc_reg" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 59
+Info (12128): Elaborating entity "branch_predictor" for hierarchy "fetch:fetch_unit|branch_predictor:BP" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 77
+Info (12128): Elaborating entity "decode" for hierarchy "decode:decode_unt" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 29
+Info (12128): Elaborating entity "registers" for hierarchy "decode:decode_unt|registers:out_reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 93
+Info (13014): Ignored 28 buffer(s)
+    Info (13019): Ignored 28 SOFT buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "REG1[7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG1[15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 13
+    Warning (13410): Pin "REG2[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+    Warning (13410): Pin "REG2[15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 215 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 72 output pins
+    Info (21061): Implemented 124 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 694 megabytes
+    Info: Processing ended: Mon May 29 20:24:25 2017
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:35
 
 

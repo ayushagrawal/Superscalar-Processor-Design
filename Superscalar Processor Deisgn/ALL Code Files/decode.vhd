@@ -13,21 +13,14 @@ entity decode is
 		  stall_in : in std_logic;
 		  
 		  -- To fetch
-		  decode_stall_out : out std_logic;
+--		  decode_stall_out : out std_logic;
 		  
 		  inst1 : in std_logic_vector(15 downto 0);
 		  inst2 : in std_logic_vector(15 downto 0);
 		  PC1			: in std_logic_vector(6 downto 0);
 		  PC2			: in std_logic_vector(6 downto 0);
 		  
-		  ------------ FROM WRITE BACK -----------
-		  in_sel1: in std_logic_vector(2 downto 0);
-		  in_sel2 : in std_logic_vector(2 downto 0);
-		  input1 : in std_logic_vector(15 downto 0);
-		  input2 : in std_logic_vector(15 downto 0);
-		  wren1 : in std_logic;
-		  wren2 : in std_logic;
-		  ----------------------------------------
+		  
 		  ------- CALCULATED uOPS RESGITERS ------
 		  REG1	: out std_logic_vector(35 downto 0);
 		  REG2	: out std_logic_vector(35 downto 0));
@@ -50,6 +43,8 @@ architecture DEC of decode is
 	
 	signal extra1,extra2 : std_logic_vector(2 downto 0);
 	signal isWB_1,isWB_2,isA_1,isA_2,isB_1,isB_2 : std_logic;
+	
+--	signal decode_stall_in : std_logic;
 	
 begin
 
@@ -128,6 +123,7 @@ begin
 			isA_1  <= '1';
 			isB_1  <= '1';
 			extra1 <= "000";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0001") then	-- ADI
 			regA_1			 <= inst1(11 downto 9);			-- RA is first operand
@@ -139,6 +135,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "00";
 			opcode_reduced1(1 downto 0) <= "11";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0010") then	-- NAND
 			regA_1			 <= inst1(11 downto 9);
@@ -150,6 +147,7 @@ begin
 			isA_1  <= '1';
 			isB_1  <= '1';
 			extra1			<= "000";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0011") then	-- LHI
 			regA_1			 <= inst1(8 downto 6);		-- Immediate(2)
@@ -161,6 +159,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "10";
 			opcode_reduced1(1 downto 0) <= "00";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0100") then	-- LOAD RA,RB,IMM
 			regA_1			 <= inst1(8 downto 6);		-- RB is first operand
@@ -172,6 +171,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "10";
 			opcode_reduced1(1 downto 0) <= "01";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0101") then	-- STORE
 			regA_1			 <= inst1(11 downto 9);		-- RA is for store
@@ -183,24 +183,32 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "10";
 			opcode_reduced1(1 downto 0) <= "10";
+			--decode_stall_in <= '0';
 			
-		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
-			regA_1			 	 <= inst1(11 downto 9);		-- RA is first operand
-			regB_1			 	 <= "000";														-- Immediate(1)
-			regWB_1				 <= counter_out;
-			extra1(0) 			 <= inst1(to_integer(unsigned(counter_out)));		-- Immediate(0)
-			extra1(2 downto 1) <= "00";
-			isWB_1 			 	 <= inst1(to_integer(unsigned(counter_out)));
-			isA_1  <= '1';
-			isB_1  <= '0';
-			opcode_reduced1(3 downto 2) <= "10";
-			opcode_reduced1(1 downto 0) <= "01";
+--		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
+--			regA_1			 	 <= inst1(11 downto 9);		-- RA is first operand
+--			regB_1			 	 <= "000";														-- Immediate(1)
+--			regWB_1				 <= counter_out;
+--			extra1(0) 			 <= inst1(to_integer(unsigned(counter_out)));		-- Immediate(0)
+--			extra1(2 downto 1) <= "00";
+--			isWB_1 			 	 <= inst1(to_integer(unsigned(counter_out)));
+--			isA_1  <= '1';
+--			isB_1  <= '0';
+--			opcode_reduced1(3 downto 2) <= "10";
+--			opcode_reduced1(1 downto 0) <= "01";
+--			decode_stall_in <= '1';
 --			
 --		elsif(opcode1 = "0111") then	-- STORE MULTIPLE
---			rden1v := '1';
---			rden2v := '0';
---			wr1v := '0';
---			toWrite1v := inst1(5 downto 3);
+--			regA_1			 <= counter_out;		-- RA is for store
+--			regB_1			 <= inst1(11 downto 9);		-- RB is first operand
+--			regWB_1			 <= "000";						-- Immediate(1)
+--			extra1 			 <= inst1(2 downto 0);		-- Immediate(0)
+--			isWB_1 			 <= '0';							-- No write back
+--			isA_1  <= '1';
+--			isB_1  <= '0';
+--			opcode_reduced1(3 downto 2) <= "10";
+--			opcode_reduced1(1 downto 0) <= "10";
+--			decode_stall_in <= '1';
 			
 		elsif(opcode1 = "1100") then	-- BEQ
 			regA_1			 <= inst1(11 downto 9);		-- RA is first operand
@@ -212,6 +220,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "11";
 			opcode_reduced1(1 downto 0) <= "00";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "1000") then	-- JAL
 			regA_1			 <= inst1(8 downto 6);		-- Immediate(2)
@@ -223,6 +232,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "11";
 			opcode_reduced1(1 downto 0) <= "01";
+			--decode_stall_in <= '0';
 			
 		else									-- JLR
 			regA_1			 <= inst1(8 downto 6);		-- RB us first operand
@@ -234,6 +244,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "11";
 			opcode_reduced1(1 downto 0) <= "10";
+			--decode_stall_in <= '0';
 			
 		end if;
 	
@@ -251,6 +262,7 @@ begin
 			isA_2  <= '1';
 			isB_2  <= '1';
 			extra2 <= "000";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0001") then	-- ADI
 			regA_2			 <= inst2(11 downto 9);
@@ -262,6 +274,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "00";
 			opcode_reduced2(1 downto 0) <= "11";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0010") then	-- NAND
 			regA_2			 <= inst2(11 downto 9);
@@ -273,6 +286,7 @@ begin
 			isA_2  <= '1';
 			isB_2  <= '1';
 			extra2			<= "000";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0011") then	-- LHI
 			regA_2			 <= inst2(8 downto 6);
@@ -284,6 +298,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "00";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0100") then	-- LOAD RA,RB,IMM
 			regA_2			 <= inst2(8 downto 6);		-- RB is first operand
@@ -295,6 +310,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "01";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0101") then	-- STORE
 			regA_2			 <= inst2(8 downto 6);		-- RB is first operand
@@ -306,18 +322,21 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "10";
+			--decode_stall_in <= '0';
 			
 --		elsif(opcode2 = "0110") then	-- LOAD MULTIPLE
 --			rden1v := '1';
 --			rden2v := '0';
 --			wr1v := '1';
 --			toWrite1v := "000";		-----------------CHANGE!!!!!!!!!
+--			decode_stall_in <= '1';
 --			
 --		elsif(opcode2 = "0111") then	-- STORE MULTIPLE
 --			rden1v := '1';
 --			rden2v := '0';
 --			wr1v := '0';
 --			toWrite1v := inst2(5 downto 3);
+--			decode_stall_in <= '1';
 			
 		elsif(opcode2 = "1100") then	-- BEQ
 			regA_2			 <= inst2(8 downto 6);		-- RB is second operand
@@ -329,6 +348,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "11";
 			opcode_reduced2(1 downto 0) <= "00";
+			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "1000") then	-- JAL
 			regA_2			 <= inst2(8 downto 6);		-- Immediate
@@ -340,6 +360,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "11";
 			opcode_reduced2(1 downto 0) <= "01";
+			--decode_stall_in <= '0';
 			
 		else									-- JLR
 			regA_2			 <= inst2(8 downto 6);		-- RB us first operand
@@ -351,6 +372,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "11";
 			opcode_reduced2(1 downto 0) <= "10";
+			--decode_stall_in <= '0';
 			
 		end if;
 	end process;
@@ -368,9 +390,22 @@ begin
 	
 	-- In either of the case we have to stall the fetch unit for 4,4,8 cycles respectively
 	
-	count4 : counter port map(clock => clk,
-									  cnt_en => ,
-									  sclr => ,
-									  cout => ,
-									  q => counter_out4);
+--	count4 : counter port map(clock => clk,
+--									  cnt_en => ,
+--									  sclr => ,
+--									  cout => ,
+--									  q => counter_out4);
+--									  
+--									  
+--									  
+--									  
+--	-- DECODE STALL REGISTER
+--	
+--	dec_stall : registers generic map(N => 1)
+--								 port    map(input => decode_stall_in,
+--												 reset => reset,
+--												 clk => clk,
+--												 enable => '1',
+--												 output => decode_stall_out);
+	
 end DEC;

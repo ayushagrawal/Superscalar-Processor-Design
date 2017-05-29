@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon May 29 20:24:34 2017
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : fetch_decode
+Top-level Entity Name : fetch_decode
+Family : Cyclone IV E
+Device : EP4CE6F17C6
+Timing Models : Final
+Total logic elements : 94 / 6,272 ( 1 % )
+    Total combinational functions : 66 / 6,272 ( 1 % )
+    Dedicated logic registers : 82 / 6,272 ( 1 % )
+Total registers : 82
+Total pins : 75 / 180 ( 42 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 276,480 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

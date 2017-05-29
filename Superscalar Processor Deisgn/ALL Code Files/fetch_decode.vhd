@@ -9,16 +9,9 @@ entity fetch_decode is
 		  reset		: in std_logic;
 		  stall		: in std_logic;
 		  
-		  -- FROM WRITE BACK
-		  in_sel1 : in std_logic_vector(2 downto 0);
-		  in_sel2 : in std_logic_vector(2 downto 0);
-		  input1 : in std_logic_vector(15 downto 0);
-		  input2 : in std_logic_vector(15 downto 0);
-		  wren1 : in std_logic;
-		  wren2 : in std_logic;
 		   ------- CALCULATED uOPS RESGITERS ------
-		  REG1	: out std_logic_vector(61 downto 0);
-		  REG2	: out std_logic_vector(61 downto 0));
+		  REG1	: out std_logic_vector(35 downto 0);
+		  REG2	: out std_logic_vector(35 downto 0));
 end entity;
 
 architecture fd of fetch_decode is
@@ -40,14 +33,6 @@ begin
 										  inst2 => inst2(15 downto 0),
 										  PC1 => inst1(22 downto 16),
 										  PC2 => inst2(22 downto 16),
-										  
-										  -- FROM WRITE BACK
-										  in_sel1 => in_sel1,
-										  in_sel2 => in_sel2,
-										  input1  => input1,
-										  input1  => input2,
-										  wren1   => wren1,
-										  wren2   => wren2,
 										  
 										  -- TO REGISTER FILE
 										  REG1 => REG1,

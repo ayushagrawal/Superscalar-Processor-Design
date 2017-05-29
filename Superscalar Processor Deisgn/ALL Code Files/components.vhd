@@ -135,20 +135,12 @@ package components is
 			  stall_in : in std_logic;
 			  inst1 : in std_logic_vector(15 downto 0);
 			  inst2 : in std_logic_vector(15 downto 0);
-			  PC1			: in std_logic_vector(7 downto 0);
-			  PC2			: in std_logic_vector(7 downto 0);
+			  PC1			: in std_logic_vector(6 downto 0);
+			  PC2			: in std_logic_vector(6 downto 0);
 			  
-			  ------------ FROM WRITE BACK -----------
-			  in_sel1: in std_logic_vector(2 downto 0);
-			  in_sel2 : in std_logic_vector(2 downto 0);
-			  input1 : in std_logic_vector(15 downto 0);
-			  input2 : in std_logic_vector(15 downto 0);
-			  wren1 : in std_logic;
-			  wren2 : in std_logic;
-			  ----------------------------------------
 			  ------- CALCULATED uOPS RESGITERS ------
-			  REG1	: out std_logic_vector(61 downto 0);
-			  REG2	: out std_logic_vector(61 downto 0));
+			  REG1	: out std_logic_vector(35 downto 0);
+			  REG2	: out std_logic_vector(35 downto 0));
 	end component;
 	
 	component demux is
@@ -223,6 +215,16 @@ package components is
 			  inst2		: out std_logic_vector(22 downto 0));
 	end component;
 	
+	component fetch_decode is
+		port(clk 		: in std_logic;
+			  reset		: in std_logic;
+			  stall		: in std_logic;
+			  
+				------- CALCULATED uOPS RESGITERS ------
+			  REG1	: out std_logic_vector(35 downto 0);
+			  REG2	: out std_logic_vector(35 downto 0));
+	end component;
+	
 	component inc IS
 		PORT
 		(
@@ -247,6 +249,17 @@ package components is
 		);
 	END component;
 	
+	
+	component multiplexer is
+	
+		generic(X : integer;
+				  Y : integer);
+		port(output : out std_logic_vector(Y-1 downto 0);
+			  input  : in main_array(0 to X-1)(Y-1 downto 0);
+			  sel		: in std_logic_vector(natural(log2(real(X)))-1 downto 0));
+
+	end component;
+	
 	component mux2 is 
 		generic (N : integer);
 		port( in0,in1 : in std_logic_vector(N-1 downto 0); 
@@ -263,15 +276,41 @@ package components is
 			  reset : in std_logic);
 	end component;
 	
-	component multiplexer is
-	
-		generic(X : integer;
-				  Y : integer);
-		port(output : out std_logic_vector(Y-1 downto 0);
-			  input  : in main_array(0 to X-1)(Y-1 downto 0);
-			  sel		: in std_logic_vector(natural(log2(real(X)))-1 downto 0));
-
+	component register_file is
+		port(reset : in std_logic;
+			  clk   : in std_logic;
+			  stall_out : out std_logic;
+			  
+			  -- From Decode
+			  REG1 : in std_logic_vector(35 downto 0);
+			  REG2 : in std_logic_vector(35 downto 0);
+			  
+			  -- To Reservation Station
+			  register1 : out std_logic_vector(71 downto 0);
+			  register2 : out std_logic_vector(71 downto 0);
+			  
+			  -- From Write Back for ARF
+			  in_sel1				: in std_logic_vector(2 downto 0);
+			  in_sel2				: in std_logic_vector(2 downto 0);
+			  
+			  input1					: in std_logic_vector(15 downto 0);
+			  input2					: in std_logic_vector(15 downto 0);
+			  
+			  wren1					: in std_logic;
+			  wren2					: in std_logic;
+			  
+			  -- From Execute Complete for ROB
+			  broadcast				: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
+																							-- Data 		= 16 bits
+																							-- Tag  		= 5  bits (RRF size)
+																							-- Validity = 1 bit
+																							-- (In the above order) --
+			  -- TO COMPLETE FROM ROB
+			  complete1				: out std_logic_vector(37 downto 0);
+			  complete2				: out std_logic_vector(37 downto 0));
+		
 	end component;
+	
 	
 	component reservation_station is
 		generic(N  : integer := 8;			-- Specifies the number of entiries in a reservation station

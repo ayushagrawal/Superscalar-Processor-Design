@@ -1,0 +1,241 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "register1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[50]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[51]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[52]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[53]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[54]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[55]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[56]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[57]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[58]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[59]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[60]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[61]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[62]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[63]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[64]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[65]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[66]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[67]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[68]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[69]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[70]",
+					"strict" : false
+				},
+				{
+					"name" : "register1[71]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[50]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[51]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[52]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[53]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[54]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[55]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[56]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[57]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[58]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[59]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[60]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[61]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[63]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[64]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[65]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[66]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[67]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[68]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[69]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[70]",
+					"strict" : false
+				},
+				{
+					"name" : "register2[71]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
