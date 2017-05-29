@@ -313,7 +313,7 @@ package components is
 				 -- If write back					: 1  bit
 				 -- Instruction type 			: 2  bits
 				 -- Register affected 			: 3  bits
-				 -- Data 							: 16 bits
+				 -- Data/Memory Address			: 16 bits
 				 -- Validity of information 	: 1  bit
 				 -- Total							: 23 bits
 				 
@@ -322,13 +322,14 @@ package components is
 				 inst2_tag : out std_logic_vector(natural(log2(real(N)))-1 downto 0);
 				 
 				 -- TO COMPLETE
-				 complete1 : out std_logic_vector(35 downto 0);
-				 complete2 : out std_logic_vector(35 downto 0)
-				 -- Inst_type : 2 bits
-				 -- Register affected: 3 bits
-				 -- Memory affected : 16 bits
-				 -- Data				  : 16 bits
-				 -- validity		  : 1 bit
+				 complete1 : out std_logic_vector(37 downto 0);
+				 complete2 : out std_logic_vector(37 downto 0)
+				 -- If write back		 : 1  bit
+				 -- Inst_type 			 : 2  bits
+				 -- Register affected : 3  bits
+				 -- Memory affected   : 16 bits
+				 -- Data				    : 16 bits
+				 -- validity		    : 1  bit
 			 );
 			 
 	end component;

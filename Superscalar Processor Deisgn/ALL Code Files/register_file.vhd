@@ -36,8 +36,8 @@ entity register_file is
 																						-- Validity = 1 bit
 																						-- (In the above order) --
 		  -- TO COMPLETE FROM ROB
-		  complete1				: out std_logic_vector(35 downto 0);
-		  complete2				: out std_logic_vector(35 downto 0));
+		  complete1				: out std_logic_vector(37 downto 0);
+		  complete2				: out std_logic_vector(37 downto 0));
 	
 end entity;
 
@@ -45,7 +45,7 @@ architecture rFile of register_file is
 	
 	signal regIn1,regIn2 : std_logic_vector(71 downto 0);
 	
-	signal r1_1,r2_1,r3_1,r1_2,r2_2,r3_2	: std_logic_vector(2 downto 0);
+	signal r1_1,r2_1,r1_2,r2_2	: std_logic_vector(2 downto 0);
 	
 	signal RA_1,RB_1,RA_2,RB_2 				: std_logic_vector(16 downto 0);
 	signal RA_arf1,RB_arf1,RA_arf2,RB_arf2 : std_logic_vector(16 downto 0);
@@ -95,6 +95,12 @@ begin
 	reg1_val(16 downto 1)  <= "0000000000000000";
 	reg1_val(0) 			  <= REG1(35);
 	
+	reg2_val(22)			  <= REG2(30);					-- IF wirte back
+	reg2_val(21 downto 20) <= REG2(34 downto 33);
+	reg2_val(19 downto 17) <= REG2(27 downto 25);
+	reg2_val(16 downto 1)  <= "0000000000000000";
+	reg2_val(0) 			  <= REG2(35);
+	
 	--------------------------------------------------
 	
 	--__________________________ DATA MAPPING ________________________________--
@@ -109,13 +115,25 @@ begin
 	regIn1(32 downto 17) <= RB_1(15 downto 0);			-- REG_B VALUE
 	regIn1(16) 				<= RB_1(16);						-- VALIDITY
 	regIn1(15 downto 0)  <= REG1(15 downto 0);			-- PC
+	
+	regIn2(71) 				<= REG2(35);						-- VALIDITY
+	regIn2(70 downto 67) <= REG2(34 downto 31);			-- REDUCED OP-CODE
+	regIn2(66 downto 62) <= reg2_index;						-- ROB INDEX
+	regIn2(61 downto 59) <= REG2(27 downto 25);			-- WB REG
+	regIn2(58 downto 50) <= immediate2;						-- IMMEDIATE
+	regIn2(49 downto 34) <= RA_2(15 downto 0);			-- REG_A VALUE
+	regIn2(33)				<= RA_2(16);						-- VALIDITY
+	regIn2(32 downto 17) <= RB_2(15 downto 0);			-- REG_B VALUE
+	regIn2(16) 				<= RB_2(16);						-- VALIDITY
+	regIn2(15 downto 0)  <= REG2(15 downto 0);			-- PC
 	----------------------------------------------------------------------------
 	
 	-- LOGIC FOR IMMEDIATE
 	
 	immediate1(2 downto 0) <= REG1(18 downto 16);
+	immediate2(2 downto 0) <= REG2(18 downto 16);
 	
-	process(REG1)
+	process(REG1,REG2)
 	begin
 		if(REG1(34 downto 31) = "0011" or REG1(34 downto 31) = "1001") then			-- ADI,LW in REGB
 			immediate1(5 downto 3) <= REG1(21 downto 19);
@@ -129,16 +147,30 @@ begin
 			immediate1(5 downto 3) <= REG1(21 downto 19);
 			immediate1(8 downto 6) <= REG1(24 downto 22);
 		end if;
+		
+		
+		if(REG2(34 downto 31) = "0011" or REG2(34 downto 31) = "1001") then			-- ADI,LW in REGB
+			immediate2(5 downto 3) <= REG2(21 downto 19);
+			immediate2(8 downto 6) <= "000";
+			
+		elsif(REG2(34 downto 31) = "1010" or REG2(34 downto 31) = "1100") then		-- BEQ,SW in WB_REG
+			immediate2(5 downto 3) <= REG2(27 downto 25);
+			immediate2(8 downto 6) <= "000";
+			
+		else																								-- JAL,LHI
+			immediate2(5 downto 3) <= REG2(21 downto 19);
+			immediate2(8 downto 6) <= REG2(24 downto 22);
+		end if;
 	end process;
 	
 	----------------------
 	
 	ar_file : ARF port map(reset => reset,
 								  clk => clk,
-								  in_sel1 => in_sel1,	-- From write back
-								  in_sel2 => in_sel2,	-- From write back
-								  in_sel3 => r3_1,		-- From decode
-								  in_sel4 => r3_2,		-- From deocde
+								  in_sel1 => in_sel1,					-- From write back
+								  in_sel2 => in_sel2,					-- From write back
+								  in_sel3 => REG1(27 downto 25),		-- From decode
+								  in_sel4 => REG2(27 downto 25),		-- From deocde
 								  
 								  input1 => input1,									-- From write back
 								  input2 => input2,									-- From write back

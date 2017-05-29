@@ -1,5 +1,5 @@
 Assembler report for register_file
-Sun May 28 11:06:13 2017
+Sun May 28 17:26:38 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun May 28 11:06:13 2017 ;
+; Assembler Status      ; Successful - Sun May 28 17:26:38 2017 ;
 ; Revision Name         ; register_file                         ;
 ; Top-level Entity Name ; register_file                         ;
 ; Family                ; Cyclone IV E                          ;
@@ -67,8 +67,8 @@ agreement for further details.
 +----------------+---------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                           ;
 +----------------+---------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x001EC6ED                                                                                        ;
-; Checksum       ; 0x001EC6ED                                                                                        ;
+; JTAG usercode  ; 0x001F4871                                                                                        ;
+; Checksum       ; 0x001F4871                                                                                        ;
 +----------------+---------------------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun May 28 11:06:11 2017
+    Info: Processing started: Sun May 28 17:26:37 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off register_file -c register_file
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 569 megabytes
-    Info: Processing ended: Sun May 28 11:06:13 2017
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 570 megabytes
+    Info: Processing ended: Sun May 28 17:26:38 2017
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
