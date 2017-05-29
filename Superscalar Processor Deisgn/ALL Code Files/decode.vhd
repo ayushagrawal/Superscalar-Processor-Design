@@ -11,6 +11,10 @@ entity decode is
 	port(clk	: in std_logic;
 		  reset : in std_logic;
 		  stall_in : in std_logic;
+		  
+		  -- To fetch
+		  decode_stall_out : out std_logic;
+		  
 		  inst1 : in std_logic_vector(15 downto 0);
 		  inst2 : in std_logic_vector(15 downto 0);
 		  PC1			: in std_logic_vector(6 downto 0);
@@ -180,11 +184,17 @@ begin
 			opcode_reduced1(3 downto 2) <= "10";
 			opcode_reduced1(1 downto 0) <= "10";
 			
---		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
---			rden1v := '1';
---			rden2v := '0';
---			wr1v := '1';
---			toWrite1v := "000";		-----------------CHANGE!!!!!!!!!
+		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
+			regA_1			 	 <= inst1(11 downto 9);		-- RA is first operand
+			regB_1			 	 <= "000";														-- Immediate(1)
+			regWB_1				 <= counter_out;
+			extra1(0) 			 <= inst1(to_integer(unsigned(counter_out)));		-- Immediate(0)
+			extra1(2 downto 1) <= "00";
+			isWB_1 			 	 <= inst1(to_integer(unsigned(counter_out)));
+			isA_1  <= '1';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "10";
+			opcode_reduced1(1 downto 0) <= "01";
 --			
 --		elsif(opcode1 = "0111") then	-- STORE MULTIPLE
 --			rden1v := '1';
@@ -253,7 +263,7 @@ begin
 			opcode_reduced2(3 downto 2) <= "00";
 			opcode_reduced2(1 downto 0) <= "11";
 			
-		elsif(opcode1 = "0010") then	-- NAND
+		elsif(opcode2 = "0010") then	-- NAND
 			regA_2			 <= inst2(11 downto 9);
 			regB_2			 <= inst2(8 downto 6);
 			regWB_2			 <= inst2(5 downto 3);
@@ -264,7 +274,7 @@ begin
 			isB_2  <= '1';
 			extra2			<= "000";
 			
-		elsif(opcode1 = "0011") then	-- LHI
+		elsif(opcode2 = "0011") then	-- LHI
 			regA_2			 <= inst2(8 downto 6);
 			regB_2			 <= inst2(5 downto 3);
 			regWB_2			 <= inst2(11 downto 9);
@@ -275,7 +285,7 @@ begin
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "00";
 			
-		elsif(opcode1 = "0100") then	-- LOAD RA,RB,IMM
+		elsif(opcode2 = "0100") then	-- LOAD RA,RB,IMM
 			regA_2			 <= inst2(8 downto 6);		-- RB is first operand
 			regB_2			 <= inst2(5 downto 3);		-- Immediate
 			regWB_2			 <= inst2(11 downto 9);		-- RA is for write back
@@ -286,7 +296,7 @@ begin
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "01";
 			
-		elsif(opcode1 = "0101") then	-- STORE
+		elsif(opcode2 = "0101") then	-- STORE
 			regA_2			 <= inst2(8 downto 6);		-- RB is first operand
 			regB_2			 <= inst2(5 downto 3);		-- Immediate
 			regWB_2			 <= inst2(11 downto 9);		-- RA is for store
@@ -297,19 +307,19 @@ begin
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "10";
 			
---		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
+--		elsif(opcode2 = "0110") then	-- LOAD MULTIPLE
 --			rden1v := '1';
 --			rden2v := '0';
 --			wr1v := '1';
 --			toWrite1v := "000";		-----------------CHANGE!!!!!!!!!
 --			
---		elsif(opcode1 = "0111") then	-- STORE MULTIPLE
+--		elsif(opcode2 = "0111") then	-- STORE MULTIPLE
 --			rden1v := '1';
 --			rden2v := '0';
 --			wr1v := '0';
 --			toWrite1v := inst2(5 downto 3);
 			
-		elsif(opcode1 = "1100") then	-- BEQ
+		elsif(opcode2 = "1100") then	-- BEQ
 			regA_2			 <= inst2(8 downto 6);		-- RB is second operand
 			regB_2			 <= inst2(5 downto 3);		-- Immediate
 			regWB_2			 <= inst2(11 downto 9);		-- RA is first operand
@@ -320,7 +330,7 @@ begin
 			opcode_reduced2(3 downto 2) <= "11";
 			opcode_reduced2(1 downto 0) <= "00";
 			
-		elsif(opcode1 = "1000") then	-- JAL
+		elsif(opcode2 = "1000") then	-- JAL
 			regA_2			 <= inst2(8 downto 6);		-- Immediate
 			regB_2			 <= inst2(5 downto 3);		-- Immediate
 			regWB_2			 <= inst2(11 downto 9);		-- RA is WB
@@ -347,4 +357,20 @@ begin
 	
 	---------------------------------------------------------------------
 	
+	-- INSTRUCTION MANAGEMENT FOR LM/SM
+	-- There can be three situations
+	--   	1. LM with some other instruction
+	--		2. SM with some other instruction
+	--		3. LM & SM together
+	
+	-- THIS IS MANAGED AS IF THERE EXIST A DIFFERENT DECODING AND FECTHING UNIT
+	-- MUXES ARE USED FOR CONTROLLING THE DATA FLOW
+	
+	-- In either of the case we have to stall the fetch unit for 4,4,8 cycles respectively
+	
+	count4 : counter port map(clock => clk,
+									  cnt_en => ,
+									  sclr => ,
+									  cout => ,
+									  q => counter_out4);
 end DEC;
