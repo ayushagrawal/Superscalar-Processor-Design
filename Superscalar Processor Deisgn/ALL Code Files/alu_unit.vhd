@@ -43,7 +43,7 @@ begin
 												 zero => z_nand);
 	
 	-- structure of output : 
-
+	
 --	reg_out : registers generic map(N => 22)
 --							  port 	 map(clk => clk,
 --											  reset => reset,
