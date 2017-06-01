@@ -14,6 +14,17 @@ package components is
 			 
 	end component;
 	
+	component add_unit is
+		
+		generic(N : integer := 16);
+		port(in1 : in std_logic_vector(N-1 downto 0);
+			  in2 : in std_logic_vector(N-1 downto 0);
+			  output : out std_logic_vector(N-1 downto 0);
+			  carry : out std_logic;
+			  zero : out std_logic);
+			  
+	end component;
+	
 	component allocating_unit is
 		generic(N_alu 	: integer := 8;			-- Number of registers in the ALU reservation station = Number of entries in the Free Queue
 				  N_bch 	: integer := 4;			-- Number of registers in the BCH reservation station = Number of entries in the Free Queue
@@ -311,6 +322,17 @@ package components is
 		port( in0,in1 : in std_logic_vector(N-1 downto 0); 
 				sel : in std_logic; 
 				output : out std_logic_vector(N-1 downto 0));
+	end component;
+	
+	component nand_unit is
+		
+		generic(N : integer := 16);
+		port(in1 : in std_logic_vector(N-1 downto 0);
+			  in2 : in std_logic_vector(N-1 downto 0);
+			  output : out std_logic_vector(N-1 downto 0);
+			  carry : out std_logic;
+			  zero : out std_logic);
+			  
 	end component;
 	
 	component registers is
