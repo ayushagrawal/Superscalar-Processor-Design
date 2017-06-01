@@ -72,6 +72,27 @@ package components is
 			  );
 	end component;
 	
+	component alu_unit is
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  input : in std_logic_vector(43 downto 0);
+			  output : out std_logic_vector(21 downto 0));
+	end component;
+	
+	component bch_unit is
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  input : in std_logic_vector(58 downto 0);
+			  output : out std_logic_vector(21 downto 0));
+	end component;
+	
+	component lst_unit is
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  input : in std_logic_vector(42 downto 0);
+			  output : out std_logic_vector(21 downto 0));
+	end component;
+	
 	component ARF is
 		port(reset : in std_logic;
 			  clk   : in std_logic;
