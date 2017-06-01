@@ -228,6 +228,31 @@ package components is
 			  );
 	end component;
 	
+	component execute_complete is
+
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  
+			  -- TO ALU EXECUTING UNIT
+			  alu_inst1 : in std_logic_vector(43 downto 0);
+			  alu_inst2 : in std_logic_vector(43 downto 0);
+			  
+			  -- TO BRANCH EXECUTING UNIT
+			  bch_inst1 : in std_logic_vector(58 downto 0);
+			  
+			  -- TO LOAD/STORE EXECUTING UNIT
+			  lst_inst1 : in std_logic_vector(42 downto 0);
+			  lst_inst2 : in std_logic_vector(42 downto 0);
+			  
+			  -- FROM EXECUTING UNITS
+			  broadcast	: out main_array(0 to 4)(21 downto 0)	-- Max of 5 units can return
+			  -- Data 		= 16 bits
+			  -- Tag  		= 5  bits (RRF size)
+			  -- Validity  = 1 bit
+			  -- (In the above order) --
+			  );	
+	end component;
+	
 	component fetch is
 		port(clk 		: in std_logic;
 			  reset		: in std_logic;
@@ -354,6 +379,39 @@ package components is
 			  data_out : out main_array(0 to N-1)(X-1 downto 0);
 			  clk   : in std_logic;
 			  reset : in std_logic);
+	end component;
+	
+	component reservation_station_complete is
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  -- FROM DECODE
+			  instruction1 : in std_logic_vector(62 downto 0);
+			  instruction2 : in std_logic_vector(62 downto 0);
+			  
+			  -- TO DECODE
+			  only_one_alu : out std_logic;
+			  only_one_bch : out std_logic;
+			  only_one_lst : out std_logic;
+			  
+			  -- TO ALU EXECUTING UNIT
+			  alu_inst1_out : out std_logic_vector(43 downto 0);
+			  alu_inst2_out : out std_logic_vector(43 downto 0);
+			  
+			  -- TO BRANCH EXECUTING UNIT
+			  bch_inst1_out : out std_logic_vector(58 downto 0);
+			  
+			  -- TO LOAD/STORE EXECUTING UNIT
+			  lst_inst1_out : out std_logic_vector(42 downto 0);
+			  lst_inst2_out : out std_logic_vector(42 downto 0);
+			  
+			  
+			  -- FROM EXECUTING UNITS
+			  broadcast	: in main_array(0 to 4)(21 downto 0)	-- Max of 5 units can return
+			  -- Data 		= 16 bits
+			  -- Tag  		= 5  bits (RRF size)
+			  -- Validity  = 1 bit
+			  -- (In the above order) --
+			  );
 	end component;
 	
 	component ROB is
