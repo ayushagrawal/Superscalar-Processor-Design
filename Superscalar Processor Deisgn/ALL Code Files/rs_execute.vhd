@@ -17,16 +17,16 @@ entity rs_execute is
 			  only_one_lst : out std_logic;
 			  
 			  -- TO ALL
-			  broadcast : out main_array(0 to 4)(21 downto 0));
+			  broadcast : out main_array(0 to 4)(22 downto 0));
 			  
 	end entity;
 
 architecture RS_ex of rs_execute is
 	
-	signal broadcast1 : main_array(0 to 4)(21 downto 0);
-	signal alu_inst1,alu_inst2 : std_logic_vector(43 downto 0);
-	signal bch_inst1				: std_logic_vector(58 downto 0);
-	signal lst_inst1,lst_inst2 : std_logic_vector(42 downto 0);
+	signal broadcast1 : main_array(0 to 4)(22 downto 0);
+	signal alu_inst1,alu_inst2 : std_logic_vector(40 downto 0);
+	signal bch_inst1				: std_logic_vector(55 downto 0);
+	signal lst_inst1,lst_inst2 : std_logic_vector(39 downto 0);
 	
 begin
 	

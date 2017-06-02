@@ -11,21 +11,22 @@ entity execute_complete is
 		  reset : in std_logic;
 		  
 		  -- TO ALU EXECUTING UNIT
-		  alu_inst1 : in std_logic_vector(43 downto 0);
-		  alu_inst2 : in std_logic_vector(43 downto 0);
+		  alu_inst1 : in std_logic_vector(40 downto 0);
+		  alu_inst2 : in std_logic_vector(40 downto 0);
 		  
 		  -- TO BRANCH EXECUTING UNIT
-		  bch_inst1 : in std_logic_vector(58 downto 0);
+		  bch_inst1 : in std_logic_vector(55 downto 0);
 		  
 		  -- TO LOAD/STORE EXECUTING UNIT
-		  lst_inst1 : in std_logic_vector(42 downto 0);
-		  lst_inst2 : in std_logic_vector(42 downto 0);
+		  lst_inst1 : in std_logic_vector(39 downto 0);
+		  lst_inst2 : in std_logic_vector(39 downto 0);
 		  
 		  -- FROM EXECUTING UNITS
-		  broadcast	: out main_array(0 to 4)(21 downto 0)	-- Max of 5 units can return
+		  broadcast	: out main_array(0 to 4)(22 downto 0)	-- Max of 5 units can return
+		  -- WB_Valid  = 1  bit
 		  -- Data 		= 16 bits
 		  -- Tag  		= 5  bits (RRF size)
-		  -- Validity  = 1 bit
+		  -- Validity  = 1  bit
 		  -- (In the above order) --
 		  );
 	

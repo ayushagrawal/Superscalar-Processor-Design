@@ -1,5 +1,5 @@
 Analysis & Synthesis report for execute_complete
-Thu Jun 01 18:56:26 2017
+Fri Jun 02 20:22:10 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,9 +14,16 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: alu_unit:alu_unit1|add_unit:Adding_unit
+ 10. Parameter Settings for User Entity Instance: alu_unit:alu_unit1|nand_unit:Nanding_unit
+ 11. Parameter Settings for User Entity Instance: alu_unit:alu_unit1|registers:reg_out
+ 12. Parameter Settings for User Entity Instance: alu_unit:alu_unit2|add_unit:Adding_unit
+ 13. Parameter Settings for User Entity Instance: alu_unit:alu_unit2|nand_unit:Nanding_unit
+ 14. Parameter Settings for User Entity Instance: alu_unit:alu_unit2|registers:reg_out
+ 15. Port Connectivity Checks: "alu_unit:alu_unit1|registers:reg_out"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +50,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 01 18:56:26 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 20:22:10 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; execute_complete                            ;
 ; Top-level Entity Name              ; execute_complete                            ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 345                                         ;
+; Total logic elements               ; 116                                         ;
+;     Total combinational functions  ; 104                                         ;
+;     Dedicated logic registers      ; 46                                          ;
+; Total registers                    ; 46                                          ;
+; Total pins                         ; 335                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,6 +74,7 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Top-level entity name                                                      ; execute_complete   ; execute_complete   ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; 2                  ;                    ;
 ; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
 ; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -167,6 +175,9 @@ agreement for further details.
 +----------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                               ; Library ;
 +----------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
+; ../ALL Code Files/registers.vhd        ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd        ;         ;
+; ../ALL Code Files/nand_unit.vhd        ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd        ;         ;
+; ../ALL Code Files/add_unit.vhd         ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd         ;         ;
 ; ../ALL Code Files/lst_unit.vhd         ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd         ;         ;
 ; ../ALL Code Files/bch_unit.vhd         ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd         ;         ;
 ; ../ALL Code Files/alu_unit.vhd         ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd         ;         ;
@@ -175,44 +186,53 @@ agreement for further details.
 +----------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 345   ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 345   ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 116       ;
+;                                             ;           ;
+; Total combinational functions               ; 104       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 70        ;
+;     -- 3 input functions                    ; 32        ;
+;     -- <=2 input functions                  ; 2         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 72        ;
+;     -- arithmetic mode                      ; 32        ;
+;                                             ;           ;
+; Total registers                             ; 46        ;
+;     -- Dedicated logic registers            ; 46        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 335       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 46        ;
+; Total fan-out                               ; 895       ;
+; Average fan-out                             ; 1.09      ;
++---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
-; |execute_complete          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 345  ; 0            ; |execute_complete   ; execute_complete ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                       ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name      ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+------------------+--------------+
+; |execute_complete              ; 104 (0)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 335  ; 0            ; |execute_complete                                           ; execute_complete ; work         ;
+;    |alu_unit:alu_unit1|        ; 52 (25)             ; 23 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit1                        ; alu_unit         ; work         ;
+;       |add_unit:Adding_unit|   ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit1|add_unit:Adding_unit   ; add_unit         ; work         ;
+;       |nand_unit:Nanding_unit| ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit1|nand_unit:Nanding_unit ; nand_unit        ; work         ;
+;       |registers:reg_out|      ; 0 (0)               ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit1|registers:reg_out      ; registers        ; work         ;
+;    |alu_unit:alu_unit2|        ; 52 (25)             ; 23 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit2                        ; alu_unit         ; work         ;
+;       |add_unit:Adding_unit|   ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit2|add_unit:Adding_unit   ; add_unit         ; work         ;
+;       |nand_unit:Nanding_unit| ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit2|nand_unit:Nanding_unit ; nand_unit        ; work         ;
+;       |registers:reg_out|      ; 0 (0)               ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |execute_complete|alu_unit:alu_unit2|registers:reg_out      ; registers        ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -221,14 +241,83 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 46    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 46    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_unit:alu_unit1|add_unit:Adding_unit ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_unit:alu_unit1|nand_unit:Nanding_unit ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_unit:alu_unit1|registers:reg_out ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 23    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_unit:alu_unit2|add_unit:Adding_unit ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_unit:alu_unit2|nand_unit:Nanding_unit ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_unit:alu_unit2|registers:reg_out ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 23    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_unit:alu_unit1|registers:reg_out" ;
++--------+-------+----------+--------------------------------------+
+; Port   ; Type  ; Severity ; Details                              ;
++--------+-------+----------+--------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                         ;
++--------+-------+----------+--------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -236,13 +325,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 345                         ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 335                         ;
+; cycloneiii_ff         ; 46                          ;
+;     CLR               ; 46                          ;
+; cycloneiii_lcell_comb ; 105                         ;
+;     arith             ; 32                          ;
+;         3 data inputs ; 32                          ;
+;     normal            ; 73                          ;
+;         0 data inputs ; 3                           ;
+;         4 data inputs ; 70                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 7.30                        ;
+; Average LUT depth     ; 4.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -251,7 +345,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -261,10 +355,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Jun 01 18:56:09 2017
+    Info: Processing started: Fri Jun 02 20:21:48 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off execute_complete -c execute_complete
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
+    Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 13
+    Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/nand_unit.vhd
+    Info (12022): Found design unit 1: nand_unit-nand_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd Line: 24
+    Info (12023): Found entity 1: nand_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/add_unit.vhd
+    Info (12022): Found design unit 1: add_unit-add_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd Line: 24
+    Info (12023): Found entity 1: add_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/lst_unit.vhd
     Info (12022): Found design unit 1: lst_unit-lst_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd Line: 17
     Info (12023): Found entity 1: lst_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd Line: 8
@@ -272,19 +374,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: bch_unit-bch_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 17
     Info (12023): Found entity 1: bch_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/alu_unit.vhd
-    Info (12022): Found design unit 1: alu_unit-alu_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Info (12023): Found entity 1: alu_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 8
+    Info (12022): Found design unit 1: alu_unit-alu_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 22
+    Info (12023): Found entity 1: alu_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 13
 Info (12021): Found 1 design units, including 0 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/components.vhd
     Info (12022): Found design unit 1: components File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/execute_complete.vhd
-    Info (12022): Found design unit 1: execute_complete-ex_comp File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 34
+    Info (12022): Found design unit 1: execute_complete-ex_comp File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 35
     Info (12023): Found entity 1: execute_complete File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 8
 Info (12127): Elaborating entity "execute_complete" for the top level hierarchy
-Info (12128): Elaborating entity "alu_unit" for hierarchy "alu_unit:alu_unit1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 40
-Warning (10541): VHDL Signal Declaration warning at alu_unit.vhd(13): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 13
-Info (12128): Elaborating entity "bch_unit" for hierarchy "bch_unit:bch_unit0" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 50
+Info (12128): Elaborating entity "alu_unit" for hierarchy "alu_unit:alu_unit1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 41
+Info (12128): Elaborating entity "add_unit" for hierarchy "alu_unit:alu_unit1|add_unit:Adding_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 32
+Info (12128): Elaborating entity "nand_unit" for hierarchy "alu_unit:alu_unit1|nand_unit:Nanding_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 39
+Info (12128): Elaborating entity "registers" for hierarchy "alu_unit:alu_unit1|registers:reg_out" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 76
+Info (12128): Elaborating entity "bch_unit" for hierarchy "bch_unit:bch_unit0" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 51
 Warning (10541): VHDL Signal Declaration warning at bch_unit.vhd(13): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 13
-Info (12128): Elaborating entity "lst_unit" for hierarchy "lst_unit:lst_unit1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 55
+Info (12128): Elaborating entity "lst_unit" for hierarchy "lst_unit:lst_unit1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 56
 Warning (10541): VHDL Signal Declaration warning at lst_unit.vhd(13): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd Line: 13
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "broadcast[4][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
@@ -309,6 +413,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "broadcast[4][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[4][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[4][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
+    Warning (13410): Pin "broadcast[4][22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[3][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[3][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[3][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
@@ -331,6 +436,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "broadcast[3][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[3][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[3][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
+    Warning (13410): Pin "broadcast[3][22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[2][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[2][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[2][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
@@ -353,143 +459,11 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "broadcast[2][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[2][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
     Warning (13410): Pin "broadcast[2][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[1][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
-    Warning (13410): Pin "broadcast[0][21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
+    Warning (13410): Pin "broadcast[2][22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 25
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 235 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 10
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 11
-    Warning (15610): No output dependent on input pin "alu_inst1[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[3]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[4]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[5]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[6]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[7]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[8]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[9]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[10]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[11]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[12]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[13]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[14]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[15]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[16]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[17]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[18]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[23]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[24]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[25]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[26]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[27]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[28]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[29]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[30]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[31]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[32]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[33]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[34]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[35]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[36]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[37]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[38]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[39]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[40]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[41]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[42]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst1[43]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 14
-    Warning (15610): No output dependent on input pin "alu_inst2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[3]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[4]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[5]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[6]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[7]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[8]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[9]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[10]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[11]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[12]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[13]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[14]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[15]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[16]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[17]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[18]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[23]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[24]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[25]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[26]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[27]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[28]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[29]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[30]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[31]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[32]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[33]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[34]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[35]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[36]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[37]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[38]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[39]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[40]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[41]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[42]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
-    Warning (15610): No output dependent on input pin "alu_inst2[43]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 15
+Warning (21074): Design contains 136 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "bch_inst1[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
     Warning (15610): No output dependent on input pin "bch_inst1[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
     Warning (15610): No output dependent on input pin "bch_inst1[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
@@ -546,9 +520,6 @@ Warning (21074): Design contains 235 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "bch_inst1[53]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
     Warning (15610): No output dependent on input pin "bch_inst1[54]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
     Warning (15610): No output dependent on input pin "bch_inst1[55]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
-    Warning (15610): No output dependent on input pin "bch_inst1[56]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
-    Warning (15610): No output dependent on input pin "bch_inst1[57]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
-    Warning (15610): No output dependent on input pin "bch_inst1[58]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 18
     Warning (15610): No output dependent on input pin "lst_inst1[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
     Warning (15610): No output dependent on input pin "lst_inst1[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
     Warning (15610): No output dependent on input pin "lst_inst1[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
@@ -589,9 +560,6 @@ Warning (21074): Design contains 235 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "lst_inst1[37]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
     Warning (15610): No output dependent on input pin "lst_inst1[38]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
     Warning (15610): No output dependent on input pin "lst_inst1[39]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
-    Warning (15610): No output dependent on input pin "lst_inst1[40]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
-    Warning (15610): No output dependent on input pin "lst_inst1[41]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
-    Warning (15610): No output dependent on input pin "lst_inst1[42]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 21
     Warning (15610): No output dependent on input pin "lst_inst2[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
     Warning (15610): No output dependent on input pin "lst_inst2[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
     Warning (15610): No output dependent on input pin "lst_inst2[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
@@ -632,16 +600,14 @@ Warning (21074): Design contains 235 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "lst_inst2[37]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
     Warning (15610): No output dependent on input pin "lst_inst2[38]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
     Warning (15610): No output dependent on input pin "lst_inst2[39]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
-    Warning (15610): No output dependent on input pin "lst_inst2[40]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
-    Warning (15610): No output dependent on input pin "lst_inst2[41]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
-    Warning (15610): No output dependent on input pin "lst_inst2[42]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 22
-Info (21057): Implemented 345 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 235 input pins
-    Info (21059): Implemented 110 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 351 warnings
-    Info: Peak virtual memory: 683 megabytes
-    Info: Processing ended: Thu Jun 01 18:56:26 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:36
+Info (21057): Implemented 451 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 220 input pins
+    Info (21059): Implemented 115 output pins
+    Info (21061): Implemented 116 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 209 warnings
+    Info: Peak virtual memory: 678 megabytes
+    Info: Processing ended: Fri Jun 02 20:22:10 2017
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:41
 
 

@@ -9,8 +9,8 @@ entity bch_unit is
 
 		port(clk : in std_logic;
 			  reset : in std_logic;
-			  input : in std_logic_vector(58 downto 0);
-			  output : out std_logic_vector(21 downto 0));
+			  input : in std_logic_vector(55 downto 0);
+			  output : out std_logic_vector(22 downto 0));
 			  
 end entity;
 

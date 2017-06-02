@@ -86,22 +86,22 @@ package components is
 	component alu_unit is
 		port(clk : in std_logic;
 			  reset : in std_logic;
-			  input : in std_logic_vector(43 downto 0);
-			  output : out std_logic_vector(21 downto 0));
+			  input : in std_logic_vector(40 downto 0);
+			  output : out std_logic_vector(22 downto 0));
 	end component;
 	
 	component bch_unit is
 		port(clk : in std_logic;
 			  reset : in std_logic;
-			  input : in std_logic_vector(58 downto 0);
-			  output : out std_logic_vector(21 downto 0));
+			  input : in std_logic_vector(55 downto 0);
+			  output : out std_logic_vector(22 downto 0));
 	end component;
 	
 	component lst_unit is
 		port(clk : in std_logic;
 			  reset : in std_logic;
-			  input : in std_logic_vector(42 downto 0);
-			  output : out std_logic_vector(21 downto 0));
+			  input : in std_logic_vector(39 downto 0);
+			  output : out std_logic_vector(22 downto 0));
 	end component;
 	
 	component ARF is
@@ -153,7 +153,7 @@ package components is
 		generic(tag_size : integer := 5;
 				  tag_num : integer := 16;
 				  N       : integer := 62);		-- DATA LENGTH
-		port (to_match : in main_array(0 to 4)(21 downto 0);					-- CONTAINS THE BROADCAST
+		port (to_match : in main_array(0 to 4)(22 downto 0);					-- CONTAINS THE BROADCAST
 				data_in : in main_array(0 to tag_num-1)(N-1 downto 0);		-- THE REGISTER'S DATA
 				data_out : out main_array(0 to tag_num-1)(N-1 downto 0);		-- THE REGISTER'S DATA
 				busy		: in main_array(0 to tag_num-1)(0 downto 0);
@@ -245,18 +245,18 @@ package components is
 			  reset : in std_logic;
 			  
 			  -- TO ALU EXECUTING UNIT
-			  alu_inst1 : in std_logic_vector(43 downto 0);
-			  alu_inst2 : in std_logic_vector(43 downto 0);
+			  alu_inst1 : in std_logic_vector(40 downto 0);
+			  alu_inst2 : in std_logic_vector(40 downto 0);
 			  
 			  -- TO BRANCH EXECUTING UNIT
-			  bch_inst1 : in std_logic_vector(58 downto 0);
+			  bch_inst1 : in std_logic_vector(55 downto 0);
 			  
 			  -- TO LOAD/STORE EXECUTING UNIT
-			  lst_inst1 : in std_logic_vector(42 downto 0);
-			  lst_inst2 : in std_logic_vector(42 downto 0);
+			  lst_inst1 : in std_logic_vector(39 downto 0);
+			  lst_inst2 : in std_logic_vector(39 downto 0);
 			  
 			  -- FROM EXECUTING UNITS
-			  broadcast	: out main_array(0 to 4)(21 downto 0)	-- Max of 5 units can return
+			  broadcast	: out main_array(0 to 4)(22 downto 0)	-- Max of 5 units can return
 			  -- Data 		= 16 bits
 			  -- Tag  		= 5  bits (RRF size)
 			  -- Validity  = 1 bit
@@ -368,7 +368,7 @@ package components is
 			  wren2					: in std_logic;
 			  
 			  -- From Execute Complete for ROB
-			  broadcast				: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
+			  broadcast				: in main_array(0 to 4)(22 downto 0);	-- Max of 5 units can return
 																							-- Data 		= 16 bits
 																							-- Tag  		= 5  bits (RRF size)
 																							-- Validity = 1 bit
@@ -416,19 +416,19 @@ package components is
 			  only_one_lst : out std_logic;
 			  
 			  -- TO ALU EXECUTING UNIT
-			  alu_inst1_out : out std_logic_vector(43 downto 0);
-			  alu_inst2_out : out std_logic_vector(43 downto 0);
+			  alu_inst1_out : out std_logic_vector(40 downto 0);
+			  alu_inst2_out : out std_logic_vector(40 downto 0);
 			  
 			  -- TO BRANCH EXECUTING UNIT
-			  bch_inst1_out : out std_logic_vector(58 downto 0);
+			  bch_inst1_out : out std_logic_vector(55 downto 0);
 			  
 			  -- TO LOAD/STORE EXECUTING UNIT
-			  lst_inst1_out : out std_logic_vector(42 downto 0);
-			  lst_inst2_out : out std_logic_vector(42 downto 0);
+			  lst_inst1_out : out std_logic_vector(39 downto 0);
+			  lst_inst2_out : out std_logic_vector(39 downto 0);
 			  
 			  
 			  -- FROM EXECUTING UNITS
-			  broadcast	: in main_array(0 to 4)(21 downto 0)	-- Max of 5 units can return
+			  broadcast	: in main_array(0 to 4)(22 downto 0)	-- Max of 5 units can return
 			  -- Data 		= 16 bits
 			  -- Tag  		= 5  bits (RRF size)
 			  -- Validity  = 1 bit
@@ -441,7 +441,7 @@ package components is
 		port(reset 	: in std_logic;
 				clk	: in std_logic;
 				stall_out : out std_logic;
-				broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
+				broadcast	: in main_array(0 to 4)(22 downto 0);	-- Max of 5 units can return
 				-- Data 		= 16 bits
 				-- Tag  		= 5  bits (RRF size)
 				-- Validity = 1 bit
@@ -478,7 +478,7 @@ package components is
 	component update_unit is
 		generic(N : integer := 62;				-- DATA LENGTH 
 				  X : integer := 16);			-- Specifies the number of entries in the reservation station
-		port(broadcast	: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
+		port(broadcast	: in main_array(0 to 4)(22 downto 0);	-- Max of 5 units can return
 			  -- Data 		= 16 bits
 			  -- Tag  		= 5  bits (RRF size)
 			  -- Validity  = 1 bit

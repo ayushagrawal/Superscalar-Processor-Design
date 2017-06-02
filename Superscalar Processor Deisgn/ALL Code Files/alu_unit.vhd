@@ -14,7 +14,7 @@ entity alu_unit is
 
 		port(clk : in std_logic;
 			  reset : in std_logic;
-			  input : in std_logic_vector(43 downto 0);
+			  input : in std_logic_vector(40 downto 0);
 			  output : out std_logic_vector(22 downto 0));
 			  
 end entity;
@@ -45,27 +45,27 @@ begin
 	
 	-- structure of output : WB_VALIDITY:DATA:TAG:VALIDITY
 	
-	reg_in(0) <= input(43);
-	reg_in(5 downto 1) <= input(39 downto 35);
+	reg_in(0) <= input(40);								-- Validity
+	reg_in(5 downto 1) <= input(36 downto 32);	-- ROB index
 	
 	process(input,add_out,nand_out,c_add,z_add,c_nand,z_nand)
 	begin
-		if(input(42) = '0') then
+		if(input(39) = '0') then
 			reg_in(21 downto 6) <= add_out;
-			if (input(41 downto 40) = "00") then
+			if (input(38 downto 37) = "00") then
 				reg_in(22) <= '1';
-			elsif (input(41 downto 40) = "10") then
+			elsif (input(38 downto 37) = "10") then
 				reg_in(22) <= c_add;
-			elsif (input(41 downto 40) = "01") then
+			elsif (input(38 downto 37) = "01") then
 				reg_in(22) <= z_add;
 			else		-- ADI
 				reg_in(22) <= '1';
 			end if;
 		else
 			reg_in(21 downto 6) <= nand_out;
-			if (input(41 downto 40) = "00") then
+			if (input(38 downto 37) = "00") then
 				reg_in(22) <= '1';
-			elsif (input(41 downto 40) = "10") then
+			elsif (input(38 downto 37) = "10") then
 				reg_in(22) <= c_nand;
 			else
 				reg_in(22) <= z_nand;

@@ -1,5 +1,5 @@
 Flow report for execute_complete
-Thu Jun 01 18:56:49 2017
+Fri Jun 02 20:22:35 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 01 18:56:44 2017       ;
+; Flow Status                        ; Successful - Fri Jun 02 20:22:31 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; execute_complete                            ;
 ; Top-level Entity Name              ; execute_complete                            ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0 / 28,848 ( 0 % )                          ;
-;     Total combinational functions  ; 0 / 28,848 ( 0 % )                          ;
-;     Dedicated logic registers      ; 0 / 28,848 ( 0 % )                          ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 345 / 533 ( 65 % )                          ;
+; Total logic elements               ; 116 / 28,848 ( < 1 % )                      ;
+;     Total combinational functions  ; 104 / 28,848 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 46 / 28,848 ( < 1 % )                       ;
+; Total registers                    ; 46                                          ;
+; Total pins                         ; 335 / 533 ( 63 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/01/2017 18:56:09 ;
+; Start date & time ; 06/02/2017 20:21:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; execute_complete    ;
 +-------------------+---------------------+
@@ -76,7 +76,8 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149632356915420        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149641510904572        ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -91,11 +92,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 683 MB              ; 00:00:36                           ;
-; Fitter                    ; 00:00:13     ; 1.0                     ; 1155 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 565 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 664 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:53                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 678 MB              ; 00:00:41                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 1174 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 569 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 666 MB              ; 00:00:03                           ;
+; Total                     ; 00:00:42     ; --                      ; --                  ; 00:01:04                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
