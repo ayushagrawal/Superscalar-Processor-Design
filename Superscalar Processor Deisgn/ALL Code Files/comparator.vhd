@@ -10,7 +10,7 @@ entity comparator is
 	generic(tag_size : integer := 5;
 			  tag_num : integer := 16;
 			  N       : integer := 62);		-- DATA LENGTH
-	port (to_match : in main_array(0 to 4)(21 downto 0);					-- CONTAINS THE BROADCAST
+	port (to_match : in main_array(0 to 4)(22 downto 0);					-- CONTAINS THE BROADCAST
 			data_in : in main_array(0 to tag_num-1)(N-1 downto 0);		-- THE REGISTER'S DATA
 			data_out : out main_array(0 to tag_num-1)(N-1 downto 0);		-- THE REGISTER'S DATA
 			busy		: in main_array(0 to tag_num-1)(0 downto 0);
