@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Jun 01 20:55:57 2017
+Fitter Status : Successful - Fri Jun 02 19:27:53 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : alu_unit
 Top-level Entity Name : alu_unit
 Family : Cyclone IV E
 Device : EP4CE6F17C6
 Timing Models : Final
-Total logic elements : 0 / 6,272 ( 0 % )
-    Total combinational functions : 0 / 6,272 ( 0 % )
-    Dedicated logic registers : 0 / 6,272 ( 0 % )
-Total registers : 0
-Total pins : 68 / 180 ( 38 % )
+Total logic elements : 59 / 6,272 ( < 1 % )
+    Total combinational functions : 53 / 6,272 ( < 1 % )
+    Dedicated logic registers : 23 / 6,272 ( < 1 % )
+Total registers : 23
+Total pins : 69 / 180 ( 38 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )

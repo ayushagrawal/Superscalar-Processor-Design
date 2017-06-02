@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu_unit
-Thu Jun 01 20:55:52 2017
+Fri Jun 02 19:27:46 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -16,8 +16,8 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: add_unit:Adding_unit
  10. Parameter Settings for User Entity Instance: nand_unit:Nanding_unit
- 11. Port Connectivity Checks: "nand_unit:Nanding_unit"
- 12. Port Connectivity Checks: "add_unit:Adding_unit"
+ 11. Parameter Settings for User Entity Instance: registers:reg_out
+ 12. Port Connectivity Checks: "registers:reg_out"
  13. Post-Synthesis Netlist Statistics for Top Partition
  14. Elapsed Time Per Partition
  15. Analysis & Synthesis Messages
@@ -47,16 +47,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 01 20:55:52 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 19:27:46 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; alu_unit                                    ;
 ; Top-level Entity Name              ; alu_unit                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 68                                          ;
+; Total logic elements               ; 59                                          ;
+;     Total combinational functions  ; 53                                          ;
+;     Dedicated logic registers      ; 23                                          ;
+; Total registers                    ; 23                                          ;
+; Total pins                         ; 69                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -71,6 +71,7 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Top-level entity name                                                      ; alu_unit           ; alu_unit           ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; 2                  ;                    ;
 ; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
 ; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -171,6 +172,7 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; ../ALL Code Files/registers.vhd  ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd  ;         ;
 ; ../ALL Code Files/components.vhd ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd ;         ;
 ; ../ALL Code Files/alu_unit.vhd   ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd   ;         ;
 ; ../ALL Code Files/add_unit.vhd   ; yes             ; User VHDL File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd   ;         ;
@@ -178,44 +180,48 @@ agreement for further details.
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 68    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 68    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 59        ;
+;                                             ;           ;
+; Total combinational functions               ; 53        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 34        ;
+;     -- 3 input functions                    ; 17        ;
+;     -- <=2 input functions                  ; 2         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 37        ;
+;     -- arithmetic mode                      ; 16        ;
+;                                             ;           ;
+; Total registers                             ; 23        ;
+;     -- Dedicated logic registers            ; 23        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 69        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 23        ;
+; Total fan-out                               ; 350       ;
+; Average fan-out                             ; 1.64      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |alu_unit                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |alu_unit           ; alu_unit    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
+; |alu_unit                   ; 53 (26)             ; 23 (0)                    ; 0           ; 0            ; 0       ; 0         ; 69   ; 0            ; |alu_unit                        ; alu_unit    ; work         ;
+;    |add_unit:Adding_unit|   ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_unit|add_unit:Adding_unit   ; add_unit    ; work         ;
+;    |nand_unit:Nanding_unit| ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_unit|nand_unit:Nanding_unit ; nand_unit   ; work         ;
+;    |registers:reg_out|      ; 0 (0)               ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu_unit|registers:reg_out      ; registers   ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -224,10 +230,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 23    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 23    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -254,26 +260,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "nand_unit:Nanding_unit"                                                               ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; carry  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers:reg_out ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n              ; 23    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "add_unit:Adding_unit"                                                                 ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; carry  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------+
+; Port Connectivity Checks: "registers:reg_out" ;
++--------+-------+----------+-------------------+
+; Port   ; Type  ; Severity ; Details           ;
++--------+-------+----------+-------------------+
+; enable ; Input ; Info     ; Stuck at VCC      ;
++--------+-------+----------+-------------------+
 
 
 +-----------------------------------------------------+
@@ -281,13 +284,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 68                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
+; boundary_port         ; 69                          ;
+; cycloneiii_ff         ; 23                          ;
+;     CLR               ; 23                          ;
+; cycloneiii_lcell_comb ; 53                          ;
+;     arith             ; 16                          ;
+;         3 data inputs ; 16                          ;
+;     normal            ; 37                          ;
 ;         0 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 34                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 6.60                        ;
+; Average LUT depth     ; 4.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -296,7 +306,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -306,10 +316,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Jun 01 20:55:38 2017
+    Info: Processing started: Fri Jun 02 19:27:29 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_unit -c alu_unit
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/registers.vhd
     Info (12022): Found design unit 1: registers-reg File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 13
     Info (12023): Found entity 1: registers File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd Line: 4
@@ -325,94 +334,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: nand_unit-nand_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd Line: 24
     Info (12023): Found entity 1: nand_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd Line: 13
 Info (12127): Elaborating entity "alu_unit" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at alu_unit.vhd(18): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at alu_unit.vhd(24): object "add_out" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 24
-Warning (10036): Verilog HDL or VHDL warning at alu_unit.vhd(24): object "nand_out" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 24
-Warning (10036): Verilog HDL or VHDL warning at alu_unit.vhd(25): object "c_add" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at alu_unit.vhd(25): object "c_nand" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at alu_unit.vhd(25): object "z_add" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at alu_unit.vhd(25): object "z_nand" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 25
-Info (12128): Elaborating entity "add_unit" for hierarchy "add_unit:Adding_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 31
-Info (12128): Elaborating entity "nand_unit" for hierarchy "nand_unit:Nanding_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 38
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
-    Warning (13410): Pin "output[21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 18
+Info (12128): Elaborating entity "add_unit" for hierarchy "add_unit:Adding_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 32
+Info (12128): Elaborating entity "nand_unit" for hierarchy "nand_unit:Nanding_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 39
+Info (12128): Elaborating entity "registers" for hierarchy "registers:reg_out" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 76
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 46 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 15
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 16
-    Warning (15610): No output dependent on input pin "input[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[3]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[4]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[5]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[6]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[7]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[8]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[9]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[10]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[11]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[12]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[13]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[14]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[15]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[16]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[17]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[18]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[23]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[24]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[25]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[26]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[27]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[28]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[29]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[30]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[31]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "input[32]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
     Warning (15610): No output dependent on input pin "input[33]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
     Warning (15610): No output dependent on input pin "input[34]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[35]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[36]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[37]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[38]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[39]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[40]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[41]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[42]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-    Warning (15610): No output dependent on input pin "input[43]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 17
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 128 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 46 input pins
-    Info (21059): Implemented 22 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
-    Info: Peak virtual memory: 672 megabytes
-    Info: Processing ended: Thu Jun 01 20:55:52 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 59 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 673 megabytes
+    Info: Processing ended: Fri Jun 02 19:27:46 2017
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:37
 
 

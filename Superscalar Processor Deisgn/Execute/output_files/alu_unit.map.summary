@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Jun 01 20:55:52 2017
+Analysis & Synthesis Status : Successful - Fri Jun 02 19:27:46 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : alu_unit
 Top-level Entity Name : alu_unit
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 68
+Total logic elements : 59
+    Total combinational functions : 53
+    Dedicated logic registers : 23
+Total registers : 23
+Total pins : 69
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
