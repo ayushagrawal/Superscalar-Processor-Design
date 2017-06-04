@@ -23,7 +23,7 @@ architecture Comp of comparator is
 
 begin
 
-	process(to_match,data_in)
+	process(to_match,data_in,busy)
 		variable Nvalid : main_array(0 to 4)(0 downto 0);
 		variable Nindex : main_array(0 to 4)(natural(log2(real(tag_num)))-1 downto 0) := (others => (others => '0'));
 	begin
@@ -32,12 +32,12 @@ begin
 		for I in 0 to 4 loop
 			if(to_match(I)(0) = '1') then			-- VALIDITY_BROADCAST == 1
 				for J in 0 to tag_num-1 loop
-					if ((to_match(I)(tag_size downto 1) = data_in(J)(21 downto 17) ) and (busy(J) = "1")) then
+					if ((to_match(I)(5 downto 1) = data_in(J)(21 downto 17) ) and (busy(J) = "1")) then
 						Nvalid(I) := "1";
 						Nindex(I) := std_logic_vector(to_unsigned(J,natural(log2(real(tag_num)))));
 						data_out(J)(32 downto 17) <= to_match(I)(21 downto 6);
 					end if;
-					if ((to_match(I)(tag_size downto 1) = data_in(J)(38 downto 34) ) and (busy(J) = "1")) then
+					if ((to_match(I)(5 downto 1) = data_in(J)(38 downto 34) ) and (busy(J) = "1")) then
 						Nvalid(I) := "1";
 						Nindex(I) := std_logic_vector(to_unsigned(J,natural(log2(real(tag_num)))));
 						data_out(J)(32 downto 17) <= to_match(I)(21 downto 6);

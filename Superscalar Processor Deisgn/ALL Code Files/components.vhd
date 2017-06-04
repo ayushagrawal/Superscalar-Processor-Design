@@ -40,8 +40,8 @@ package components is
 			  only_one_lst : out std_logic;
 			  
 			  -- FROM DECODE [validity:tag:______]
-			  inst1 : in std_logic_vector(62 downto 0);
-			  inst2 : in std_logic_vector(62 downto 0);
+			  inst1 : in std_logic_vector(71 downto 0);
+			  inst2 : in std_logic_vector(71 downto 0);
 			  
 			  -- TO RESERVATION STATION (NEED TO CONSIDER FROM ALL THE RESERVATION STATION)
 			  reg_alu_data : out main_array(0 to N_alu-1)(X_alu-1 downto 0);
@@ -282,6 +282,33 @@ package components is
 			  REG2	: out std_logic_vector(35 downto 0));
 	end component;
 	
+	component fetch_decode_rf is
+		port(clk 		: in std_logic;
+			  reset		: in std_logic;
+			  
+			  -- FROM WRITE BACK to Register File
+			  in_sel1 : in std_logic_vector(2 downto 0);
+			  in_sel2 : in std_logic_vector(2 downto 0);
+			  input1 : in std_logic_vector(15 downto 0);
+			  input2 : in std_logic_vector(15 downto 0);
+			  wren1 : in std_logic;
+			  wren2 : in std_logic;
+			  
+				-- To Reservation Station
+			  register1 : out std_logic_vector(71 downto 0);
+			  register2 : out std_logic_vector(71 downto 0);		  
+			  
+			  -- From Execute Complete for ROB
+			  broadcast				: in main_array(0 to 4)(22 downto 0);	-- Max of 5 units can return
+																							-- Data 		= 16 bits
+																							-- Tag  		= 5  bits (RRF size)
+																							-- Validity = 1 bit
+																							-- (In the above order) --
+			  -- TO COMPLETE FROM ROB
+			  complete1				: out std_logic_vector(37 downto 0);
+			  complete2				: out std_logic_vector(37 downto 0));
+	end component;
+	
 	component inc IS
 		PORT
 		(
@@ -407,8 +434,8 @@ package components is
 		port(clk : in std_logic;
 			  reset : in std_logic;
 			  -- FROM DECODE
-			  instruction1 : in std_logic_vector(62 downto 0);
-			  instruction2 : in std_logic_vector(62 downto 0);
+			  instruction1 : in std_logic_vector(71 downto 0);
+			  instruction2 : in std_logic_vector(71 downto 0);
 			  
 			  -- TO DECODE
 			  only_one_alu : out std_logic;
@@ -474,6 +501,23 @@ package components is
 			 
 	end component;
 
+	component rs_execute is
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  
+			  -- FROM DECODE
+			  instruction1 : in std_logic_vector(71 downto 0);
+			  instruction2 : in std_logic_vector(71 downto 0);
+			  
+			  -- TO DECODE
+			  only_one_alu : out std_logic;
+			  only_one_bch : out std_logic;
+			  only_one_lst : out std_logic;
+			  
+			  -- TO ALL
+			  broadcast : out main_array(0 to 4)(22 downto 0));
+			  
+	end component;
 	
 	component update_unit is
 		generic(N : integer := 62;				-- DATA LENGTH 

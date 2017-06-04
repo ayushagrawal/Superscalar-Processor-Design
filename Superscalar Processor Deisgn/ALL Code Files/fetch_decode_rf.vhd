@@ -21,7 +21,7 @@ entity fetch_decode_rf is
 		  register2 : out std_logic_vector(71 downto 0);		  
 		  
 		  -- From Execute Complete for ROB
-		  broadcast				: in main_array(0 to 4)(21 downto 0);	-- Max of 5 units can return
+		  broadcast				: in main_array(0 to 4)(22 downto 0);	-- Max of 5 units can return
 																						-- Data 		= 16 bits
 																						-- Tag  		= 5  bits (RRF size)
 																						-- Validity = 1 bit

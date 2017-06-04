@@ -1,5 +1,5 @@
 Flow report for rs_execute
-Fri Jun 02 21:53:12 2017
+Sat Jun 03 19:12:41 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 02 21:53:08 2017       ;
+; Flow Status                        ; Successful - Sat Jun 03 19:12:37 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; rs_execute                                  ;
 ; Top-level Entity Name              ; rs_execute                                  ;
@@ -50,7 +50,7 @@ agreement for further details.
 ;     Total combinational functions  ; 2 / 15,408 ( < 1 % )                        ;
 ;     Dedicated logic registers      ; 2 / 15,408 ( < 1 % )                        ;
 ; Total registers                    ; 2                                           ;
-; Total pins                         ; 246 / 344 ( 72 % )                          ;
+; Total pins                         ; 262 / 344 ( 76 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/02/2017 21:52:36 ;
+; Start date & time ; 06/03/2017 19:12:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; rs_execute          ;
 +-------------------+---------------------+
@@ -76,7 +76,8 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149642055608636        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149649733013716        ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -91,11 +92,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 706 MB              ; 00:00:39                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 1123 MB             ; 00:00:09                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 567 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 639 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:52                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 705 MB              ; 00:00:35                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 1123 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 569 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 640 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:46                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

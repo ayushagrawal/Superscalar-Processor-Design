@@ -37,8 +37,8 @@ entity allocating_unit is
 			  only_one_lst : out std_logic;
 			  
 			  -- FROM DECODE [validity:tag:______]
-			  inst1 : in std_logic_vector(62 downto 0);
-			  inst2 : in std_logic_vector(62 downto 0);
+			  inst1 : in std_logic_vector(71 downto 0);
+			  inst2 : in std_logic_vector(71 downto 0);
 			  
 			  -- TO RESERVATION STATION (NEED TO CONSIDER FROM ALL THE RESERVATION STATION)
 			  reg_alu_data : out main_array(0 to N_alu-1)(X_alu-1 downto 0);
@@ -100,7 +100,7 @@ architecture AU of allocating_unit is
 	
 	signal stall_alu,stall_bch,stall_lst : std_logic;
 	
-	signal inst1_alu,inst1_bch,inst1_lst,inst2_alu,inst2_bch,inst2_lst : std_logic_vector(62 downto 0);
+	signal inst1_alu,inst1_bch,inst1_lst,inst2_alu,inst2_bch,inst2_lst : std_logic_vector(71 downto 0);
 	
 begin	
 	

@@ -8,8 +8,8 @@ entity rs_execute is
 			  reset : in std_logic;
 			  
 			  -- FROM DECODE
-			  instruction1 : in std_logic_vector(62 downto 0);
-			  instruction2 : in std_logic_vector(62 downto 0);
+			  instruction1 : in std_logic_vector(71 downto 0);
+			  instruction2 : in std_logic_vector(71 downto 0);
 			  
 			  -- TO DECODE
 			  only_one_alu : out std_logic;

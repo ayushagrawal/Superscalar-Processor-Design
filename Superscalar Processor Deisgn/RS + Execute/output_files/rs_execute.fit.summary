@@ -1,4 +1,4 @@
-Fitter Status : Successful - Fri Jun 02 21:53:05 2017
+Fitter Status : Successful - Sat Jun 03 19:12:34 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : rs_execute
 Top-level Entity Name : rs_execute
@@ -9,7 +9,7 @@ Total logic elements : 2 / 15,408 ( < 1 % )
     Total combinational functions : 2 / 15,408 ( < 1 % )
     Dedicated logic registers : 2 / 15,408 ( < 1 % )
 Total registers : 2
-Total pins : 246 / 344 ( 72 % )
+Total pins : 262 / 344 ( 76 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
