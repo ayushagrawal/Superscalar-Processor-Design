@@ -161,6 +161,31 @@ package components is
 				valid		: out main_array(0 to 4)(0 downto 0));		
 	end component;
 	
+	component complete is
+		port(clk 		: in std_logic;
+			  reset		: in std_logic;
+			  
+			  -- TO COMPLETE FROM ROB
+			  complete1				: in std_logic_vector(37 downto 0);
+			  complete2				: in std_logic_vector(37 downto 0);
+			  -- If write back		 : 1  bit
+			  -- Inst_type 			 : 2  bits
+			  -- Register affected : 3  bits
+			  -- Memory affected   : 16 bits
+			  -- Data				    : 16 bits
+			  -- validity		    : 1  bit
+			  
+			  
+			  -- TO DECODE
+			  in_sel1 : out std_logic_vector(2 downto 0);
+			  in_sel2 : out std_logic_vector(2 downto 0);
+			  input1  : out std_logic_vector(15 downto 0);
+			  input2  : out std_logic_vector(15 downto 0);
+			  wren1 : out std_logic;
+			  wren2 : out std_logic);
+			  
+	end component;
+	
 	component decode is
 		port(clk	: in std_logic;
 			  reset : in std_logic;
@@ -359,6 +384,24 @@ package components is
 			  output : out std_logic_vector(N-1 downto 0);
 			  carry : out std_logic;
 			  zero : out std_logic);
+			  
+	end component;
+	
+	component para_final is
+		port(clk 		: in std_logic;
+			  reset		: in std_logic;
+			  
+			  -- FROM COMPLETE
+			  in_sel1 : in std_logic_vector(2 downto 0);
+			  in_sel2 : in std_logic_vector(2 downto 0);
+			  input1  : in std_logic_vector(15 downto 0);
+			  input2  : in std_logic_vector(15 downto 0);
+			  wren1 : in std_logic;
+			  wren2 : in std_logic;
+			  
+			  -- TO COMPLETE FROM ROB
+			  complete1				: out std_logic_vector(37 downto 0);
+			  complete2				: out std_logic_vector(37 downto 0));
 			  
 	end component;
 	
