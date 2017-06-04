@@ -28,7 +28,14 @@ entity fetch_decode_rf is
 																						-- (In the above order) --
 		  -- TO COMPLETE FROM ROB
 		  complete1				: out std_logic_vector(37 downto 0);
-		  complete2				: out std_logic_vector(37 downto 0));
+		  complete2				: out std_logic_vector(37 downto 0)
+		  -- If write back		 : 1  bit
+		  -- Inst_type 			 : 2  bits
+		  -- Register affected : 3  bits
+		  -- Memory affected   : 16 bits
+		  -- Data				    : 16 bits
+		  -- validity		    : 1  bit
+		  );
 end entity;
 
 architecture fd of fetch_decode_rf is

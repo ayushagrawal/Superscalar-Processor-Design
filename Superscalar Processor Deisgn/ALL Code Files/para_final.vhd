@@ -14,7 +14,12 @@ entity para_final is
 		  input1  : in std_logic_vector(15 downto 0);
 		  input2  : in std_logic_vector(15 downto 0);
 		  wren1 : in std_logic;
-		  wren2 : in std_logic);
+		  wren2 : in std_logic;
+		  
+		  -- TO COMPLETE FROM ROB
+		  complete1				: out std_logic_vector(37 downto 0);
+		  complete2				: out std_logic_vector(37 downto 0));
+		  
 end entity;
 
 architecture pfinal of para_final is
@@ -39,7 +44,10 @@ begin
 												 register1 => instruction1,
 												 register2 => instruction2,
 												 
-												 broadcast => broadcast);
+												 broadcast => broadcast,
+												 
+												 complete1 => complete1,
+												 complete2 => complete2);
 												 
 	RS_EX : rs_execute port map(clk => clk,
 										 reset =>reset,

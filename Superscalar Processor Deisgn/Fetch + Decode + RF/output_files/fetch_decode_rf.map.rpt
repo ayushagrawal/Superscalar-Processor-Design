@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fetch_decode_rf
-Mon May 29 20:30:39 2017
+Sun Jun 04 07:28:01 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -560,7 +560,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 29 20:30:39 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 04 07:28:01 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; fetch_decode_rf                             ;
 ; Top-level Entity Name              ; fetch_decode_rf                             ;
@@ -569,7 +569,7 @@ agreement for further details.
 ;     Total combinational functions  ; 85                                          ;
 ;     Dedicated logic registers      ; 145                                         ;
 ; Total registers                    ; 145                                         ;
-; Total pins                         ; 372                                         ;
+; Total pins                         ; 377                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,048                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -739,15 +739,15 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 145       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 372       ;
+; I/O pins                                    ; 377       ;
 ; Total memory bits                           ; 2048      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 161       ;
-; Total fan-out                               ; 1452      ;
-; Average fan-out                             ; 1.47      ;
+; Total fan-out                               ; 1457      ;
+; Average fan-out                             ; 1.46      ;
 +---------------------------------------------+-----------+
 
 
@@ -756,7 +756,7 @@ agreement for further details.
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                     ; Entity Name        ; Library Name ;
 +---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |fetch_decode_rf                                  ; 85 (1)              ; 145 (0)                   ; 2048        ; 0            ; 0       ; 0         ; 372  ; 0            ; |fetch_decode_rf                                                                                                                                        ; fetch_decode_rf    ; work         ;
+; |fetch_decode_rf                                  ; 85 (1)              ; 145 (0)                   ; 2048        ; 0            ; 0       ; 0         ; 377  ; 0            ; |fetch_decode_rf                                                                                                                                        ; fetch_decode_rf    ; work         ;
 ;    |fetch_decode:fetch_dec_unit|                  ; 55 (0)              ; 84 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode_rf|fetch_decode:fetch_dec_unit                                                                                                            ; fetch_decode       ; work         ;
 ;       |decode:decode_unt|                         ; 47 (44)             ; 46 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode_rf|fetch_decode:fetch_dec_unit|decode:decode_unt                                                                                          ; decode             ; work         ;
 ;          |registers:out_reg1|                     ; 0 (0)               ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch_decode_rf|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg1                                                                       ; registers          ; work         ;
@@ -1144,17 +1144,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                               ; due to stuck port clock_enable ; register_file:reg_file|registers:data_reg2|data[44],                             ;
 ;                                                                               ;                                ; register_file:reg_file|registers:data_reg1|data[27],                             ;
 ;                                                                               ;                                ; register_file:reg_file|registers:data_reg1|data[44]                              ;
-; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:MEM_AFFECTED|data[6] ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:top_pointer|data[0],                ;
+; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:MEM_AFFECTED|data[9] ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:top_pointer|data[0],                ;
 ;                                                                               ; due to stuck port clock_enable ; register_file:reg_file|registers:data_reg2|data[62]                              ;
 ; fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:pc2_reg|data[0]        ; Stuck at GND                   ; fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg2|data[0],        ;
 ;                                                                               ; due to stuck port data_in      ; register_file:reg_file|registers:data_reg2|data[0]                               ;
-; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:DATA|data[5]         ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED|data[0]       ;
+; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:DATA|data[8]         ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED|data[0]       ;
 ;                                                                               ; due to stuck port clock_enable ;                                                                                  ;
-; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:DATA|data[6]         ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED|data[1]       ;
+; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:DATA|data[9]         ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED|data[1]       ;
 ;                                                                               ; due to stuck port clock_enable ;                                                                                  ;
-; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:DATA|data[7]         ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED|data[2]       ;
+; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:DATA|data[10]        ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED|data[2]       ;
 ;                                                                               ; due to stuck port clock_enable ;                                                                                  ;
-; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:MEM_AFFECTED|data[5] ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:INSTRUCTION_TYPE|data[1] ;
+; register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:MEM_AFFECTED|data[8] ; Stuck at GND                   ; register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:INSTRUCTION_TYPE|data[1] ;
 ;                                                                               ; due to stuck port clock_enable ;                                                                                  ;
 ; fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg2|data[7]      ; Stuck at GND                   ; register_file:reg_file|registers:data_reg2|data[7]                               ;
 ;                                                                               ; due to stuck port data_in      ;                                                                                  ;
@@ -6484,7 +6484,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 372                         ;
+; boundary_port         ; 377                         ;
 ; cycloneiii_ff         ; 145                         ;
 ;     CLR               ; 57                          ;
 ;     ENA CLR           ; 85                          ;
@@ -6518,7 +6518,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon May 29 20:30:22 2017
+    Info: Processing started: Sun Jun 04 07:27:44 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fetch_decode_rf -c fetch_decode_rf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -6570,10 +6570,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: adds-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 19
     Info (12023): Found entity 1: adds File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/fetch_decode_rf.vhd
-    Info (12022): Found design unit 1: fetch_decode_rf-fd File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 34
+    Info (12022): Found design unit 1: fetch_decode_rf-fd File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 41
     Info (12023): Found entity 1: fetch_decode_rf File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 7
 Info (12127): Elaborating entity "fetch_decode_rf" for the top level hierarchy
-Info (12128): Elaborating entity "fetch_decode" for hierarchy "fetch_decode:fetch_dec_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 42
+Info (12128): Elaborating entity "fetch_decode" for hierarchy "fetch_decode:fetch_dec_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 49
 Info (12128): Elaborating entity "fetch" for hierarchy "fetch_decode:fetch_dec_unit|fetch:fetch_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 23
 Info (12128): Elaborating entity "instruction_memory" for hierarchy "fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 25
 Info (12128): Elaborating entity "altsyncram" for hierarchy "fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
@@ -6655,7 +6655,7 @@ Info (12128): Elaborating entity "registers" for hierarchy "fetch_decode:fetch_d
 Info (12128): Elaborating entity "branch_predictor" for hierarchy "fetch_decode:fetch_dec_unit|fetch:fetch_unit|branch_predictor:BP" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 77
 Info (12128): Elaborating entity "decode" for hierarchy "fetch_decode:fetch_dec_unit|decode:decode_unt" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 29
 Info (12128): Elaborating entity "registers" for hierarchy "fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 93
-Info (12128): Elaborating entity "register_file" for hierarchy "register_file:reg_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 49
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:reg_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 56
 Info (12128): Elaborating entity "registers" for hierarchy "register_file:reg_file|registers:data_reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 75
 Info (12128): Elaborating entity "ARF" for hierarchy "register_file:reg_file|ARF:ar_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd Line: 168
 Info (12128): Elaborating entity "registers" for hierarchy "register_file:reg_file|ARF:ar_file|registers:\GEN_REG:0:VALD" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 73
@@ -6835,7 +6835,7 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 150 input pin(s) that do not drive logic
+Warning (21074): Design contains 155 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "in_sel1[0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 12
     Warning (15610): No output dependent on input pin "in_sel1[1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 12
     Warning (15610): No output dependent on input pin "in_sel1[2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 12
@@ -6898,6 +6898,7 @@ Warning (21074): Design contains 150 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "broadcast[4][19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[4][20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[4][21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
+    Warning (15610): No output dependent on input pin "broadcast[4][22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[3][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[3][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[3][2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
@@ -6920,6 +6921,7 @@ Warning (21074): Design contains 150 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "broadcast[3][19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[3][20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[3][21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
+    Warning (15610): No output dependent on input pin "broadcast[3][22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[2][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[2][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[2][2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
@@ -6942,6 +6944,7 @@ Warning (21074): Design contains 150 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "broadcast[2][19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[2][20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[2][21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
+    Warning (15610): No output dependent on input pin "broadcast[2][22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[1][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[1][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[1][2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
@@ -6964,6 +6967,7 @@ Warning (21074): Design contains 150 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "broadcast[1][19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[1][20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[1][21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
+    Warning (15610): No output dependent on input pin "broadcast[1][22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[0][0]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[0][1]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[0][2]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
@@ -6986,15 +6990,16 @@ Warning (21074): Design contains 150 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "broadcast[0][19]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[0][20]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
     Warning (15610): No output dependent on input pin "broadcast[0][21]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
-Info (21057): Implemented 561 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 152 input pins
+    Warning (15610): No output dependent on input pin "broadcast[0][22]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 24
+Info (21057): Implemented 566 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 157 input pins
     Info (21059): Implemented 220 output pins
     Info (21061): Implemented 173 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 317 warnings
-    Info: Peak virtual memory: 709 megabytes
-    Info: Processing ended: Mon May 29 20:30:39 2017
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 322 warnings
+    Info: Peak virtual memory: 713 megabytes
+    Info: Processing ended: Sun Jun 04 07:28:01 2017
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Total CPU time (on all processors): 00:00:34
 
 

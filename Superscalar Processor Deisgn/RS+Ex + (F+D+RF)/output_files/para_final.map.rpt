@@ -1,5 +1,5 @@
 Analysis & Synthesis report for para_final
-Sun Jun 04 06:57:22 2017
+Sun Jun 04 07:17:27 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -853,10 +853,9 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 845. Port Connectivity Checks: "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder1"
 846. Port Connectivity Checks: "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder"
 847. Port Connectivity Checks: "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map"
-848. Port Connectivity Checks: "fetch_decode_rf:F_D_RF"
-849. Post-Synthesis Netlist Statistics for Top Partition
-850. Elapsed Time Per Partition
-851. Analysis & Synthesis Messages
+848. Post-Synthesis Netlist Statistics for Top Partition
+849. Elapsed Time Per Partition
+850. Analysis & Synthesis Messages
 
 
 
@@ -883,7 +882,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 04 06:57:22 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 04 07:17:27 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; para_final                                  ;
 ; Top-level Entity Name              ; para_final                                  ;
@@ -892,7 +891,7 @@ agreement for further details.
 ;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 42                                          ;
+; Total pins                         ; 118                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -1076,13 +1075,13 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 42    ;
+; I/O pins                                    ; 118   ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 42    ;
+; Total fan-out                               ; 118   ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -1092,103 +1091,266 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |para_final                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |para_final         ; para_final  ; work         ;
+; |para_final                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 118  ; 0            ; |para_final         ; para_final  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                             ;
-+--------------------------------------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                                                    ; Reason for Removal                          ;
-+--------------------------------------------------------------------------------------------------+---------------------------------------------+
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:VALIDITY|data[0] ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:BUSY|data[0]     ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:VALIDITY|data[0]  ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:BUSY|data[0]      ; Stuck at GND due to stuck port clock_enable ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:stall_manage|data[0]         ; Lost fanout                                 ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[0..4]    ; Lost fanout                                 ;
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[0..4]       ; Lost fanout                                 ;
-; fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg2|data[35] ; Lost fanout                                 ;
-; fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg1|data[35] ; Lost fanout                                 ;
-; fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:pc_reg|data[0..6]  ; Lost fanout                                 ;
-; Total Number of Removed Registers = 84                                                           ;                                             ;
-+--------------------------------------------------------------------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                     ;
++----------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                                            ; Reason for Removal                          ;
++----------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:30:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:29:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:28:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:27:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:26:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:25:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:24:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:23:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:22:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:21:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:20:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:19:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:18:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:17:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:16:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:15:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:14:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:13:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:12:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:11:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:IF_WB|data[0]            ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:MEM_AFFECTED|data[0..15] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:R_AFFECTED|data[0..2]    ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:DATA|data[0..15]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:VALIDITY|data[0]         ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:BUSY|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:10:INSTRUCTION_TYPE|data[1] ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:9:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:8:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:7:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:6:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:5:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:4:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:3:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:2:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:1:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:IF_WB|data[0]             ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:MEM_AFFECTED|data[0..15]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED|data[0..2]     ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:DATA|data[0..15]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:VALIDITY|data[0]          ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:BUSY|data[0]              ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:INSTRUCTION_TYPE|data[1]  ; Stuck at GND due to stuck port clock_enable ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:stall_manage|data[0]                 ; Lost fanout                                 ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[0..4]               ; Lost fanout                                 ;
+; fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg2|data[35]         ; Lost fanout                                 ;
+; fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg1|data[35]         ; Lost fanout                                 ;
+; fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:pc_reg|data[0..6]          ; Lost fanout                                 ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[0..4]            ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 1268                                                                 ;                                             ;
++----------------------------------------------------------------------------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                 ;
-+----------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------+
-; Register name                                                                                ; Reason for Removal             ; Registers Removed due to This Register                                                      ;
-+----------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------+
-; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:BUSY|data[0] ; Stuck at GND                   ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[3], ;
-;                                                                                              ; due to stuck port clock_enable ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[4], ;
-;                                                                                              ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[0],    ;
-;                                                                                              ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[1],    ;
-;                                                                                              ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[2],    ;
-;                                                                                              ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[3],    ;
-;                                                                                              ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[4]     ;
-+----------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------+
+; Register name                                                                                    ; Reason for Removal             ; Registers Removed due to This Register                                                      ;
++--------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------+
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:VALIDITY|data[0] ; Stuck at GND                   ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[0], ;
+;                                                                                                  ; due to stuck port clock_enable ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[1], ;
+;                                                                                                  ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[2], ;
+;                                                                                                  ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[3], ;
+;                                                                                                  ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:bottom_pointer|data[4]  ;
+; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:31:BUSY|data[0]     ; Stuck at GND                   ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[0],    ;
+;                                                                                                  ; due to stuck port clock_enable ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[1],    ;
+;                                                                                                  ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[2],    ;
+;                                                                                                  ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[3],    ;
+;                                                                                                  ;                                ; fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer|data[4]     ;
++--------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -9720,26 +9882,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fetch_decode_rf:F_D_RF"                                                                  ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; complete1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; complete2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 42                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 118                         ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -9757,9 +9912,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun 04 06:57:06 2017
+    Info: Processing started: Sun Jun 04 07:17:10 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off para_final -c para_final
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/testbench.vhd
+    Info (12022): Found design unit 1: testbench-Behave File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/testbench.vhd Line: 10
+    Info (12023): Found entity 1: testbench File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/testbench.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/update_unit.vhd
     Info (12022): Found design unit 1: update_unit-UU File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 37
     Info (12023): Found entity 1: update_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd Line: 12
@@ -9859,13 +10017,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: add_unit-add_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd Line: 24
     Info (12023): Found entity 1: add_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/para_final.vhd
-    Info (12022): Found design unit 1: para_final-pfinal File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Info (12022): Found design unit 1: para_final-pfinal File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 25
     Info (12023): Found entity 1: para_final File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 7
 Info (12127): Elaborating entity "para_final" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(25): object "only_one_alu" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(25): object "only_one_bch" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(25): object "only_one_lst" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 25
-Info (12128): Elaborating entity "fetch_decode_rf" for hierarchy "fetch_decode_rf:F_D_RF" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(30): object "only_one_alu" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(30): object "only_one_bch" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(30): object "only_one_lst" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 30
+Info (12128): Elaborating entity "fetch_decode_rf" for hierarchy "fetch_decode_rf:F_D_RF" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 34
 Info (12128): Elaborating entity "fetch_decode" for hierarchy "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 42
 Info (12128): Elaborating entity "fetch" for hierarchy "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 23
 Info (12128): Elaborating entity "instruction_memory" for hierarchy "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 25
@@ -9958,7 +10116,7 @@ Info (12128): Elaborating entity "registers" for hierarchy "fetch_decode_rf:F_D_
 Info (12128): Elaborating entity "registers" for hierarchy "fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:\GEN_REG:0:R_AFFECTED" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 96
 Info (12128): Elaborating entity "registers" for hierarchy "fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|registers:top_pointer" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 123
 Info (12128): Elaborating entity "adds" for hierarchy "fetch_decode_rf:F_D_RF|register_file:reg_file|ROB:reorder|adds:adder0" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd Line: 295
-Info (12128): Elaborating entity "rs_execute" for hierarchy "rs_execute:RS_EX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 44
+Info (12128): Elaborating entity "rs_execute" for hierarchy "rs_execute:RS_EX" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 52
 Info (12128): Elaborating entity "reservation_station_complete" for hierarchy "rs_execute:RS_EX|reservation_station_complete:Reserv_Statn" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd Line: 33
 Warning (10036): Verilog HDL or VHDL warning at reservation_station_complete.vhd(70): object "ready_alu" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd Line: 70
 Warning (10036): Verilog HDL or VHDL warning at reservation_station_complete.vhd(71): object "ready_bch" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd Line: 71
@@ -10002,7 +10160,84 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated|q_a[13]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/RS+Ex + (F+D+RF)/db/altsyncram_0vt3.tdf Line: 496
         Warning (14320): Synthesized away node "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated|q_a[14]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/RS+Ex + (F+D+RF)/db/altsyncram_0vt3.tdf Line: 531
         Warning (14320): Synthesized away node "fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated|q_a[15]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/RS+Ex + (F+D+RF)/db/altsyncram_0vt3.tdf Line: 566
-Info (17049): 20 registers lost all their fanouts during netlist optimizations.
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "complete1[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[23]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[24]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[25]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[26]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[27]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[28]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[29]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[30]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[31]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[32]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[33]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[34]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[35]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[36]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete1[37]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 20
+    Warning (13410): Pin "complete2[0]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[1]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[2]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[3]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[4]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[5]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[6]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[7]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[8]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[9]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[10]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[11]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[12]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[13]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[14]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[15]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[16]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[17]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[18]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[19]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[20]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[21]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[22]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[23]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[24]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[25]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[26]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[27]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[28]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[29]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[30]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[31]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[32]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[33]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[34]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[35]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[36]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+    Warning (13410): Pin "complete2[37]" is stuck at GND File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 21
+Info (17049): 15 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 42 input pin(s) that do not drive logic
@@ -10048,13 +10283,13 @@ Warning (21074): Design contains 42 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "input2[15]" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 15
     Warning (15610): No output dependent on input pin "wren1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 16
     Warning (15610): No output dependent on input pin "wren2" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 17
-Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 42 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 740 megabytes
-    Info: Processing ended: Sun Jun 04 06:57:22 2017
-    Info: Elapsed time: 00:00:16
+    Info (21059): Implemented 76 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 147 warnings
+    Info: Peak virtual memory: 741 megabytes
+    Info: Processing ended: Sun Jun 04 07:17:27 2017
+    Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:34
 
 
