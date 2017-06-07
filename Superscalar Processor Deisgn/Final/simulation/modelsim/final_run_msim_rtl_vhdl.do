@@ -11,6 +11,7 @@ vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/AL
 vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd}
 vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd}
 vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd}
+vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd}
 vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd}
 vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd}
 vcom -2008 -work work {C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd}

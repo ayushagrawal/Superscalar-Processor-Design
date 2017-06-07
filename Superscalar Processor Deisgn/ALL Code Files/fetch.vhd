@@ -14,19 +14,16 @@ entity fetch is
 end entity;
 
 architecture fetching of fetch is
-	signal mux_pc,add_pc,add_pc1,pc_add_out 	: std_logic_vector(6 downto 0);
+	signal mux_pc,add_pc,pc_add_out 				: std_logic_vector(6 downto 0);
 	signal reg1_in,reg2_in 							: std_logic_vector(15 downto 0);
-	signal pc_out,bp_out 							: std_logic_vector(6 downto 0);
+	signal bp_out 							: std_logic_vector(6 downto 0);
 	signal mux_sel,not_stall 						: std_logic;
-	signal temp,mux_pc1,pc_add_out1				: std_logic_vector(6 downto 0);
+	
+	signal pc1,pc2 									: std_logic_vector(6 downto 0);
+	
 begin
 	
 	not_stall <= not(stall);
-	
-	temp <= (others => reset);
-	add_pc1 <= (not temp) and add_pc;
-	mux_pc1 <= (not temp) and mux_pc;
-	pc_add_out1 <= (not temp) and pc_add_out;
 	
 	mem_map : instruction_memory port map(address_a => mux_pc,
 													  address_b => add_pc,
@@ -38,7 +35,7 @@ begin
 													  q_a			=> reg1_in,
 													  q_b			=> reg2_in);
 	
-	mux	  : mux2 generic map(N => 7) port map(in0 	=> pc_add_out1,
+	mux	  : mux2 generic map(N => 7) port map(in0 	=> pc_add_out,
 															  in1 	=> bp_out,
 															  sel		=> mux_sel,
 															  output => mux_pc);
@@ -46,7 +43,7 @@ begin
 	adder	  : inc port map(data0x => mux_pc,
 								  data1x => "0000001",
 								  result => add_pc);
-	adder1  : inc port map(data0x => pc_out,
+	adder1  : inc port map(data0x => pc2,
 								  data1x => "0000001",
 								  result => pc_add_out);
 								  
@@ -61,26 +58,22 @@ begin
 																	  enable => not_stall,
 																	  input  => reg2_in,
 																	  output => inst2(15 downto 0));
-	
-	pc_reg  : registers generic map(N => 7) port map(clk	  => clk,
-																	 reset  => reset,
-																	 enable => not_stall,
-																	 input  => add_pc1,
-																	 output => pc_out);
 																	 
 	pc1_reg : registers generic map(N => 7) port map(clk	  => clk,
 																	 reset  => reset,
-																	 enable => not_stall,
-																	 input  => mux_pc1,
-																	 output => inst1(22 downto 16));
+																	 enable => '1',
+																	 input  => mux_pc,
+																	 output => pc1);
+	inst1(22 downto 16) <= pc1;
 															
-	pc2_reg : registers generic map(N => 7) port map(clk	  => clk,
-																	 reset  => reset,
-																	 enable => not_stall,
-																	 input  => add_pc1,
-																	 output => inst2(22 downto 16));
+	pc2_reg : registers1 generic map(N => 7) port map(clk	  => clk,
+																	  reset  => reset,
+																	  enable => '1',
+																	  input  => add_pc,
+																	  output => pc2);
+	inst2(22 downto 16) <= pc2;																 
 	
-	BP		  : branch_predictor port map(pc 	 => pc_out,
+	BP		  : branch_predictor port map(pc 	 => pc2,
 													clk	 => clk,
 													bp_out => bp_out,
 													sel	 => mux_sel);

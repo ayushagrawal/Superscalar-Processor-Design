@@ -39,6 +39,7 @@ source_file = 1, C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code
 source_file = 1, C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd
 source_file = 1, C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd
 source_file = 1, C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/instruction.hex
+source_file = 1, C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd
 source_file = 1, c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/16.1/quartus/libraries/vhdl/ieee/timing_b.vhd

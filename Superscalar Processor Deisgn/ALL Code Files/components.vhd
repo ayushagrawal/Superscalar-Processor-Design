@@ -414,6 +414,15 @@ package components is
 			  reset : in std_logic);
 	end component;
 	
+	component registers1 is
+		generic(N  : integer);
+		port(input : in std_logic_vector(N-1 downto 0);
+			  enable: in std_logic;
+			  output: out std_logic_vector(N-1 downto 0);
+			  clk   : in std_logic;
+			  reset : in std_logic);
+	end component;
+	
 	component register_file is
 		port(reset : in std_logic;
 			  clk   : in std_logic;

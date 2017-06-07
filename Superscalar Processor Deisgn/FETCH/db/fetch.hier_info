@@ -2,27 +2,15 @@
 clk => instruction_memory:mem_map.clock
 clk => registers:reg1.clk
 clk => registers:reg2.clk
-clk => registers:pc_reg.clk
 clk => registers:pc1_reg.clk
 clk => registers:pc2_reg.clk
 clk => branch_predictor:BP.clk
 reset => registers:reg1.reset
-reset => add_pc1[6].IN1
-reset => add_pc1[5].IN1
-reset => add_pc1[4].IN1
-reset => add_pc1[3].IN1
-reset => add_pc1[2].IN1
-reset => add_pc1[1].IN1
-reset => add_pc1[0].IN1
 reset => registers:reg2.reset
-reset => registers:pc_reg.reset
 reset => registers:pc1_reg.reset
 reset => registers:pc2_reg.reset
 stall => registers:reg1.enable
 stall => registers:reg2.enable
-stall => registers:pc_reg.enable
-stall => registers:pc1_reg.enable
-stall => registers:pc2_reg.enable
 inst1[0] <= registers:reg1.output[0]
 inst1[1] <= registers:reg1.output[1]
 inst1[2] <= registers:reg1.output[2]
@@ -946,44 +934,6 @@ reset => data[12].ACLR
 reset => data[13].ACLR
 reset => data[14].ACLR
 reset => data[15].ACLR
-
-
-|fetch|registers:pc_reg
-input[0] => data[0].DATAIN
-input[1] => data[1].DATAIN
-input[2] => data[2].DATAIN
-input[3] => data[3].DATAIN
-input[4] => data[4].DATAIN
-input[5] => data[5].DATAIN
-input[6] => data[6].DATAIN
-enable => data[0].ENA
-enable => data[1].ENA
-enable => data[2].ENA
-enable => data[3].ENA
-enable => data[4].ENA
-enable => data[5].ENA
-enable => data[6].ENA
-output[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
-output[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
-output[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
-output[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
-clk => data[0].CLK
-clk => data[1].CLK
-clk => data[2].CLK
-clk => data[3].CLK
-clk => data[4].CLK
-clk => data[5].CLK
-clk => data[6].CLK
-reset => data[0].ACLR
-reset => data[1].ACLR
-reset => data[2].ACLR
-reset => data[3].ACLR
-reset => data[4].ACLR
-reset => data[5].ACLR
-reset => data[6].ACLR
 
 
 |fetch|registers:pc1_reg

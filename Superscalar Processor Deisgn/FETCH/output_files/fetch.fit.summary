@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Jun 07 10:33:52 2017
+Fitter Status : Successful - Wed Jun 07 12:14:33 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : fetch
 Top-level Entity Name : fetch
 Family : Cyclone IV E
 Device : EP4CE6E22C6
 Timing Models : Final
-Total logic elements : 2 / 6,272 ( < 1 % )
-    Total combinational functions : 2 / 6,272 ( < 1 % )
-    Dedicated logic registers : 1 / 6,272 ( < 1 % )
-Total registers : 1
+Total logic elements : 17 / 6,272 ( < 1 % )
+    Total combinational functions : 11 / 6,272 ( < 1 % )
+    Dedicated logic registers : 13 / 6,272 ( < 1 % )
+Total registers : 13
 Total pins : 49 / 92 ( 53 % )
 Total virtual pins : 0
-Total memory bits : 64 / 276,480 ( < 1 % )
+Total memory bits : 2,048 / 276,480 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
 Total PLLs : 0 / 2 ( 0 % )
