@@ -1,5 +1,5 @@
 Flow report for fetch
-Wed May 24 07:00:53 2017
+Wed Jun 07 10:33:59 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 24 07:00:48 2017       ;
+; Flow Status                        ; Successful - Wed Jun 07 10:33:55 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; fetch                                       ;
 ; Top-level Entity Name              ; fetch                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 20 / 6,272 ( < 1 % )                        ;
-;     Total combinational functions  ; 12 / 6,272 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 19 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 19                                          ;
+; Total logic elements               ; 2 / 6,272 ( < 1 % )                         ;
+;     Total combinational functions  ; 2 / 6,272 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 1 / 6,272 ( < 1 % )                         ;
+; Total registers                    ; 1                                           ;
 ; Total pins                         ; 49 / 92 ( 53 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 2,048 / 276,480 ( < 1 % )                   ;
+; Total memory bits                  ; 64 / 276,480 ( < 1 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 ; Device                             ; EP4CE6E22C6                                 ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/24/2017 07:00:19 ;
+; Start date & time ; 06/07/2017 10:33:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; fetch               ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 246927996093656.149558941912080        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 246927996093656.149681180910332        ; --            ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -92,11 +92,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 695 MB              ; 00:00:33                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 1115 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 558 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 638 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:43                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 696 MB              ; 00:00:32                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 1113 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 559 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 630 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:41                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

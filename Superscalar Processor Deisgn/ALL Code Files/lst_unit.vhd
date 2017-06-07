@@ -20,6 +20,6 @@ architecture lst_arch of lst_unit is
 	
 begin
 	
-
+	output <= (others => '0');
 	
 end architecture;

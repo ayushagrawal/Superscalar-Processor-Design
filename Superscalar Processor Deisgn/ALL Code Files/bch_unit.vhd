@@ -20,6 +20,6 @@ architecture bch_arch of bch_unit is
 	
 begin
 	
-
+	output <= (others => '0');
 	
 end architecture;

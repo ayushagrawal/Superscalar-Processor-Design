@@ -1,6 +1,6 @@
 EDA Netlist Writer report for final
-Mon Jun 05 08:33:16 2017
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Wed Jun 07 10:57:34 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jun 05 08:33:16 2017 ;
+; EDA Netlist Writer Status ; Successful - Wed Jun 07 10:57:34 2017 ;
 ; Revision Name             ; final                                 ;
 ; Top-level Entity Name     ; final                                 ;
 ; Family                    ; Cyclone IV E                          ;
@@ -45,42 +45,42 @@ agreement for further details.
 +---------------------------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                           ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Option                                                                                            ; Setting                   ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate functional simulation netlist                                                            ; Off                       ;
-; Time scale                                                                                        ; 1 ps                      ;
-; Truncate long hierarchy paths                                                                     ; Off                       ;
-; Map illegal HDL characters                                                                        ; Off                       ;
-; Flatten buses into individual nodes                                                               ; Off                       ;
-; Maintain hierarchy                                                                                ; Off                       ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
-; Enable glitch filtering                                                                           ; Off                       ;
-; Do not write top level VHDL entity                                                                ; Off                       ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
-; Architecture name in VHDL output netlist                                                          ; structure                 ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                        ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Option                                                                                            ; Setting                ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
+; Generate functional simulation netlist                                                            ; Off                    ;
+; Time scale                                                                                        ; 1 ps                   ;
+; Truncate long hierarchy paths                                                                     ; Off                    ;
+; Map illegal HDL characters                                                                        ; Off                    ;
+; Flatten buses into individual nodes                                                               ; Off                    ;
+; Maintain hierarchy                                                                                ; Off                    ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
+; Enable glitch filtering                                                                           ; Off                    ;
+; Do not write top level VHDL entity                                                                ; Off                    ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
+; Architecture name in VHDL output netlist                                                          ; structure              ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
++---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                      ;
-+-----------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------------+
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_85c_slow.vo     ;
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_0c_slow.vo      ;
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_min_1200mv_0c_fast.vo    ;
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final.vo                       ;
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_85c_v_slow.sdo  ;
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_0c_v_slow.sdo   ;
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_v.sdo                    ;
-+-----------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                        ;
++-------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                   ;
++-------------------------------------------------------------------------------------------------------------------+
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_85c_slow.vho      ;
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_0c_slow.vho       ;
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_min_1200mv_0c_fast.vho     ;
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final.vho                        ;
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_85c_vhd_slow.sdo  ;
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_6_1200mv_0c_vhd_slow.sdo   ;
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_min_1200mv_0c_vhd_fast.sdo ;
+; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/final_vhd.sdo                    ;
++-------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Jun 05 08:33:15 2017
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Wed Jun 07 10:57:33 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off final -c final
-Info (204019): Generated file final_6_1200mv_85c_slow.vo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file final_6_1200mv_0c_slow.vo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file final_min_1200mv_0c_fast.vo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file final.vo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file final_6_1200mv_85c_v_slow.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file final_6_1200mv_0c_v_slow.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file final_min_1200mv_0c_v_fast.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file final_v.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final_6_1200mv_85c_slow.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final_6_1200mv_0c_slow.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final_min_1200mv_0c_fast.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final_6_1200mv_85c_vhd_slow.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final_6_1200mv_0c_vhd_slow.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file final_vhd.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 525 megabytes
-    Info: Processing ended: Mon Jun 05 08:33:16 2017
+    Info: Peak virtual memory: 527 megabytes
+    Info: Processing ended: Wed Jun 07 10:57:34 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

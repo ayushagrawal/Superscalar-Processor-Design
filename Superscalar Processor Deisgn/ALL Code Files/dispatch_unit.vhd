@@ -39,11 +39,11 @@ entity dispatch_unit is
 
 architecture DU of dispatch_unit is
 	
-	signal index_inp,index_oup : main_array(0 to N-1)(natural(log2(real(N)))-1 downto 0);
-	signal index_en,valid_inp,valid_oup,valid_en : main_array(0 to N-1)(0 downto 0);
-	signal top_in,top_out : std_logic_vector(natural(log2(real(N)))-1 downto 0);
-	signal top_add : main_array(0 to 7)(natural(log2(real(N)))-1 downto 0);
-	signal bottom_in,bottom_out,bottom_out_add,bottom_add : std_logic_vector(natural(log2(real(N)))-1 downto 0);
+	signal index_inp,index_oup : main_array(0 to N-1)(natural(log2(real(N)))-1 downto 0) := (others =>(others => '0'));
+	signal index_en,valid_inp,valid_oup,valid_en : main_array(0 to N-1)(0 downto 0) := (others => (others => '0'));
+	signal top_in,top_out : std_logic_vector(natural(log2(real(N)))-1 downto 0) := (others => '0');
+	signal top_add : main_array(0 to 7)(natural(log2(real(N)))-1 downto 0) := (others => (others => '0'));
+	signal bottom_in,bottom_out,bottom_out_add,bottom_add : std_logic_vector(natural(log2(real(N)))-1 downto 0)  := (others => '0');
 	
 begin	
 	

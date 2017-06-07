@@ -1,6 +1,6 @@
 Analysis & Synthesis report for final
-Mon Jun 05 08:32:59 2017
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Wed Jun 07 10:57:20 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -866,7 +866,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -886,8 +886,8 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 05 08:32:59 2017       ;
-; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 07 10:57:20 2017       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; final                                       ;
 ; Top-level Entity Name              ; final                                       ;
 ; Family                             ; Cyclone IV E                                ;
@@ -1006,59 +1006,60 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                 ;
-+----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                           ; Library ;
-+----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; ../ALL Code Files/update_unit.vhd                  ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd                  ;         ;
-; ../ALL Code Files/rs_execute.vhd                   ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd                   ;         ;
-; ../ALL Code Files/ROB.vhd                          ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd                          ;         ;
-; ../ALL Code Files/reservation_station_complete.vhd ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd ;         ;
-; ../ALL Code Files/reservation_station.vhd          ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd          ;         ;
-; ../ALL Code Files/registers.vhd                    ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd                    ;         ;
-; ../ALL Code Files/register_file.vhd                ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd                ;         ;
-; ../ALL Code Files/para_final.vhd                   ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd                   ;         ;
-; ../ALL Code Files/nand_unit.vhd                    ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd                    ;         ;
-; ../ALL Code Files/mux2.vhd                         ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd                         ;         ;
-; ../ALL Code Files/multiplexer.vhd                  ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd                  ;         ;
-; ../ALL Code Files/lst_unit.vhd                     ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd                     ;         ;
-; ../ALL Code Files/instruction_memory.vhd           ; yes             ; User Wizard-Generated File   ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd           ;         ;
-; ../ALL Code Files/inc.vhd                          ; yes             ; User Wizard-Generated File   ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd                          ;         ;
-; ../ALL Code Files/fetch_decode_rf.vhd              ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd              ;         ;
-; ../ALL Code Files/fetch_decode.vhd                 ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd                 ;         ;
-; ../ALL Code Files/fetch.vhd                        ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd                        ;         ;
-; ../ALL Code Files/execute_complete.vhd             ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd             ;         ;
-; ../ALL Code Files/dispatch_unit_bch.vhd            ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit_bch.vhd            ;         ;
-; ../ALL Code Files/dispatch_unit.vhd                ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit.vhd                ;         ;
-; ../ALL Code Files/decode.vhd                       ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd                       ;         ;
-; ../ALL Code Files/components.vhd                   ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd                   ;         ;
-; ../ALL Code Files/complete.vhd                     ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd                     ;         ;
-; ../ALL Code Files/comparator.vhd                   ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd                   ;         ;
-; ../ALL Code Files/branch_predictor.vhd             ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd             ;         ;
-; ../ALL Code Files/bch_unit.vhd                     ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd                     ;         ;
-; ../ALL Code Files/ARF.vhd                          ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd                          ;         ;
-; ../ALL Code Files/alu_unit.vhd                     ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd                     ;         ;
-; ../ALL Code Files/allocating_unit.vhd              ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd              ;         ;
-; ../ALL Code Files/adds.vhd                         ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd                         ;         ;
-; ../ALL Code Files/add_unit.vhd                     ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd                     ;         ;
-; ../ALL Code Files/final.vhd                        ; yes             ; User VHDL File               ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd                        ;         ;
-; altsyncram.tdf                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                  ;         ;
-; stratix_ram_block.inc                              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                           ;         ;
-; lpm_mux.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                     ;         ;
-; lpm_decode.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                                  ;         ;
-; aglobal170.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                                  ;         ;
-; a_rdenreg.inc                                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                                   ;         ;
-; altrom.inc                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                      ;         ;
-; altram.inc                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                      ;         ;
-; altdpram.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                    ;         ;
-; db/altsyncram_0vt3.tdf                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/altsyncram_0vt3.tdf                    ;         ;
-; parallel_add.tdf                                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/parallel_add.tdf                                ;         ;
-; pcpa_add.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/pcpa_add.inc                                    ;         ;
-; csa_add.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/csa_add.inc                                     ;         ;
-; altshift.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altshift.inc                                    ;         ;
-; db/par_add_fse.tdf                                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/par_add_fse.tdf                        ;         ;
-+----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
++----------------------------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                                                           ; Library ;
++----------------------------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; ../ALL Code Files/update_unit.vhd                  ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/update_unit.vhd                  ;         ;
+; ../ALL Code Files/rs_execute.vhd                   ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd                   ;         ;
+; ../ALL Code Files/ROB.vhd                          ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd                          ;         ;
+; ../ALL Code Files/reservation_station_complete.vhd ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd ;         ;
+; ../ALL Code Files/reservation_station.vhd          ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd          ;         ;
+; ../ALL Code Files/registers.vhd                    ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd                    ;         ;
+; ../ALL Code Files/register_file.vhd                ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd                ;         ;
+; ../ALL Code Files/para_final.vhd                   ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd                   ;         ;
+; ../ALL Code Files/nand_unit.vhd                    ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd                    ;         ;
+; ../ALL Code Files/mux2.vhd                         ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd                         ;         ;
+; ../ALL Code Files/multiplexer.vhd                  ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd                  ;         ;
+; ../ALL Code Files/lst_unit.vhd                     ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd                     ;         ;
+; ../ALL Code Files/instruction_memory.vhd           ; yes             ; User Wizard-Generated File            ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd           ;         ;
+; ../ALL Code Files/inc.vhd                          ; yes             ; User Wizard-Generated File            ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd                          ;         ;
+; ../ALL Code Files/fetch_decode_rf.vhd              ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd              ;         ;
+; ../ALL Code Files/fetch_decode.vhd                 ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd                 ;         ;
+; ../ALL Code Files/fetch.vhd                        ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd                        ;         ;
+; ../ALL Code Files/execute_complete.vhd             ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd             ;         ;
+; ../ALL Code Files/dispatch_unit_bch.vhd            ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit_bch.vhd            ;         ;
+; ../ALL Code Files/dispatch_unit.vhd                ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit.vhd                ;         ;
+; ../ALL Code Files/decode.vhd                       ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd                       ;         ;
+; ../ALL Code Files/components.vhd                   ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/components.vhd                   ;         ;
+; ../ALL Code Files/complete.vhd                     ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd                     ;         ;
+; ../ALL Code Files/comparator.vhd                   ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd                   ;         ;
+; ../ALL Code Files/branch_predictor.vhd             ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd             ;         ;
+; ../ALL Code Files/bch_unit.vhd                     ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd                     ;         ;
+; ../ALL Code Files/ARF.vhd                          ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd                          ;         ;
+; ../ALL Code Files/alu_unit.vhd                     ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd                     ;         ;
+; ../ALL Code Files/allocating_unit.vhd              ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd              ;         ;
+; ../ALL Code Files/adds.vhd                         ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd                         ;         ;
+; ../ALL Code Files/add_unit.vhd                     ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd                     ;         ;
+; ../ALL Code Files/final.vhd                        ; yes             ; User VHDL File                        ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd                        ;         ;
+; instruction.hex                                    ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/instruction.hex                           ;         ;
+; altsyncram.tdf                                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf                                  ;         ;
+; stratix_ram_block.inc                              ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc                           ;         ;
+; lpm_mux.inc                                        ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                                     ;         ;
+; lpm_decode.inc                                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc                                  ;         ;
+; aglobal161.inc                                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc                                  ;         ;
+; a_rdenreg.inc                                      ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc                                   ;         ;
+; altrom.inc                                         ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc                                      ;         ;
+; altram.inc                                         ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc                                      ;         ;
+; altdpram.inc                                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc                                    ;         ;
+; db/altsyncram_0vt3.tdf                             ; yes             ; Auto-Generated Megafunction           ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/altsyncram_0vt3.tdf                    ;         ;
+; parallel_add.tdf                                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/parallel_add.tdf                                ;         ;
+; pcpa_add.inc                                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/pcpa_add.inc                                    ;         ;
+; csa_add.inc                                        ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/csa_add.inc                                     ;         ;
+; altshift.inc                                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altshift.inc                                    ;         ;
+; db/par_add_fse.tdf                                 ; yes             ; Auto-Generated Megafunction           ; C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/par_add_fse.tdf                        ;         ;
++----------------------------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -9793,8 +9794,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Jun 05 08:32:40 2017
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Wed Jun 07 10:57:03 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/testbench.vhd
@@ -9899,8 +9900,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: allocating_unit-AU File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 83
     Info (12023): Found entity 1: allocating_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/allocating_unit.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/adds.vhd
-    Info (12022): Found design unit 1: adds-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 19
-    Info (12023): Found entity 1: adds File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 11
+    Info (12022): Found design unit 1: adds-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 18
+    Info (12023): Found entity 1: adds File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/adds.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/add_unit.vhd
     Info (12022): Found design unit 1: add_unit-add_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd Line: 24
     Info (12023): Found entity 1: add_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd Line: 13
@@ -9915,7 +9916,7 @@ Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(30): object "only
 Info (12128): Elaborating entity "fetch_decode_rf" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 34
 Info (12128): Elaborating entity "fetch_decode" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 49
 Info (12128): Elaborating entity "fetch" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 23
-Info (12128): Elaborating entity "instruction_memory" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 25
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 31
 Info (12128): Elaborating entity "altsyncram" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
 Info (12130): Elaborated megafunction instantiation "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
 Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
@@ -9971,9 +9972,9 @@ Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0vt3.tdf
     Info (12023): Found entity 1: altsyncram_0vt3 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/altsyncram_0vt3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_0vt3" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "mux2" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|mux2:mux" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 35
-Info (12128): Elaborating entity "inc" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 40
+Info (12128): Elaborating entity "altsyncram_0vt3" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "mux2" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|mux2:mux" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 41
+Info (12128): Elaborating entity "inc" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 46
 Info (12128): Elaborating entity "parallel_add" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
 Info (12130): Elaborated megafunction instantiation "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
 Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" with the following parameter: File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
@@ -9989,10 +9990,10 @@ Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_
     Info (12134): Parameter "lpm_type" = "parallel_add"
 Info (12021): Found 1 design units, including 1 entities, in source file db/par_add_fse.tdf
     Info (12023): Found entity 1: par_add_fse File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/par_add_fse.tdf Line: 25
-Info (12128): Elaborating entity "par_add_fse" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component|par_add_fse:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/parallel_add.tdf Line: 148
-Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 47
-Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:pc_reg" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 59
-Info (12128): Elaborating entity "branch_predictor" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|branch_predictor:BP" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 77
+Info (12128): Elaborating entity "par_add_fse" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component|par_add_fse:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/parallel_add.tdf Line: 148
+Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 53
+Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:pc_reg" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 65
+Info (12128): Elaborating entity "branch_predictor" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|branch_predictor:BP" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 83
 Info (12128): Elaborating entity "decode" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 29
 Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 93
 Info (12128): Elaborating entity "register_file" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|register_file:reg_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 56
@@ -10028,9 +10029,7 @@ Info (12128): Elaborating entity "add_unit" for hierarchy "para_final:PAR_FIN|rs
 Info (12128): Elaborating entity "nand_unit" for hierarchy "para_final:PAR_FIN|rs_execute:RS_EX|execute_complete:execute_units|alu_unit:alu_unit1|nand_unit:Nanding_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 39
 Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|rs_execute:RS_EX|execute_complete:execute_units|alu_unit:alu_unit1|registers:reg_out" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/alu_unit.vhd Line: 76
 Info (12128): Elaborating entity "bch_unit" for hierarchy "para_final:PAR_FIN|rs_execute:RS_EX|execute_complete:execute_units|bch_unit:bch_unit0" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 51
-Warning (10541): VHDL Signal Declaration warning at bch_unit.vhd(13): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 13
 Info (12128): Elaborating entity "lst_unit" for hierarchy "para_final:PAR_FIN|rs_execute:RS_EX|execute_complete:execute_units|lst_unit:lst_unit1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 56
-Warning (10541): VHDL Signal Declaration warning at lst_unit.vhd(13): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd Line: 13
 Info (12128): Elaborating entity "complete" for hierarchy "complete:COMP" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd Line: 35
 Info (12128): Elaborating entity "registers" for hierarchy "complete:COMP|registers:COMP_REG1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd Line: 45
 Warning (14284): Synthesized away the following node(s):
@@ -10060,10 +10059,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 740 megabytes
-    Info: Processing ended: Mon Jun 05 08:32:59 2017
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 739 megabytes
+    Info: Processing ended: Wed Jun 07 10:57:20 2017
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
 
 

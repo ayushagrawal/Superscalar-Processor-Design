@@ -72,30 +72,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "inst1[17]",
-					"strict" : false
-				},
-				{
-					"name" : "inst1[18]",
-					"strict" : false
-				},
-				{
-					"name" : "inst1[19]",
-					"strict" : false
-				},
-				{
-					"name" : "inst1[20]",
-					"strict" : false
-				},
-				{
-					"name" : "inst1[21]",
-					"strict" : false
-				},
-				{
-					"name" : "inst1[22]",
-					"strict" : false
-				},
-				{
 					"name" : "inst2[0]",
 					"strict" : false
 				},
@@ -157,30 +133,6 @@
 				},
 				{
 					"name" : "inst2[15]",
-					"strict" : false
-				},
-				{
-					"name" : "inst2[17]",
-					"strict" : false
-				},
-				{
-					"name" : "inst2[18]",
-					"strict" : false
-				},
-				{
-					"name" : "inst2[19]",
-					"strict" : false
-				},
-				{
-					"name" : "inst2[20]",
-					"strict" : false
-				},
-				{
-					"name" : "inst2[21]",
-					"strict" : false
-				},
-				{
-					"name" : "inst2[22]",
 					"strict" : false
 				},
 				{

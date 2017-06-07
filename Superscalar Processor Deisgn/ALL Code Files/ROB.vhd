@@ -53,14 +53,14 @@ architecture files of ROB is
 	signal rob_data_in,rob_data_out : main_array(0 to N-1)(15 downto 0);
 	signal rob_r_in, rob_r_out : main_array(0 to N-1)(2 downto 0);
 	
-	signal top_in,top_out,top_add_two,top_add_one,top_add_in_two,top_add_in : std_logic_vector(natural(log2(real(N)))-1 downto 0);
+	signal top_in,top_out,top_add_two,top_add_one,top_add_in_two,top_add_in : std_logic_vector(natural(log2(real(N)))-1 downto 0) := (others => '0');
 	signal bottom_in,bottom_out,bottom_out_one,bottom_out_two,bottom_1,bottom_2: std_logic_vector(natural(log2(real(N)))-1 downto 0);
 	
 	signal manage_bit_in,manage_bit_out : std_logic_vector(0 downto 0);
 	signal top_en,bottom_en,manage_bit_en : std_logic;
 	
-	signal rob_mem_in,rob_mem_en,rob_mem_out : main_array(0 to N-1)(15 downto 0);
-	
+	signal rob_mem_in,rob_mem_out : main_array(0 to N-1)(15 downto 0);
+	signal rob_mem_en : main_array(0 to N-1)(0 downto 0);
 	signal rob_wb_in,rob_wb_en,rob_wb_out : main_array(0 to N-1)(0 downto 0);
 	
 begin
