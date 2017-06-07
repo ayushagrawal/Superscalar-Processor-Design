@@ -61,6 +61,9 @@ architecture rFile of register_file is
 	-- From ROB
 	signal reg1_index,reg2_index : std_logic_vector(4 downto 0);
 	
+	signal reg_A_value,reg_B_value : std_logic_vector(15 downto 0);
+	signal reg_A_validity,reg_B_validity : std_logic;
+	
 begin
 	
 	--------- STALL LOGIC ---------
@@ -121,10 +124,10 @@ begin
 	regIn2(66 downto 62) <= reg2_index;						-- ROB INDEX
 	regIn2(61 downto 59) <= REG2(27 downto 25);			-- WB REG
 	regIn2(58 downto 50) <= immediate2;						-- IMMEDIATE
-	regIn2(49 downto 34) <= RA_2(15 downto 0);			-- REG_A VALUE
-	regIn2(33)				<= RA_2(16);						-- VALIDITY
-	regIn2(32 downto 17) <= RB_2(15 downto 0);			-- REG_B VALUE
-	regIn2(16) 				<= RB_2(16);						-- VALIDITY
+	regIn2(49 downto 34) <= reg_A_value;	 				-- REG_A VALUE
+	regIn2(33)				<= reg_A_validity;				-- VALIDITY
+	regIn2(32 downto 17) <= reg_B_value;					-- REG_B VALUE
+	regIn2(16) 				<= reg_B_validity;				-- VALIDITY
 	regIn2(15 downto 0)  <= REG2(15 downto 0);			-- PC
 	----------------------------------------------------------------------------
 	
@@ -195,9 +198,33 @@ begin
 								  osel2 => REG1(21 downto 19),
 								  osel3 => REG2(24 downto 22),
 								  osel4 => REG2(21 downto 19));
-								  
+	
+	-- For special condition when required registers of 2nd instruction are WB of 1st
+	process(REG1,REG2,reg1_index,RA_2,RB_2)
+	
+	begin
+	
+		if(REG2(24 downto 22) = REG1(27 downto 25)) then
+			reg_A_value(4 downto 0) <= reg1_index;
+			reg_A_value(15 downto 5) <= "00000000000";
+			reg_A_validity <= '0';
+		else
+			reg_A_value <= RA_2(15 downto 0);
+			reg_A_validity <= RA_2(16);
+		end if;
+		if(REG2(21 downto 19) = REG1(27 downto 25)) then
+			reg_B_value(4 downto 0) <= reg1_index;
+			reg_B_value(15 downto 5) <= "00000000000";
+			reg_B_validity <= '0';
+		else
+			reg_B_value <= RB_2(15 downto 0);
+			reg_B_validity <= RB_2(16);
+		end if;
+	
+	end process;
+	
 	-- For maintaing the validity bit
-	process(REG1)
+	process(REG1,REG2)
 	begin
 		if(REG1(30) = '1') then			-- IMPLIES THAT THERE IS A VALID WRITE-BACK -> The register becomes invalid
 			validity_in(to_integer(unsigned(REG1(27 downto 25))))(0) <= '0';
@@ -206,6 +233,15 @@ begin
 			validity_in(to_integer(unsigned(REG1(27 downto 25))))(0) <= '0';		-- Don't care
 			val_en_ch(to_integer(unsigned(REG1(27 downto 25))))(0) <= '0';			-- Not using the result
 		end if;
+		
+		if(REG2(30) = '1') then			-- IMPLIES THAT THERE IS A VALID WRITE-BACK -> The register becomes invalid
+			validity_in(to_integer(unsigned(REG2(27 downto 25))))(0) <= '0';
+			val_en_ch(to_integer(unsigned(REG2(27 downto 25))))(0) <= '1';
+		else
+			validity_in(to_integer(unsigned(REG2(27 downto 25))))(0) <= '0';		-- Don't care
+			val_en_ch(to_integer(unsigned(REG2(27 downto 25))))(0) <= '0';			-- Not using the result
+		end if;
+		
 		validity_in <= (others => (others => '0'));
 		val_en_ch <= (others => (others => '0'));
 	end process;

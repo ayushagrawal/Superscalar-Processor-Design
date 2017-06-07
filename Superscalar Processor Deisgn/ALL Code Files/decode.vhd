@@ -44,18 +44,19 @@ architecture DEC of decode is
 	signal extra1,extra2 : std_logic_vector(2 downto 0);
 	signal isWB_1,isWB_2,isA_1,isA_2,isB_1,isB_2 : std_logic;
 	
+	signal temp : std_logic;
+	
 --	signal decode_stall_in : std_logic;
 	
 begin
 
-	inst1_val <= not_stall;
-	inst2_val <= not_stall;
+	temp <= not(PC2(0) and PC2(1) and PC2(2) and PC2(3) and PC2(4) and PC2(5) and PC2(6));	-- Due to initial Default condition
 	
 	-- TO BE PROCESSED IN PARALLEL
 	opcode1 <= inst1(15 downto 12);
 	opcode2 <= inst2(15 downto 12);
 																		
-	not_stall <= not stall_in;
+	not_stall <= '1';
 	
 	PC_1(6 downto 0)  <= PC1;
 	PC_1(15 downto 7) <= "000000000";
@@ -110,7 +111,7 @@ begin
 	--
 	--
 	
-	process(opcode1,opcode2,inst1,inst2)
+	process(opcode1,opcode2,inst1,inst2,temp)
 	begin
 		-- For 1st instruction
 		if(opcode1 = "0000") then		-- ADD
@@ -123,6 +124,7 @@ begin
 			isA_1  <= '1';
 			isB_1  <= '1';
 			extra1 <= "000";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0001") then	-- ADI
@@ -135,6 +137,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "00";
 			opcode_reduced1(1 downto 0) <= "11";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0010") then	-- NAND
@@ -147,6 +150,7 @@ begin
 			isA_1  <= '1';
 			isB_1  <= '1';
 			extra1			<= "000";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0011") then	-- LHI
@@ -159,6 +163,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "10";
 			opcode_reduced1(1 downto 0) <= "00";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0100") then	-- LOAD RA,RB,IMM
@@ -171,6 +176,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "10";
 			opcode_reduced1(1 downto 0) <= "01";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "0101") then	-- STORE
@@ -183,6 +189,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "10";
 			opcode_reduced1(1 downto 0) <= "10";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
 --		elsif(opcode1 = "0110") then	-- LOAD MULTIPLE
@@ -220,6 +227,7 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "11";
 			opcode_reduced1(1 downto 0) <= "00";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode1 = "1000") then	-- JAL
@@ -232,9 +240,10 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "11";
 			opcode_reduced1(1 downto 0) <= "01";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
 			
-		else									-- JLR
+		elsif(opcode1 = "1001") then	-- JLR
 			regA_1			 <= inst1(8 downto 6);		-- RB us first operand
 			regB_1			 <= inst1(5 downto 3);		-- Nothing
 			regWB_1			 <= inst1(11 downto 9);		-- RA is WB
@@ -244,8 +253,20 @@ begin
 			isB_1  <= '0';
 			opcode_reduced1(3 downto 2) <= "11";
 			opcode_reduced1(1 downto 0) <= "10";
+			inst1_val <= temp;
 			--decode_stall_in <= '0';
-			
+		
+		else
+			regA_1			 <= "000";
+			regB_1			 <= "000";
+			regWB_1			 <= "000";
+			extra1 			 <= "000";
+			isWB_1 			 <= '0';
+			isA_1  <= '0';
+			isB_1  <= '0';
+			opcode_reduced1(3 downto 2) <= "00";
+			opcode_reduced1(1 downto 0) <= "00";
+			inst1_val <= '0';
 		end if;
 	
 		-- ###################### For 2nd instruction #################### --
@@ -261,6 +282,7 @@ begin
 			isWB_2 <= '1';
 			isA_2  <= '1';
 			isB_2  <= '1';
+			inst2_val <= temp;
 			extra2 <= "000";
 			--decode_stall_in <= '0';
 			
@@ -274,6 +296,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "00";
 			opcode_reduced2(1 downto 0) <= "11";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0010") then	-- NAND
@@ -286,6 +309,7 @@ begin
 			isA_2  <= '1';
 			isB_2  <= '1';
 			extra2			<= "000";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0011") then	-- LHI
@@ -298,6 +322,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "00";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0100") then	-- LOAD RA,RB,IMM
@@ -310,6 +335,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "01";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "0101") then	-- STORE
@@ -322,6 +348,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "10";
 			opcode_reduced2(1 downto 0) <= "10";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
 			
 --		elsif(opcode2 = "0110") then	-- LOAD MULTIPLE
@@ -348,6 +375,7 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "11";
 			opcode_reduced2(1 downto 0) <= "00";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
 			
 		elsif(opcode2 = "1000") then	-- JAL
@@ -360,9 +388,10 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "11";
 			opcode_reduced2(1 downto 0) <= "01";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
 			
-		else									-- JLR
+		elsif(opcode2 = "1001") then	-- JLR
 			regA_2			 <= inst2(8 downto 6);		-- RB us first operand
 			regB_2			 <= inst2(5 downto 3);		-- Nothing
 			regWB_2			 <= inst2(11 downto 9);		-- RA is WB
@@ -372,8 +401,20 @@ begin
 			isB_2  <= '0';
 			opcode_reduced2(3 downto 2) <= "11";
 			opcode_reduced2(1 downto 0) <= "10";
+			inst2_val <= temp;
 			--decode_stall_in <= '0';
-			
+		
+		else
+			regA_2			 <= "000";
+			regB_2			 <= "000";
+			regWB_2			 <= "000";
+			extra2 			 <= "000";
+			isWB_2 			 <= '0';
+			isA_2  <= '0';
+			isB_2  <= '0';
+			opcode_reduced2(3 downto 2) <= "00";
+			opcode_reduced2(1 downto 0) <= "00";
+			inst2_val <= '0';
 		end if;
 	end process;
 	

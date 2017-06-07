@@ -70,12 +70,12 @@ begin
 													input => input(I),
 													output => data_out(I),
 													enable => enable_data(I)(0));
-				 VALD : registers generic map(N => 1)
-										port map(reset	=> reset,
-													clk	=> clk,
-													input => validity_in(I),
-													output => validity_out(I),
-													enable => val_en_ch(I)(0));
+				 VALD : registers1 generic map(N => 1)
+										 port map(reset	=> reset,
+											 		 clk	=> clk,
+													 input => validity_in(I),
+													 output => validity_out(I),
+													 enable => val_en_ch(I)(0));
 				end generate;
 	----------------------------------------------------------------------
 	

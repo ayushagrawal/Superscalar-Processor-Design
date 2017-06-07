@@ -23,7 +23,7 @@ architecture fetching of fetch is
 	
 begin
 	
-	not_stall <= not(stall);
+	not_stall <= '1';
 	
 	mem_map : instruction_memory port map(address_a => mux_pc,
 													  address_b => add_pc,
@@ -32,8 +32,8 @@ begin
 													  data_b		=> "0000000000000000",
 													  wren_a		=> '0',
 													  wren_b		=> '0',
-													  q_a			=> reg1_in,
-													  q_b			=> reg2_in);
+													  q_a			=> inst1(15 downto 0),
+													  q_b			=> inst2(15 downto 0));
 	
 	mux	  : mux2 generic map(N => 7) port map(in0 	=> pc_add_out,
 															  in1 	=> bp_out,
@@ -47,17 +47,6 @@ begin
 								  data1x => "0000001",
 								  result => pc_add_out);
 								  
-	reg1	  : registers generic map(N => 16) port map(clk    => clk,
-																	  reset	=> reset,
-																	  enable => not_stall,
-																	  input  => reg1_in,
-																	  output => inst1(15 downto 0));
-	
-	reg2	  : registers generic map(N => 16) port map(clk    => clk,
-																	  reset 	=> reset,
-																	  enable => not_stall,
-																	  input  => reg2_in,
-																	  output => inst2(15 downto 0));
 																	 
 	pc1_reg : registers generic map(N => 7) port map(clk	  => clk,
 																	 reset  => reset,

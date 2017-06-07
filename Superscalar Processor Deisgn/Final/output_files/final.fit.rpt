@@ -1,5 +1,5 @@
 Fitter report for final
-Wed Jun 07 12:22:17 2017
+Wed Jun 07 17:12:18 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jun 07 12:22:17 2017       ;
+; Fitter Status                      ; Successful - Wed Jun 07 17:12:18 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; final                                       ;
 ; Top-level Entity Name              ; final                                       ;
@@ -148,7 +148,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -742,10 +742,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/output_files/final.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1099 megabytes
-    Info: Processing ended: Wed Jun 07 12:22:17 2017
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 1101 megabytes
+    Info: Processing ended: Wed Jun 07 17:12:18 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
