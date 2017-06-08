@@ -32,8 +32,8 @@ entity reservation_station is
 
 architecture RS of reservation_station is
 
-	signal data_in_mux : main_array(0 to N-1)(X-1 downto 0);
-	signal data_en_mux : main_array(0 to N-1)(0 downto 0);
+	signal data_in_mux : main_array(0 to N-1)(X-1 downto 0) := (others => (others => '0'));
+	signal data_en_mux : main_array(0 to N-1)(0 downto 0) := (others => (others => '0'));
 
 begin
 	

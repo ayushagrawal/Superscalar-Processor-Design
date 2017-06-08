@@ -35,8 +35,8 @@ entity update_unit is
 	end entity;
 
 architecture UU of update_unit is
-	signal index : main_array(0 to 4)(natural(log2(real(X)))-1 downto 0);
-	signal valid : main_array(0 to 4)(0 downto 0);
+	signal index : main_array(0 to 4)(natural(log2(real(X)))-1 downto 0) := (others => (others => '0'));
+	signal valid : main_array(0 to 4)(0 downto 0) := (others => (others => '0'));
 begin
 	
 	-- This gives me the index of the entries in the RS which match with the broadcast

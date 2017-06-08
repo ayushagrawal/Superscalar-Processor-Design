@@ -50,10 +50,10 @@ end entity;
 
 architecture files of ARF is
 	
-	signal data_out : main_array(0 to 7)(15 downto 0);	-- CONTAINS OUTPUT OF EACH REGISTER
-	signal input : main_array(0 to 7)(15 downto 0);		-- CONTAINS INPUT FOR EACH REGISTER
-	signal enable_data : main_array(0 to 7)(0 downto 0);
-	signal validity_out : main_array(0 to 7)(0 downto 0);
+	signal data_out : main_array(0 to 7)(15 downto 0) := (others => (others => '0'));	-- CONTAINS OUTPUT OF EACH REGISTER
+	signal input : main_array(0 to 7)(15 downto 0) := (others => (others => '0'));		-- CONTAINS INPUT FOR EACH REGISTER
+	signal enable_data : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
+	signal validity_out : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
 
 begin
 	

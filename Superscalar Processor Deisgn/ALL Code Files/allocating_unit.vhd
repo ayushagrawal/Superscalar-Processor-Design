@@ -82,42 +82,51 @@ entity allocating_unit is
 
 architecture AU of allocating_unit is
 	
-	signal index_alu_in,index_alu_out : main_array(0 to N_alu-1)(natural(log2(real(N_alu)))-1 downto 0);
-	signal index_bch_in,index_bch_out : main_array(0 to N_bch-1)(natural(log2(real(N_bch)))-1 downto 0);
-	signal index_lst_in,index_lst_out : main_array(0 to N_lst-1)(natural(log2(real(N_lst)))-1 downto 0);
-	signal index_alu_en,valid_alu_in,valid_alu_out,valid_alu_en : main_array(0 to N_alu-1)(0 downto 0);
-	signal index_bch_en,valid_bch_in,valid_bch_out,valid_bch_en : main_array(0 to N_bch-1)(0 downto 0);
-	signal index_lst_en,valid_lst_in,valid_lst_out,valid_lst_en : main_array(0 to N_lst-1)(0 downto 0);
+	signal index_alu_in,index_alu_out : main_array(0 to N_alu-1)(natural(log2(real(N_alu)))-1 downto 0) := (others => (others => '0'));
+	signal index_bch_in,index_bch_out : main_array(0 to N_bch-1)(natural(log2(real(N_bch)))-1 downto 0) := (others => (others => '0'));
+	signal index_lst_in,index_lst_out : main_array(0 to N_lst-1)(natural(log2(real(N_lst)))-1 downto 0) := (others => (others => '0'));
+	signal index_alu_en,valid_alu_in,valid_alu_out,valid_alu_en : main_array(0 to N_alu-1)(0 downto 0) := (others => (others => '0'));
+	signal index_bch_en,valid_bch_in,valid_bch_out,valid_bch_en : main_array(0 to N_bch-1)(0 downto 0) := (others => (others => '0'));
+	signal index_lst_en,valid_lst_in,valid_lst_out,valid_lst_en : main_array(0 to N_lst-1)(0 downto 0) := (others => (others => '0'));
 	
 --	 FOR KEEPING A TRACK OF VALID INSTRUCTION_________________________________________________________________
-	signal top_alu_in,top_alu_out,top_alu_add,top_alu_add_one : std_logic_vector(natural(log2(real(N_alu)))-1 downto 0);
-	signal bottom_alu_in,bottom_alu_out,bottom_alu_out_add,bottom_alu_add : std_logic_vector(natural(log2(real(N_alu)))-1 downto 0);
-	signal top_bch_in,top_bch_out,top_bch_add,top_bch_add_one : std_logic_vector(natural(log2(real(N_bch)))-1 downto 0);
-	signal bottom_bch_in,bottom_bch_out,bottom_bch_out_add,bottom_bch_add : std_logic_vector(natural(log2(real(N_bch)))-1 downto 0);
-	signal top_lst_in,top_lst_out,top_lst_add,top_lst_add_one : std_logic_vector(natural(log2(real(N_lst)))-1 downto 0);
-	signal bottom_lst_in,bottom_lst_out,bottom_lst_out_add,bottom_lst_add : std_logic_vector(natural(log2(real(N_lst)))-1 downto 0);
+	signal top_alu_in,top_alu_out,top_alu_add,top_alu_add_one : std_logic_vector(natural(log2(real(N_alu)))-1 downto 0) := (others => '0');
+	signal bottom_alu_in,bottom_alu_out,bottom_alu_out_add,bottom_alu_add : std_logic_vector(natural(log2(real(N_alu)))-1 downto 0) := (others => '0');
+	signal top_bch_in,top_bch_out,top_bch_add,top_bch_add_one : std_logic_vector(natural(log2(real(N_bch)))-1 downto 0) := (others => '0');
+	signal bottom_bch_in,bottom_bch_out,bottom_bch_out_add,bottom_bch_add : std_logic_vector(natural(log2(real(N_bch)))-1 downto 0) := (others => '0');
+	signal top_lst_in,top_lst_out,top_lst_add,top_lst_add_one : std_logic_vector(natural(log2(real(N_lst)))-1 downto 0) := (others => '0');
+	signal bottom_lst_in,bottom_lst_out,bottom_lst_out_add,bottom_lst_add : std_logic_vector(natural(log2(real(N_lst)))-1 downto 0) := (others => '0');
 --	____________________________________________________________________________________________________________
 	
-	signal stall_alu,stall_bch,stall_lst : std_logic;
+	signal stall_alu,stall_bch,stall_lst,clk_index : std_logic := '0';
 	
-	signal inst1_alu,inst1_bch,inst1_lst,inst2_alu,inst2_bch,inst2_lst : std_logic_vector(71 downto 0);
+	signal inst1_alu,inst1_bch,inst1_lst,inst2_alu,inst2_bch,inst2_lst : std_logic_vector(71 downto 0) := (others => '0');
 	
 begin	
 	
 	stall_out <= stall_alu and stall_bch and stall_lst;	
+	
+	process(clk,reset)
+	begin
+		if(reset = '1') then
+			clk_index <= not clk;
+		else
+			clk_index <= clk;
+		end if;
+	end process;
 	
 --	_______________________________________________________________________________________________
 	GEN_ALU : for I in 0 to N_alu-1
 				 generate
 				 BUFF_I_ALU : registers generic map(N => natural(log2(real(N_alu))))
 												port map (reset => '0',
-															 clk	 => clk,
+															 clk	 => clk_index,
 															 input => index_alu_in(I),
 															 output=> index_alu_out(I),
 															 enable=> index_alu_en(I)(0));
 				 BUFF_V_ALU : registers generic map(N => 1)
 												port map (reset => '0',
-															 clk	 => clk,
+															 clk	 => clk_index,
 															 input => valid_alu_in(I),
 															 output=> valid_alu_out(I),
 															 enable=> valid_alu_en(I)(0));
@@ -212,7 +221,7 @@ begin
 																						 data2 => top_alu_add,
 																						 output => top_alu_in);
 																						 
-	adder3 : adds generic map(N => natural(log2(real(N_alu)))) port map(data1 => bottom_alu_out,
+	adder3 : adds generic map(N => natural(log2(real(N_alu)))) port map(data1 => top_alu_out,
 																						 data2 => (0 => '1',others => '0'),
 																						 output => top_alu_add_one);																					 
 	
@@ -254,14 +263,14 @@ begin
 	
 	begin
 	
-		if(inst1(61) = '0') then
+		if(inst1(70) = '0') then
 			inst1_alu <= inst1;
 			inst1_bch <= (others => '0');
 			inst1_lst <= (others => '0');
 			inst_ready_alu(0)(0) <= inst1(33) and inst1(16) and inst1(62);
 			inst_ready_bch(0) <= "0";
 			inst_ready_lst(0) <= "0";
-		elsif(inst1(61 downto 60) = "11") then
+		elsif(inst1(70 downto 69) = "11") then
 			inst1_bch <= inst1;
 			inst1_alu <= (others => '0');
 			inst1_lst <= (others => '0');
@@ -277,14 +286,14 @@ begin
 			inst_ready_alu(0) <= "0";
 		end if;
 		
-		if(inst2(61) = '0') then
+		if(inst2(70) = '0') then
 			inst2_alu <= inst2;
 			inst2_bch <= (others => '0');
 			inst2_lst <= (others => '0');
 			inst_ready_alu(1)(0) <= inst2(33) and inst2(16) and inst2(62);
 			inst_ready_bch(1) <= "0";
 			inst_ready_lst(1) <= "0";
-		elsif(inst1(61 downto 60) = "11") then
+		elsif(inst1(70 downto 69) = "11") then
 			inst2_bch <= inst2;
 			inst2_alu <= (others => '0');
 			inst2_lst <= (others => '0');
@@ -303,16 +312,31 @@ begin
 	end process;
 	
 -- _____________________________________________________________________________________________________	
-	process(valid_alu_out,inst1_alu,index_alu_out,bottom_alu_out_add,inst2_alu,bottom_alu_in,reset,valid_alu_allocate,index_alu_allocate,top_alu_add_one,top_alu_in,index_alu_in,index_alu_en,valid_alu_in,valid_alu_en)
+	process(valid_alu_out,inst1_alu,index_alu_out,bottom_alu_out_add,inst2_alu,bottom_alu_in,reset,valid_alu_allocate,index_alu_allocate,top_alu_add_one,top_alu_in,index_alu_in,index_alu_en,valid_alu_in,valid_alu_en,bottom_alu_out)
 		variable count : integer;
+		variable Nvalid_alu_in,Nvalid_alu_en : main_array(0 to N_alu-1)(0 downto 0);
+		
+		variable Nindex_alu_en : main_array(0 to N_alu-1)(0 downto 0);
+		variable Nindex_alu_in : main_array(0 to N_alu-1)(natural(log2(real(N_alu)))-1 downto 0);
+		
+		variable Nbusy_alu_en,Nbusy_alu,Nreg_alu_en : main_array(0 to N_alu-1)(0 downto 0);
+		variable Nreg_alu_data : main_array(0 to N_alu-1)(X_alu-1 downto 0);
 	begin
-		count := 0;
+		count := 0;		
 		for I in 0 to N_alu-1 loop
 			if(valid_alu_out(I)(0) = '1') then
 				count := count + 1;
 			else
 				count := count;
 			end if;
+			Nindex_alu_in(I) := (others => '0');
+			Nindex_alu_en(I) := "0";
+			Nvalid_alu_in(I) := "0";
+			Nvalid_alu_en(I) := "0";
+			Nbusy_alu(I)  := "0";
+			Nbusy_alu_en(I)  := "0";
+			Nreg_alu_data(I) := (others => '0');
+			Nreg_alu_en(I)	  := "0";
 		end loop;
 		if(count = 0) then
 			stall_alu <= '1';
@@ -325,84 +349,73 @@ begin
 			only_one_alu <= '0';
 		end if;
 		
-		if(inst1_alu(62) = '1') then		-- VALID INSTRUCTION
-			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= inst1_alu;
-			reg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= "1";
-			busy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= "1";
-			busy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) <= "1";
-			indx_alloc_alu(0) <= index_alu_out(to_integer(unsigned(bottom_alu_out_add)));
+		if(inst1_alu(71) = '1') then		-- VALID INSTRUCTION
+			Nreg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := inst1_alu;
+			Nreg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
+			Nbusy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
+			Nbusy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
+			indx_alloc_alu(0) <= index_alu_out(to_integer(unsigned(bottom_alu_out)));
+			Nvalid_alu_in(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "0";
+			Nvalid_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
 		end if;
 		
-		if(inst2_alu(62) = '1') then
-			bottom_alu_add <= (0 =>  not inst1_alu(0), 1 => inst1_alu(0), others => '0');
-			reg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= inst1_alu;
-			reg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= "1";
-			busy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= "1";
-			busy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_in)))))) <= "1";
-			indx_alloc_alu(1) <= index_alu_out(to_integer(unsigned(bottom_alu_in)));
+		if(inst2_alu(71) = '1') then
+			bottom_alu_add <= (0 =>  not inst1_alu(71), 1 => inst1_alu(71), others => '0');
+			Nreg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := inst1_alu;
+			Nreg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
+			Nbusy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
+			Nbusy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
+			indx_alloc_alu(1) <= index_alu_out(to_integer(unsigned(bottom_alu_out_add)));
+			Nvalid_alu_in(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "0";
+			Nvalid_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
 		else
-			bottom_alu_add <= (0 => inst1_alu(0), others => '0');
+			bottom_alu_add <= (0 => inst1_alu(71), others => '0');
 		end if;
 		
-		reg_alu_data <= (others => (others => '0')); 
-		reg_alu_en <= (others => (others => '0')); 
-		busy_alu <= (others => (others => '0')); 
-		busy_alu_en <= (others => (others => '0'));
+		reg_alu_data <= Nreg_alu_data; 
+		reg_alu_en <= Nreg_alu_en; 
+		busy_alu <= Nbusy_alu; 
+		busy_alu_en <= Nbusy_alu_en;
 		indx_alloc_alu <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
 			for I in 0 to N_alu-1 loop
-				index_alu_in(I) <= std_logic_vector(to_unsigned(I,natural(log2(real(N_alu)))));
-				index_alu_en(I)(0) <= '1';
-				valid_alu_in(I)(0) <= '1';
-				valid_alu_en(I)(0) <= '1';
+				Nindex_alu_in(I) := std_logic_vector(to_unsigned(I,natural(log2(real(N_alu)))));
+				Nindex_alu_en(I)(0) := '1';
+				Nvalid_alu_in(I)(0) := '1';
+				Nvalid_alu_en(I)(0) := '1';
 			end loop;
 			top_alu_add <= (others => '0');
 		else
 			-- General update policy: Using Dispatching data
 			if (valid_alu_allocate(0)(0) = '1' and valid_alu_allocate(1)(0) = '1') then		-- Indicates 2 instructions are dispatched
 				top_alu_add <= (1 => '1', others => '0');
-				index_alu_in(to_integer(unsigned(top_alu_add_one))) <= index_alu_allocate(0);
-				index_alu_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-				index_alu_in(to_integer(unsigned(top_alu_in))) <= index_alu_allocate(1);
-				index_alu_en(to_integer(unsigned(top_alu_in)))(0) <= '1';
-				index_alu_in <= (others => (others => '0'));
-				index_alu_en <= (others => (others => '0'));
-				valid_alu_in(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-				valid_alu_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-				valid_alu_in(to_integer(unsigned(top_alu_in)))(0) <= '1';
-				valid_alu_en(to_integer(unsigned(top_alu_in)))(0) <= '1';
-				valid_alu_in <= (others => (others => '0'));
-				valid_alu_en <= (others => (others => '0'));
+				Nindex_alu_in(to_integer(unsigned(top_alu_add_one))) := index_alu_allocate(0);
+				Nindex_alu_en(to_integer(unsigned(top_alu_add_one)))(0) := '1';
+				Nindex_alu_in(to_integer(unsigned(top_alu_in))) := index_alu_allocate(1);
+				Nindex_alu_en(to_integer(unsigned(top_alu_in)))(0) := '1';
+				Nvalid_alu_in(to_integer(unsigned(top_alu_add_one)))(0) := '1';
+				Nvalid_alu_en(to_integer(unsigned(top_alu_add_one)))(0) := '1';
 			else
 				top_alu_add <= (0 => valid_alu_allocate(0)(0) and valid_alu_allocate(1)(0), others => '0');
 				if (valid_alu_allocate(0)(0) = '1') then
-					index_alu_in(to_integer(unsigned(top_alu_add_one))) <= index_alu_allocate(0);
-					index_alu_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					index_alu_in <= (others => (others => '0'));
-					index_alu_en <= (others => (others => '0'));
-					valid_alu_in(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					valid_alu_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					valid_alu_in <= (others => (others => '0'));
-					valid_alu_en <= (others => (others => '0'));
+					Nindex_alu_in(to_integer(unsigned(top_alu_add_one))) := index_alu_allocate(0);
+					Nindex_alu_en(to_integer(unsigned(top_alu_add_one)))(0) := '1';
+					Nvalid_alu_in(to_integer(unsigned(top_alu_add_one)))(0) := '1';
+					Nvalid_alu_en(to_integer(unsigned(top_alu_add_one)))(0) := '1';
 				elsif(valid_alu_allocate(1)(0) = '1') then
-					index_alu_in(to_integer(unsigned(top_alu_add_one))) <= index_alu_allocate(1);
-					index_alu_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					index_alu_in <= (others => (others => '0'));
-					index_alu_en <= (others => (others => '0'));
-					valid_alu_in(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					valid_alu_en(to_integer(unsigned(top_alu_add_one)))(0) <= '1';
-					valid_alu_in <= (others => (others => '0'));
-					valid_alu_en <= (others => (others => '0'));
-				else
-					index_alu_in <= (others => (others => '0'));
-					index_alu_en <= (others => (others => '0'));
-					valid_alu_in <= (others => (others => '0'));
-					valid_alu_en <= (others => (others => '0'));
+					Nindex_alu_in(to_integer(unsigned(top_alu_add_one))) := index_alu_allocate(1);
+					Nindex_alu_en(to_integer(unsigned(top_alu_add_one)))(0) := '1';
+					Nvalid_alu_in(to_integer(unsigned(top_alu_add_one)))(0) := '1';
+					Nvalid_alu_en(to_integer(unsigned(top_alu_add_one)))(0) := '1';
 				end if;
-			end if;			
+			end if;
 		end if;
+		valid_alu_in <= Nvalid_alu_in;
+		valid_alu_en <= Nvalid_alu_en;
+		index_alu_in <= Nindex_alu_in;
+		index_alu_en <= Nindex_alu_en;
 	end process;
 	----------------------------------------------------------------------------------------------------------
 	process(valid_bch_out,inst1_bch,index_bch_out,bottom_bch_out_add,inst2_bch,bottom_bch_in,reset,valid_bch_allocate,index_bch_allocate,top_bch_add_one,top_bch_in,index_bch_in,index_bch_en,valid_bch_in,valid_bch_en)
@@ -427,7 +440,7 @@ begin
 			only_one_bch <= '0';
 		end if;
 		
-		if(inst1_bch(62) = '1') then		-- VALID INSTRUCTION
+		if(inst1_bch(71) = '1') then		-- VALID INSTRUCTION
 			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= inst1_bch;
 			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
 			busy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
@@ -435,7 +448,7 @@ begin
 			indx_alloc_bch(0) <= index_bch_out(to_integer(unsigned(bottom_bch_out_add)));
 		end if;
 		
-		if(inst2_bch(62) = '1') then
+		if(inst2_bch(71) = '1') then
 			bottom_bch_add <= (0 =>  not inst1_bch(0), 1 => inst1_bch(0), others => '0');
 			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= inst1_bch;
 			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
@@ -507,16 +520,31 @@ begin
 		end if;
 	end process;
 	----------------------------------------------------------------------------------------------------------
-	process(valid_lst_out,inst1_lst,index_lst_out,bottom_lst_out_add,inst2_lst,bottom_lst_in,reset,valid_lst_allocate,index_lst_allocate,top_lst_add_one,top_lst_in,index_lst_in,index_lst_en,valid_lst_in,valid_lst_en)
+	process(valid_lst_out,bottom_lst_out,inst1_lst,index_lst_out,bottom_lst_out_add,inst2_lst,bottom_lst_in,reset,valid_lst_allocate,index_lst_allocate,top_lst_add_one,top_lst_in,index_lst_in,index_lst_en,valid_lst_in,valid_lst_en)
 		variable count : integer;
+		variable Nvalid_lst_in,Nvalid_lst_en : main_array(0 to N_lst-1)(0 downto 0);
+		
+		variable Nindex_lst_en : main_array(0 to N_lst-1)(0 downto 0);
+		variable Nindex_lst_in : main_array(0 to N_lst-1)(natural(log2(real(N_lst)))-1 downto 0);
+		
+		variable Nbusy_lst_en,Nbusy_lst,Nreg_lst_en : main_array(0 to N_lst-1)(0 downto 0);
+		variable Nreg_lst_data : main_array(0 to N_lst-1)(X_lst-1 downto 0);
 	begin
-		count := 0;
+		count := 0;		
 		for I in 0 to N_lst-1 loop
 			if(valid_lst_out(I)(0) = '1') then
 				count := count + 1;
 			else
 				count := count;
 			end if;
+			Nindex_lst_in(I) := (others => '0');
+			Nindex_lst_en(I) := "0";
+			Nvalid_lst_in(I) := "0";
+			Nvalid_lst_en(I) := "0";
+			Nbusy_lst(I)  := "0";
+			Nbusy_lst_en(I)  := "0";
+			Nreg_lst_data(I) := (others => '0');
+			Nreg_lst_en(I)	  := "0";
 		end loop;
 		if(count = 0) then
 			stall_lst <= '1';
@@ -529,84 +557,73 @@ begin
 			only_one_lst <= '0';
 		end if;
 		
-		if(inst1_lst(62) = '1') then		-- VALID INSTRUCTION
-			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= inst1_lst;
-			reg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= "1";
-			busy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= "1";
-			busy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) <= "1";
-			indx_alloc_lst(0) <= index_lst_out(to_integer(unsigned(bottom_lst_out_add)));
+		if(inst1_lst(71) = '1') then		-- VALID INSTRUCTION
+			Nreg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := inst1_lst;
+			Nreg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
+			Nbusy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
+			Nbusy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
+			indx_alloc_lst(0) <= index_lst_out(to_integer(unsigned(bottom_lst_out)));
+			Nvalid_lst_in(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "0";
+			Nvalid_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
 		end if;
 		
-		if(inst2_lst(62) = '1') then
-			bottom_lst_add <= (0 =>  not inst1_lst(0), 1 => inst1_lst(0), others => '0');
-			reg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= inst1_lst;
-			reg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= "1";
-			busy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= "1";
-			busy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_in)))))) <= "1";
-			indx_alloc_lst(1) <= index_lst_out(to_integer(unsigned(bottom_lst_in)));
+		if(inst2_lst(71) = '1') then
+			bottom_lst_add <= (0 =>  not inst1_lst(71), 1 => inst1_lst(71), others => '0');
+			Nreg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := inst1_lst;
+			Nreg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
+			Nbusy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
+			Nbusy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
+			indx_alloc_lst(1) <= index_lst_out(to_integer(unsigned(bottom_lst_out_add)));
+			Nvalid_lst_in(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "0";
+			Nvalid_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
 		else
-			bottom_lst_add <= (0 => inst1_lst(0), others => '0');
+			bottom_lst_add <= (0 => inst1_lst(71), others => '0');
 		end if;
 		
-		reg_lst_data <= (others => (others => '0')); 
-		reg_lst_en <= (others => (others => '0')); 
-		busy_lst <= (others => (others => '0')); 
-		busy_lst_en <= (others => (others => '0'));
+		reg_lst_data <= Nreg_lst_data; 
+		reg_lst_en <= Nreg_lst_en; 
+		busy_lst <= Nbusy_lst; 
+		busy_lst_en <= Nbusy_lst_en;
 		indx_alloc_lst <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
 			for I in 0 to N_lst-1 loop
-				index_lst_in(I) <= std_logic_vector(to_unsigned(I,natural(log2(real(N_lst)))));
-				index_lst_en(I)(0) <= '1';
-				valid_lst_in(I)(0) <= '1';
-				valid_lst_en(I)(0) <= '1';
+				Nindex_lst_in(I) := std_logic_vector(to_unsigned(I,natural(log2(real(N_lst)))));
+				Nindex_lst_en(I)(0) := '1';
+				Nvalid_lst_in(I)(0) := '1';
+				Nvalid_lst_en(I)(0) := '1';
 			end loop;
 			top_lst_add <= (others => '0');
 		else
 			-- General update policy: Using Dispatching data
 			if (valid_lst_allocate(0)(0) = '1' and valid_lst_allocate(1)(0) = '1') then		-- Indicates 2 instructions are dispatched
 				top_lst_add <= (1 => '1', others => '0');
-				index_lst_in(to_integer(unsigned(top_lst_add_one))) <= index_lst_allocate(0);
-				index_lst_en(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-				index_lst_in(to_integer(unsigned(top_lst_in))) <= index_lst_allocate(1);
-				index_lst_en(to_integer(unsigned(top_lst_in)))(0) <= '1';
-				index_lst_in <= (others => (others => '0'));
-				index_lst_en <= (others => (others => '0'));
-				valid_lst_in(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-				valid_lst_en(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-				valid_lst_in(to_integer(unsigned(top_lst_in)))(0) <= '1';
-				valid_lst_en(to_integer(unsigned(top_lst_in)))(0) <= '1';
-				valid_lst_in <= (others => (others => '0'));
-				valid_lst_en <= (others => (others => '0'));
+				Nindex_lst_in(to_integer(unsigned(top_lst_add_one))) := index_lst_allocate(0);
+				Nindex_lst_en(to_integer(unsigned(top_lst_add_one)))(0) := '1';
+				Nindex_lst_in(to_integer(unsigned(top_lst_in))) := index_lst_allocate(1);
+				Nindex_lst_en(to_integer(unsigned(top_lst_in)))(0) := '1';
+				Nvalid_lst_in(to_integer(unsigned(top_lst_add_one)))(0) := '1';
+				Nvalid_lst_en(to_integer(unsigned(top_lst_add_one)))(0) := '1';
 			else
 				top_lst_add <= (0 => valid_lst_allocate(0)(0) and valid_lst_allocate(1)(0), others => '0');
 				if (valid_lst_allocate(0)(0) = '1') then
-					index_lst_in(to_integer(unsigned(top_lst_add_one))) <= index_lst_allocate(0);
-					index_lst_en(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-					index_lst_in <= (others => (others => '0'));
-					index_lst_en <= (others => (others => '0'));
-					valid_lst_in(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-					valid_lst_en(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-					valid_lst_in <= (others => (others => '0'));
-					valid_lst_en <= (others => (others => '0'));
+					Nindex_lst_in(to_integer(unsigned(top_lst_add_one))) := index_lst_allocate(0);
+					Nindex_lst_en(to_integer(unsigned(top_lst_add_one)))(0) := '1';
+					Nvalid_lst_in(to_integer(unsigned(top_lst_add_one)))(0) := '1';
+					Nvalid_lst_en(to_integer(unsigned(top_lst_add_one)))(0) := '1';
 				elsif(valid_lst_allocate(1)(0) = '1') then
-					index_lst_in(to_integer(unsigned(top_lst_add_one))) <= index_lst_allocate(1);
-					index_lst_en(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-					index_lst_in <= (others => (others => '0'));
-					index_lst_en <= (others => (others => '0'));
-					valid_lst_in(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-					valid_lst_en(to_integer(unsigned(top_lst_add_one)))(0) <= '1';
-					valid_lst_in <= (others => (others => '0'));
-					valid_lst_en <= (others => (others => '0'));
-				else
-					index_lst_in <= (others => (others => '0'));
-					index_lst_en <= (others => (others => '0'));
-					valid_lst_in <= (others => (others => '0'));
-					valid_lst_en <= (others => (others => '0'));
+					Nindex_lst_in(to_integer(unsigned(top_lst_add_one))) := index_lst_allocate(1);
+					Nindex_lst_en(to_integer(unsigned(top_lst_add_one)))(0) := '1';
+					Nvalid_lst_in(to_integer(unsigned(top_lst_add_one)))(0) := '1';
+					Nvalid_lst_en(to_integer(unsigned(top_lst_add_one)))(0) := '1';
 				end if;
-			end if;			
+			end if;
 		end if;
+		valid_lst_in <= Nvalid_lst_in;
+		valid_lst_en <= Nvalid_lst_en;
+		index_lst_in <= Nindex_lst_in;
+		index_lst_en <= Nindex_lst_en;
 	end process;
 	
 	

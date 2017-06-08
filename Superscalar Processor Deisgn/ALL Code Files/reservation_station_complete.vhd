@@ -42,48 +42,48 @@ entity reservation_station_complete is
 
 architecture RS of reservation_station_complete is
 
-	signal rs_data_alu,rs_data_lst : main_array(0 to 7)(71 downto 0);
-	signal rs_data_bch 				 : main_array(0 to 3)(71 downto 0);
+	signal rs_data_alu,rs_data_lst : main_array(0 to 7)(71 downto 0) := (others => (others => '0'));
+	signal rs_data_bch 				 : main_array(0 to 3)(71 downto 0) := (others => (others => '0'));
 	
-	signal rs_data_in_alu_alloc,rs_data_in_lst_alloc : main_array(0 to 7)(71 downto 0);
-	signal rs_data_in_bch_alloc							 : main_array(0 to 3)(71 downto 0);
-	signal rs_data_in_alu_updte,rs_data_in_lst_updte : main_array(0 to 7)(71 downto 0);
-	signal rs_data_in_bch_updte							 : main_array(0 to 3)(71 downto 0);
-	signal rs_data_en_alu_alloc,rs_data_en_lst_alloc : main_array(0 to 7)(0 downto 0);
-	signal rs_data_en_bch_alloc							 : main_array(0 to 3)(0 downto 0);
-	signal rs_data_en_alu_updte,rs_data_en_lst_updte : main_array(0 to 7)(0 downto 0);
-	signal rs_data_en_bch_updte							 : main_array(0 to 3)(0 downto 0);
+	signal rs_data_in_alu_alloc,rs_data_in_lst_alloc : main_array(0 to 7)(71 downto 0) := (others => (others => '0'));
+	signal rs_data_in_bch_alloc							 : main_array(0 to 3)(71 downto 0) := (others => (others => '0'));
+	signal rs_data_in_alu_updte,rs_data_in_lst_updte : main_array(0 to 7)(71 downto 0) := (others => (others => '0'));
+	signal rs_data_in_bch_updte							 : main_array(0 to 3)(71 downto 0) := (others => (others => '0'));
+	signal rs_data_en_alu_alloc,rs_data_en_lst_alloc : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
+	signal rs_data_en_bch_alloc							 : main_array(0 to 3)(0 downto 0) := (others => (others => '0'));
+	signal rs_data_en_alu_updte,rs_data_en_lst_updte : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
+	signal rs_data_en_bch_updte							 : main_array(0 to 3)(0 downto 0) := (others => (others => '0'));
 	
-	signal index_alu_allocate,index_lst_allocate : main_array(0 to 1)(2 downto 0);
-	signal index_bch_allocate							: main_array(0 to 1)(1 downto 0);
+	signal index_alu_allocate,index_lst_allocate : main_array(0 to 1)(2 downto 0) := (others => (others => '0'));
+	signal index_bch_allocate							: main_array(0 to 1)(1 downto 0) := (others => (others => '0'));
 	
-	signal valid_alu_allocate,valid_lst_allocate,valid_bch_allocate : main_array(0 to 1)(0 downto 0);
+	signal valid_alu_allocate,valid_lst_allocate,valid_bch_allocate : main_array(0 to 1)(0 downto 0) := (others => (others => '0'));
 	
-	signal index_out_alu,index_out_lst : main_array(0 to 4)(2 downto 0);
-	signal index_out_bch 				  : main_array(0 to 4)(1 downto 0);
-	signal index_val_alu,index_val_lst : main_array(0 to 4)(0 downto 0);
-	signal index_val_bch					  : main_array(0 to 4)(0 downto 0);
+	signal index_out_alu,index_out_lst : main_array(0 to 4)(2 downto 0) := (others => (others => '0'));
+	signal index_out_bch 				  : main_array(0 to 4)(1 downto 0) := (others => (others => '0'));
+	signal index_val_alu,index_val_lst : main_array(0 to 4)(0 downto 0) := (others => (others => '0'));
+	signal index_val_bch					  : main_array(0 to 4)(0 downto 0) := (others => (others => '0'));
 	
-	signal busy_alu,busy_lst : main_array(0 to 7)(0 downto 0);
-	signal busy_bch			 : main_array(0 to 3)(0 downto 0);
+	signal busy_alu,busy_lst : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
+	signal busy_bch			 : main_array(0 to 3)(0 downto 0) := (others => (others => '0'));
 	
-	signal rs_valid_in_alu,rs_valid_in_lst,ready_alu : main_array(0 to 7)(0 downto 0);
-	signal rs_valid_in_bch,ready_bch 					 : main_array(0 to 3)(0 downto 0);
-	signal rs_valid_en_alu,rs_valid_en_lst,ready_lst : main_array(0 to 7)(0 downto 0);
-	signal rs_valid_en_bch 									 : main_array(0 to 3)(0 downto 0);
+	signal rs_valid_in_alu,rs_valid_in_lst,ready_alu : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
+	signal rs_valid_in_bch,ready_bch 					 : main_array(0 to 3)(0 downto 0) := (others => (others => '0'));
+	signal rs_valid_en_alu,rs_valid_en_lst,ready_lst : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
+	signal rs_valid_en_bch 									 : main_array(0 to 3)(0 downto 0) := (others => (others => '0'));
 	
-	signal busy_alu_in,busy_lst_in,busy_lst_en,busy_alu_en : main_array(0 to 7)(0 downto 0);
-	signal busy_bch_in,busy_bch_en							    : main_array(0 to 3)(0 downto 0);
+	signal busy_alu_in,busy_lst_in,busy_lst_en,busy_alu_en : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
+	signal busy_bch_in,busy_bch_en							    : main_array(0 to 3)(0 downto 0) := (others => (others => '0'));
 	signal stall_out													 : std_logic;
 	
-	signal tag_alu,tag_lst : main_array(0 to 7)(4 downto 0);
-	signal tag_bch			  : main_array(0 to 3)(4 downto 0);
+	signal tag_alu,tag_lst : main_array(0 to 7)(4 downto 0) := (others => (others => '0'));
+	signal tag_bch			  : main_array(0 to 3)(4 downto 0) := (others => (others => '0'));
 	
-	signal inst_ready_alu,inst_ready_bch,inst_ready_lst : main_array(0 to 1)(0 downto 0);
-	signal indx_alloc_alu,indx_alloc_lst : main_array(0 to 1)(2 downto 0);
-	signal indx_alloc_bch 					 : main_array(0 to 1)(1 downto 0);
+	signal inst_ready_alu,inst_ready_bch,inst_ready_lst : main_array(0 to 1)(0 downto 0) := (others => (others => '0'));
+	signal indx_alloc_alu,indx_alloc_lst : main_array(0 to 1)(2 downto 0) := (others => (others => '0'));
+	signal indx_alloc_bch 					 : main_array(0 to 1)(1 downto 0) := (others => (others => '0'));
 
-	signal alu_inst1,alu_inst2,bch_inst1,lst_inst1,lst_inst2 : std_logic_vector(71 downto 0);
+	signal alu_inst1,alu_inst2,bch_inst1,lst_inst1,lst_inst2 : std_logic_vector(71 downto 0) := (others => '0');
 	
 begin
 	
