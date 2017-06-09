@@ -32,8 +32,10 @@ entity reservation_station is
 
 architecture RS of reservation_station is
 
-	signal data_in_mux : main_array(0 to N-1)(X-1 downto 0) := (others => (others => '0'));
-	signal data_en_mux : main_array(0 to N-1)(0 downto 0) := (others => (others => '0'));
+	signal data_in_mux    : main_array(0 to N-1)(X-1 downto 0) := (others => (others => '0'));
+	signal data_en_mux    : main_array(0 to N-1)(0 downto 0) := (others => (others => '0'));
+	signal ready_in_final : main_array(0 to N-1)(0 downto 0);
+	signal ready_en_final : main_array(0 to N-1)(0 downto 0);
 
 begin
 	
@@ -54,8 +56,8 @@ begin
 						READY : registers generic map(N => 1)
 											   port map(reset => reset,
 															clk	=> clk,
-															input => ready_in(I),
-															enable=> ready_en(I)(0),
+															input => ready_in_final(I),
+															enable=> ready_en_final(I)(0),
 															output=> ready_out(I));
 						
 						
@@ -68,7 +70,7 @@ begin
 															output=> data_out(I));
 						end generate;
 	
-	process(data_en_updte,data_in_updte,data_in_alloc,data_en_alloc)
+	process(data_en_updte,data_in_updte,data_in_alloc,data_en_alloc,ready_en,busy_en,data_en_mux,ready_in,data_in_mux)
 	begin
 		for I in 0 to N-1 loop
 			if(data_en_updte(I) = "1") then
@@ -78,6 +80,8 @@ begin
 				data_in_mux(I) <= data_in_alloc(I);
 				data_en_mux(I) <= data_en_alloc(I);
 			end if;
+			ready_en_final(I) <= ready_en(I) or (busy_en(I) and data_en_mux(I));
+			ready_in_final(I)(0) <= ready_in(I)(0) or ( data_in_mux(I)(71) and data_in_mux(I)(33) and data_in_mux(I)(16));
 		end loop;
 	end process;
 	

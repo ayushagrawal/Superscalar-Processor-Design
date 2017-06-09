@@ -83,7 +83,12 @@ architecture RS of reservation_station_complete is
 	signal indx_alloc_alu,indx_alloc_lst : main_array(0 to 1)(2 downto 0) := (others => (others => '0'));
 	signal indx_alloc_bch 					 : main_array(0 to 1)(1 downto 0) := (others => (others => '0'));
 
+	signal inst_ready_alu_out,inst_ready_bch_out,inst_ready_lst_out : main_array(0 to 1)(0 downto 0) := (others => (others => '0'));
+	signal indx_alloc_alu_out,indx_alloc_lst_out : main_array(0 to 1)(2 downto 0) := (others => (others => '0'));
+	signal indx_alloc_bch_out 					 : main_array(0 to 1)(1 downto 0) := (others => (others => '0'));
+
 	signal alu_inst1,alu_inst2,bch_inst1,lst_inst1,lst_inst2 : std_logic_vector(71 downto 0) := (others => '0');
+	
 	
 begin
 	
@@ -112,6 +117,94 @@ begin
 	bch_inst1_out(47 downto 32) <= bch_inst1(49 downto 34);
 	bch_inst1_out(31 downto 16) <= bch_inst1(32 downto 17);
 	bch_inst1_out(15 downto 0)  <= bch_inst1(15 downto 0);
+	
+	-- TO DISPATCH FROM ALLOCATE TO INTRODUCE ONE CYCLE DELAY
+	
+	allo_disp_alu0 : registers generic map(N => 1)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => inst_ready_alu(0),
+													   output => inst_ready_alu_out(0),
+													   enable => '1');
+	
+	allo_disp_alu1 : registers generic map(N => 3)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => indx_alloc_alu(0),
+													   output => indx_alloc_alu_out(0),
+													   enable => '1');
+	
+	allo_disp_lst0 : registers generic map(N => 1)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => inst_ready_lst(0),
+													   output => inst_ready_lst_out(0),
+													   enable => '1');
+	
+	allo_disp_lst1 : registers generic map(N => 3)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => indx_alloc_lst(0),
+													   output => indx_alloc_lst_out(0),
+													   enable => '1');
+	
+	allo_disp_bch0 : registers generic map(N => 1)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => inst_ready_bch(0),
+													   output => inst_ready_bch_out(0),
+													   enable => '1');
+	
+	allo_disp_bch1 : registers generic map(N => 2)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => indx_alloc_bch(0),
+													   output => indx_alloc_bch_out(0),
+													   enable => '1');
+	
+	allo_disp_alu2 : registers generic map(N => 1)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => inst_ready_alu(1),
+													   output => inst_ready_alu_out(1),
+													   enable => '1');
+	
+	allo_disp_alu3 : registers generic map(N => 3)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => indx_alloc_alu(1),
+													   output => indx_alloc_alu_out(1),
+													   enable => '1');
+	
+	allo_disp_lst2 : registers generic map(N => 1)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => inst_ready_lst(1),
+													   output => inst_ready_lst_out(1),
+													   enable => '1');
+	
+	allo_disp_lst3 : registers generic map(N => 3)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => indx_alloc_lst(1),
+													   output => indx_alloc_lst_out(1),
+													   enable => '1');
+	
+	allo_disp_bch2 : registers generic map(N => 1)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => inst_ready_bch(1),
+													   output => inst_ready_bch_out(1),
+													   enable => '1');
+	
+	allo_disp_bch3 : registers generic map(N => 2)
+									   port    map(clk => clk,
+													   reset => reset,
+													   input => indx_alloc_bch(1),
+													   output => indx_alloc_bch_out(1),
+													   enable => '1');
+	
+	---------------------------------------------------------------------------------------------------------
 	
 	ALLOC_UNIT : allocating_unit generic map(N_alu => 8,
 														  N_bch => 4,
@@ -216,8 +309,8 @@ begin
 														  clk   => clk,
 														  
 														  -- FROM ALLOCATING UNIT
-														  inst_ready => inst_ready_alu,
-														  indx_alloc => indx_alloc_alu,
+														  inst_ready => inst_ready_alu_out,
+														  indx_alloc => indx_alloc_alu_out,
 														  
 														  -- TO RS
 														  reg_data => rs_data_alu,
@@ -238,8 +331,8 @@ begin
 															  clk   => clk,
 															  
 														     -- FROM ALLOCATING UNIT
-														     inst_ready => inst_ready_bch,
-															  indx_alloc => indx_alloc_bch,
+														     inst_ready => inst_ready_bch_out,
+															  indx_alloc => indx_alloc_bch_out,
 															  
 															  reg_data => rs_data_bch,
 															  
@@ -257,8 +350,8 @@ begin
 														  clk   => clk,
 														  
 														  -- FROM ALLOCATING UNIT
-														  inst_ready => inst_ready_lst,
-														  indx_alloc => indx_alloc_lst,
+														  inst_ready => inst_ready_lst_out,
+														  indx_alloc => indx_alloc_lst_out,
 														  
 														  reg_data => rs_data_lst,
 														  

@@ -361,7 +361,7 @@ begin
 		
 		if(inst2_alu(71) = '1') then
 			bottom_alu_add <= (0 =>  not inst1_alu(71), 1 => inst1_alu(71), others => '0');
-			Nreg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := inst1_alu;
+			Nreg_alu_data(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := inst2_alu;
 			Nreg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
 			Nbusy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
 			Nbusy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
@@ -420,6 +420,13 @@ begin
 	----------------------------------------------------------------------------------------------------------
 	process(valid_bch_out,inst1_bch,index_bch_out,bottom_bch_out_add,inst2_bch,bottom_bch_in,reset,valid_bch_allocate,index_bch_allocate,top_bch_add_one,top_bch_in,index_bch_in,index_bch_en,valid_bch_in,valid_bch_en)
 		variable count : integer;
+		variable Nvalid_bch_in,Nvalid_bch_en : main_array(0 to N_bch-1)(0 downto 0);
+		
+		variable Nindex_bch_en : main_array(0 to N_bch-1)(0 downto 0);
+		variable Nindex_bch_in : main_array(0 to N_bch-1)(natural(log2(real(N_bch)))-1 downto 0);
+		
+		variable Nbusy_bch_en,Nbusy_bch,Nreg_bch_en : main_array(0 to N_bch-1)(0 downto 0);
+		variable Nreg_bch_data : main_array(0 to N_bch-1)(X_bch-1 downto 0);
 	begin
 		count := 0;
 		for I in 0 to N_bch-1 loop
@@ -428,6 +435,14 @@ begin
 			else
 				count := count;
 			end if;
+			Nindex_bch_in(I) := (others => '0');
+			Nindex_bch_en(I) := "0";
+			Nvalid_bch_in(I) := "0";
+			Nvalid_bch_en(I) := "0";
+			Nbusy_bch(I)  := "0";
+			Nbusy_bch_en(I)  := "0";
+			Nreg_bch_data(I) := (others => '0');
+			Nreg_bch_en(I)	  := "0";
 		end loop;
 		if(count = 0) then
 			stall_bch <= '1';
@@ -441,83 +456,70 @@ begin
 		end if;
 		
 		if(inst1_bch(71) = '1') then		-- VALID INSTRUCTION
-			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= inst1_bch;
-			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
-			busy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
-			busy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) <= "1";
+			Nreg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) := inst1_bch;
+			Nreg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) := "1";
+			Nbusy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) := "1";
+			Nbusy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) := "1";
 			indx_alloc_bch(0) <= index_bch_out(to_integer(unsigned(bottom_bch_out_add)));
 		end if;
 		
 		if(inst2_bch(71) = '1') then
 			bottom_bch_add <= (0 =>  not inst1_bch(0), 1 => inst1_bch(0), others => '0');
-			reg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= inst1_bch;
-			reg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
-			busy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
-			busy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) <= "1";
+			Nreg_bch_data(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) := inst2_bch;
+			Nreg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) := "1";
+			Nbusy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) := "1";
+			Nbusy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) := "1";
 			indx_alloc_bch(1) <= index_bch_out(to_integer(unsigned(bottom_bch_in)));
 		else
 			bottom_bch_add <= (0 => inst1_bch(0), others => '0');
 		end if;
 		
-		reg_bch_data <= (others => (others => '0')); 
-		reg_bch_en <= (others => (others => '0')); 
-		busy_bch <= (others => (others => '0')); 
-		busy_bch_en <= (others => (others => '0'));
+		reg_bch_data <= Nreg_bch_data; 
+		reg_bch_en <= Nreg_bch_en; 
+		busy_bch <= Nbusy_bch; 
+		busy_bch_en <= Nbusy_bch_en;
 		indx_alloc_bch <= (others => (others => '0'));
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
 			for I in 0 to N_bch-1 loop
-				index_bch_in(I) <= std_logic_vector(to_unsigned(I,natural(log2(real(N_bch)))));
-				index_bch_en(I)(0) <= '1';
-				valid_bch_in(I)(0) <= '1';
-				valid_bch_en(I)(0) <= '1';
+				Nindex_bch_in(I) := std_logic_vector(to_unsigned(I,natural(log2(real(N_bch)))));
+				Nindex_bch_en(I)(0) := '1';
+				Nvalid_bch_in(I)(0) := '1';
+				Nvalid_bch_en(I)(0) := '1';
 			end loop;
 			top_bch_add <= (others => '0');
 		else
 			-- General update policy: Using Dispatching data
 			if (valid_bch_allocate(0)(0) = '1' and valid_bch_allocate(1)(0) = '1') then		-- Indicates 2 instructions are dispatched
 				top_bch_add <= (1 => '1', others => '0');
-				index_bch_in(to_integer(unsigned(top_bch_add_one))) <= index_bch_allocate(0);
-				index_bch_en(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-				index_bch_in(to_integer(unsigned(top_bch_in))) <= index_bch_allocate(1);
-				index_bch_en(to_integer(unsigned(top_bch_in)))(0) <= '1';
-				index_bch_in <= (others => (others => '0'));
-				index_bch_en <= (others => (others => '0'));
-				valid_bch_in(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-				valid_bch_en(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-				valid_bch_in(to_integer(unsigned(top_bch_in)))(0) <= '1';
-				valid_bch_en(to_integer(unsigned(top_bch_in)))(0) <= '1';
-				valid_bch_in <= (others => (others => '0'));
-				valid_bch_en <= (others => (others => '0'));
+				Nindex_bch_in(to_integer(unsigned(top_bch_add_one))) := index_bch_allocate(0);
+				Nindex_bch_en(to_integer(unsigned(top_bch_add_one)))(0) := '1';
+				Nindex_bch_in(to_integer(unsigned(top_bch_in))) := index_bch_allocate(1);
+				Nindex_bch_en(to_integer(unsigned(top_bch_in)))(0) := '1';
+				Nvalid_bch_in(to_integer(unsigned(top_bch_add_one)))(0) := '1';
+				Nvalid_bch_en(to_integer(unsigned(top_bch_add_one)))(0) := '1';
+				Nvalid_bch_in(to_integer(unsigned(top_bch_in)))(0) := '1';
+				Nvalid_bch_en(to_integer(unsigned(top_bch_in)))(0) := '1';
 			else
 				top_bch_add <= (0 => valid_bch_allocate(0)(0) and valid_bch_allocate(1)(0), others => '0');
 				if (valid_bch_allocate(0)(0) = '1') then
-					index_bch_in(to_integer(unsigned(top_bch_add_one))) <= index_bch_allocate(0);
-					index_bch_en(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-					index_bch_in <= (others => (others => '0'));
-					index_bch_en <= (others => (others => '0'));
-					valid_bch_in(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-					valid_bch_en(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-					valid_bch_in <= (others => (others => '0'));
-					valid_bch_en <= (others => (others => '0'));
+					Nindex_bch_in(to_integer(unsigned(top_bch_add_one))) := index_bch_allocate(0);
+					Nindex_bch_en(to_integer(unsigned(top_bch_add_one)))(0) := '1';
+					Nvalid_bch_in(to_integer(unsigned(top_bch_add_one)))(0) := '1';
+					Nvalid_bch_en(to_integer(unsigned(top_bch_add_one)))(0) := '1';
 				elsif(valid_bch_allocate(1)(0) = '1') then
-					index_bch_in(to_integer(unsigned(top_bch_add_one))) <= index_bch_allocate(1);
-					index_bch_en(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-					index_bch_in <= (others => (others => '0'));
-					index_bch_en <= (others => (others => '0'));
-					valid_bch_in(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-					valid_bch_en(to_integer(unsigned(top_bch_add_one)))(0) <= '1';
-					valid_bch_in <= (others => (others => '0'));
-					valid_bch_en <= (others => (others => '0'));
-				else
-					index_bch_in <= (others => (others => '0'));
-					index_bch_en <= (others => (others => '0'));
-					valid_bch_in <= (others => (others => '0'));
-					valid_bch_en <= (others => (others => '0'));
+					Nindex_bch_in(to_integer(unsigned(top_bch_add_one))) := index_bch_allocate(1);
+					Nindex_bch_en(to_integer(unsigned(top_bch_add_one)))(0) := '1';
+					Nvalid_bch_in(to_integer(unsigned(top_bch_add_one)))(0) := '1';
+					Nvalid_bch_en(to_integer(unsigned(top_bch_add_one)))(0) := '1';
 				end if;
 			end if;			
 		end if;
+		index_bch_in <= Nindex_bch_in;
+		index_bch_en <= Nindex_bch_en;
+		valid_bch_in <= Nvalid_bch_in;
+		valid_bch_en <= Nvalid_bch_en;
 	end process;
 	----------------------------------------------------------------------------------------------------------
 	process(valid_lst_out,bottom_lst_out,inst1_lst,index_lst_out,bottom_lst_out_add,inst2_lst,bottom_lst_in,reset,valid_lst_allocate,index_lst_allocate,top_lst_add_one,top_lst_in,index_lst_in,index_lst_en,valid_lst_in,valid_lst_en)
@@ -569,7 +571,7 @@ begin
 		
 		if(inst2_lst(71) = '1') then
 			bottom_lst_add <= (0 =>  not inst1_lst(71), 1 => inst1_lst(71), others => '0');
-			Nreg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := inst1_lst;
+			Nreg_lst_data(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := inst2_lst;
 			Nreg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
 			Nbusy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
 			Nbusy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";

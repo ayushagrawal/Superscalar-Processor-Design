@@ -24,9 +24,9 @@ V2VLG:8jcZ<Bbl5dV0[:i72
 !s100 ;T;9`[Z67=If5E@jn?VVl3
 Z9 OV;C;10.5b;63
 33
-Z10 !s110 1496906510
+Z10 !s110 1496930961
 !i10b 1
-Z11 !s108 1496906510.000000
+Z11 !s108 1496930961.000000
 Z12 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd|
 Z13 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/add_unit.vhd|
 !i113 1
@@ -103,7 +103,7 @@ R22
 R14
 R15
 Eallocating_unit
-Z23 w1496906465
+Z23 w1496915183
 R3
 R4
 R2
@@ -135,8 +135,8 @@ R6
 DEx4 work 15 allocating_unit 0 22 MZenYKHh_ciXe2i9MY[gL1
 l105
 L83
-V=MI7eCBF<ZlVf6k3iA0=U2
-!s100 WCE@[n0[hBaJfV<0:]5BY1
+VDg`lSM8>@id@CK@Pi91z]0
+!s100 ^bONWPSIL3^h8<Ul4^F;O2
 R9
 33
 R10
@@ -295,9 +295,9 @@ Vg]6jb=[i[N=>2o9RDzjI23
 !s100 XCWkRTRnih`NeD^WP1FZj1
 R9
 33
-Z46 !s110 1496906507
+Z46 !s110 1496930958
 !i10b 1
-Z47 !s108 1496906507.000000
+Z47 !s108 1496930958.000000
 Z48 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd|
 Z49 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd|
 !i113 1
@@ -339,9 +339,9 @@ R9
 33
 R10
 !i10b 1
-Z53 !s108 1496906509.000000
-Z54 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd|
-Z55 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd|
+R11
+Z53 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd|
+Z54 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/comparator.vhd|
 !i113 1
 R14
 R15
@@ -360,30 +360,30 @@ R9
 33
 R10
 !i10b 1
+R11
 R53
 R54
-R55
 !i113 1
 R14
 R15
 Ecomplete
-Z56 w1496544680
+Z55 w1496544680
 R2
 R3
 R5
 R6
 R0
-Z57 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd
-Z58 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd
+Z56 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd
+Z57 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd
 l0
 L7
 VmeHX1b3KS31Dc_;Rn7^5i0
 !s100 b9a`B4AzDV=n@Xnof5PCi2
 R9
 33
-Z59 !s110 1496906509
+Z58 !s110 1496930960
 !i10b 1
-R53
+Z59 !s108 1496930960.000000
 Z60 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd|
 Z61 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/complete.vhd|
 !i113 1
@@ -401,9 +401,9 @@ V98=QCmlh@E@j1o>Ai`<Lc2
 !s100 ]zlN_B>1fOF>8Imz7CQl=2
 R9
 33
-R59
+R10
 !i10b 1
-R53
+R59
 R60
 R61
 !i113 1
@@ -446,9 +446,9 @@ V=eAk=XFG3zZfaMXU2B@Y:0
 !s100 EE9J=@@h?QNZ2S99_?LRT2
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 Z65 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd|
 Z66 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd|
 !i113 1
@@ -466,16 +466,16 @@ VD5i92m1fMn<F4CCQm6kzc1
 !s100 Mc7>@Bb>?UchPj1K@i8:V2
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 R65
 R66
 !i113 1
 R14
 R15
 Edispatch_unit
-Z67 w1496806242
+Z67 w1496930888
 R3
 R4
 R2
@@ -490,9 +490,9 @@ VjFH:X7KG^KHeMF=ZJ[[EL0
 !s100 We=dYl493j5zGjBYKiPS01
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 Z70 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit.vhd|
 Z71 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit.vhd|
 !i113 1
@@ -507,13 +507,13 @@ R6
 DEx4 work 13 dispatch_unit 0 22 jFH:X7KG^KHeMF=ZJ[[EL0
 l48
 L40
-V`7ca9=:6A<T^3J?2SJRfN3
-!s100 @CFP_1k@3WBPH@MKiaG4?3
+VPlNZi<Qe`TWm2K?[Q>5N_2
+!s100 QlX?Haj^dIj=a^aNd8hjU1
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 R70
 R71
 !i113 1
@@ -535,9 +535,9 @@ V;E1U71SF8J8Fe[gi0cHEJ1
 !s100 dV@EFCCGEW=lgYDMZHTDb2
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 Z75 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit_bch.vhd|
 Z76 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/dispatch_unit_bch.vhd|
 !i113 1
@@ -556,9 +556,9 @@ V<E1h9LaASQDjN2@40HIen1
 !s100 80Y3`Z3]klbfA01LO`GKV2
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 R75
 R76
 !i113 1
@@ -580,9 +580,9 @@ VVo;_;=h]7CWJ;ngzGcYbJ3
 !s100 ZnCZ;T@83f>V1mmWgj2@H3
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 Z80 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd|
 Z81 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd|
 !i113 1
@@ -601,9 +601,9 @@ V;BaK<h8P:o:;6b27Y`Z0N3
 !s100 65:g]oRi:5_z>eBiF?`ho3
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 R80
 R81
 !i113 1
@@ -624,9 +624,9 @@ VE@51QnLB@hX53@A:AXWoG3
 !s100 <DLKHm]gBlLEC8OY?S_J_2
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 Z85 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd|
 Z86 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd|
 !i113 1
@@ -644,9 +644,9 @@ V^[FcYj3]BP]h2FRmG?dJ:2
 !s100 7U3ePnHeW8N[U=bm][kdn1
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 R85
 R86
 !i113 1
@@ -667,9 +667,9 @@ VElG21V[A@_97;RU^T_VW52
 !s100 <j8X[^XhFWXWb]4^NMGJa2
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 Z90 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd|
 Z91 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd|
 !i113 1
@@ -687,9 +687,9 @@ VoIGiBKWSN9nOO099H<`KG3
 !s100 4C[IcJ]?GLeeaFKmFjTL03
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 R90
 R91
 !i113 1
@@ -710,9 +710,9 @@ VSLb;l54z<X19^VoXOhLC60
 !s100 kGm]6oj7VklOh]ofIdeEf1
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 Z95 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd|
 Z96 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd|
 !i113 1
@@ -730,9 +730,9 @@ VG9GiDL?J8g7Ubcn;d6c>72
 !s100 lZM3M=^>mAg2i?]3cU;JI3
 R9
 33
-R59
+R58
 !i10b 1
-R53
+R59
 R95
 R96
 !i113 1
@@ -753,11 +753,11 @@ VGQgL@0]cE`m1SHDS3eE?Z2
 !s100 ;X1T?==C:7Ki8C2fggHL11
 R9
 33
-Z100 !s110 1496906511
+Z100 !s110 1496930962
 !i10b 1
-R11
-Z101 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd|
-Z102 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd|
+Z101 !s108 1496930962.000000
+Z102 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd|
+Z103 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/final.vhd|
 !i113 1
 R14
 R15
@@ -775,20 +775,20 @@ R9
 33
 R100
 !i10b 1
-R11
 R101
 R102
+R103
 !i113 1
 R14
 R15
 Einc
-Z103 w1488822903
-Z104 DPx9 altera_mf 20 altera_mf_components 0 22 m2K6F5NmQKkFhQa^^]15g3
+Z104 w1488822903
+Z105 DPx9 altera_mf 20 altera_mf_components 0 22 m2K6F5NmQKkFhQa^^]15g3
 R5
 R6
 R0
-Z105 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd
-Z106 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd
+Z106 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd
+Z107 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd
 l0
 L43
 VNcCo:7dUUz>5lmWH>I0[33
@@ -798,13 +798,13 @@ R9
 R46
 !i10b 1
 R47
-Z107 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd|
-Z108 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd|
+Z108 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd|
+Z109 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd|
 !i113 1
 R14
 R15
 Asyn
-R104
+R105
 R5
 R6
 DEx4 work 3 inc 0 22 NcCo:7dUUz>5lmWH>I0[33
@@ -817,19 +817,19 @@ R9
 R46
 !i10b 1
 R47
-R107
 R108
+R109
 !i113 1
 R14
 R15
 Einstruction_memory
-Z109 w1488815363
-R104
+Z110 w1488815363
+R105
 R5
 R6
 R0
-Z110 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd
-Z111 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd
+Z111 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd
+Z112 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd
 l0
 L43
 VzGl]7RYjK^z<iT]XYQeME1
@@ -839,13 +839,13 @@ R9
 R46
 !i10b 1
 R47
-Z112 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd|
-Z113 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd|
+Z113 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd|
+Z114 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd|
 !i113 1
 R14
 R15
 Asyn
-R104
+R105
 R5
 R6
 DEx4 work 18 instruction_memory 0 22 zGl]7RYjK^z<iT]XYQeME1
@@ -858,30 +858,30 @@ R9
 R46
 !i10b 1
 R47
-R112
 R113
+R114
 !i113 1
 R14
 R15
 Elst_unit
-Z114 w1496808240
+Z115 w1496808240
 R2
 R3
 R4
 R5
 R6
 R0
-Z115 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd
-Z116 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd
+Z116 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd
+Z117 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd
 l0
 L8
 Vn=VLc5nl9TzUNh[TZ_>CD2
 !s100 TVKR2Wa8AU_6lW_@bjiaX3
 R9
 33
-Z117 !s110 1496906508
+R58
 !i10b 1
-Z118 !s108 1496906508.000000
+Z118 !s108 1496930959.000000
 Z119 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd|
 Z120 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/lst_unit.vhd|
 !i113 1
@@ -900,7 +900,7 @@ V3b7KjL8Kidi6c6nCS@O0:0
 !s100 9VUTS_:jlSMa^C_8fcH@60
 R9
 33
-R117
+R58
 !i10b 1
 R118
 R119
@@ -924,11 +924,11 @@ V35B]5O]lY@fd5WKg6@k0c2
 !s100 jfUzm^0nI6N@_z<K]EOij2
 R9
 33
-R117
+Z124 !s110 1496930959
 !i10b 1
 R118
-Z124 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd|
-Z125 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd|
+Z125 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd|
+Z126 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/multiplexer.vhd|
 !i113 1
 R14
 R15
@@ -945,21 +945,21 @@ V[TMbN0F38<RWAKzz0Oj<D2
 !s100 cfGA4`95hWSO:f`oUbeI^1
 R9
 33
-R117
+R124
 !i10b 1
 R118
-R124
 R125
+R126
 !i113 1
 R14
 R15
 Emux2
-Z126 w1495589414
+Z127 w1495589414
 R5
 R6
 R0
-Z127 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd
-Z128 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd
+Z128 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd
+Z129 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd
 l0
 L4
 V>6<7Z04CWRM0OehOGG5<Q0
@@ -969,8 +969,8 @@ R9
 R46
 !i10b 1
 R47
-Z129 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd|
-Z130 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd|
+Z130 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd|
+Z131 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/mux2.vhd|
 !i113 1
 R14
 R15
@@ -987,32 +987,32 @@ R9
 R46
 !i10b 1
 R47
-R129
 R130
+R131
 !i113 1
 R14
 R15
 Enand_unit
-Z131 w1496330737
+Z132 w1496330737
 R2
 R3
 R4
 R5
 R6
 R0
-Z132 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd
-Z133 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd
+Z133 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd
+Z134 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd
 l0
 L13
 VYPXKdkBG88QLX2V4c0ZJc2
 !s100 RiRYS2_g:d?cSEYWJ=H<=2
 R9
 33
-R117
+R124
 !i10b 1
 R118
-Z134 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd|
-Z135 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd|
+Z135 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd|
+Z136 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/nand_unit.vhd|
 !i113 1
 R14
 R15
@@ -1029,34 +1029,34 @@ VJYnTh62I=MGfBnEAA9dYf2
 !s100 n5CHPFi>14Ri<`32eT6<;0
 R9
 33
-R117
+R124
 !i10b 1
 R118
-R134
 R135
+R136
 !i113 1
 R14
 R15
 Epara_final
-Z136 w1496540823
+Z137 w1496540823
 R2
 R3
 R5
 R6
 R0
-Z137 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd
-Z138 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd
+Z138 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd
+Z139 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd
 l0
 L7
 V1m[z9:WeBBN>adJQjED]N2
 !s100 :0BLWShZ=EA5VKJNba4YA1
 R9
 33
-R117
+R124
 !i10b 1
 R118
-Z139 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd|
-Z140 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd|
+Z140 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd|
+Z141 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd|
 !i113 1
 R14
 R15
@@ -1072,35 +1072,35 @@ V35Wmli@K=b_?Dj<7Af0<>2
 !s100 zBPLLGzC7QlB<L96]K67R3
 R9
 33
-R117
+R124
 !i10b 1
 R118
-R139
 R140
+R141
 !i113 1
 R14
 R15
 Eregister_file
-Z141 w1496835706
+Z142 w1496835706
 R2
 R3
 R4
 R5
 R6
 R0
-Z142 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd
-Z143 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd
+Z143 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd
+Z144 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd
 l0
 L8
 Vbmz?M_Aln@BIiX@aeY_U;2
 !s100 ?zYa:A2>n[L_:<mZJ=HkF3
 R9
 33
-R117
+R124
 !i10b 1
 R118
-Z144 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd|
-Z145 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd|
+Z145 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd|
+Z146 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/register_file.vhd|
 !i113 1
 R14
 R15
@@ -1117,21 +1117,21 @@ VYPCO`XY`1gS_dinQaFDHC1
 !s100 QY5<];UVQINlc5kRg3YEf2
 R9
 33
-R117
+R124
 !i10b 1
 R118
-R144
 R145
+R146
 !i113 1
 R14
 R15
 Eregisters
-Z146 w1494006677
+Z147 w1494006677
 R5
 R6
 R0
-Z147 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd
-Z148 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd
+Z148 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd
+Z149 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd
 l0
 L4
 VKIoM?IW;GX62:2L5??>0K3
@@ -1141,8 +1141,8 @@ R9
 R46
 !i10b 1
 R47
-Z149 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd|
-Z150 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd|
+Z150 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd|
+Z151 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers.vhd|
 !i113 1
 R14
 R15
@@ -1159,18 +1159,18 @@ R9
 R46
 !i10b 1
 R47
-R149
 R150
+R151
 !i113 1
 R14
 R15
 Eregisters1
-Z151 w1496818257
+Z152 w1496818257
 R5
 R6
 R0
-Z152 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd
-Z153 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd
+Z153 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd
+Z154 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd
 l0
 L4
 V6[I4ZkibCF5bgkc8ez[Vi3
@@ -1180,8 +1180,8 @@ R9
 R46
 !i10b 1
 R47
-Z154 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd|
-Z155 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd|
+Z155 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd|
+Z156 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/registers1.vhd|
 !i113 1
 R14
 R15
@@ -1198,31 +1198,31 @@ R9
 R46
 !i10b 1
 R47
-R154
 R155
+R156
 !i113 1
 R14
 R15
 Ereservation_station
-Z156 w1496844961
+Z157 w1496916348
 R2
 R3
 R5
 R6
 R0
-Z157 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd
-Z158 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd
+Z158 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd
+Z159 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd
 l0
 L10
 VP8<3[YRa^9i=ZFATMR75o2
 !s100 QWcjEU^XQ22@C?LZG_NA22
 R9
 33
-R117
+R124
 !i10b 1
 R118
-Z159 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd|
-Z160 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd|
+Z160 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd|
+Z161 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station.vhd|
 !i113 1
 R14
 R15
@@ -1232,40 +1232,40 @@ R3
 R5
 R6
 DEx4 work 19 reservation_station 0 22 P8<3[YRa^9i=ZFATMR75o2
-l38
+l40
 L33
-VkH]I5A66>N:NhNW3m8zm11
-!s100 b2BIBi:DI>KRFE5E:5?Th1
+VNcSLclL<]7In@_nec7H4[0
+!s100 E=aFKB=?KPQU_]L>cTZB61
 R9
 33
-R117
+R124
 !i10b 1
 R118
-R159
 R160
+R161
 !i113 1
 R14
 R15
 Ereservation_station_complete
-Z161 w1496845206
+Z162 w1496845206
 R2
 R3
 R5
 R6
 R0
-Z162 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd
-Z163 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd
+Z163 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd
+Z164 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd
 l0
 L9
 V9<mQ9AY;80Ka0Bb6mVTPc1
 !s100 VMJnA[4M0_a<V^^_:[=F;1
 R9
 33
-R117
+R124
 !i10b 1
 R118
-Z164 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd|
-Z165 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd|
+Z165 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd|
+Z166 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/reservation_station_complete.vhd|
 !i113 1
 R14
 R15
@@ -1281,35 +1281,35 @@ Vo:I8nnoZXZ=R5I3A?f7z43
 !s100 6SziejVz;1iQ72W22mJV73
 R9
 33
-R117
+R124
 !i10b 1
 R118
-R164
 R165
+R166
 !i113 1
 R14
 R15
 Erob
-Z166 w1496808681
+Z167 w1496808681
 R3
 R4
 R2
 R5
 R6
 R0
-Z167 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd
-Z168 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd
+Z168 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd
+Z169 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd
 l0
 L11
 V@A1zH=@h>MLQfk8MHTD>n0
 !s100 BibH3SQ<9z>5NOe97h[ch0
 R9
 33
-R117
+R124
 !i10b 1
 R118
-Z169 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd|
-Z170 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd|
+Z170 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd|
+Z171 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ROB.vhd|
 !i113 1
 R14
 R15
@@ -1326,34 +1326,34 @@ VlOBLSdX:aJ5i2B?lQPSOo2
 !s100 j7RF41IGIW]LUN;>1VbF93
 R9
 33
-R117
+R124
 !i10b 1
 R118
-R169
 R170
+R171
 !i113 1
 R14
 R15
 Ers_execute
-Z171 w1496538936
+Z172 w1496538936
 R2
 R3
 R5
 R6
 R0
-Z172 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd
-Z173 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd
+Z173 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd
+Z174 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd
 l0
 L6
 V0cGdGK=aR?kYBOc2M36BW3
 !s100 gYiin3KXDaRD:^RV6z2I41
 R9
 33
-R117
+R124
 !i10b 1
 R47
-Z174 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd|
-Z175 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd|
+Z175 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd|
+Z176 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/rs_execute.vhd|
 !i113 1
 R14
 R15
@@ -1369,21 +1369,21 @@ VWXzV]nE8Iz1oEmSdn7IJg2
 !s100 AK_RAFacfKJ<^JiU;Bo`E3
 R9
 33
-R117
+R124
 !i10b 1
 R47
-R174
 R175
+R176
 !i113 1
 R14
 R15
 Etestbench
-Z176 w1496631759
+Z177 w1496631759
 R6
 R5
 R0
-Z177 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/../testbench.vhd
-Z178 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/../testbench.vhd
+Z178 8C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/../testbench.vhd
+Z179 FC:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/../testbench.vhd
 l0
 L6
 V8ZQn7MS^T;7OJcTJoNgT_1
@@ -1392,7 +1392,7 @@ R9
 33
 R100
 !i10b 1
-Z179 !s108 1496906511.000000
+R101
 Z180 !s90 -reportprogress|300|-2008|-work|work|C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/../testbench.vhd|
 Z181 !s107 C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/../testbench.vhd|
 !i113 1
@@ -1410,7 +1410,7 @@ R9
 33
 R100
 !i10b 1
-R179
+R101
 R180
 R181
 !i113 1
