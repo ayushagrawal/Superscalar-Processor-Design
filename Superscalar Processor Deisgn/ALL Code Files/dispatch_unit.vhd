@@ -107,7 +107,7 @@ begin
 		Nvalid_allocate := (others => (others => '0'));
 		Ntop_add := (others => '0');
 		count := '0';
-		if(not((top_out = bottom_out))) then
+		if(not((top_out = bottom_out)) or (valid_oup(to_integer(unsigned(top_out))) = "1")) then
 			-- Either top 2 are available or only the first is available
 			if(valid_oup(to_integer(unsigned(top_out_add)))(0) = '1') then
 				Nexecute2 := reg_data(to_integer(unsigned(index_oup(to_integer(unsigned(top_out_add))))));
@@ -126,7 +126,6 @@ begin
 			Nexecute2 := (others => '0');
 			Nindex_allocate := (others => (others => '0'));
 			Nvalid_allocate := (others => (others => '0'));
-			Ntop_add := (others => '0');
 		end if;
 		execute1 <= Nexecute1;
 		execute2 <= Nexecute2;

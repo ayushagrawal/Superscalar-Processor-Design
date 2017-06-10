@@ -13,6 +13,7 @@ entity update_unit is
 		generic(N : integer := 62;				-- DATA LENGTH 
 				  X : integer := 16);			-- Specifies the number of entries in the reservation station
 		port(broadcast	: in main_array(0 to 4)(22 downto 0);	-- Max of 5 units can return
+			  -- is_WB     = 1  bit
 			  -- Data 		= 16 bits
 			  -- Tag  		= 5  bits (RRF size)
 			  -- Validity  = 1 bit

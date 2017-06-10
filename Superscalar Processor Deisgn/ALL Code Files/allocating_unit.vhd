@@ -321,8 +321,11 @@ begin
 		
 		variable Nbusy_alu_en,Nbusy_alu,Nreg_alu_en : main_array(0 to N_alu-1)(0 downto 0);
 		variable Nreg_alu_data : main_array(0 to N_alu-1)(X_alu-1 downto 0);
+		
+		variable Nindx_alloc_alu : main_array(0 to 1)(natural(log2(real(N_alu)))-1 downto 0);
 	begin
-		count := 0;		
+		count := 0;
+		Nindx_alloc_alu := (others => (others => '0'));
 		for I in 0 to N_alu-1 loop
 			if(valid_alu_out(I)(0) = '1') then
 				count := count + 1;
@@ -354,7 +357,7 @@ begin
 			Nreg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
 			Nbusy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
 			Nbusy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
-			indx_alloc_alu(0) <= index_alu_out(to_integer(unsigned(bottom_alu_out)));
+			Nindx_alloc_alu(0) := index_alu_out(to_integer(unsigned(bottom_alu_out)));
 			Nvalid_alu_in(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "0";
 			Nvalid_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out)))))) := "1";
 		end if;
@@ -365,7 +368,7 @@ begin
 			Nreg_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
 			Nbusy_alu(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
 			Nbusy_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
-			indx_alloc_alu(1) <= index_alu_out(to_integer(unsigned(bottom_alu_out_add)));
+			Nindx_alloc_alu(1) := index_alu_out(to_integer(unsigned(bottom_alu_out_add)));
 			Nvalid_alu_in(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "0";
 			Nvalid_alu_en(to_integer(unsigned(index_alu_out(to_integer(unsigned(bottom_alu_out_add)))))) := "1";
 		else
@@ -376,7 +379,7 @@ begin
 		reg_alu_en <= Nreg_alu_en; 
 		busy_alu <= Nbusy_alu; 
 		busy_alu_en <= Nbusy_alu_en;
-		indx_alloc_alu <= (others => (others => '0'));
+		indx_alloc_alu <= Nindx_alloc_alu;
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
@@ -427,8 +430,11 @@ begin
 		
 		variable Nbusy_bch_en,Nbusy_bch,Nreg_bch_en : main_array(0 to N_bch-1)(0 downto 0);
 		variable Nreg_bch_data : main_array(0 to N_bch-1)(X_bch-1 downto 0);
+		
+		variable Nindx_alloc_bch : main_array(0 to 1)(natural(log2(real(N_bch)))-1 downto 0);
 	begin
 		count := 0;
+		Nindx_alloc_bch := (others => (others => '0'));
 		for I in 0 to N_bch-1 loop
 			if(valid_bch_out(I)(0) = '1') then
 				count := count + 1;
@@ -460,7 +466,7 @@ begin
 			Nreg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) := "1";
 			Nbusy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) := "1";
 			Nbusy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_out_add)))))) := "1";
-			indx_alloc_bch(0) <= index_bch_out(to_integer(unsigned(bottom_bch_out_add)));
+			Nindx_alloc_bch(0) := index_bch_out(to_integer(unsigned(bottom_bch_out_add)));
 		end if;
 		
 		if(inst2_bch(71) = '1') then
@@ -469,7 +475,7 @@ begin
 			Nreg_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) := "1";
 			Nbusy_bch(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) := "1";
 			Nbusy_bch_en(to_integer(unsigned(index_bch_out(to_integer(unsigned(bottom_bch_in)))))) := "1";
-			indx_alloc_bch(1) <= index_bch_out(to_integer(unsigned(bottom_bch_in)));
+			Nindx_alloc_bch(1) := index_bch_out(to_integer(unsigned(bottom_bch_in)));
 		else
 			bottom_bch_add <= (0 => inst1_bch(0), others => '0');
 		end if;
@@ -478,7 +484,7 @@ begin
 		reg_bch_en <= Nreg_bch_en; 
 		busy_bch <= Nbusy_bch; 
 		busy_bch_en <= Nbusy_bch_en;
-		indx_alloc_bch <= (others => (others => '0'));
+		indx_alloc_bch <= Nindx_alloc_bch;
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
@@ -531,8 +537,11 @@ begin
 		
 		variable Nbusy_lst_en,Nbusy_lst,Nreg_lst_en : main_array(0 to N_lst-1)(0 downto 0);
 		variable Nreg_lst_data : main_array(0 to N_lst-1)(X_lst-1 downto 0);
+		
+		variable Nindx_alloc_lst : main_array(0 to 1)(natural(log2(real(N_lst)))-1 downto 0);
 	begin
-		count := 0;		
+		count := 0;
+		Nindx_alloc_lst := (others => (others => '0'));		
 		for I in 0 to N_lst-1 loop
 			if(valid_lst_out(I)(0) = '1') then
 				count := count + 1;
@@ -564,7 +573,7 @@ begin
 			Nreg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
 			Nbusy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
 			Nbusy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
-			indx_alloc_lst(0) <= index_lst_out(to_integer(unsigned(bottom_lst_out)));
+			Nindx_alloc_lst(0) := index_lst_out(to_integer(unsigned(bottom_lst_out)));
 			Nvalid_lst_in(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "0";
 			Nvalid_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out)))))) := "1";
 		end if;
@@ -575,7 +584,7 @@ begin
 			Nreg_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
 			Nbusy_lst(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
 			Nbusy_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
-			indx_alloc_lst(1) <= index_lst_out(to_integer(unsigned(bottom_lst_out_add)));
+			Nindx_alloc_lst(1) := index_lst_out(to_integer(unsigned(bottom_lst_out_add)));
 			Nvalid_lst_in(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "0";
 			Nvalid_lst_en(to_integer(unsigned(index_lst_out(to_integer(unsigned(bottom_lst_out_add)))))) := "1";
 		else
@@ -586,7 +595,7 @@ begin
 		reg_lst_en <= Nreg_lst_en; 
 		busy_lst <= Nbusy_lst; 
 		busy_lst_en <= Nbusy_lst_en;
-		indx_alloc_lst <= (others => (others => '0'));
+		indx_alloc_lst <= Nindx_alloc_lst;
 		
 		-- FOR INITIALIZING THE INDEX OF THE 'FREE QUEUE' : Using Dispatching Data
 		if (reset = '1') then
