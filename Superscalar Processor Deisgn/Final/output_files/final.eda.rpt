@@ -1,6 +1,6 @@
 EDA Netlist Writer report for final
-Sat Jul 08 10:43:06 2017
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Mon Jul 10 13:24:59 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Jul 08 10:43:06 2017 ;
+; EDA Netlist Writer Status ; Successful - Mon Jul 10 13:24:59 2017 ;
 ; Revision Name             ; final                                 ;
 ; Top-level Entity Name     ; final                                 ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,8 +88,8 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat Jul 08 10:43:04 2017
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Jul 10 13:24:56 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off final -c final
 Info (204019): Generated file final_6_1200mv_85c_slow.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file final_6_1200mv_0c_slow.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
@@ -101,8 +101,8 @@ Info (204019): Generated file final_min_1200mv_0c_vhd_fast.sdo in folder "C:/Use
 Info (204019): Generated file final_vhd.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 528 megabytes
-    Info: Processing ended: Sat Jul 08 10:43:06 2017
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Mon Jul 10 13:24:59 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

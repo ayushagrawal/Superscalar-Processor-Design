@@ -1,4 +1,4 @@
--- Copyright (C) 2016  Intel Corporation. All rights reserved.
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
 -- and other software and tools, and its AMPP partner logic 
 -- functions, and any output files from any of the foregoing 
@@ -15,9 +15,9 @@
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
+-- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
--- DATE "07/08/2017 10:43:06"
+-- DATE "07/10/2017 13:24:59"
 
 -- 
 -- Device: Altera EP4CE6E22C6 Package TQFP144
