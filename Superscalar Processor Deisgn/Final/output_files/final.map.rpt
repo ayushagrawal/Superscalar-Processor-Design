@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Sat Jun 10 10:01:12 2017
+Sat Jul 08 10:42:25 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -840,9 +840,10 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 832. Port Connectivity Checks: "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder1"
 833. Port Connectivity Checks: "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder"
 834. Port Connectivity Checks: "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map"
-835. Post-Synthesis Netlist Statistics for Top Partition
-836. Elapsed Time Per Partition
-837. Analysis & Synthesis Messages
+835. Port Connectivity Checks: "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit"
+836. Post-Synthesis Netlist Statistics for Top Partition
+837. Elapsed Time Per Partition
+838. Analysis & Synthesis Messages
 
 
 
@@ -869,7 +870,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 10 10:01:12 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jul 08 10:42:25 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; final                                       ;
 ; Top-level Entity Name              ; final                                       ;
@@ -9462,6 +9463,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+-------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit" ;
++------+--------+----------+-----------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                 ;
++------+--------+----------+-----------------------------------------------------------------------------------------+
+; bc_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.     ;
+; bc_2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.     ;
++------+--------+----------+-----------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-------------------+---------------------------------+
@@ -9489,7 +9500,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sat Jun 10 10:00:50 2017
+    Info: Processing started: Sat Jul 08 10:42:01 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/testbench.vhd
@@ -9550,7 +9561,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: fetch_decode-fd File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 17
     Info (12023): Found entity 1: fetch_decode File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/fetch.vhd
-    Info (12022): Found design unit 1: fetch-fetching File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 16
+    Info (12022): Found design unit 1: fetch-fetching File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 22
     Info (12023): Found entity 1: fetch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/execute_complete.vhd
     Info (12022): Found design unit 1: execute_complete-ex_comp File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/execute_complete.vhd Line: 35
@@ -9582,8 +9593,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: branch_predictor-BP File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd Line: 11
     Info (12023): Found entity 1: branch_predictor File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/branch_predictor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/bch_unit.vhd
-    Info (12022): Found design unit 1: bch_unit-bch_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 17
-    Info (12023): Found entity 1: bch_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 8
+    Info (12022): Found design unit 1: bch_unit-bch_arch File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 29
+    Info (12023): Found entity 1: bch_unit File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/bch_unit.vhd Line: 20
 Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/desktop/git/superscalar processor deisgn/all code files/arf.vhd
     Info (12022): Found design unit 1: ARF-files File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 51
     Info (12023): Found entity 1: ARF File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/ARF.vhd Line: 13
@@ -9616,8 +9627,8 @@ Warning (10036): Verilog HDL or VHDL warning at para_final.vhd(30): object "only
 Info (12128): Elaborating entity "fetch_decode_rf" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/para_final.vhd Line: 34
 Info (12128): Elaborating entity "fetch_decode" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 49
 Info (12128): Elaborating entity "fetch" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 23
-Warning (10036): Verilog HDL or VHDL warning at fetch.vhd(20): object "not_stall" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 20
-Info (12128): Elaborating entity "instruction_memory" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at fetch.vhd(25): object "not_stall" assigned a value but never read File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 25
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 33
 Info (12128): Elaborating entity "altsyncram" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
 Info (12130): Elaborated megafunction instantiation "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
 Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/instruction_memory.vhd Line: 68
@@ -9674,8 +9685,8 @@ Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0vt3.tdf
     Info (12023): Found entity 1: altsyncram_0vt3 File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/altsyncram_0vt3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_0vt3" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map|altsyncram:altsyncram_component|altsyncram_0vt3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "mux2" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|mux2:mux" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 38
-Info (12128): Elaborating entity "inc" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 43
+Info (12128): Elaborating entity "mux2" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|mux2:mux" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 43
+Info (12128): Elaborating entity "inc" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 48
 Info (12128): Elaborating entity "parallel_add" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
 Info (12130): Elaborated megafunction instantiation "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
 Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component" with the following parameter: File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/inc.vhd Line: 81
@@ -9692,9 +9703,9 @@ Info (12133): Instantiated megafunction "para_final:PAR_FIN|fetch_decode_rf:F_D_
 Info (12021): Found 1 design units, including 1 entities, in source file db/par_add_fse.tdf
     Info (12023): Found entity 1: par_add_fse File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/db/par_add_fse.tdf Line: 25
 Info (12128): Elaborating entity "par_add_fse" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|inc:adder|parallel_add:parallel_add_component|par_add_fse:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/parallel_add.tdf Line: 148
-Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:pc1_reg" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 51
-Info (12128): Elaborating entity "registers1" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers1:pc2_reg" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 58
-Info (12128): Elaborating entity "branch_predictor" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|branch_predictor:BP" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 65
+Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers:pc1_reg" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 56
+Info (12128): Elaborating entity "registers1" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|registers1:pc2_reg" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 63
+Info (12128): Elaborating entity "branch_predictor" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|branch_predictor:BP" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch.vhd Line: 70
 Info (12128): Elaborating entity "decode" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode.vhd Line: 29
 Info (12128): Elaborating entity "registers" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg1" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/decode.vhd Line: 94
 Info (12128): Elaborating entity "register_file" for hierarchy "para_final:PAR_FIN|fetch_decode_rf:F_D_RF|register_file:reg_file" File: C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/ALL Code Files/fetch_decode_rf.vhd Line: 56
@@ -9764,9 +9775,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 748 megabytes
-    Info: Processing ended: Sat Jun 10 10:01:12 2017
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 754 megabytes
+    Info: Processing ended: Sat Jul 08 10:42:25 2017
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:37
 
 

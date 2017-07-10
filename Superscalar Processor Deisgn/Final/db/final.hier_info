@@ -645,6 +645,8 @@ inst2[19] <= registers1:pc2_reg.output[3]
 inst2[20] <= registers1:pc2_reg.output[4]
 inst2[21] <= registers1:pc2_reg.output[5]
 inst2[22] <= registers1:pc2_reg.output[6]
+bc_1 <= branch_predictor:BP.sel
+bc_2 <= branch_predictor:BP.sel
 
 
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit|instruction_memory:mem_map

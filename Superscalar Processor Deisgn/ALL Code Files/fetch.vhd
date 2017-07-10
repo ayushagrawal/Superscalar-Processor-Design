@@ -10,13 +10,18 @@ entity fetch is
 		  reset		: in std_logic;
 		  stall		: in std_logic;
 		  inst1		: out std_logic_vector(22 downto 0);
-		  inst2		: out std_logic_vector(22 downto 0));
+		  inst2		: out std_logic_vector(22 downto 0);
+		  
+		  bc_1		: out std_logic;
+		  bc_2		: out std_logic
+		  -- Bits represents Branch taken or not
+		  -- Only relevant for branch instructions
+	);
 end entity;
 
 architecture fetching of fetch is
 	signal mux_pc,add_pc,pc_add_out 				: std_logic_vector(6 downto 0);
-	signal reg1_in,reg2_in 							: std_logic_vector(15 downto 0);
-	signal bp_out 							: std_logic_vector(6 downto 0);
+	signal bp_out 										: std_logic_vector(6 downto 0);
 	signal mux_sel,not_stall 						: std_logic;
 	
 	signal pc1,pc2 									: std_logic_vector(6 downto 0);
@@ -67,4 +72,8 @@ begin
 													bp_out => bp_out,
 													sel	 => mux_sel);
 	
+	-- sel = '0' => Not taken
+	
+	bc_1 <= mux_sel;
+	bc_2 <= mux_sel;
 end architecture;

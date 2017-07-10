@@ -32,16 +32,16 @@ architecture bch_arch of bch_unit is
 	
 begin
 	
-	process
-		begin
-		
-		if() then
-		
-		elsif then
-		
-		end if;
-		
-	end process;
+--	process
+--		begin
+--		
+--		if() then
+--		
+--		elsif then
+--		
+--		end if;
+--		
+--	end process;
 	output <= (others => '0');
 	
 end architecture;

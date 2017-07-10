@@ -294,7 +294,10 @@ package components is
 			  reset		: in std_logic;
 			  stall		: in std_logic;
 			  inst1		: out std_logic_vector(22 downto 0);
-			  inst2		: out std_logic_vector(22 downto 0));
+			  inst2		: out std_logic_vector(22 downto 0);
+			  
+			  bc_1		: out std_logic;
+			  bc_2		: out std_logic);
 	end component;
 	
 	component fetch_decode is
