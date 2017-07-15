@@ -15,9 +15,9 @@
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
+-- VERSION "Version 17.0.1 Build 598 06/07/2017 SJ Lite Edition"
 
--- DATE "07/10/2017 13:24:58"
+-- DATE "07/15/2017 15:30:57"
 
 -- 
 -- Device: Altera EP4CE6E22C6 Package TQFP144

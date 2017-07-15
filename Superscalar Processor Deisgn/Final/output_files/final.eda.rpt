@@ -1,6 +1,6 @@
 EDA Netlist Writer report for final
-Mon Jul 10 13:24:59 2017
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Sat Jul 15 15:30:57 2017
+Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Lite Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jul 10 13:24:59 2017 ;
+; EDA Netlist Writer Status ; Successful - Sat Jul 15 15:30:57 2017 ;
 ; Revision Name             ; final                                 ;
 ; Top-level Entity Name     ; final                                 ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,8 +88,8 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Jul 10 13:24:56 2017
+    Info: Version 17.0.1 Build 598 06/07/2017 SJ Lite Edition
+    Info: Processing started: Sat Jul 15 15:30:56 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off final -c final
 Info (204019): Generated file final_6_1200mv_85c_slow.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file final_6_1200mv_0c_slow.vho in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
@@ -100,9 +100,9 @@ Info (204019): Generated file final_6_1200mv_0c_vhd_slow.sdo in folder "C:/Users
 Info (204019): Generated file final_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file final_vhd.sdo in folder "C:/Users/dell/Desktop/GIT/Superscalar Processor Deisgn/Final/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 528 megabytes
-    Info: Processing ended: Mon Jul 10 13:24:59 2017
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 527 megabytes
+    Info: Processing ended: Sat Jul 15 15:30:57 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

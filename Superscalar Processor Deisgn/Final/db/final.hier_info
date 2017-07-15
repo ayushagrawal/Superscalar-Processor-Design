@@ -508,6 +508,8 @@ complete2[34] <= register_file:reg_file.complete2[34]
 complete2[35] <= register_file:reg_file.complete2[35]
 complete2[36] <= register_file:reg_file.complete2[36]
 complete2[37] <= register_file:reg_file.complete2[37]
+bc_1 <= register_file:reg_file.bc_1out
+bc_2 <= register_file:reg_file.bc_2out
 
 
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit
@@ -589,6 +591,8 @@ REG2[32] <= decode:decode_unt.REG2[32]
 REG2[33] <= decode:decode_unt.REG2[33]
 REG2[34] <= decode:decode_unt.REG2[34]
 REG2[35] <= decode:decode_unt.REG2[35]
+bc_1 <= decode:decode_unt.bc_1out[0]
+bc_2 <= decode:decode_unt.bc_2out[0]
 
 
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|fetch:fetch_unit
@@ -1458,8 +1462,12 @@ sel <= <GND>
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt
 clk => registers:out_reg1.clk
 clk => registers:out_reg2.clk
+clk => registers:out_reg_1.clk
+clk => registers:out_reg_2.clk
 reset => registers:out_reg1.reset
 reset => registers:out_reg2.reset
+reset => registers:out_reg_1.reset
+reset => registers:out_reg_2.reset
 stall_in => ~NO_FANOUT~
 inst1[0] => opcode_reduced1.DATAB
 inst1[0] => reg1_in[31].DATAB
@@ -1838,6 +1846,10 @@ REG2[32] <= registers:out_reg2.output[32]
 REG2[33] <= registers:out_reg2.output[33]
 REG2[34] <= registers:out_reg2.output[34]
 REG2[35] <= registers:out_reg2.output[35]
+bc_1in[0] => registers:out_reg_1.input[0]
+bc_2in[0] => registers:out_reg_2.input[0]
+bc_1out[0] <= registers:out_reg_1.output[0]
+bc_2out[0] <= registers:out_reg_2.output[0]
 
 
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg1
@@ -2206,13 +2218,33 @@ reset => data[34].ACLR
 reset => data[35].ACLR
 
 
+|final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg_1
+input[0] => data[0].DATAIN
+enable => data[0].ENA
+output[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+clk => data[0].CLK
+reset => data[0].ACLR
+
+
+|final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|fetch_decode:fetch_dec_unit|decode:decode_unt|registers:out_reg_2
+input[0] => data[0].DATAIN
+enable => data[0].ENA
+output[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+clk => data[0].CLK
+reset => data[0].ACLR
+
+
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|register_file:reg_file
 reset => registers:data_reg1.reset
 reset => registers:data_reg2.reset
+reset => registers:data_reg3.reset
+reset => registers:data_reg4.reset
 reset => ARF:ar_file.reset
 reset => ROB:reorder.reset
 clk => registers:data_reg1.clk
 clk => registers:data_reg2.clk
+clk => registers:data_reg3.clk
+clk => registers:data_reg4.clk
 clk => ARF:ar_file.clk
 clk => ROB:reorder.clk
 stall_out <= ROB:reorder.stall_out
@@ -2751,6 +2783,10 @@ complete2[34] <= ROB:reorder.complete2[34]
 complete2[35] <= ROB:reorder.complete2[35]
 complete2[36] <= ROB:reorder.complete2[36]
 complete2[37] <= ROB:reorder.complete2[37]
+bc_1in => registers:data_reg3.input[0]
+bc_2in => registers:data_reg4.input[0]
+bc_1out <= registers:data_reg3.output[0]
+bc_2out <= registers:data_reg4.output[0]
 
 
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|register_file:reg_file|registers:data_reg1
@@ -3477,6 +3513,22 @@ reset => data[68].ACLR
 reset => data[69].ACLR
 reset => data[70].ACLR
 reset => data[71].ACLR
+
+
+|final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|register_file:reg_file|registers:data_reg3
+input[0] => data[0].DATAIN
+enable => data[0].ENA
+output[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+clk => data[0].CLK
+reset => data[0].ACLR
+
+
+|final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|register_file:reg_file|registers:data_reg4
+input[0] => data[0].DATAIN
+enable => data[0].ENA
+output[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+clk => data[0].CLK
+reset => data[0].ACLR
 
 
 |final|para_final:PAR_FIN|fetch_decode_rf:F_D_RF|register_file:reg_file|ARF:ar_file

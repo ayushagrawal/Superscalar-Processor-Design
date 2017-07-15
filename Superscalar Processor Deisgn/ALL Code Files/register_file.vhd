@@ -37,7 +37,12 @@ entity register_file is
 																						-- (In the above order) --
 		  -- TO COMPLETE FROM ROB
 		  complete1				: out std_logic_vector(37 downto 0);
-		  complete2				: out std_logic_vector(37 downto 0));
+		  complete2				: out std_logic_vector(37 downto 0);
+		  
+		  bc_1in					: in std_logic;
+		  bc_2in					: in std_logic;
+		  bc_1out				: out std_logic;
+		  bc_2out				: out std_logic);
 	
 end entity;
 
@@ -86,6 +91,19 @@ begin
 								 port    map(input => regIn2,
 												 enable => '1',
 												 output => register2,
+												 clk => clk,
+												 reset => reset);
+												 
+	data_reg3 : registers generic map(N => 1)
+								 port    map(input(0) => bc_1in,
+												 enable => '1',
+												 output(0) => bc_1out,
+												 clk => clk,
+												 reset => reset);
+	data_reg4 : registers generic map(N => 1)
+								 port    map(input(0) => bc_2in,
+												 enable => '1',
+												 output(0) => bc_2out,
 												 clk => clk,
 												 reset => reset);
 	----------------------------------------------------------------------------			

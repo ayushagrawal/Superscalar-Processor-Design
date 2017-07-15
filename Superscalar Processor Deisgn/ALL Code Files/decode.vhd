@@ -23,7 +23,12 @@ entity decode is
 		  
 		  ------- CALCULATED uOPS RESGITERS ------
 		  REG1	: out std_logic_vector(35 downto 0);
-		  REG2	: out std_logic_vector(35 downto 0));
+		  REG2	: out std_logic_vector(35 downto 0);
+		  
+		  bc_1in  : in std_logic_vector(0 downto 0);
+		  bc_2in  : in std_logic_vector(0 downto 0);
+		  bc_1out : out std_logic_vector(0 downto 0);
+		  bc_2out : out std_logic_vector(0 downto 0));
 		  --*** (VALIDITY:OPCODE:ROB-INDEX:WB_REG:REG1:REG2:PC) ***--
 
 end entity;
@@ -102,6 +107,19 @@ begin
 																	   input => reg2_in,
 																	   output => REG2,
 																	   enable => not_stall);
+	
+	out_reg_1 : registers generic map(N => 1) port map(clk => clk,
+																		reset => reset,
+																		input => bc_1in,
+																		output => bc_1out,
+																		enable => not_stall);
+	
+	out_reg_2 : registers generic map(N => 1) port map(clk => clk,
+																		reset => reset,
+																		input => bc_2in,
+																		output => bc_2out,
+																		enable => not_stall);
+																		
 	
 	--------------------------- DECODING --------------------------------
 	

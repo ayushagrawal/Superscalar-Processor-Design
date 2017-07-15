@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for final
-Mon Jul 10 13:24:52 2017
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Sat Jul 15 15:30:55 2017
+Quartus Prime Version 17.0.1 Build 598 06/07/2017 SJ Lite Edition
 
 
 ---------------------
@@ -68,7 +68,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------+
 ; TimeQuest Timing Analyzer Summary                                           ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Quartus Prime Version ; Version 17.0.1 Build 598 06/07/2017 SJ Lite Edition ;
 ; Timing Analyzer       ; TimeQuest                                           ;
 ; Revision Name         ; final                                               ;
 ; Device Family         ; Cyclone IV E                                        ;
@@ -328,8 +328,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Jul 10 13:24:48 2017
+    Info: Version 17.0.1 Build 598 06/07/2017 SJ Lite Edition
+    Info: Processing started: Sat Jul 15 15:30:52 2017
 Info: Command: quartus_sta final -c final
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
@@ -377,8 +377,8 @@ Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 631 megabytes
-    Info: Processing ended: Mon Jul 10 13:24:52 2017
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Sat Jul 15 15:30:55 2017
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

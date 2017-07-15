@@ -197,7 +197,12 @@ package components is
 			  
 			  ------- CALCULATED uOPS RESGITERS ------
 			  REG1	: out std_logic_vector(35 downto 0);
-			  REG2	: out std_logic_vector(35 downto 0));
+			  REG2	: out std_logic_vector(35 downto 0);
+			  
+			  bc_1in  : in std_logic_vector(0 downto 0);
+			  bc_2in  : in std_logic_vector(0 downto 0);
+			  bc_1out : out std_logic_vector(0 downto 0);
+			  bc_2out : out std_logic_vector(0 downto 0));
 	end component;
 	
 	component demux is
@@ -307,7 +312,10 @@ package components is
 			  
 				------- CALCULATED uOPS RESGITERS ------
 			  REG1	: out std_logic_vector(35 downto 0);
-			  REG2	: out std_logic_vector(35 downto 0));
+			  REG2	: out std_logic_vector(35 downto 0);
+			  
+			  bc_1	: out std_logic;
+			  bc_2	: out std_logic);
 	end component;
 	
 	component fetch_decode_rf is
@@ -457,7 +465,12 @@ package components is
 																							-- (In the above order) --
 			  -- TO COMPLETE FROM ROB
 			  complete1				: out std_logic_vector(37 downto 0);
-			  complete2				: out std_logic_vector(37 downto 0));
+			  complete2				: out std_logic_vector(37 downto 0);
+			  
+			  bc_1in					: in std_logic;
+			  bc_2in					: in std_logic;
+			  bc_1out				: out std_logic;
+			  bc_2out				: out std_logic);
 		
 	end component;
 	

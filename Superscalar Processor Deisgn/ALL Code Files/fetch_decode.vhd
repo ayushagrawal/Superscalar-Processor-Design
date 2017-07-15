@@ -11,13 +11,16 @@ entity fetch_decode is
 		  
 		   ------- CALCULATED uOPS RESGITERS ------
 		  REG1	: out std_logic_vector(35 downto 0);
-		  REG2	: out std_logic_vector(35 downto 0));
+		  REG2	: out std_logic_vector(35 downto 0);
+		  
+		  bc_1	: out std_logic;
+		  bc_2	: out std_logic);
 end entity;
 
 architecture fd of fetch_decode is
 
 	signal inst1,inst2 : std_logic_vector(22 downto 0);  	-- PC(22 downto 16) + INSTRUCTION(15 downto 0)
-	signal bc_1,bc_2   : std_logic;
+	signal bc_11,bc_22 : std_logic;
 
 begin
 	
@@ -27,8 +30,8 @@ begin
 										  inst1 => inst1,				-- PC(22 downto 16) + INSTRUCTION(15 downto 0)
 										  inst2 => inst2,				-- PC(22 downto 16) + INSTRUCTION(15 downto 0)
 										  
-										  bc_1  => bc_1,
-										  bc_2  => bc_2);
+										  bc_1  => bc_11,
+										  bc_2  => bc_22);
 										 
 	decode_unt : decode port map(clk => clk,
 										  reset => reset,
@@ -40,6 +43,11 @@ begin
 										  
 										  -- TO REGISTER FILE
 										  REG1 => REG1,
-										  REG2 => REG2);
+										  REG2 => REG2,
+										  
+										  bc_1in(0)  => bc_11,
+										  bc_2in(0)  => bc_22,
+										  bc_1out(0) => bc_1,
+										  bc_2out(0) => bc_2);
 	
 end architecture;

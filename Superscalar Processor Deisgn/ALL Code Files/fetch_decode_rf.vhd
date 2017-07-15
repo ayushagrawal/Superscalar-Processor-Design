@@ -28,14 +28,16 @@ entity fetch_decode_rf is
 																						-- (In the above order) --
 		  -- TO COMPLETE FROM ROB
 		  complete1				: out std_logic_vector(37 downto 0);
-		  complete2				: out std_logic_vector(37 downto 0)
+		  complete2				: out std_logic_vector(37 downto 0);
 		  -- If write back		 : 1  bit
 		  -- Inst_type 			 : 2  bits
 		  -- Register affected : 3  bits
 		  -- Memory affected   : 16 bits
-		  -- Data				    : 16 bits
-		  -- validity		    : 1  bit
-		  );
+		  -- Data				  : 16 bits
+		  -- validity		     : 1  bit
+		  
+		  bc_1					: out std_logic;
+		  bc_2					: out std_logic);
 end entity;
 
 architecture fd of fetch_decode_rf is
@@ -43,6 +45,8 @@ architecture fd of fetch_decode_rf is
 	signal REG1,REG2 : std_logic_vector(35 downto 0);
 	
 	signal stall : std_logic;
+	
+	signal bc_11,bc_22 : std_logic;
 
 begin
 	
@@ -51,7 +55,10 @@ begin
 														 stall => stall,
 														
 														 REG1 => REG1,
-														 REG2 => REG2);
+														 REG2 => REG2,
+														 
+														 bc_1 => bc_11,
+														 bc_2 => bc_22);
 	
 	reg_file			: register_file port map(clk => clk,
 														 reset => reset,
@@ -76,6 +83,11 @@ begin
 														 
 														 -- To Complete
 														 complete1 => complete1,
-														 complete2 => complete2);
+														 complete2 => complete2,
+														 
+														 bc_1in => bc_11,
+														 bc_2in => bc_22,
+														 bc_1out => bc_1,
+														 bc_2out => bc_2);
 	
 end architecture;
