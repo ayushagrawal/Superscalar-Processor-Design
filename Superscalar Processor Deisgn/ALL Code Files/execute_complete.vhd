@@ -15,7 +15,7 @@ entity execute_complete is
 		  alu_inst2 : in std_logic_vector(40 downto 0);
 		  
 		  -- TO BRANCH EXECUTING UNIT
-		  bch_inst1 : in std_logic_vector(55 downto 0);
+		  bch_inst1 : in std_logic_vector(56 downto 0);
 		  
 		  -- TO LOAD/STORE EXECUTING UNIT
 		  lst_inst1 : in std_logic_vector(39 downto 0);

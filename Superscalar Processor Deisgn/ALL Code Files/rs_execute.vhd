@@ -8,8 +8,8 @@ entity rs_execute is
 			  reset : in std_logic;
 			  
 			  -- FROM DECODE
-			  instruction1 : in std_logic_vector(71 downto 0);
-			  instruction2 : in std_logic_vector(71 downto 0);
+			  instruction1 : in std_logic_vector(72 downto 0);
+			  instruction2 : in std_logic_vector(72 downto 0);
 			  
 			  -- TO DECODE
 			  only_one_alu : out std_logic;
@@ -25,7 +25,7 @@ architecture RS_ex of rs_execute is
 	
 	signal broadcast1 : main_array(0 to 4)(22 downto 0);
 	signal alu_inst1,alu_inst2 : std_logic_vector(40 downto 0);
-	signal bch_inst1				: std_logic_vector(55 downto 0);
+	signal bch_inst1				: std_logic_vector(56 downto 0);
 	signal lst_inst1,lst_inst2 : std_logic_vector(39 downto 0);
 	
 begin

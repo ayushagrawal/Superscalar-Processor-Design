@@ -10,8 +10,8 @@ entity reservation_station_complete is
 		port(clk : in std_logic;
 			  reset : in std_logic;
 			  -- FROM DECODE
-			  instruction1 : in std_logic_vector(71 downto 0);
-			  instruction2 : in std_logic_vector(71 downto 0);
+			  instruction1 : in std_logic_vector(72 downto 0);
+			  instruction2 : in std_logic_vector(72 downto 0);
 			  
 			  -- TO DECODE
 			  only_one_alu : out std_logic;
@@ -23,7 +23,7 @@ entity reservation_station_complete is
 			  alu_inst2_out : out std_logic_vector(40 downto 0);
 			  
 			  -- TO BRANCH EXECUTING UNIT
-			  bch_inst1_out : out std_logic_vector(55 downto 0);
+			  bch_inst1_out : out std_logic_vector(56 downto 0);
 			  
 			  -- TO LOAD/STORE EXECUTING UNIT
 			  lst_inst1_out : out std_logic_vector(39 downto 0);
@@ -42,13 +42,13 @@ entity reservation_station_complete is
 
 architecture RS of reservation_station_complete is
 
-	signal rs_data_alu,rs_data_lst : main_array(0 to 7)(71 downto 0) := (others => (others => '0'));
-	signal rs_data_bch 				 : main_array(0 to 3)(71 downto 0) := (others => (others => '0'));
+	signal rs_data_alu,rs_data_lst : main_array(0 to 7)(72 downto 0) := (others => (others => '0'));
+	signal rs_data_bch 				 : main_array(0 to 3)(72 downto 0) := (others => (others => '0'));
 	
-	signal rs_data_in_alu_alloc,rs_data_in_lst_alloc : main_array(0 to 7)(71 downto 0) := (others => (others => '0'));
-	signal rs_data_in_bch_alloc							 : main_array(0 to 3)(71 downto 0) := (others => (others => '0'));
-	signal rs_data_in_alu_updte,rs_data_in_lst_updte : main_array(0 to 7)(71 downto 0) := (others => (others => '0'));
-	signal rs_data_in_bch_updte							 : main_array(0 to 3)(71 downto 0) := (others => (others => '0'));
+	signal rs_data_in_alu_alloc,rs_data_in_lst_alloc : main_array(0 to 7)(72 downto 0) := (others => (others => '0'));
+	signal rs_data_in_bch_alloc							 : main_array(0 to 3)(72 downto 0) := (others => (others => '0'));
+	signal rs_data_in_alu_updte,rs_data_in_lst_updte : main_array(0 to 7)(72 downto 0) := (others => (others => '0'));
+	signal rs_data_in_bch_updte							 : main_array(0 to 3)(72 downto 0) := (others => (others => '0'));
 	signal rs_data_en_alu_alloc,rs_data_en_lst_alloc : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
 	signal rs_data_en_bch_alloc							 : main_array(0 to 3)(0 downto 0) := (others => (others => '0'));
 	signal rs_data_en_alu_updte,rs_data_en_lst_updte : main_array(0 to 7)(0 downto 0) := (others => (others => '0'));
@@ -87,7 +87,7 @@ architecture RS of reservation_station_complete is
 	signal indx_alloc_alu_out,indx_alloc_lst_out : main_array(0 to 1)(2 downto 0) := (others => (others => '0'));
 	signal indx_alloc_bch_out 					 : main_array(0 to 1)(1 downto 0) := (others => (others => '0'));
 
-	signal alu_inst1,alu_inst2,bch_inst1,lst_inst1,lst_inst2 : std_logic_vector(71 downto 0) := (others => '0');
+	signal alu_inst1,alu_inst2,bch_inst1,lst_inst1,lst_inst2 : std_logic_vector(72 downto 0) := (others => '0');
 	
 	
 begin
@@ -112,6 +112,7 @@ begin
 	lst_inst2_out(31 downto 16) <= lst_inst2(49 downto 34);
 	lst_inst2_out(15 downto 0)  <= lst_inst2(32 downto 17);
 	
+	bch_inst1_out(56)				 <= bch_inst1(72);
 	bch_inst1_out(55) 			 <= bch_inst1(71);
 	bch_inst1_out(54 downto 48) <= bch_inst1(68 downto 62);
 	bch_inst1_out(47 downto 32) <= bch_inst1(49 downto 34);
@@ -209,9 +210,9 @@ begin
 	ALLOC_UNIT : allocating_unit generic map(N_alu => 8,
 														  N_bch => 4,
 														  N_lst => 8,
-														  X_alu => 72,
-														  X_bch => 72,
-														  X_lst => 72)
+														  X_alu => 73,
+														  X_bch => 73,
+														  X_lst => 73)
 										  port map	 (reset     => reset,
 														  clk	      => clk,
 														  stall_out => stall_out,
@@ -255,7 +256,7 @@ begin
 	
 	-------------------------------------------------------------------------------------
 	RESRV_ALU  : reservation_station generic map(N => 8,              -- Number of entries                  
-																X => 72)					-- Data Length                               
+																X => 73)					-- Data Length                               
 												port map   (clk      => clk,                          
 																reset    => reset,                        
 																busy_in  => busy_alu_in,                            
@@ -271,7 +272,7 @@ begin
 																data_out => rs_data_alu);
 	
 	RESRV_BCH  : reservation_station generic map(N => 4,              -- Number of entries
-																X => 72)					-- Data Length
+																X => 73)					-- Data Length
 												port map   (clk   => clk,
 																reset => reset,
 																busy_in => busy_bch_in,
@@ -287,7 +288,7 @@ begin
 																data_out => rs_data_bch);
 	
 	RESRV_LST  : reservation_station generic map(N => 8,              -- Number of entries
-																X => 72)					-- Data Length
+																X => 73)					-- Data Length
 												port map   (clk   => clk,
 																reset => reset,
 																busy_in => busy_lst_in,
@@ -304,7 +305,7 @@ begin
 	-------------------------------------------------------------------------------------------
 	
 	DISPATCH_ALU : dispatch_unit generic map(N => 8,
-														  X => 72)
+														  X => 73)
 										  port map   (reset => reset,
 														  clk   => clk,
 														  
@@ -326,7 +327,7 @@ begin
 														  execute2 => alu_inst2);
 	
 	DISPATCH_BCH : dispatch_unit_bch generic map(N => 4,
-																X => 72)
+																X => 73)
 											  port map   (reset => reset,
 															  clk   => clk,
 															  
@@ -345,7 +346,7 @@ begin
 															  execute1 => bch_inst1); 
 	
 	DISPATCH_LST : dispatch_unit generic map(N => 8,
-														  X => 72)
+														  X => 73)
 										  port map   (reset => reset,
 														  clk   => clk,
 														  
@@ -366,7 +367,7 @@ begin
 														  
 	---------------------------------------------------------------------------------------------
 	
-	UPDATE_ALU : update_unit generic map(N => 72,			-- Data Length
+	UPDATE_ALU : update_unit generic map(N => 73,			-- Data Length
 													 X => 8)				-- Entries in RF
 									 port map   (broadcast => broadcast,
 													 busy => busy_alu,
@@ -378,7 +379,7 @@ begin
 													 index_out => index_out_alu,
 													 index_val => index_val_alu);
 	
-	UPDATE_BCH : update_unit generic map(N => 72,			-- Data Length
+	UPDATE_BCH : update_unit generic map(N => 73,			-- Data Length
 													 X => 4)				-- Entries in RF
 									 port map   (broadcast => broadcast,
 													 busy => busy_bch,
@@ -390,7 +391,7 @@ begin
 													 index_out => index_out_bch,
 													 index_val => index_val_bch);
 													 
-	UPDATE_LST : update_unit generic map(N => 72,			-- Data Length
+	UPDATE_LST : update_unit generic map(N => 73,			-- Data Length
 													 X => 8)				-- Entries in RF
 									 port map   (broadcast => broadcast,
 													 busy => busy_lst,

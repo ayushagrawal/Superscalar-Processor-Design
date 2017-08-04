@@ -24,12 +24,17 @@ end entity;
 
 architecture pfinal of para_final is
 
-	signal instruction1,instruction2 : std_logic_vector(71 downto 0);
+	signal instruction1,instruction2 : std_logic_vector(72 downto 0);
 	signal broadcast : main_array(0 to 4)(22 downto 0);
 	
 	signal only_one_alu,only_one_bch,only_one_lst : std_logic;
+	
+	signal bc_1,bc_2 : std_logic;
 
 begin
+	
+	instruction1(72) <= bc_1;
+	instruction2(72) <= bc_2;
 	
 	F_D_RF : fetch_decode_rf port map(clk => clk,
 												 reset => reset,
@@ -41,13 +46,16 @@ begin
 												 wren1 => wren1,
 												 wren2 => wren2,
 												 
-												 register1 => instruction1,
-												 register2 => instruction2,
+												 register1 => instruction1(71 downto 0),
+												 register2 => instruction2(71 downto 0),
 												 
 												 broadcast => broadcast,
 												 
 												 complete1 => complete1,
-												 complete2 => complete2);
+												 complete2 => complete2,
+												 
+												 bc_1	=> bc_1,
+												 bc_2 => bc_2);
 												 
 	RS_EX : rs_execute port map(clk => clk,
 										 reset =>reset,

@@ -40,8 +40,8 @@ package components is
 			  only_one_lst : out std_logic;
 			  
 			  -- FROM DECODE [validity:tag:______]
-			  inst1 : in std_logic_vector(71 downto 0);
-			  inst2 : in std_logic_vector(71 downto 0);
+			  inst1 : in std_logic_vector(72 downto 0);
+			  inst2 : in std_logic_vector(72 downto 0);
 			  
 			  -- TO RESERVATION STATION (NEED TO CONSIDER FROM ALL THE RESERVATION STATION)
 			  reg_alu_data : out main_array(0 to N_alu-1)(X_alu-1 downto 0);
@@ -90,20 +90,6 @@ package components is
 			  output : out std_logic_vector(22 downto 0));
 	end component;
 	
-	component bch_unit is
-		port(clk : in std_logic;
-			  reset : in std_logic;
-			  input : in std_logic_vector(55 downto 0);
-			  output : out std_logic_vector(22 downto 0));
-	end component;
-	
-	component lst_unit is
-		port(clk : in std_logic;
-			  reset : in std_logic;
-			  input : in std_logic_vector(39 downto 0);
-			  output : out std_logic_vector(22 downto 0));
-	end component;
-	
 	component ARF is
 		port(reset : in std_logic;
 			  clk   : in std_logic;
@@ -140,6 +126,13 @@ package components is
 			  osel3	 : in std_logic_vector(2 downto 0);
 			  osel4	 : in std_logic_vector(2 downto 0));
 		
+	end component;
+	
+	component bch_unit is
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  input : in std_logic_vector(56 downto 0);
+			  output : out std_logic_vector(22 downto 0));
 	end component;
 	
 	component branch_predictor is
@@ -279,7 +272,7 @@ package components is
 			  alu_inst2 : in std_logic_vector(40 downto 0);
 			  
 			  -- TO BRANCH EXECUTING UNIT
-			  bch_inst1 : in std_logic_vector(55 downto 0);
+			  bch_inst1 : in std_logic_vector(56 downto 0);
 			  
 			  -- TO LOAD/STORE EXECUTING UNIT
 			  lst_inst1 : in std_logic_vector(39 downto 0);
@@ -342,7 +335,10 @@ package components is
 																							-- (In the above order) --
 			  -- TO COMPLETE FROM ROB
 			  complete1				: out std_logic_vector(37 downto 0);
-			  complete2				: out std_logic_vector(37 downto 0));
+			  complete2				: out std_logic_vector(37 downto 0);
+			  
+			  bc_1					: out std_logic;
+			  bc_2					: out std_logic);
 	end component;
 	
 	component inc IS
@@ -369,6 +365,12 @@ package components is
 		);
 	END component;
 	
+	component lst_unit is
+		port(clk : in std_logic;
+			  reset : in std_logic;
+			  input : in std_logic_vector(39 downto 0);
+			  output : out std_logic_vector(22 downto 0));
+	end component;
 	
 	component multiplexer is
 	
@@ -502,8 +504,8 @@ package components is
 		port(clk : in std_logic;
 			  reset : in std_logic;
 			  -- FROM DECODE
-			  instruction1 : in std_logic_vector(71 downto 0);
-			  instruction2 : in std_logic_vector(71 downto 0);
+			  instruction1 : in std_logic_vector(72 downto 0);
+			  instruction2 : in std_logic_vector(72 downto 0);
 			  
 			  -- TO DECODE
 			  only_one_alu : out std_logic;
@@ -515,7 +517,7 @@ package components is
 			  alu_inst2_out : out std_logic_vector(40 downto 0);
 			  
 			  -- TO BRANCH EXECUTING UNIT
-			  bch_inst1_out : out std_logic_vector(55 downto 0);
+			  bch_inst1_out : out std_logic_vector(56 downto 0);
 			  
 			  -- TO LOAD/STORE EXECUTING UNIT
 			  lst_inst1_out : out std_logic_vector(39 downto 0);
@@ -574,8 +576,8 @@ package components is
 			  reset : in std_logic;
 			  
 			  -- FROM DECODE
-			  instruction1 : in std_logic_vector(71 downto 0);
-			  instruction2 : in std_logic_vector(71 downto 0);
+			  instruction1 : in std_logic_vector(72 downto 0);
+			  instruction2 : in std_logic_vector(72 downto 0);
 			  
 			  -- TO DECODE
 			  only_one_alu : out std_logic;
